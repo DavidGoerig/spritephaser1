@@ -15,6 +15,7 @@ export default class Tile {
   readonly y: number;
   z: number;
 
+  protected tileId: number | null = null;
   object: number | null;
 
   constructor(scene: Game, id: number, x: number, y: number, z?: number) {
@@ -74,6 +75,20 @@ export default class Tile {
   }
 
   /**
+   * Visual highlight for hover / selection.
+   */
+  setHighlighted(on: boolean) {
+    if (on) {
+      // Strong fill tint so it is clearly visible.
+      this.sprite.setTintFill(0xffff00);
+      this.ssprite.setTintFill(0xffff00);
+    } else {
+      this.sprite.clearTint();
+      this.ssprite.clearTint();
+    }
+  }
+
+  /**
    * Recalculate world position and depth when the
    * grid view direction or tile height changes.
    * Also updates directional sprite frames when
@@ -120,7 +135,12 @@ export default class Tile {
     }
   }
 
+  get id(): number | null {
+    return this.tileId;
+  }
+
   setTile(id: number) {
+    this.tileId = id;
     let tkey = 't' + id;
     let y = this.by - Grid.OFFSET_Z * this.z;
 
@@ -155,6 +175,8 @@ export default class Tile {
     if (!setter) {
       this.sprite.setVisible(false);
       this.ssprite.setVisible(false);
+      this.tileId = null;
+      this.object = null;
       return;
     }
 
