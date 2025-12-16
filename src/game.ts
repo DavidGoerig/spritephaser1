@@ -3,6 +3,7 @@ import Grid from "./engine/grid";
 import Mouse from "./utils/mouse";
 import Camera from "./utils/camera";
 import { Direction, StairDirection, type OptionalTileSetter } from "./engine/types";
+import { UI, ANIMATION } from "./engine/constants";
 
 export default class Game extends Phaser.Scene {
   grid = new Grid(this);
@@ -32,10 +33,23 @@ export default class Game extends Phaser.Scene {
     // ------------------------------------------------
     // LOAD TILES & OBJECTS
     // ------------------------------------------------
+    // Add error handling for asset loading
+    this.load.on("filecomplete", (key: string, type: string) => {
+      console.log(`Loaded asset: ${key} (${type})`);
+    });
+
+    this.load.on("loaderror", (file: Phaser.Loader.File) => {
+      console.error(`Failed to load asset: ${file.key} from ${file.src}`);
+      // Continue execution - missing assets will show as missing texture
+    });
+
     // Use 64x64 block tiles from public/blocks instead
     for (let i = 1; i <= 5; i++) {
       this.grid.loadTile(`/blocks/blocks_${i}.png`, 64, 64);
     }
+    
+    // Load mushroom with 16 frames (64x64 each)
+    this.grid.loadTile(`/blocks/mushroom.png`, 64, 64);
 
     // Selector sprite (highlight under hovered cube)
     this.load.image("selector", "/blocks/selector.png");
@@ -54,42 +68,37 @@ export default class Game extends Phaser.Scene {
     // ------------------------------------------------
     // INFO PANEL (bottom-left, fixed to screen)
     // ------------------------------------------------
-    const margin = 10;
-    const bgWidth = 220;
-    const bgHeight = 70;
-
     this.infoBg = this.add.rectangle(
-      margin + bgWidth / 2,
-      this.scale.height - margin - bgHeight / 2,
-      bgWidth,
-      bgHeight,
-      0x000000,
-      0.6
+      UI.INFO_MARGIN + UI.INFO_BG_WIDTH / 2,
+      this.scale.height - UI.INFO_MARGIN - UI.INFO_BG_HEIGHT / 2,
+      UI.INFO_BG_WIDTH,
+      UI.INFO_BG_HEIGHT,
+      UI.INFO_BG_COLOR,
+      UI.INFO_BG_ALPHA
     ).setOrigin(0.5).setScrollFactor(0).setVisible(false);
 
     this.infoText = this.add.text(
-      margin + 8,
-      this.scale.height - margin - bgHeight + 8,
+      UI.INFO_MARGIN + UI.INFO_TEXT_PADDING,
+      this.scale.height - UI.INFO_MARGIN - UI.INFO_BG_HEIGHT + UI.INFO_TEXT_PADDING,
       "",
       {
-        fontSize: "12px",
-        color: "#ffffff",
+        fontSize: UI.INFO_TEXT_FONT_SIZE,
+        color: UI.INFO_TEXT_COLOR,
       }
     ).setScrollFactor(0).setVisible(false);
 
     // Selector image used to highlight hovered cube (drawn on top, semi‑transparent)
     this.hoverSelector = this.add.image(0, 0, "selector")
       .setVisible(false)
-      .setDepth(9999)
-      .setAlpha(0.5);
+      .setDepth(UI.SELECTOR_DEPTH)
+      .setAlpha(UI.SELECTOR_ALPHA);
 
     // ------------------------------------------------
     // CREATE TILES & OBJECTS ANIMATIONS
     // ------------------------------------------------
-    // If you add multi-frame spritesheets later, you
-    // can enable animations here again.
-    // this.grid.createTileAnim(4, 6);
-    // this.grid.createObjectAnim(3, 6);
+    // Mushroom animation: 16 frames, 8 fps, loop forever
+    // Tile ID 6 is mushroom (after blocks_1 to blocks_5)
+    this.grid.createTileAnim(6, ANIMATION.DEFAULT_FRAME_RATE, ANIMATION.DEFAULT_REPEAT, ANIMATION.DEFAULT_REPEAT_DELAY);
     // ------------------------------------------------
 
     // ------------------------------------------------
@@ -144,6 +153,10 @@ export default class Game extends Phaser.Scene {
     stair(7, 6, 1, StairDirection.SouthEastToNorthWest); // Stair at z=1, same level as platform
 
     this.grid.setGrid(map);
+
+    // Add mushroom on Platform 1 (center platform at z=1)
+    // Mushroom at (4, 4) at z=2 (on top of the platform)
+    this.grid.setTile(4, 4, 2, { id: 6 }); // Mushroom (tile ID 6) on top of platform
 
     // ------------------------------------------------
     // VIEW ROTATION CONTROLS
@@ -220,26 +233,24 @@ export default class Game extends Phaser.Scene {
 
     // Clear previous hover tint if tile changed
     if (this.hoverTile && this.hoverTile !== tile) {
-      (this.hoverTile as any).setHighlighted?.(false);
+      this.hoverTile.setHighlighted(false);
     }
 
     this.hoverTile = tile ?? null;
 
     if (tile) {
-      const sx = (tile as any).worldX ?? (tile as any).sprite?.x;
-      const sy = (tile as any).worldY ?? (tile as any).sprite?.y;
+      const sx = tile.worldX;
+      const sy = tile.worldY;
 
-      if (typeof sx === "number" && typeof sy === "number") {
-        // Position selector sprite on top of the hovered tile
-        this.hoverSelector
-          .setPosition(sx, sy)
-          .setVisible(true);
-      }
+      // Position selector sprite on top of the hovered tile
+      this.hoverSelector
+        .setPosition(sx, sy)
+        .setVisible(true);
 
       // Update info panel text
-      const id = (tile as any).id ?? "?";
-      const z = (tile as any).z ?? 0;
-      const obj = (tile as any).object ?? "none";
+      const id = tile.id ?? "?";
+      const z = tile.z;
+      const obj = tile.object ?? "none";
 
       this.infoText.setText(
         `Cube\nx: ${tile.x}, y: ${tile.y}, z: ${z}\n` +

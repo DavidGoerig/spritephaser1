@@ -2,10 +2,11 @@ import Game from "../game";
 import Grid from "./grid";
 import Phaser from "phaser";
 
-import { cart2iso } from "../utils/math";
-import { Direction, StairDirection, type OptionalTileSetter } from "./types";
+import { calculateIsoScreenPosition } from "../utils/math";
+import { Direction, StairDirection, type OptionalTileSetter, type ITile } from "./types";
+import { TACTICAL_MODE, TACTICAL_MODE_2, HIGHLIGHT } from "./constants";
 
-export default class Tile {
+export default class Tile implements ITile {
   protected grid: Grid;
   protected sprite = {} as Phaser.GameObjects.Sprite;
   protected ssprite = {} as Phaser.GameObjects.Sprite;
@@ -22,8 +23,13 @@ export default class Tile {
   protected tacticalMode2Active: boolean = false;  // Track if tactical mode 2 is enabled (show all cubes)
   protected tacticalTint: number | null = null;  // Store tactical mode tint color
   protected originalAlpha: number = 1.0;  // Store original alpha for mode 2
-  protected isTopCube: boolean = true;  // Track if this is the top cube at its position
+  isTopCube: boolean = true;  // Track if this is the top cube at its position (public for interface)
   object: number | null;
+  
+  // Expose tileId as public property for interface compliance
+  get id(): number | null {
+    return this.tileId;
+  }
 
   constructor(scene: Game, id: number, x: number, y: number, z?: number) {
     this.x = x;
@@ -35,10 +41,7 @@ export default class Tile {
     // Initial screen position is computed based on the
     // grid's current view direction.
     const [cx, cy] = this.grid.getRenderCartCoords(x, y);
-    let [sx, sy] = cart2iso(cx, cy);
-
-    sx = (sx / 2) + Grid.OFFSET_X;
-    sy = (sy / 2) + Grid.OFFSET_Y;
+    const [sx, sy] = calculateIsoScreenPosition(cx, cy, 0, Grid.OFFSET_X, Grid.OFFSET_Y, Grid.OFFSET_Z);
     this.by = sy;
 
     this.sprite = scene.add.sprite(sx, sy, 't' + id);
@@ -90,13 +93,13 @@ export default class Tile {
       if (this.tacticalModeActive && this.tacticalTint !== null) {
         // In tactical mode: keep the z-level tint, just make it brighter
         const highlightTint = Phaser.Display.Color.ValueToColor(this.tacticalTint);
-        highlightTint.lighten(30); // Make it 30% brighter
+        highlightTint.lighten(HIGHLIGHT.BRIGHTNESS_INCREASE);
         this.sprite.setTint(highlightTint.color);
         this.ssprite.setTint(highlightTint.color);
       } else {
         // Normal mode: use yellow highlight
-        this.sprite.setTintFill(0xffff00);
-        this.ssprite.setTintFill(0xffff00);
+        this.sprite.setTintFill(HIGHLIGHT.COLOR);
+        this.ssprite.setTintFill(HIGHLIGHT.COLOR);
       }
     } else {
       // Restore tactical tint if active, otherwise clear
@@ -121,9 +124,7 @@ export default class Tile {
 
     if (enabled) {
       // Tint based on z-level: darker = higher
-      // z=0: no tint, z=1: light blue, z=2: blue, z=3: dark blue, etc.
-      const tintColors = [0xffffff, 0xaaccff, 0x6699ff, 0x3366ff, 0x0033ff, 0x0000cc];
-      const tint = tintColors[Math.min(this.z, tintColors.length - 1)];
+      const tint = TACTICAL_MODE.TINT_COLORS[Math.min(this.z, TACTICAL_MODE.TINT_COLORS.length - 1)];
       this.tacticalTint = tint;
       this.sprite.setTint(tint);
       this.ssprite.setTint(tint);
@@ -131,20 +132,18 @@ export default class Tile {
       // Show z-level text label
       if (!this.zLevelText) {
         const [cx, cy] = this.grid.getRenderCartCoords(this.x, this.y);
-        let [sx, sy] = cart2iso(cx, cy);
-        sx = (sx / 2) + Grid.OFFSET_X;
-        sy = (sy / 2) + Grid.OFFSET_Y - Grid.OFFSET_Z * this.z;
+        const [sx, sy] = calculateIsoScreenPosition(cx, cy, this.z, Grid.OFFSET_X, Grid.OFFSET_Y, Grid.OFFSET_Z);
 
-        this.zLevelText = (this.grid as any).scene.add.text(sx, sy - 20, `z${this.z}`, {
-          fontSize: "10px",
-          color: "#ffffff",
-          stroke: "#000000",
-          strokeThickness: 2,
-        }).setOrigin(0.5).setDepth(this.sprite.depth + 1000);
+        this.zLevelText = this.grid.sceneInstance.add.text(sx, sy - TACTICAL_MODE.TEXT_OFFSET_Y, `z${this.z}`, {
+          fontSize: TACTICAL_MODE.TEXT_FONT_SIZE,
+          color: TACTICAL_MODE.TEXT_COLOR,
+          stroke: TACTICAL_MODE.TEXT_STROKE,
+          strokeThickness: TACTICAL_MODE.TEXT_STROKE_THICKNESS,
+        }).setOrigin(0.5).setDepth(this.sprite.depth + TACTICAL_MODE.TEXT_DEPTH_OFFSET);
       }
       if (this.zLevelText) {
         this.zLevelText.setVisible(true);
-        this.zLevelText.setPosition(this.sprite.x, this.sprite.y - 20);
+        this.zLevelText.setPosition(this.sprite.x, this.sprite.y - TACTICAL_MODE.TEXT_OFFSET_Y);
         this.zLevelText.setText(`z${this.z}`);
       }
     } else {
@@ -183,8 +182,10 @@ export default class Tile {
         this.ssprite.setAlpha(1.0);
       } else {
         // Hidden cubes: semi-transparent based on z-level
-        // Lower z = more transparent (0.3 for z=0, 0.5 for z=1, etc.)
-        const alpha = Math.min(0.3 + (this.z * 0.15), 0.7);
+        const alpha = Math.min(
+          TACTICAL_MODE_2.MIN_ALPHA + (this.z * TACTICAL_MODE_2.ALPHA_INCREMENT),
+          TACTICAL_MODE_2.MAX_ALPHA
+        );
         this.sprite.setAlpha(alpha);
         this.ssprite.setAlpha(alpha);
       }
@@ -218,10 +219,7 @@ export default class Tile {
    */
   updateView() {
     const [cx, cy] = this.grid.getRenderCartCoords(this.x, this.y);
-    let [sx, sy] = cart2iso(cx, cy);
-
-    sx = (sx / 2) + Grid.OFFSET_X;
-    sy = (sy / 2) + Grid.OFFSET_Y;
+    const [sx, sy] = calculateIsoScreenPosition(cx, cy, 0, Grid.OFFSET_X, Grid.OFFSET_Y, Grid.OFFSET_Z);
     this.by = sy;
 
     const y = this.by - Grid.OFFSET_Z * this.z;
@@ -231,7 +229,7 @@ export default class Tile {
       .setY(y)
       .setDepth(cx + cy + (Grid.OFFSET_Z * this.z));
 
-    const offset = this.grid.offsets.get(this.ssprite.texture.key) ?? 0;
+    const offset = this.grid.animationManager.getOffset(this.ssprite.texture.key);
     this.ssprite
       .setX(sx)
       .setY(y - offset)
@@ -239,8 +237,8 @@ export default class Tile {
 
     // Update z-level text position if tactical mode is active
     if (this.zLevelText) {
-      this.zLevelText.setPosition(sx, y - 20);
-      this.zLevelText.setDepth(this.sprite.depth + 1000);
+      this.zLevelText.setPosition(sx, y - TACTICAL_MODE.TEXT_OFFSET_Y);
+      this.zLevelText.setDepth(this.sprite.depth + TACTICAL_MODE.TEXT_DEPTH_OFFSET);
     }
 
     // If your tiles/objects are 4-frame spritesheets
@@ -250,6 +248,13 @@ export default class Tile {
   }
 
   protected applyDirectionFrame() {
+    // Skip frame selection if this tile has an active animation
+    // (animations handle their own frame progression)
+    const tkey = this.tileId !== null ? 't' + this.tileId : '';
+    if (tkey && this.grid.anims.has(tkey) && this.sprite.anims.isPlaying) {
+      return; // Let the animation handle frames
+    }
+
     let frameIndex: number;
     
     // For stairs (block id 2), combine the world-facing diagonal direction with view rotation
@@ -283,40 +288,60 @@ export default class Tile {
     }
   }
 
-  get id(): number | null {
-    return this.tileId;
-  }
-
   setTile(id: number) {
     this.tileId = id;
-    let tkey = 't' + id;
-    let y = this.by - Grid.OFFSET_Z * this.z;
+    const tkey = 't' + id;
+    const y = this.by - Grid.OFFSET_Z * this.z;
 
-    this.sprite.setTexture(tkey)
-               .setY(y)
-               .setDepth((Grid.WIDTH * this.x) + (Grid.HEIGHT * this.y) + (Grid.OFFSET_Z * this.z))
-               .setVisible(true);
+    // Check if texture exists before setting
+    if (!this.grid.sceneInstance.textures.exists(tkey)) {
+      console.warn(`Texture '${tkey}' does not exist. Tile may not render correctly.`);
+    }
 
-    this.applyDirectionFrame();
+    try {
+      this.sprite.setTexture(tkey)
+                 .setY(y)
+                 .setDepth((Grid.WIDTH * this.x) + (Grid.HEIGHT * this.y) + (Grid.OFFSET_Z * this.z))
+                 .setVisible(true);
 
-    if (this.grid.anims.has(tkey)) this.sprite.play(tkey);
-    else this.sprite.stop();
+      this.applyDirectionFrame();
+
+      if (this.grid.animationManager.hasAnimation(tkey)) {
+        this.sprite.play(tkey);
+      } else {
+        this.sprite.stop();
+      }
+    } catch (error) {
+      console.error(`Error setting tile texture '${tkey}':`, error);
+    }
   }
 
   setObject(id: number) {
-    let okey = 'o' + id;
-    let offset = this.grid.offsets.get(okey) ?? 0;
-    let y = this.by - (Grid.OFFSET_Z * this.z) - offset;
+    const okey = 'o' + id;
+    const offset = this.grid.offsets.get(okey) ?? 0;
+    const y = this.by - (Grid.OFFSET_Z * this.z) - offset;
 
-    this.ssprite.setTexture(okey)
-                .setY(y)
-                .setDepth(this.sprite.depth + offset)
-                .setVisible(true);
+    // Check if texture exists before setting
+    if (!this.grid.sceneInstance.textures.exists(okey)) {
+      console.warn(`Texture '${okey}' does not exist. Object may not render correctly.`);
+    }
 
-    this.applyDirectionFrame();
-      
-    if (this.grid.anims.has(okey)) this.ssprite.play(okey);
-    else this.ssprite.stop();
+    try {
+      this.ssprite.setTexture(okey)
+                  .setY(y)
+                  .setDepth(this.sprite.depth + offset)
+                  .setVisible(true);
+
+      this.applyDirectionFrame();
+        
+      if (this.grid.animationManager.hasAnimation(okey)) {
+        this.ssprite.play(okey);
+      } else {
+        this.ssprite.stop();
+      }
+    } catch (error) {
+      console.error(`Error setting object texture '${okey}':`, error);
+    }
   }
 
   set(setter?: OptionalTileSetter) {

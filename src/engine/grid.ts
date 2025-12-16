@@ -1,8 +1,11 @@
 import Game from "../game";
 import Tile from "./tile";
 
-import { cart2iso } from "../utils/math";
 import { Direction, type OptionalTileSetter } from "./types";
+import { CoordinateTransformer } from "./coordinate-transformer";
+import { AnimationManager } from "./animation-manager";
+import { TacticalModeManager } from "./tactical-mode-manager";
+import { type GridConfig, validateConfig } from "./config";
 
 export default class Grid {
   // Base cartesian size of one tile before isometric
@@ -32,19 +35,59 @@ export default class Grid {
   // for selecting directional sprite frames).
   direction: Direction = Direction.North;
 
-  anims: Set<string> = new Set();
-  offsets: Map<string, number> = new Map();
-  
   protected scene: Game;
-  // 3D array: tiles[z][y][x] - allows multiple cubes stacked at same (x,y)
-  protected tiles: Tile[][][] = Array.from({ length: Grid.MAX_Z + 1 }, () =>
-    Array.from({ length: Grid.ROW }, () => [])
-  );
-  // Ghost cubes for tactical mode 2 (show empty positions) - 3D array [z][y][x]
-  protected ghostCubes: Phaser.GameObjects.Sprite[][][] = [];
+  
+  // Instance configuration (allows per-instance customization)
+  protected config: GridConfig;
 
-  constructor(scene: Game) {
+  // Manager classes for separation of concerns
+  protected coordinateTransformer: CoordinateTransformer;
+  public animationManager: AnimationManager;
+  protected tacticalModeManager: TacticalModeManager;
+  
+  // Public getter for scene (needed by Tile for creating text objects)
+  get sceneInstance(): Game {
+    return this.scene;
+  }
+  
+  // Expose animation manager properties for backward compatibility
+  get anims(): Set<string> {
+    return this.animationManager.anims;
+  }
+  
+  get offsets(): Map<string, number> {
+    return this.animationManager.offsets;
+  }
+  
+  // 3D array: tiles[z][y][x] - allows multiple cubes stacked at same (x,y)
+  protected tiles: (Tile | null)[][][];
+
+  constructor(scene: Game, config?: Partial<GridConfig>) {
     this.scene = scene;
+    this.config = validateConfig(config || {});
+    
+    this.coordinateTransformer = new CoordinateTransformer(
+      this.config.width,
+      this.config.height,
+      this.config.column,
+      this.config.row
+    );
+    this.animationManager = new AnimationManager(scene);
+    this.tacticalModeManager = new TacticalModeManager(
+      scene,
+      this.config.maxZ,
+      this.config.row,
+      this.config.column,
+      this.config.offsetX,
+      this.config.offsetY,
+      this.config.offsetZ,
+      this.coordinateTransformer
+    );
+    
+    // Initialize tiles array with configured dimensions
+    this.tiles = Array.from({ length: this.config.maxZ + 1 }, () =>
+      Array.from({ length: this.config.row }, () => [])
+    );
   }
 
   // ------------------------------------------------
@@ -57,21 +100,7 @@ export default class Grid {
    * mapped to isometric space.
    */
   getRenderCartCoords(x: number, y: number): [number, number] {
-    switch (this.direction) {
-      case Direction.North:
-        return [x * Grid.WIDTH, y * Grid.HEIGHT];
-      case Direction.East:
-        // Rotate 90° clockwise
-        return [y * Grid.WIDTH, (Grid.COLUMN - 1 - x) * Grid.HEIGHT];
-      case Direction.South:
-        // Rotate 180°
-        return [(Grid.COLUMN - 1 - x) * Grid.WIDTH, (Grid.ROW - 1 - y) * Grid.HEIGHT];
-      case Direction.West:
-        // Rotate 270° clockwise (or 90° CCW)
-        return [(Grid.ROW - 1 - y) * Grid.WIDTH, x * Grid.HEIGHT];
-      default:
-        return [x * Grid.WIDTH, y * Grid.HEIGHT];
-    }
+    return this.coordinateTransformer.getRenderCartCoords(x, y, this.direction);
   }
 
   /**
@@ -82,9 +111,9 @@ export default class Grid {
     if (this.direction === dir) return;
     this.direction = dir;
 
-    for (let z = 0; z <= Grid.MAX_Z; z++) {
-      for (let y = 0; y < Grid.ROW; y++) {
-        for (let x = 0; x < Grid.COLUMN; x++) {
+    for (let z = 0; z <= this.config.maxZ; z++) {
+      for (let y = 0; y < this.config.row; y++) {
+        for (let x = 0; x < this.config.column; x++) {
           const tile = this.tiles[z][y][x];
           if (tile) {
             tile.updateView();
@@ -94,30 +123,8 @@ export default class Grid {
     }
 
     // Update ghost cubes positions if tactical mode 2 is active
-    this.updateGhostCubesPositions();
-  }
-
-  /**
-   * Update ghost cubes positions when view rotates.
-   */
-  protected updateGhostCubesPositions() {
-    for (let z = 0; z < this.ghostCubes.length; z++) {
-      if (!this.ghostCubes[z]) continue;
-      for (let y = 0; y < this.ghostCubes[z].length; y++) {
-        if (!this.ghostCubes[z][y]) continue;
-        for (let x = 0; x < this.ghostCubes[z][y].length; x++) {
-          const ghost = this.ghostCubes[z][y][x];
-          if (ghost) {
-            const [cx, cy] = this.getRenderCartCoords(x, y);
-            let [sx, sy] = cart2iso(cx, cy);
-            sx = (sx / 2) + Grid.OFFSET_X;
-            sy = (sy / 2) + Grid.OFFSET_Y - Grid.OFFSET_Z * z;
-
-            ghost.setPosition(sx, sy);
-            ghost.setDepth(cx + cy + (Grid.OFFSET_Z * z) - 0.5);
-          }
-        }
-      }
+    if (this.tacticalModeManager.getIsMode2Active()) {
+      this.tacticalModeManager.updateGhostCubesPositions(this.direction);
     }
   }
 
@@ -126,16 +133,7 @@ export default class Grid {
    * Shows z-level visualization (tints and labels).
    */
   setTacticalMode(enabled: boolean) {
-    for (let z = 0; z <= Grid.MAX_Z; z++) {
-      for (let y = 0; y < Grid.ROW; y++) {
-        for (let x = 0; x < Grid.COLUMN; x++) {
-          const tile = this.tiles[z][y][x];
-          if (tile) {
-            (tile as any).setTacticalMode?.(enabled);
-          }
-        }
-      }
-    }
+    this.tacticalModeManager.setTacticalMode(enabled, this.tiles);
   }
 
   /**
@@ -144,128 +142,11 @@ export default class Grid {
    * Also creates ghost/sketch cubes for empty positions to show complete XYZ grid.
    */
   setTacticalMode2(enabled: boolean) {
-    if (enabled) {
-      // First, determine which cubes are top cubes
-      for (let y = 0; y < Grid.ROW; y++) {
-        for (let x = 0; x < Grid.COLUMN; x++) {
-          let topZ = -1;
-          // Find the top cube at this (x,y) that has a tileId (is actually placed)
-          for (let z = Grid.MAX_Z; z >= 0; z--) {
-            const tile = this.tiles[z][y][x];
-            if (tile && (tile as any).tileId !== null) {
-              topZ = z;
-              break;
-            }
-          }
-          // Mark all cubes at this position
-          for (let z = 0; z <= Grid.MAX_Z; z++) {
-            const tile = this.tiles[z][y][x];
-            if (tile) {
-              (tile as any).isTopCube = (z === topZ);
-            }
-          }
-        }
-      }
-
-      // Create ghost cubes for empty positions (air)
-      this.createGhostCubes();
-
-      // Apply tactical mode 2 to all existing tiles
-      for (let z = 0; z <= Grid.MAX_Z; z++) {
-        for (let y = 0; y < Grid.ROW; y++) {
-          for (let x = 0; x < Grid.COLUMN; x++) {
-            const tile = this.tiles[z][y][x];
-            if (tile) {
-              (tile as any).setTacticalMode2?.(true);
-            }
-          }
-        }
-      }
-    } else {
-      // Remove ghost cubes
-      this.removeGhostCubes();
-
-      // Restore normal visibility for all tiles
-      for (let z = 0; z <= Grid.MAX_Z; z++) {
-        for (let y = 0; y < Grid.ROW; y++) {
-          for (let x = 0; x < Grid.COLUMN; x++) {
-            const tile = this.tiles[z][y][x];
-            if (tile) {
-              (tile as any).setTacticalMode2?.(false);
-            }
-          }
-        }
-      }
-    }
-  }
-
-  /**
-   * Create ghost/sketch cubes for all empty positions to show complete XYZ grid.
-   */
-  protected createGhostCubes() {
-    this.removeGhostCubes(); // Clear any existing ghost cubes
-
-    // Initialize 3D array
-    this.ghostCubes = Array.from({ length: Grid.MAX_Z + 1 }, () =>
-      Array.from({ length: Grid.ROW }, () => [])
-    );
-
-    for (let z = 0; z <= Grid.MAX_Z; z++) {
-      for (let y = 0; y < Grid.ROW; y++) {
-        for (let x = 0; x < Grid.COLUMN; x++) {
-          // Check if this position is empty (no tile or tile has no tileId)
-          const tile = this.tiles[z][y][x];
-          const isEmpty = !tile || (tile as any).tileId === null;
-
-          if (isEmpty) {
-            // Create ghost cube at this empty position using selector sprite
-            const [cx, cy] = this.getRenderCartCoords(x, y);
-            let [sx, sy] = cart2iso(cx, cy);
-            sx = (sx / 2) + Grid.OFFSET_X;
-            sy = (sy / 2) + Grid.OFFSET_Y - Grid.OFFSET_Z * z;
-
-            const ghost = this.scene.add.sprite(sx, sy, 'selector3') // Use selector sprite
-              .setAlpha(0.2) // Slightly more visible than before
-              .setTint(0x666666) // Dark gray tint
-              .setDepth(cx + cy + (Grid.OFFSET_Z * z) - 0.5) // Slightly behind real cubes
-              .setVisible(true);
-
-            this.ghostCubes[z][y][x] = ghost;
-          }
-        }
-      }
-    }
-  }
-
-  /**
-   * Remove all ghost cubes.
-   */
-  protected removeGhostCubes() {
-    for (let z = 0; z < this.ghostCubes.length; z++) {
-      if (!this.ghostCubes[z]) continue;
-      for (let y = 0; y < this.ghostCubes[z].length; y++) {
-        if (!this.ghostCubes[z][y]) continue;
-        for (let x = 0; x < this.ghostCubes[z][y].length; x++) {
-          const ghost = this.ghostCubes[z][y][x];
-          if (ghost) {
-            ghost.destroy();
-          }
-        }
-      }
-    }
-    this.ghostCubes = [];
+    this.tacticalModeManager.setTacticalMode2(enabled, this.tiles, this.direction);
   }
 
   protected createAnim(key: string, framerate?: number, repeat?: number, repeat_delay?: number) {
-    this.scene.anims.create({ 
-      key: key, 
-      frames: this.scene.anims.generateFrameNumbers(key), 
-      frameRate: framerate ?? 8, 
-      repeat: repeat ?? -1,
-      repeatDelay: repeat_delay ?? 0
-    });
-
-    this.anims.add(key);
+    this.animationManager.createAnimation(key, framerate, repeat, repeat_delay);
   }
 
   // ------------------------------------------------
@@ -273,19 +154,55 @@ export default class Grid {
   // Only execute these functions on scene.preload.
   // ------------------------------------------------
   loadTile(src: string, fw?: number, fh?: number) {
+    if (!src) {
+      console.warn("loadTile called with empty src");
+      return;
+    }
+
     this.tile_id++;
 
-    if (!fw && !fh) this.scene.load.image('t' + this.tile_id, src);
-    else this.scene.load.spritesheet('t' + this.tile_id, src, { frameWidth: fw!, frameHeight: fh! });
+    try {
+      if (!fw && !fh) {
+        this.scene.load.image('t' + this.tile_id, src);
+      } else {
+        if (!fw || !fh) {
+          console.warn(`loadTile: frameWidth and frameHeight must both be provided for spritesheet. Using image instead.`);
+          this.scene.load.image('t' + this.tile_id, src);
+        } else {
+          this.scene.load.spritesheet('t' + this.tile_id, src, { frameWidth: fw, frameHeight: fh });
+        }
+      }
+    } catch (error) {
+      console.error(`Error loading tile ${src}:`, error);
+    }
   }
 
   loadObject(src: string, offset?: number, fw?: number, fh?: number) {
+    if (!src) {
+      console.warn("loadObject called with empty src");
+      return;
+    }
+
     this.object_id++;
 
-    if (!fw && !fh) this.scene.load.image('o' + this.object_id, src);
-    else this.scene.load.spritesheet('o' + this.object_id, src, { frameWidth: fw!, frameHeight: fh! });
+    try {
+      if (!fw && !fh) {
+        this.scene.load.image('o' + this.object_id, src);
+      } else {
+        if (!fw || !fh) {
+          console.warn(`loadObject: frameWidth and frameHeight must both be provided for spritesheet. Using image instead.`);
+          this.scene.load.image('o' + this.object_id, src);
+        } else {
+          this.scene.load.spritesheet('o' + this.object_id, src, { frameWidth: fw, frameHeight: fh });
+        }
+      }
 
-    if (offset) this.offsets.set('o' + this.object_id, offset);
+      if (offset !== undefined && offset !== null) {
+        this.animationManager.setOffset('o' + this.object_id, offset);
+      }
+    } catch (error) {
+      console.error(`Error loading object ${src}:`, error);
+    }
   }
   // ------------------------------------------------
 
@@ -308,13 +225,13 @@ export default class Grid {
   // ------------------------------------------------
 
   getTile(x: number, y: number, z?: number): Tile | null {
-    if (x < 0 || x >= Grid.COLUMN || y < 0 || y >= Grid.ROW) return null;
+    if (x < 0 || x >= this.config.column || y < 0 || y >= this.config.row) return null;
     if (z !== undefined) {
-      if (z < 0 || z > Grid.MAX_Z) return null;
+      if (z < 0 || z > this.config.maxZ) return null;
       return this.tiles[z][y][x] || null;
     }
     // If no z specified, return topmost cube at this (x,y)
-    for (let zz = Grid.MAX_Z; zz >= 0; zz--) {
+    for (let zz = this.config.maxZ; zz >= 0; zz--) {
       if (this.tiles[zz][y][x]) {
         return this.tiles[zz][y][x];
       }
@@ -327,31 +244,38 @@ export default class Grid {
   }
 
   getTileByCartPos(x: number, y: number): Tile | null {
-    const gx = Math.floor((x / Grid.WIDTH) + 1.2);
-    const gy = Math.floor((y / Grid.HEIGHT) + 1.2);
+    const gx = Math.floor((x / this.config.width) + 1.2);
+    const gy = Math.floor((y / this.config.height) + 1.2);
     return this.getTile(gx, gy);
   }
 
+  /**
+   * Get tile at isometric screen position.
+   * Optimized with early exit - checks tiles from top to bottom,
+   * returns the first (topmost) tile that contains the point.
+   */
   getTileByIsoPos(x: number, y: number): Tile | null {
-    let best: Tile | null = null;
-
-    // Check all z-levels, find topmost cube under cursor
-    for (let z = Grid.MAX_Z; z >= 0; z--) {
-      for (let gy = 0; gy < Grid.ROW; gy++) {
-        for (let gx = 0; gx < Grid.COLUMN; gx++) {
+    // Check all z-levels from top to bottom, find topmost cube under cursor
+    // Early exit optimization: once we find a tile at a z-level, we can skip lower z-levels
+    // at the same (x,y) position since they would be hidden
+    for (let z = this.config.maxZ; z >= 0; z--) {
+      // Iterate through grid positions
+      for (let gy = 0; gy < this.config.row; gy++) {
+        for (let gx = 0; gx < this.config.column; gx++) {
           const tile = this.tiles[z][gy][gx];
           if (!tile) continue;
 
+          // Check if point is within tile bounds
           if (tile.containsPoint(x, y)) {
-            if (!best || tile.depth > best.depth) {
-              best = tile;
-            }
+            // Found a tile at this z-level containing the point
+            // Since we iterate top-to-bottom, this is the topmost visible tile
+            return tile;
           }
         }
       }
     }
 
-    return best;
+    return null;
   }
 
   /**
@@ -359,14 +283,15 @@ export default class Grid {
    * If z > 0, also creates cubes at all lower z-levels up to z.
    */
   setTile(x: number, y: number, z: number, tile: OptionalTileSetter) {
-    if (x < 0 || x >= Grid.COLUMN || y < 0 || y >= Grid.ROW || z < 0 || z > Grid.MAX_Z) return;
+    if (x < 0 || x >= this.config.column || y < 0 || y >= this.config.row || z < 0 || z > this.config.maxZ) return;
 
     if (!tile || tile === 0 || tile === null) {
       // Remove cube at this z-level and all above
-      for (let zz = z; zz <= Grid.MAX_Z; zz++) {
-        if (this.tiles[zz][y][x]) {
-          this.tiles[zz][y][x].set(null);
-          this.tiles[zz][y][x] = null as any;
+      for (let zz = z; zz <= this.config.maxZ; zz++) {
+        const tile = this.tiles[zz][y][x];
+        if (tile) {
+          tile.set(null);
+          this.tiles[zz][y][x] = null;
         }
       }
       return;
@@ -376,45 +301,57 @@ export default class Grid {
     if (!tileId || tileId === 0) return;
 
     // Create cubes from z=0 up to the specified z
-    for (let zz = 0; zz <= z; zz++) {
+    // But only update the cube at the target z-level, preserve existing cubes below
+    for (let zz = 0; zz < z; zz++) {
+      // Only create missing cubes below, don't update existing ones
       if (!this.tiles[zz][y][x]) {
-        this.tiles[zz][y][x] = new Tile(this.scene, tileId, x, y, zz);
-      }
-      // Update the cube at this z-level
-      // Preserve direction field (important for stairs with StairDirection)
-      const setter: OptionalTileSetter = typeof tile === "object" 
-        ? { id: tileId, z: zz, object: tile.object, direction: tile.direction } 
-        : tileId;
-      if (this.tiles[zz][y][x]) {
-        this.tiles[zz][y][x].set(setter);
+        const newTile = new Tile(this.scene, tileId, x, y, zz);
+        this.tiles[zz][y][x] = newTile;
+        const setter: OptionalTileSetter = typeof tile === "object" 
+          ? { id: tileId, z: zz, object: tile.object, direction: tile.direction } 
+          : tileId;
+        newTile.set(setter);
       }
     }
+    
+    // Update/create the cube at the target z-level
+    let targetTile = this.tiles[z][y][x];
+    if (!targetTile) {
+      targetTile = new Tile(this.scene, tileId, x, y, z);
+      this.tiles[z][y][x] = targetTile;
+    }
+    const setter: OptionalTileSetter = typeof tile === "object" 
+      ? { id: tileId, z: z, object: tile.object, direction: tile.direction } 
+      : tileId;
+    targetTile.set(setter);
 
     // Remove any cubes above this z-level
-    for (let zz = z + 1; zz <= Grid.MAX_Z; zz++) {
-      if (this.tiles[zz][y][x]) {
-        this.tiles[zz][y][x].set(null);
-        this.tiles[zz][y][x] = null as any;
+    for (let zz = z + 1; zz <= this.config.maxZ; zz++) {
+      const tile = this.tiles[zz][y][x];
+      if (tile) {
+        tile.set(null);
+        this.tiles[zz][y][x] = null;
       }
     }
   }
 
   setGrid(tiles: OptionalTileSetter[][]) {
     // Clear all existing tiles
-    for (let z = 0; z <= Grid.MAX_Z; z++) {
-      for (let y = 0; y < Grid.ROW; y++) {
-        for (let x = 0; x < Grid.COLUMN; x++) {
-          if (this.tiles[z][y][x]) {
-            this.tiles[z][y][x].set(null);
-            this.tiles[z][y][x] = null as any;
+    for (let z = 0; z <= this.config.maxZ; z++) {
+      for (let y = 0; y < this.config.row; y++) {
+        for (let x = 0; x < this.config.column; x++) {
+          const tile = this.tiles[z][y][x];
+          if (tile) {
+            tile.set(null);
+            this.tiles[z][y][x] = null;
           }
         }
       }
     }
 
     // Set new tiles (with stacking)
-    for (let y = 0; y < Grid.ROW; y++) {
-      for (let x = 0; x < Grid.COLUMN; x++) {
+    for (let y = 0; y < this.config.row; y++) {
+      for (let x = 0; x < this.config.column; x++) {
         const tileData = tiles[y][x];
         if (!tileData) continue;
 

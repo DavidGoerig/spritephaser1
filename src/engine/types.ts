@@ -8,6 +8,28 @@ export type TileSetter = {
 export type OptionalTileSetter = TileSetter | 0 | null;
 
 // ------------------------------------------------
+// TILE INTERFACE
+// ------------------------------------------------
+// Public API interface for Tile class to ensure type safety
+export interface ITile {
+  readonly x: number;
+  readonly y: number;
+  z: number;
+  object: number | null;
+  id: number | null;
+  depth: number;
+  worldX: number;
+  worldY: number;
+  isTopCube: boolean;
+  
+  containsPoint(screenX: number, screenY: number): boolean;
+  setHighlighted(on: boolean): void;
+  setTacticalMode(enabled: boolean): void;
+  setTacticalMode2(enabled: boolean): void;
+  updateView(): void;
+}
+
+// ------------------------------------------------
 // VIEW DIRECTION
 // ------------------------------------------------
 // Direction indices are ordered so they can be used

@@ -1,6 +1,8 @@
 # 🥧 phaser-isometric-engine
 ![image](https://github.com/FelipeIzolan/phaser-isometric-engine/assets/80170121/39ff340d-14e1-4523-a55f-d64be22134b2)
 
+A Phaser 3-based isometric engine for creating 3D-like tile-based games with support for stacked tiles, view rotation, tactical mode visualization, and more.
+
 ## 🚀 Getting Started
 
 ```
@@ -9,13 +11,68 @@ cd phaser-isometric-engine
 npm i && npm start
 ```
 - Configure the canvas in **main.ts**.
-- Configure the static's field inside grid in **grid.ts** .
-- Add **tiles** and **objects** sprites in **public/tiles** and **public/objects**.
+- Configure grid dimensions in **grid.ts** or use the configuration system.
+- Add **tiles** and **objects** sprites in **public/blocks** and **public/objects**.
 - Load and create **tiles** and **objects** in **game.ts**.
 
-## 📄 Documentation
+## 📐 Architecture Overview
 
-**Grid**
+The engine is organized into several key components:
+
+### Core Classes
+
+- **Grid** (`src/engine/grid.ts`): Main grid manager that coordinates all subsystems
+- **Tile** (`src/engine/tile.ts`): Represents a single tile/cube in the isometric grid
+- **Game** (`src/game.ts`): Phaser scene that sets up and manages the game
+
+### Manager Classes
+
+- **CoordinateTransformer** (`src/engine/coordinate-transformer.ts`): Handles coordinate transformations between grid, cartesian, and isometric space
+- **AnimationManager** (`src/engine/animation-manager.ts`): Manages sprite animations and object offsets
+- **TacticalModeManager** (`src/engine/tactical-mode-manager.ts`): Handles tactical mode visualization and ghost cube rendering
+
+### Coordinate System
+
+The engine uses a three-coordinate system:
+- **X, Y**: Grid coordinates (logical position on the 2D grid)
+- **Z**: Height/stack level (0 = ground, higher = stacked cubes)
+
+Coordinate transformations:
+1. Grid (X, Y) → Cartesian (based on view direction)
+2. Cartesian → Isometric screen coordinates
+3. Z-level affects vertical screen position
+
+### View Rotation
+
+The engine supports 4-directional view rotation (North, East, South, West). When rotating:
+- Grid coordinates are transformed based on the current direction
+- Tiles update their screen positions automatically
+- Sprite frames rotate to match the view direction
+
+## ⚙️ Configuration
+
+The engine now supports runtime configuration through the `GridConfig` interface:
+
+```typescript
+import { GridConfig } from "./engine/config";
+
+const customConfig: Partial<GridConfig> = {
+  width: 64,      // Tile width before isometric projection
+  height: 64,     // Tile height before isometric projection
+  column: 20,      // Grid width (X dimension)
+  row: 20,        // Grid height (Y dimension)
+  offsetX: 512,   // Screen X offset for centering
+  offsetY: 288,   // Screen Y offset for centering
+  offsetZ: 32,    // Vertical step per Z level
+  maxZ: 8,        // Maximum stack height
+};
+
+const grid = new Grid(scene, customConfig);
+```
+
+## 📄 API Documentation
+
+### Grid Class
 ```typescript
 tile_id: number //<- Tile id counter.
 object_id: number //<- Object id counter.
@@ -54,6 +111,31 @@ setTile(id: number) //<- Set tile by id.
 setObject(id: number) //<- Set object by id.
 set(setter: OptionalTileSetter) //<- Set (or not) a tile and object.
 ```
+
+## 🎮 Features
+
+- **3D Stacking**: Stack tiles vertically (Z-levels) for height variation
+- **View Rotation**: Rotate the isometric view in 4 directions (Q/E keys)
+- **Tactical Modes**: 
+  - Mode 1 (T key): Z-level visualization with color tints and labels
+  - Mode 2 (Y key): X-ray mode showing all cubes including hidden ones
+- **Interactive Editing**: Left-click to add cubes, right-click to remove
+- **Sprite Animations**: Support for animated tiles and objects
+- **Directional Sprites**: Automatic frame selection based on view direction
+- **Performance Optimizations**: 
+  - Sprite pooling for ghost cubes
+  - Early exit optimization in tile picking
+  - Efficient coordinate transformations
+
+## 🔧 Recent Improvements
+
+This codebase has been refactored to improve:
+- **Type Safety**: Proper TypeScript interfaces, no `any` types
+- **Architecture**: Separation of concerns with manager classes
+- **Performance**: Optimized algorithms and sprite pooling
+- **Maintainability**: Extracted constants, utility functions, and better organization
+- **Error Handling**: Comprehensive error handling for asset loading
+- **Configuration**: Runtime configuration system for grid dimensions
 
 ## 📜 License
 
