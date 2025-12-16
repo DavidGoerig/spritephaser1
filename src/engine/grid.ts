@@ -1,6 +1,7 @@
 import Game from "../game";
 import Tile from "./tile";
 
+import { cart2iso } from "../utils/math";
 import { Direction, type OptionalTileSetter } from "./types";
 
 export default class Grid {
@@ -39,6 +40,8 @@ export default class Grid {
   protected tiles: Tile[][][] = Array.from({ length: Grid.MAX_Z + 1 }, () =>
     Array.from({ length: Grid.ROW }, () => [])
   );
+  // Ghost cubes for tactical mode 2 (show empty positions) - 3D array [z][y][x]
+  protected ghostCubes: Phaser.GameObjects.Sprite[][][] = [];
 
   constructor(scene: Game) {
     this.scene = scene;
@@ -89,6 +92,33 @@ export default class Grid {
         }
       }
     }
+
+    // Update ghost cubes positions if tactical mode 2 is active
+    this.updateGhostCubesPositions();
+  }
+
+  /**
+   * Update ghost cubes positions when view rotates.
+   */
+  protected updateGhostCubesPositions() {
+    for (let z = 0; z < this.ghostCubes.length; z++) {
+      if (!this.ghostCubes[z]) continue;
+      for (let y = 0; y < this.ghostCubes[z].length; y++) {
+        if (!this.ghostCubes[z][y]) continue;
+        for (let x = 0; x < this.ghostCubes[z][y].length; x++) {
+          const ghost = this.ghostCubes[z][y][x];
+          if (ghost) {
+            const [cx, cy] = this.getRenderCartCoords(x, y);
+            let [sx, sy] = cart2iso(cx, cy);
+            sx = (sx / 2) + Grid.OFFSET_X;
+            sy = (sy / 2) + Grid.OFFSET_Y - Grid.OFFSET_Z * z;
+
+            ghost.setPosition(sx, sy);
+            ghost.setDepth(cx + cy + (Grid.OFFSET_Z * z) - 0.5);
+          }
+        }
+      }
+    }
   }
 
   /**
@@ -106,6 +136,124 @@ export default class Grid {
         }
       }
     }
+  }
+
+  /**
+   * Enable/disable tactical mode 2 for all tiles.
+   * Shows ALL cubes from z=0 to MAX_Z, even hidden ones, with transparency.
+   * Also creates ghost/sketch cubes for empty positions to show complete XYZ grid.
+   */
+  setTacticalMode2(enabled: boolean) {
+    if (enabled) {
+      // First, determine which cubes are top cubes
+      for (let y = 0; y < Grid.ROW; y++) {
+        for (let x = 0; x < Grid.COLUMN; x++) {
+          let topZ = -1;
+          // Find the top cube at this (x,y) that has a tileId (is actually placed)
+          for (let z = Grid.MAX_Z; z >= 0; z--) {
+            const tile = this.tiles[z][y][x];
+            if (tile && (tile as any).tileId !== null) {
+              topZ = z;
+              break;
+            }
+          }
+          // Mark all cubes at this position
+          for (let z = 0; z <= Grid.MAX_Z; z++) {
+            const tile = this.tiles[z][y][x];
+            if (tile) {
+              (tile as any).isTopCube = (z === topZ);
+            }
+          }
+        }
+      }
+
+      // Create ghost cubes for empty positions (air)
+      this.createGhostCubes();
+
+      // Apply tactical mode 2 to all existing tiles
+      for (let z = 0; z <= Grid.MAX_Z; z++) {
+        for (let y = 0; y < Grid.ROW; y++) {
+          for (let x = 0; x < Grid.COLUMN; x++) {
+            const tile = this.tiles[z][y][x];
+            if (tile) {
+              (tile as any).setTacticalMode2?.(true);
+            }
+          }
+        }
+      }
+    } else {
+      // Remove ghost cubes
+      this.removeGhostCubes();
+
+      // Restore normal visibility for all tiles
+      for (let z = 0; z <= Grid.MAX_Z; z++) {
+        for (let y = 0; y < Grid.ROW; y++) {
+          for (let x = 0; x < Grid.COLUMN; x++) {
+            const tile = this.tiles[z][y][x];
+            if (tile) {
+              (tile as any).setTacticalMode2?.(false);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * Create ghost/sketch cubes for all empty positions to show complete XYZ grid.
+   */
+  protected createGhostCubes() {
+    this.removeGhostCubes(); // Clear any existing ghost cubes
+
+    // Initialize 3D array
+    this.ghostCubes = Array.from({ length: Grid.MAX_Z + 1 }, () =>
+      Array.from({ length: Grid.ROW }, () => [])
+    );
+
+    for (let z = 0; z <= Grid.MAX_Z; z++) {
+      for (let y = 0; y < Grid.ROW; y++) {
+        for (let x = 0; x < Grid.COLUMN; x++) {
+          // Check if this position is empty (no tile or tile has no tileId)
+          const tile = this.tiles[z][y][x];
+          const isEmpty = !tile || (tile as any).tileId === null;
+
+          if (isEmpty) {
+            // Create ghost cube at this empty position using selector sprite
+            const [cx, cy] = this.getRenderCartCoords(x, y);
+            let [sx, sy] = cart2iso(cx, cy);
+            sx = (sx / 2) + Grid.OFFSET_X;
+            sy = (sy / 2) + Grid.OFFSET_Y - Grid.OFFSET_Z * z;
+
+            const ghost = this.scene.add.sprite(sx, sy, 'selector3') // Use selector sprite
+              .setAlpha(0.2) // Slightly more visible than before
+              .setTint(0x666666) // Dark gray tint
+              .setDepth(cx + cy + (Grid.OFFSET_Z * z) - 0.5) // Slightly behind real cubes
+              .setVisible(true);
+
+            this.ghostCubes[z][y][x] = ghost;
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * Remove all ghost cubes.
+   */
+  protected removeGhostCubes() {
+    for (let z = 0; z < this.ghostCubes.length; z++) {
+      if (!this.ghostCubes[z]) continue;
+      for (let y = 0; y < this.ghostCubes[z].length; y++) {
+        if (!this.ghostCubes[z][y]) continue;
+        for (let x = 0; x < this.ghostCubes[z][y].length; x++) {
+          const ghost = this.ghostCubes[z][y][x];
+          if (ghost) {
+            ghost.destroy();
+          }
+        }
+      }
+    }
+    this.ghostCubes = [];
   }
 
   protected createAnim(key: string, framerate?: number, repeat?: number, repeat_delay?: number) {

@@ -20,6 +20,7 @@ export default class Game extends Phaser.Scene {
   private infoText!: Phaser.GameObjects.Text;
   private hoverSelector!: Phaser.GameObjects.Image;
   private tacticalMode: boolean = false;
+  private tacticalMode2: boolean = false;  // Second tactical mode: show all cubes including hidden ones
 
   constructor() {
     super("Game");
@@ -38,6 +39,7 @@ export default class Game extends Phaser.Scene {
 
     // Selector sprite (highlight under hovered cube)
     this.load.image("selector", "/blocks/selector.png");
+    this.load.image("selector3", "/blocks/selector3.png");
   
     this.grid.loadObject(`/objects/1.png`, 5);
     this.grid.loadObject(`/objects/2.png`, 6);
@@ -169,12 +171,18 @@ export default class Game extends Phaser.Scene {
     });
 
     // ------------------------------------------------
-    // TACTICAL MODE TOGGLE
+    // TACTICAL MODE TOGGLES
     // ------------------------------------------------
-    // T key toggles tactical mode (z-level visualization)
+    // T key toggles tactical mode (z-level visualization with colors and labels)
     this.input.keyboard!.on("keydown-T", () => {
       this.tacticalMode = !this.tacticalMode;
       this.grid.setTacticalMode(this.tacticalMode);
+    });
+
+    // Y key toggles tactical mode 2 (show all cubes including hidden ones)
+    this.input.keyboard!.on("keydown-Y", () => {
+      this.tacticalMode2 = !this.tacticalMode2;
+      this.grid.setTacticalMode2(this.tacticalMode2);
     });
 
     // ------------------------------------------------

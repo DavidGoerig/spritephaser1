@@ -19,7 +19,10 @@ export default class Tile {
   protected tileDirection: Direction | StairDirection | null = null;  // Direction of this tile (Direction for regular, StairDirection for stairs)
   protected zLevelText: Phaser.GameObjects.Text | null = null;  // Text label showing z-level in tactical mode
   protected tacticalModeActive: boolean = false;  // Track if tactical mode is enabled
+  protected tacticalMode2Active: boolean = false;  // Track if tactical mode 2 is enabled (show all cubes)
   protected tacticalTint: number | null = null;  // Store tactical mode tint color
+  protected originalAlpha: number = 1.0;  // Store original alpha for mode 2
+  protected isTopCube: boolean = true;  // Track if this is the top cube at its position
   object: number | null;
 
   constructor(scene: Game, id: number, x: number, y: number, z?: number) {
@@ -153,6 +156,56 @@ export default class Tile {
       // Hide z-level text
       if (this.zLevelText) {
         this.zLevelText.setVisible(false);
+      }
+    }
+  }
+
+  /**
+   * Enable/disable tactical mode 2 visualization.
+   * Shows ALL cubes from z=0 to MAX_Z, even hidden ones, with transparency.
+   */
+  setTacticalMode2(enabled: boolean) {
+    this.tacticalMode2Active = enabled;
+
+    if (enabled) {
+      // Store original alpha if not already stored
+      if (this.originalAlpha === 1.0) {
+        this.originalAlpha = this.sprite.alpha;
+      }
+
+      // Make all cubes visible (even hidden ones)
+      this.sprite.setVisible(true);
+      this.ssprite.setVisible(true);
+
+      if (this.isTopCube) {
+        // Top cube: full opacity
+        this.sprite.setAlpha(1.0);
+        this.ssprite.setAlpha(1.0);
+      } else {
+        // Hidden cubes: semi-transparent based on z-level
+        // Lower z = more transparent (0.3 for z=0, 0.5 for z=1, etc.)
+        const alpha = Math.min(0.3 + (this.z * 0.15), 0.7);
+        this.sprite.setAlpha(alpha);
+        this.ssprite.setAlpha(alpha);
+      }
+
+      // Also apply tactical mode 1 colors if active
+      if (this.tacticalModeActive) {
+        if (this.tacticalTint !== null) {
+          this.sprite.setTint(this.tacticalTint);
+          this.ssprite.setTint(this.tacticalTint);
+        }
+      }
+    } else {
+      // Restore original visibility: only top cubes visible
+      if (!this.isTopCube) {
+        this.sprite.setVisible(false);
+        this.ssprite.setVisible(false);
+      } else {
+        this.sprite.setAlpha(this.originalAlpha);
+        this.ssprite.setAlpha(this.originalAlpha);
+        this.sprite.setVisible(true);
+        this.ssprite.setVisible(true);
       }
     }
   }
