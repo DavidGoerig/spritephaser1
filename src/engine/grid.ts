@@ -91,6 +91,23 @@ export default class Grid {
     }
   }
 
+  /**
+   * Enable/disable tactical mode for all tiles.
+   * Shows z-level visualization (tints and labels).
+   */
+  setTacticalMode(enabled: boolean) {
+    for (let z = 0; z <= Grid.MAX_Z; z++) {
+      for (let y = 0; y < Grid.ROW; y++) {
+        for (let x = 0; x < Grid.COLUMN; x++) {
+          const tile = this.tiles[z][y][x];
+          if (tile) {
+            (tile as any).setTacticalMode?.(enabled);
+          }
+        }
+      }
+    }
+  }
+
   protected createAnim(key: string, framerate?: number, repeat?: number, repeat_delay?: number) {
     this.scene.anims.create({ 
       key: key, 

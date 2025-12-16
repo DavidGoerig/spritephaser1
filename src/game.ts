@@ -19,6 +19,7 @@ export default class Game extends Phaser.Scene {
   private infoBg!: Phaser.GameObjects.Rectangle;
   private infoText!: Phaser.GameObjects.Text;
   private hoverSelector!: Phaser.GameObjects.Image;
+  private tacticalMode: boolean = false;
 
   constructor() {
     super("Game");
@@ -165,6 +166,15 @@ export default class Game extends Phaser.Scene {
       const cur = this.grid.direction;
       const next = (cur + 3) % 4; // counter‑clockwise
       this.grid.updateDirection(next as Direction);
+    });
+
+    // ------------------------------------------------
+    // TACTICAL MODE TOGGLE
+    // ------------------------------------------------
+    // T key toggles tactical mode (z-level visualization)
+    this.input.keyboard!.on("keydown-T", () => {
+      this.tacticalMode = !this.tacticalMode;
+      this.grid.setTacticalMode(this.tacticalMode);
     });
 
     // ------------------------------------------------
