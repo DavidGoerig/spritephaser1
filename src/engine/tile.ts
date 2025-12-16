@@ -3,7 +3,7 @@ import Grid from "./grid";
 import Phaser from "phaser";
 
 import { cart2iso } from "../utils/math";
-import type { OptionalTileSetter } from "./types";
+import { Direction, StairDirection, type OptionalTileSetter } from "./types";
 
 export default class Tile {
   protected grid: Grid;
@@ -16,6 +16,7 @@ export default class Tile {
   z: number;
 
   protected tileId: number | null = null;
+  protected tileDirection: Direction | StairDirection | null = null;  // Direction of this tile (Direction for regular, StairDirection for stairs)
   object: number | null;
 
   constructor(scene: Game, id: number, x: number, y: number, z?: number) {
@@ -122,16 +123,36 @@ export default class Tile {
   }
 
   protected applyDirectionFrame() {
-    const dirIndex = this.grid.direction as number;
+    let frameIndex: number;
+    
+    // For stairs (block id 2), combine the world-facing diagonal direction with view rotation
+    // StairDirection enum values (0-3) map to sprite frames:
+    //   0: SouthEastToNorthWest
+    //   1: SouthWestToNorthEast
+    //   2: NorthWestToSouthEast
+    //   3: NorthEastToSouthWest
+    if (this.tileId === 2 && this.tileDirection !== null) {
+      // Stairs: for diagonal directions, we need to subtract view rotation
+      // This correctly maps diagonal directions when rotating East/West
+      const stairDir = this.tileDirection as number;
+      const viewDir = this.grid.direction as number;
+      frameIndex = ((stairDir - viewDir + 4) % 4);
+    } else if (this.tileDirection !== null) {
+      // Other directional tiles: combine tile's facing direction with current view rotation
+      frameIndex = ((this.tileDirection as number) + this.grid.direction) % 4;
+    } else {
+      // Regular tiles: just rotate with view
+      frameIndex = this.grid.direction as number;
+    }
 
     // setFrame is safe even for single-frame textures;
     // it will just keep frame 0 in that case.
     if (this.sprite.texture.key) {
-      this.sprite.setFrame(dirIndex);
+      this.sprite.setFrame(frameIndex);
     }
 
     if (this.ssprite.texture.key) {
-      this.ssprite.setFrame(dirIndex);
+      this.ssprite.setFrame(frameIndex);
     }
   }
 
@@ -176,18 +197,21 @@ export default class Tile {
       this.sprite.setVisible(false);
       this.ssprite.setVisible(false);
       this.tileId = null;
+      this.tileDirection = null;
       this.object = null;
       return;
     }
 
     if (typeof setter == "object") {
       this.z = setter.z ?? 0;
+      this.tileDirection = setter.direction ?? null;
       this.setTile(setter.id);
 
       this.object = setter.object ?? null;
       setter.object ? this.setObject(setter.object):
                       this.ssprite.setVisible(false);
     } else {
+      this.tileDirection = null;
       this.setTile(setter)
     }
   }

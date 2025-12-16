@@ -10,17 +10,19 @@ export default class Grid {
   static WIDTH = 64;
   static HEIGHT = 64;
 
-  static COLUMN = 6;
-  static ROW = 6;
+  // Grid size (x = COLUMN, y = ROW)
+  static COLUMN = 10;
+  static ROW = 10;
 
   // Screen offsets to keep the map roughly centered.
   static OFFSET_X = 512;
   static OFFSET_Y = 288;
-  // Vertical step per "z" level. Increased a bit so
-  // higher blocks are visually separated.
-  static OFFSET_Z = 16;
+  // Vertical step per "z" level. Larger value so
+  // stacked cubes are clearly visible.
+  static OFFSET_Z = 32;
 
-  static MAX_Z = 2; 
+  // Maximum height (number of stacked levels)
+  static MAX_Z = 8; 
 
   tile_id: number = 0;
   object_id: number = 0;
@@ -33,7 +35,10 @@ export default class Grid {
   offsets: Map<string, number> = new Map();
   
   protected scene: Game;
-  protected tiles: Tile[][] = Array.from({ length: Grid.ROW }, () => []);
+  // 3D array: tiles[z][y][x] - allows multiple cubes stacked at same (x,y)
+  protected tiles: Tile[][][] = Array.from({ length: Grid.MAX_Z + 1 }, () =>
+    Array.from({ length: Grid.ROW }, () => [])
+  );
 
   constructor(scene: Game) {
     this.scene = scene;
@@ -74,11 +79,13 @@ export default class Grid {
     if (this.direction === dir) return;
     this.direction = dir;
 
-    for (let y = 0; y < Grid.ROW; y++) {
-      for (let x = 0; x < Grid.COLUMN; x++) {
-        const tile = this.tiles[y][x];
-        if (tile) {
-          tile.updateView();
+    for (let z = 0; z <= Grid.MAX_Z; z++) {
+      for (let y = 0; y < Grid.ROW; y++) {
+        for (let x = 0; x < Grid.COLUMN; x++) {
+          const tile = this.tiles[z][y][x];
+          if (tile) {
+            tile.updateView();
+          }
         }
       }
     }
@@ -122,9 +129,8 @@ export default class Grid {
   // Only execute these functions on scene.create.
   // ------------------------------------------------
    create() {
-     for (let y = 0; y < Grid.ROW; y++)
-      for (let x = 0; x < Grid.COLUMN; x++)
-        this.tiles[y][x] = new Tile(this.scene, 1, x, y);
+     // Initialize empty 3D grid (cubes will be added via setGrid)
+     // No need to pre-create tiles here anymore
    }
  
   createTileAnim(id: number, framerate?: number, repeat?: number, repeat_delay?: number) {
@@ -136,25 +142,45 @@ export default class Grid {
   }
   // ------------------------------------------------
 
-  getTile(x: number, y: number) {
-    return (x > -1 && x < Grid.COLUMN && y > -1 && y < Grid.ROW) ? this.tiles[y][x] : null;
+  getTile(x: number, y: number, z?: number): Tile | null {
+    if (x < 0 || x >= Grid.COLUMN || y < 0 || y >= Grid.ROW) return null;
+    if (z !== undefined) {
+      if (z < 0 || z > Grid.MAX_Z) return null;
+      return this.tiles[z][y][x] || null;
+    }
+    // If no z specified, return topmost cube at this (x,y)
+    for (let zz = Grid.MAX_Z; zz >= 0; zz--) {
+      if (this.tiles[zz][y][x]) {
+        return this.tiles[zz][y][x];
+      }
+    }
+    return null;
   }
-  
+
+  getTopTile(x: number, y: number): Tile | null {
+    return this.getTile(x, y);
+  }
+
   getTileByCartPos(x: number, y: number): Tile | null {
-    return this.getTile(Math.floor((x / Grid.WIDTH) + 1.2), Math.floor((y / Grid.HEIGHT) + 1.2)); 
+    const gx = Math.floor((x / Grid.WIDTH) + 1.2);
+    const gy = Math.floor((y / Grid.HEIGHT) + 1.2);
+    return this.getTile(gx, gy);
   }
 
   getTileByIsoPos(x: number, y: number): Tile | null {
     let best: Tile | null = null;
 
-    for (let gy = 0; gy < Grid.ROW; gy++) {
-      for (let gx = 0; gx < Grid.COLUMN; gx++) {
-        const tile = this.tiles[gy][gx];
-        if (!tile) continue;
+    // Check all z-levels, find topmost cube under cursor
+    for (let z = Grid.MAX_Z; z >= 0; z--) {
+      for (let gy = 0; gy < Grid.ROW; gy++) {
+        for (let gx = 0; gx < Grid.COLUMN; gx++) {
+          const tile = this.tiles[z][gy][gx];
+          if (!tile) continue;
 
-        if (tile.containsPoint(x, y)) {
-          if (!best || tile.depth > best.depth) {
-            best = tile;
+          if (tile.containsPoint(x, y)) {
+            if (!best || tile.depth > best.depth) {
+              best = tile;
+            }
           }
         }
       }
@@ -163,13 +189,73 @@ export default class Grid {
     return best;
   }
 
-  setTile(x: number, y: number, tile: OptionalTileSetter) {
-    this.tiles[y][x].set(tile);
+  /**
+   * Create or update a cube at (x, y, z).
+   * If z > 0, also creates cubes at all lower z-levels up to z.
+   */
+  setTile(x: number, y: number, z: number, tile: OptionalTileSetter) {
+    if (x < 0 || x >= Grid.COLUMN || y < 0 || y >= Grid.ROW || z < 0 || z > Grid.MAX_Z) return;
+
+    if (!tile || tile === 0 || tile === null) {
+      // Remove cube at this z-level and all above
+      for (let zz = z; zz <= Grid.MAX_Z; zz++) {
+        if (this.tiles[zz][y][x]) {
+          this.tiles[zz][y][x].set(null);
+          this.tiles[zz][y][x] = null as any;
+        }
+      }
+      return;
+    }
+
+    const tileId = typeof tile === "object" ? (tile.id ?? 1) : tile;
+    if (!tileId || tileId === 0) return;
+
+    // Create cubes from z=0 up to the specified z
+    for (let zz = 0; zz <= z; zz++) {
+      if (!this.tiles[zz][y][x]) {
+        this.tiles[zz][y][x] = new Tile(this.scene, tileId, x, y, zz);
+      }
+      // Update the cube at this z-level
+      // Preserve direction field (important for stairs with StairDirection)
+      const setter: OptionalTileSetter = typeof tile === "object" 
+        ? { id: tileId, z: zz, object: tile.object, direction: tile.direction } 
+        : tileId;
+      if (this.tiles[zz][y][x]) {
+        this.tiles[zz][y][x].set(setter);
+      }
+    }
+
+    // Remove any cubes above this z-level
+    for (let zz = z + 1; zz <= Grid.MAX_Z; zz++) {
+      if (this.tiles[zz][y][x]) {
+        this.tiles[zz][y][x].set(null);
+        this.tiles[zz][y][x] = null as any;
+      }
+    }
   }
 
   setGrid(tiles: OptionalTileSetter[][]) {
-     for (let y = 0; y < Grid.ROW; y++)
-      for (let x = 0; x < Grid.COLUMN; x++)
-        this.tiles[y][x].set(tiles[y][x]);
+    // Clear all existing tiles
+    for (let z = 0; z <= Grid.MAX_Z; z++) {
+      for (let y = 0; y < Grid.ROW; y++) {
+        for (let x = 0; x < Grid.COLUMN; x++) {
+          if (this.tiles[z][y][x]) {
+            this.tiles[z][y][x].set(null);
+            this.tiles[z][y][x] = null as any;
+          }
+        }
+      }
+    }
+
+    // Set new tiles (with stacking)
+    for (let y = 0; y < Grid.ROW; y++) {
+      for (let x = 0; x < Grid.COLUMN; x++) {
+        const tileData = tiles[y][x];
+        if (!tileData) continue;
+
+        const z = typeof tileData === "object" ? (tileData.z ?? 0) : 0;
+        this.setTile(x, y, z, tileData);
+      }
+    }
   }
 }

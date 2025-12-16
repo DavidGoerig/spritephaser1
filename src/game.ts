@@ -2,7 +2,7 @@ import Grid from "./engine/grid";
 
 import Mouse from "./utils/mouse";
 import Camera from "./utils/camera";
-import { Direction } from "./engine/types";
+import { Direction, StairDirection, type OptionalTileSetter } from "./engine/types";
 
 export default class Game extends Phaser.Scene {
   grid = new Grid(this);
@@ -89,16 +89,58 @@ export default class Game extends Phaser.Scene {
     // this.grid.createObjectAnim(3, 6);
     // ------------------------------------------------
 
-    // Simple demo map using the new 64x64 blocks.
-    // IDs 1..5 correspond to blocks_1..blocks_5.png
-    this.grid.setGrid([
-      [1, 1, 1, 1, 1, 1],
-      [1, 2, 2, 2, 2, 1],
-      [1, 2, 3, 3, 2, 1],
-      [1, 2, 3, 4, 2, 1],
-      [1, 2, 2, 2, 2, 1],
-      [1, 1, 1, 1, 1, 1],
-    ]);
+    // ------------------------------------------------
+    // SIMPLE TEST MAP: 10x10 with platforms and adjacent stairs
+    // Stairs are placed right next to platforms, pointing toward them
+    // ------------------------------------------------
+    const map: OptionalTileSetter[][] = Array.from({ length: Grid.ROW }, () =>
+      Array.from({ length: Grid.COLUMN }, () => 1 as OptionalTileSetter)
+    );
+
+    // Helper to set a rectangular platform of cubes at height z
+    const platform = (x0: number, y0: number, w: number, h: number, z: number) => {
+      for (let y = y0; y < y0 + h; y++) {
+        for (let x = x0; x < x0 + w; x++) {
+          if (x >= 0 && x < Grid.COLUMN && y >= 0 && y < Grid.ROW)
+            map[y][x] = { id: 1, z };
+        }
+      }
+    };
+
+    // Helper to place a stair adjacent to platform, pointing toward it
+    const stair = (x: number, y: number, z: number, dir: StairDirection) => {
+      if (x >= 0 && x < Grid.COLUMN && y >= 0 && y < Grid.ROW)
+        map[y][x] = { id: 2, z, direction: dir };
+    };
+
+    // Base floor already z=0 everywhere from initialization.
+
+    // Platform 1: 2x2 at z=1 (center)
+    // Platform at (4,4) to (5,5)
+    platform(4, 4, 2, 2, 1);
+    // Stair 1: adjacent to platform at same level (z=1), pointing toward platform
+    // Need block below at z=0 to reach the stair
+    platform(4, 6, 1, 1, 0); // Block foundation below stair
+    stair(4, 6, 1, StairDirection.SouthWestToNorthEast); // Stair at z=1, same level as platform
+
+    // Platform 2: 2x2 at z=2 (top-left)
+    // Platform at (1,1) to (2,2)
+    platform(1, 1, 2, 2, 2);
+    // Stair 2: adjacent to platform at same level (z=2), pointing toward platform
+    // Need blocks below at z=0 and z=1 to reach the stair
+    platform(1, 3, 1, 1, 0); // Block at z=0
+    platform(1, 3, 1, 1, 1); // Block at z=1
+    stair(1, 3, 2, StairDirection.SouthWestToNorthEast); // Stair at z=2, same level as platform
+
+    // Platform 3: 2x2 at z=1 (bottom-right)
+    // Platform at (7,7) to (8,8)
+    platform(7, 7, 2, 2, 1);
+    // Stair 3: adjacent to platform at same level (z=1), pointing toward platform
+    // Need block below at z=0 to reach the stair
+    platform(7, 6, 1, 1, 0); // Block foundation below stair
+    stair(7, 6, 1, StairDirection.SouthEastToNorthWest); // Stair at z=1, same level as platform
+
+    this.grid.setGrid(map);
 
     // ------------------------------------------------
     // VIEW ROTATION CONTROLS
@@ -123,6 +165,34 @@ export default class Game extends Phaser.Scene {
       const cur = this.grid.direction;
       const next = (cur + 3) % 4; // counter‑clockwise
       this.grid.updateDirection(next as Direction);
+    });
+
+    // ------------------------------------------------
+    // SCULPTING CONTROLS (height edit on click)
+    // ------------------------------------------------
+    // Left click: add cube on top of stack
+    // Right click: remove top cube from stack
+    this.input.on("pointerup", (pointer: Phaser.Input.Pointer) => {
+      const tile = this.grid.getTileByIsoPos(pointer.worldX, pointer.worldY);
+      if (!tile) return;
+
+      const topTile = this.grid.getTopTile(tile.x, tile.y);
+      const currentHeight = topTile ? topTile.z : -1;
+
+      // 0 = left, 2 = right mouse button
+      if (pointer.button === 0) {
+        // Add cube on top
+        if (currentHeight < Grid.MAX_Z) {
+          const newZ = currentHeight + 1;
+          const tileId = tile.id ?? 1;
+          this.grid.setTile(tile.x, tile.y, newZ, tileId);
+        }
+      } else if (pointer.button === 2) {
+        // Remove top cube
+        if (currentHeight >= 0) {
+          this.grid.setTile(tile.x, tile.y, currentHeight, null);
+        }
+      }
     });
   }
 
