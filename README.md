@@ -1,145 +1,162 @@
-# 🥧 phaser-isometric-engine
-![image](https://github.com/FelipeIzolan/phaser-isometric-engine/assets/80170121/39ff340d-14e1-4523-a55f-d64be22134b2)
+# Projet Élémentaire — MOBA/RPG Tactique Isométrique
 
-A Phaser 3-based isometric engine for creating 3D-like tile-based games with support for stacked tiles, view rotation, tactical mode visualization, and more.
+Un jeu tactique sur grille isométrique avec 22 espèces, 387 personnages, 18 éléments et un pipeline de production d'assets 3D intégré.
 
-## 🚀 Getting Started
+---
 
-```
-git clone https://github.com/FelipeIzolan/phaser-isometric-engine.git
-cd phaser-isometric-engine
-npm i && npm start
-```
-- Configure the canvas in **main.ts**.
-- Configure grid dimensions in **grid.ts** or use the configuration system.
-- Add **tiles** and **objects** sprites in **public/blocks** and **public/objects**.
-- Load and create **tiles** and **objects** in **game.ts**.
+## Vision du jeu
 
-## 📐 Architecture Overview
+Un MOBA/RPG tactique au tour par tour qui fusionne la lisibilité d'un échiquier isométrique avec la profondeur d'un univers de rôle. La grille de blocs est sculptable en 3D (Z-levels, escaliers, reliefs). Chaque personnage appartient à une **espèce**, une **classe**, une **faction** et un ou deux **éléments** parmi 18.
 
-The engine is organized into several key components:
+**4 factions** :
 
-### Core Classes
+| Faction | Région | Idéologie |
+|---|---|---|
+| Empire du Voile d'Équité | Varkhôl | Contrôle centralisé des Élus |
+| Néréides | Thalassyr | Autonomie par les profondeurs |
+| Dissidentes | Underground | Résistance, entraide, survie |
+| Hommes-Liens | Isthme | Neutralité mercantile |
 
-- **Grid** (`src/engine/grid.ts`): Main grid manager that coordinates all subsystems
-- **Tile** (`src/engine/tile.ts`): Represents a single tile/cube in the isometric grid
-- **Game** (`src/game.ts`): Phaser scene that sets up and manages the game
+**18 éléments** : Feu · Dragon · Eau · Gravité · Glace · Fée · Spectre · Électrique · Vent · Plante · Poison · Sol · Insecte · Ténèbres · Psy · Combat · Normal · Roche
 
-### Manager Classes
+**13 classes** : Tank · Assassin · Guerrier · Mage-DPS · Mage-AoE · Enchanteur-Soutien · Enchanteur-Capteur · Rôdeur · Berserk · Paladin · Invocateur · Métamorphe · Artilleur
 
-- **CoordinateTransformer** (`src/engine/coordinate-transformer.ts`): Handles coordinate transformations between grid, cartesian, and isometric space
-- **AnimationManager** (`src/engine/animation-manager.ts`): Manages sprite animations and object offsets
-- **TacticalModeManager** (`src/engine/tactical-mode-manager.ts`): Handles tactical mode visualization and ghost cube rendering
+---
 
-### Coordinate System
+## Architecture
 
-The engine uses a three-coordinate system:
-- **X, Y**: Grid coordinates (logical position on the 2D grid)
-- **Z**: Height/stack level (0 = ground, higher = stacked cubes)
+Le projet est composé de trois couches indépendantes qui forment le pipeline complet : moteur de jeu → outil de production d'assets → pipeline de génération 3D.
 
-Coordinate transformations:
-1. Grid (X, Y) → Cartesian (based on view direction)
-2. Cartesian → Isometric screen coordinates
-3. Z-level affects vertical screen position
+### 1. Moteur Phaser 3 (`src/`)
 
-### View Rotation
+Moteur TypeScript/Phaser 3 avec rendu isométrique temps-réel.
 
-The engine supports 4-directional view rotation (North, East, South, West). When rotating:
-- Grid coordinates are transformed based on the current direction
-- Tiles update their screen positions automatically
-- Sprite frames rotate to match the view direction
+- Grille 3D `tiles[z][y][x]` avec stacking, escaliers et rotation 4 directions (N/E/S/W)
+- `CoordinateTransformer` — math isométrique : grille ↔ écran, depth sort, hit-test souris
+- `AnimationManager` — animations de tuiles via spritesheets Phaser
+- `TacticalModeManager` — overlay tactique : tints par Z-level (mode 1), ghost cubes X-ray (mode 2)
+- Sculpt interactif : clic gauche ajoute, clic droit supprime, Q/E pivote, W/S monte/descend
 
-## ⚙️ Configuration
+### 2. Character Bank (`public/characters/`)
 
-The engine now supports runtime configuration through the `GridConfig` interface:
+Outil de production interne accessible via navigateur sur `/characters/`. Pas de bundler — ES modules purs avec importmap Three.js.
 
-```typescript
-import { GridConfig } from "./engine/config";
+**Viewer 3D (`viewer.js`)**
+- Caméra orthographique isométrique, 4 directions (SE/SW/NW/NE — convention pixel art)
+- Chargement GLB/FBX/BVH avec retargeting cross-squelette (Mixamo, RPG Mecanim, BVH Bandai, BVH CMU)
+- 19 slots d'animation : `idle, walk, run, jump, swim, fly, attack-01→10, hurt, die, portrait`
+- Export spritesheet PNG 512×256 (8 frames × 4 directions), pixel art nearest-neighbour
+- Attachement d'armes sur bone `RightHand`/`LeftHand` avec éditeur de grip (position/rotation/scale) et auto-détection du manche par analyse de section transversale des vertices
 
-const customConfig: Partial<GridConfig> = {
-  width: 64,      // Tile width before isometric projection
-  height: 64,     // Tile height before isometric projection
-  column: 20,      // Grid width (X dimension)
-  row: 20,        // Grid height (Y dimension)
-  offsetX: 512,   // Screen X offset for centering
-  offsetY: 288,   // Screen Y offset for centering
-  offsetZ: 32,    // Vertical step per Z level
-  maxZ: 8,        // Maximum stack height
-};
+**Interface UI (`app.js`)**
+- Liste de 387 personnages avec filtres (élément, classe, faction, espèce, texte)
+- Fiche personnage : assets (19 slots avec statut ✓/○), lore, viewer intégré
+- Picker d'animation en 4 onglets (Modèle / Banque Meshy / Sauvegardées / FBX-BVH)
+- Drag & drop de fichiers directement sur le viewer ou les slots
+- Banque de 40 animations Meshy + bibliothèque ~150 fichiers FBX/BVH
+- Persistance JSON via middleware Vite `/api/save-file` (écriture dans `public/` sans redémarrage)
 
-const grid = new Grid(scene, customConfig);
-```
+### 3. Pipeline Python (`scripts/pipeline/`)
 
-## 📄 API Documentation
+Génération automatisée de modèles 3D et de spritesheets.
 
-### Grid Class
-```typescript
-tile_id: number //<- Tile id counter.
-object_id: number //<- Object id counter.
+- **Meshy AI v2** — génération GLB (preview ~$0.50 + refine ~$2.00 = ~$2.50/personnage)
+- SQLite `pipeline.db` pour l'état par personnage (`pending → generating → glb_ready → done`)
+- Rendu headless optionnel via **Blender 3.6+** (Cycles, 64 samples, éclairage 3 points)
+- Coût estimé total : ~$585 pour 234 personnages
 
-anims: Set<string> //<- Set of sprites that has animation.
-offsets: Map<string, number> //<- Y-offset Map of objects-sprite.
+---
 
-loadTile(src: string, fw?: number, fh?: number) //<- Load the entire sprite or a frame of the sprite. (Tile)
-loadObject(src: string, fw?: number, fh?: number) //<- Load the entire sprite or a frame of the sprite. (Object)
+## Démarrage rapide
 
-create() //<- Create the tiles on the grid.
-createTileAnim(id: number, framerate?: number, repeat?: number, repeat_delay?: number) //<- Create an animation. (Tile)
-createObjectAnim(id: number, framerate?: number, repeat?: number, repeat_delay?: number) //<- Create an animation. (Object)
-
-getTile(x: number, y: number) //<- Get tile by x and y.
-getTileByCartPos(x: number, y: number): Tile | null //<- Get tile by cartesian position.
-getTileByIsoPos(x: number, y: number): Tile | null //<- Get tile by isometric position.
-
-// Look engine/types.ts
-setTile(x: number, y: number, tile: OptionalTileSetter) //<- Set tile.
-setGrid(tiles: OptionalTileSetter[][]) //<- Set grid.
+```bash
+npm install
+npm run start          # Vite dev server → http://localhost:5173
+                       # Character Bank → http://localhost:5173/characters/
 ```
 
-**Tile**
-```typescript
-x: number //<- Grid tile x.
-y: number //<- Grid tile y.
-z: number //<- Grid tile z.
-object: number | null //<- Grid tile object.
-
-worldX: number //<- Tile world position x.
-worldY: number //<- Tile world position y.
-depth: number //<- Tile depth.
-
-setTile(id: number) //<- Set tile by id.
-setObject(id: number) //<- Set object by id.
-set(setter: OptionalTileSetter) //<- Set (or not) a tile and object.
+```bash
+npm run build          # Build production (tsc + Vite + terser)
+npm run test           # Tests vitest (watch mode)
+npm run test:coverage  # Couverture v8
+npx vitest run src/engine/coordinate-transformer.test.ts  # Un seul fichier
 ```
 
-## 🎮 Features
+---
 
-- **3D Stacking**: Stack tiles vertically (Z-levels) for height variation
-- **View Rotation**: Rotate the isometric view in 4 directions (Q/E keys)
-- **Tactical Modes**: 
-  - Mode 1 (T key): Z-level visualization with color tints and labels
-  - Mode 2 (Y key): X-ray mode showing all cubes including hidden ones
-- **Interactive Editing**: Left-click to add cubes, right-click to remove
-- **Sprite Animations**: Support for animated tiles and objects
-- **Directional Sprites**: Automatic frame selection based on view direction
-- **Performance Optimizations**: 
-  - Sprite pooling for ghost cubes
-  - Early exit optimization in tile picking
-  - Efficient coordinate transformations
+## Structure
 
-## 🔧 Recent Improvements
+```
+src/
+  game.ts                     — Scene Phaser (inputs clavier/souris, update loop)
+  engine/
+    grid.ts                   — Grille 3D, orchestrateur principal
+    tile.ts                   — Sprite de tuile individuelle
+    coordinate-transformer.ts — Math isométrique (grille ↔ écran, depth sort)
+    animation-manager.ts      — Animations Phaser (spritesheets)
+    tactical-mode-manager.ts  — Overlay tactique (tints + ghost cubes)
+    config.ts                 — Config grille par défaut (10×10, maxZ=8)
+    types.ts                  — Direction, StairDirection, enums
+    constants.ts              — Constantes UI et animation
 
-This codebase has been refactored to improve:
-- **Type Safety**: Proper TypeScript interfaces, no `any` types
-- **Architecture**: Separation of concerns with manager classes
-- **Performance**: Optimized algorithms and sprite pooling
-- **Maintainability**: Extracted constants, utility functions, and better organization
-- **Error Handling**: Comprehensive error handling for asset loading
-- **Configuration**: Runtime configuration system for grid dimensions
+public/characters/
+  app.js                      — UI Character Bank (~1600 lignes)
+  viewer.js                   — GLBViewer Three.js (retargeting, capture, armes)
+  characters.json             — Registre source de vérité (387 personnages)
+  meshy-anims/                — 40 GLBs d'animations Meshy natives
+  anim-bank/                  — AnimationClips sauvegardés (JSON Three.js)
+  anim-library/               — Bibliothèque FBX/BVH par slot (~150 fichiers)
 
-## 📜 License
+public/weapons/
+  weapons.json                — Registre des armes (id, name, grip)
 
-- [phaser-isometric-engine](https://github.com/FelipeIzolan/phaser-isometric-engine) - MIT
-- [phaser](https://github.com/phaserjs/phaser) - MIT
-- [vite](https://github.com/vitejs/vite) - MIT
-- [tiny-blocks](https://dani-maccari.itch.io/tiny-blocks-isometric-pixel-assets)
+src/data/characters/          — 387 fichiers JSON (assets + animSlots)
+
+scripts/pipeline/
+  meshy_pipeline.py           — Génération GLB via Meshy AI v2
+  stage2_render_sprites.py    — Rendu Blender headless
+  run_pipeline.py             — Orchestrateur complet
+```
+
+---
+
+## Données
+
+| | Quantité |
+|---|---|
+| Personnages définis | 387 |
+| Espèces | 22 |
+| Classes | 13 |
+| Factions | 4 |
+| Éléments | 18 |
+| Animations Meshy | 40 GLBs |
+| Animations FBX/BVH | ~150 fichiers |
+
+---
+
+## Documentation
+
+- [`SPEC.md`](SPEC.md) — Analyse fonctionnelle complète du Character Bank (v2.0, avril 2026)
+- [`SPRITESHEET_SPEC.md`](SPRITESHEET_SPEC.md) — Format des spritesheets pour le moteur Phaser
+- [`LORE.md`](LORE.md) — Lore et backgrounds des 387 personnages
+- [`LORE_CANON.md`](LORE_CANON.md) — Canon narratif de l'univers
+- [`CLAUDE.md`](CLAUDE.md) — Guide pour Claude Code (commandes, architecture interne)
+
+---
+
+## Roadmap
+
+1. Export auto des spritesheets vers `public/` sans intervention manuelle
+2. Persistance de `characters.json` via `/api/save-file` à chaque édition
+3. Connexion `characters.json` → `AnimationManager` Phaser (loader dédié)
+4. Lazy loading de la banque Meshy (40 GLBs chargés à la demande)
+5. Validation automatique des animations (détection de déformations)
+
+---
+
+## Licences
+
+- Moteur isométrique basé sur [phaser-isometric-engine](https://github.com/FelipeIzolan/phaser-isometric-engine) — MIT
+- [Phaser 3](https://github.com/phaserjs/phaser) — MIT
+- [Three.js](https://github.com/mrdoob/three.js) — MIT
+- [Vite](https://github.com/vitejs/vite) — MIT

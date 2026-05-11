@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sword-01",
+    "name": "Épée courte",
+    "glb": "weapons/sword-01/model.glb",
+    "grip": {
+      "position": [
+        0,
+        -0.12,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "scale": 2.16
+    }
+  },
+  {
+    "id": "meshy-ai-sword-0429214825-texture",
+    "name": "Meshy AI Sword 0429214825 texture",
+    "glb": "weapons/meshy-ai-sword-0429214825-texture/model.glb",
+    "grip": {
+      "position": [
+        0.0545,
+        1,
+        0.0404
+      ],
+      "rotation": [
+        0,
+        0,
+        1.5708
+      ],
+      "scale": 44.7618
+    }
+  }
+]

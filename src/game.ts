@@ -22,6 +22,12 @@ export default class Game extends Phaser.Scene {
   private hoverSelector!: Phaser.GameObjects.Image;
   private tacticalMode: boolean = false;
   private tacticalMode2: boolean = false;  // Second tactical mode: show all cubes including hidden ones
+  
+  // Cursor position for keyboard navigation
+  private cursorX: number = 5;  // Start at center of grid
+  private cursorY: number = 5;
+  private cursorZ: number = 0;  // Current Z level
+  private useKeyboardCursor: boolean = false;  // Track if keyboard was used recently
 
   constructor() {
     super("Game");
@@ -199,6 +205,106 @@ export default class Game extends Phaser.Scene {
     });
 
     // ------------------------------------------------
+    // CURSOR MOVEMENT WITH ARROW KEYS
+    // ------------------------------------------------
+    const arrowKeys = this.input.keyboard!.addKeys({
+      up: Phaser.Input.Keyboard.KeyCodes.UP,
+      down: Phaser.Input.Keyboard.KeyCodes.DOWN,
+      left: Phaser.Input.Keyboard.KeyCodes.LEFT,  
+      right: Phaser.Input.Keyboard.KeyCodes.RIGHT,
+    }) as {
+      up: Phaser.Input.Keyboard.Key;
+      down: Phaser.Input.Keyboard.Key;
+      left: Phaser.Input.Keyboard.Key;
+      right: Phaser.Input.Keyboard.Key;
+    };
+
+    arrowKeys.up.on("down", () => {
+      this.useKeyboardCursor = true;
+      if (this.cursorY > 0) {
+        this.cursorY--;
+      }
+    });
+
+    arrowKeys.down.on("down", () => {
+      this.useKeyboardCursor = true;
+      if (this.cursorY < Grid.ROW - 1) {
+        this.cursorY++;
+      }
+    });
+
+    arrowKeys.left.on("down", () => {
+      this.useKeyboardCursor = true;
+      if (this.cursorX > 0) {
+        this.cursorX--;
+      }
+    });
+
+    arrowKeys.right.on("down", () => {
+      this.useKeyboardCursor = true;
+      if (this.cursorX < Grid.COLUMN - 1) {
+        this.cursorX++;
+      }
+    });
+
+    // ------------------------------------------------
+    // CURSOR VERTICAL MOVEMENT (UP/DOWN Z LEVELS)
+    // ------------------------------------------------
+    // Use W/S keys for up/down movement (most intuitive)
+    const verticalKeys = this.input.keyboard!.addKeys({
+      upZ: Phaser.Input.Keyboard.KeyCodes.W,
+      downZ: Phaser.Input.Keyboard.KeyCodes.S,
+      pageUp: Phaser.Input.Keyboard.KeyCodes.PAGE_UP,
+      pageDown: Phaser.Input.Keyboard.KeyCodes.PAGE_DOWN,
+      plus: Phaser.Input.Keyboard.KeyCodes.PLUS,
+      minus: Phaser.Input.Keyboard.KeyCodes.MINUS,
+    }) as {
+      upZ: Phaser.Input.Keyboard.Key;
+      downZ: Phaser.Input.Keyboard.Key;
+      pageUp: Phaser.Input.Keyboard.Key;
+      pageDown: Phaser.Input.Keyboard.Key;
+      plus: Phaser.Input.Keyboard.Key;
+      minus: Phaser.Input.Keyboard.Key;
+    };
+
+    const moveUp = () => {
+      this.useKeyboardCursor = true;
+      if (this.cursorZ < Grid.MAX_Z) {
+        this.cursorZ++;
+      }
+    };
+
+    const moveDown = () => {
+      this.useKeyboardCursor = true;
+      if (this.cursorZ > 0) {
+        this.cursorZ--;
+      }
+    };
+
+    // W key: move up (increase Z)
+    verticalKeys.upZ.on("down", moveUp);
+    
+    // S key: move down (decrease Z)
+    verticalKeys.downZ.on("down", moveDown);
+    
+    // Page Up: move up (increase Z)
+    verticalKeys.pageUp.on("down", moveUp);
+    
+    // Page Down: move down (decrease Z)
+    verticalKeys.pageDown.on("down", moveDown);
+    
+    // + key: move up (increase Z)
+    verticalKeys.plus.on("down", moveUp);
+    
+    // - key: move down (decrease Z)
+    verticalKeys.minus.on("down", moveDown);
+
+    // Reset to mouse cursor when mouse moves
+    this.input.on("pointermove", () => {
+      this.useKeyboardCursor = false;
+    });
+
+    // ------------------------------------------------
     // SCULPTING CONTROLS (height edit on click)
     // ------------------------------------------------
     // Left click: add cube on top of stack
@@ -228,8 +334,30 @@ export default class Game extends Phaser.Scene {
   }
 
   update() {
-    const pointer = this.input.mousePointer;
-    const tile = this.grid.getTileByIsoPos(pointer.worldX, pointer.worldY);
+    let tile: import("./engine/tile").default | null = null;
+
+    // Use keyboard cursor if keyboard was used, otherwise use mouse position
+    if (this.useKeyboardCursor) {
+      // Try to get tile at cursor Z level, if not found, get top tile
+      tile = this.grid.getTile(this.cursorX, this.cursorY, this.cursorZ);
+      if (!tile) {
+        // If no tile at cursor Z, get top tile and adjust cursor Z
+        tile = this.grid.getTile(this.cursorX, this.cursorY);
+        if (tile) {
+          this.cursorZ = tile.z;
+        }
+      }
+    } else {
+      const pointer = this.input.mousePointer;
+      tile = this.grid.getTileByIsoPos(pointer.worldX, pointer.worldY);
+      
+      // Update cursor position to match mouse position if we have a valid tile
+      if (tile) {
+        this.cursorX = tile.x;
+        this.cursorY = tile.y;
+        this.cursorZ = tile.z;
+      }
+    }
 
     // Clear previous hover tint if tile changed
     if (this.hoverTile && this.hoverTile !== tile) {

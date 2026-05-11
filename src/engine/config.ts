@@ -67,3 +67,5 @@ export function validateConfig(config: Partial<GridConfig>): GridConfig {
   return validated;
 }
 
+
+

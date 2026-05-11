@@ -1,0 +1,450 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(44, 44, 44, 0.85);
+    border-bottom: 1px solid #444;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.logo-area {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+}
+.subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    color: #b0b0b0;
+    margin-top: 2px;
+}
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.header .controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    filter: invert(60%);
+    pointer-events: none;
+}
+
+.search-bar {
+    width: 20rem;
+    height: 38px;
+    box-sizing: border-box;
+    padding: 0.6rem 2.75rem 0.6rem 2.5rem;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #f0f0f0;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #888;
+    background-color: #3a3a3a;
+}
+
+.search-bar::placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+
+#clear-search-btn {
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #f0f0f0;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 1;
+    padding: 0 4px;
+}
+
+#clear-search-btn:hover {
+    color: #fff;
+}
+
+.color-picker-container {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+#color-picker-btn {
+    background: transparent;
+    border: none;
+    color: #f0f0f0;
+    padding: 9px;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    box-sizing: border-box;
+}
+
+#color-picker-btn:hover {
+    background: #444;
+}
+
+#color-picker-btn img {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+#clear-color-btn {
+    background: transparent;
+    border: none;
+    color: #f0f0f0;
+    padding: 0 12px;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 1;
+    border-left: 1px solid #555;
+    height: 38px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+#clear-color-btn:hover {
+    background: #444;
+}
+
+.content-wrapper {
+    padding-top: 80px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #2c2c2c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card img.paused {
+    transform: scale(4);
+    transform-origin: top left;
+}
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.color-dots {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    display: flex;
+    gap: 4px;
+}
+
+.color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.details-panel {
+    position: fixed;
+    top: 0;
+    right: -450px;
+    width: 450px;
+    height: 100%;
+    background-color: #2c2c2c;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.details-panel.open {
+    right: 0;
+}
+
+.details-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #f0f0f0;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.shelf-header {
+    margin-bottom: 1.5rem;
+}
+
+.prompt-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #e0e0e0;
+}
+
+.prompt-detail {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    line-height: 1.5;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.asset-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    flex-grow: 1;
+}
+
+.asset-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.asset-container img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.download-icon {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    border-radius: 50%;
+    line-height: 0;
+    transition: background-color 0.2s;
+}
+
+.download-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+}
+
+.backdrop.visible {
+    display: block;
+}
+
+.github-link {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    color: #f0f0f0;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.github-link:hover {
+    opacity: 1;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .header .controls {
+        width: 100%;
+    }
+
+    .search-container {
+        flex-grow: 1;
+    }
+
+    .search-bar {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px; /* Prevent iOS zoom on focus */
+    }
+    
+    .content-wrapper {
+        padding-top: 130px; /* Adjust for new header height */
+    }
+
+    .gallery {
+        max-width: none;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .details-panel {
+        right: auto;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+        padding-top: 4rem;
+    }
+
+    .details-panel.open {
+        transform: translateY(0);
+        right: auto;
+    }
+
+    .asset-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .prompt-name {
+        font-size: 1.2rem;
+    }
+
+    .prompt-detail {
+        font-size: 0.85rem;
+    }
+
+    .card img.paused {
+        transform: none; /* Disable zoom effect on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .card .overlay {
+        font-size: 0.8rem;
+    }
+
+    .content-wrapper {
+        padding-top: 120px;
+    }
+    
+    .header {
+        padding: 0.75rem 1rem;
+    }
+} 

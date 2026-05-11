@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Headless Spritesheet Renderer</title>
+  <style>
+    body { margin: 0; background: transparent; }
+    canvas { display: block; }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="c" width="640" height="360"></canvas>
+  <script type="module">
+    import { GLBViewer } from './viewer.js';
+
+    const viewer = new GLBViewer(document.getElementById('c'));
+
+    /**
+     * Load a GLB model (and optional separate animation bank GLB).
+     * @param {string} modelUrl - URL served by the static file server
+     * @param {string} [animBankUrl] - optional animation bank GLB
+     */
+    window.loadModel = async function(modelUrl, animBankUrl = null) {
+      await viewer.loadModel(modelUrl);
+      if (animBankUrl) await viewer.loadAnimationBank(animBankUrl);
+      return { animClips: viewer._animClips.map(c => c.name) };
+    };
+
+    /**
+     * Generate all spritesheets for all animation slots.
+     * Returns an object: { portrait: 'data:image/png;base64,...', idle: ..., ... }
+     * Only slots whose clip exists in the model are included.
+     */
+    window.generateAllSpritesheets = async function(frameCount = 8, frameSize = 64) {
+      return await viewer.exportAllSlots(frameCount, frameSize);
+    };
+
+    /**
+     * Capture a single animation slot as 512×256 spritesheet (4 directions).
+     * @param {string} animName - exact clip name
+     */
+    window.captureSlot = async function(animName, frameCount = 8, frameSize = 64) {
+      const blob = await viewer.captureAnimation4Dir(animName, frameCount, frameSize);
+      if (!blob) return null;
+      return await viewer._blobToBase64(blob);
+    };
+
+    /**
+     * Capture portrait (512×512, SE, frame 0).
+     */
+    window.capturePortrait = async function() {
+      const blob = await viewer.capturePortrait(512);
+      if (!blob) return null;
+      return await viewer._blobToBase64(blob);
+    };
+
+    window.__viewerReady = true;
+    console.log('[headless] GLBViewer ready');
+  </script>
+</body>
+</html>
