@@ -17,6 +17,7 @@
         <h1>Character Bank</h1>
         <button id="btn-new-char" title="Nouveau personnage">+</button>
       </div>
+      <a href="/characters/timeline.html" id="btn-timeline" title="Frise chronologique du lore">📜 Frise Lore</a>
       <p id="count"></p>
 
       <div id="filters">
@@ -225,6 +226,41 @@
             <h3>Modifications de classe</h3>
             <p id="desc-classe"></p>
           </section>
+        </div>
+
+        <!-- Lore complet (visible si lore-data.js contient cet ID) -->
+        <div id="lore-section" hidden>
+
+          <div id="lore-tabs">
+            <button class="lore-tab active" data-lore-tab="histoire">Histoire</button>
+            <button class="lore-tab" data-lore-tab="sorts">Sorts</button>
+            <button class="lore-tab" data-lore-tab="relations">Relations</button>
+            <button class="lore-tab" data-lore-tab="chapitre">Chapitre</button>
+          </div>
+
+          <div id="lore-pane-histoire" class="lore-pane">
+            <div id="lore-histoire-list"></div>
+          </div>
+
+          <div id="lore-pane-sorts" class="lore-pane">
+            <div id="lore-sorts-list"></div>
+          </div>
+
+          <div id="lore-pane-relations" class="lore-pane">
+            <div id="lore-relations-list"></div>
+          </div>
+
+          <div id="lore-pane-chapitre" class="lore-pane">
+            <div id="lore-timeline-header" hidden>
+              <span id="lore-timeline-an"></span>
+              <span class="lore-timeline-sep">·</span>
+              <span id="lore-timeline-lieu"></span>
+              <span class="lore-timeline-sep">·</span>
+              <span id="lore-timeline-arc"></span>
+            </div>
+            <div id="lore-long-text"></div>
+          </div>
+
         </div>
 
         <!-- Asset slots -->

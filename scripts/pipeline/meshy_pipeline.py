@@ -455,12 +455,13 @@ async def process_one(
     *,
     provided_glb: Optional[Path] = None,
     skip_meshy: bool = False,
+    preview_only: bool = False,
     dry_run: bool = False,
 ) -> bool:
     """
     Full pipeline for a single character:
       1. Build prompt
-      2. [Optional] Generate GLB via Meshy (preview → refine)
+      2. [Optional] Generate GLB via Meshy (preview → optional refine)
       3. Download GLB
       4. Run Node.js renderer
 
@@ -481,12 +482,15 @@ async def process_one(
     prompt = build_meshy_prompt(char)
     update_job(conn, slug, prompt=prompt)
 
+    mode_label = "preview-only" if preview_only else "preview+refine"
     if dry_run:
+        print(f"  [DRY-RUN] Mode: {mode_label}")
         print(f"  [DRY-RUN] Meshy prompt ({len(prompt)} chars):")
         print(f"    {prompt[:200]}{'...' if len(prompt) > 200 else ''}")
         print(f"  [DRY-RUN] Negative: {NEGATIVE_PROMPT[:100]}...")
         print(f"  [DRY-RUN] GLB dest: {glb_dest}")
-        print(f"  [DRY-RUN] Cost: ${COST_PER_CHAR:.2f}")
+        cost = COST_PREVIEW if preview_only else COST_PER_CHAR
+        print(f"  [DRY-RUN] Token cost: ~{cost:.2f} credits")
         update_job(conn, slug, status="skipped")
         return True
 
@@ -537,19 +541,23 @@ async def process_one(
             record_cost(conn, slug, "preview", COST_PREVIEW)
             print(f"  Preview task: {preview_id}")
 
-            await poll_until_done(session, preview_id, label="preview")
+            preview_data = await poll_until_done(session, preview_id, label="preview")
 
-            # ── Refine ─────────────────────────────────────────────────────
-            print(f"  Submitting refine task…")
-            refine_id = await create_refine_task(session, preview_id)
-            update_job(conn, slug, refine_id=refine_id, meshy_task_id=refine_id)
-            record_cost(conn, slug, "refine", COST_REFINE)
-            print(f"  Refine task: {refine_id}")
-
-            refine_data = await poll_until_done(session, refine_id, label="refine")
+            if preview_only:
+                # Download from preview directly — skips refine (saves ~4 credits)
+                print(f"  [preview-only] Skipping refine step")
+                final_data = preview_data
+            else:
+                # ── Refine ─────────────────────────────────────────────────
+                print(f"  Submitting refine task…")
+                refine_id = await create_refine_task(session, preview_id)
+                update_job(conn, slug, refine_id=refine_id, meshy_task_id=refine_id)
+                record_cost(conn, slug, "refine", COST_REFINE)
+                print(f"  Refine task: {refine_id}")
+                final_data = await poll_until_done(session, refine_id, label="refine")
 
             # ── Download GLB ───────────────────────────────────────────────
-            model_urls = refine_data.get("model_urls", {})
+            model_urls = final_data.get("model_urls", {})
             glb_url    = model_urls.get("glb") or model_urls.get("obj")
             if not glb_url:
                 raise RuntimeError(
@@ -594,10 +602,14 @@ async def run_batch(
     conn: sqlite3.Connection,
     *,
     skip_meshy: bool = False,
+    preview_only: bool = False,
+    token_limit: int = 0,
     dry_run: bool = False,
 ) -> dict[str, int]:
     """Process characters sequentially (Meshy has aggressive rate limits)."""
     results = {"ok": 0, "error": 0, "skip": 0}
+    tokens_used = 0
+    cost_per = COST_PREVIEW if preview_only else COST_PER_CHAR
 
     # Timeout generous: preview(30min) + refine(30min) + download + render
     timeout = aiohttp.ClientTimeout(total=7200)
@@ -606,6 +618,12 @@ async def run_batch(
         for i, char in enumerate(chars, 1):
             slug = slug_from_char(char)
             job  = get_job(conn, slug)
+
+            # Token budget guard
+            if token_limit > 0 and tokens_used + cost_per > token_limit:
+                print(f"\n[Batch] Token limit reached ({tokens_used}/{token_limit} credits used). Stopping.")
+                print(f"[Batch] Resume with --from-id {char.get('id', i)} to continue.")
+                break
 
             # Skip already-done chars in resumable mode
             if job and job["status"] == "done" and not dry_run:
@@ -616,8 +634,11 @@ async def run_batch(
             ok = await process_one(
                 char, conn, session,
                 skip_meshy=skip_meshy,
+                preview_only=preview_only,
                 dry_run=dry_run,
             )
+            if ok and not dry_run:
+                tokens_used += cost_per
             results["ok" if ok else "error"] += 1
 
     return results
@@ -751,6 +772,14 @@ def parse_args() -> argparse.Namespace:
         help="Print prompts and actions without making any API calls",
     )
     parser.add_argument(
+        "--preview-only", action="store_true",
+        help="Generate preview GLB only, skip refine (~1 credit vs ~5 credits per char)",
+    )
+    parser.add_argument(
+        "--token-limit", metavar="N", type=int, default=0,
+        help="Stop batch when this many Meshy credits have been used (0 = no limit)",
+    )
+    parser.add_argument(
         "--from-id", metavar="N", type=int, default=1,
         help="Batch mode: start from character id N (default: 1)",
     )
@@ -791,6 +820,7 @@ def main():
                     char, conn, session,
                     provided_glb=args.glb,
                     skip_meshy=args.skip_meshy,
+                    preview_only=args.preview_only,
                     dry_run=args.dry_run,
                 )
             return ok
@@ -808,7 +838,10 @@ def main():
             conn.close()
             return
 
-        print(f"[Batch] Processing {len(filtered)} characters (from id {args.from_id})")
+        mode_label = "preview-only" if args.preview_only else "preview+refine"
+        print(f"[Batch] Processing {len(filtered)} characters (from id {args.from_id}) [{mode_label}]")
+        if args.token_limit:
+            print(f"[Batch] Token limit: {args.token_limit} credits")
         if args.dry_run:
             print("[Batch] DRY RUN — no API calls will be made")
 
@@ -818,6 +851,8 @@ def main():
             run_batch(
                 filtered, conn,
                 skip_meshy=args.skip_meshy,
+                preview_only=args.preview_only,
+                token_limit=args.token_limit,
                 dry_run=args.dry_run,
             )
         )

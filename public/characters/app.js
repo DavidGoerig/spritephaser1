@@ -1,4 +1,5 @@
 import { GLBViewer } from './viewer.js';
+import { LORE } from './lore-data.js';
 
 // ── Data ───────────────────────────────────────────────────────
 
@@ -429,13 +430,127 @@ function selectChar(char) {
   viewerBankClips = [];
   renderAnimButtons('anim-buttons', [], viewer);
   $('anim-browser').hidden = true;
-  // Reset animation state WITHOUT destroying the model so it stays visible while
-  // the new character's model loads (_loadModel replaces it atomically).
   viewer?.clearAnimState();
-
-  // If meshy bank is already loaded, auto-assign will happen after loadUrl callback.
-  // Auto-load GLB — model replaces the previous one once ready.
+  renderLore(char);
   checkAndLoadGlb(char);
+}
+
+// ── Lore panel ─────────────────────────────────────────────────
+
+function renderLore(char) {
+  const section = $('lore-section');
+  const lore = LORE[char.id];
+  if (!lore) { section.hidden = true; return; }
+  section.hidden = false;
+
+  // Tabs — class-based, wired once
+  if (!section.dataset.tabsWired) {
+    section.dataset.tabsWired = '1';
+    $('lore-tabs').addEventListener('click', e => {
+      const btn = e.target.closest('.lore-tab');
+      if (!btn) return;
+      section.querySelectorAll('.lore-tab').forEach(b => b.classList.remove('active'));
+      section.querySelectorAll('.lore-pane').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      $('lore-pane-' + btn.dataset.loreTab).classList.add('active');
+    });
+  }
+  // Reset to first tab
+  section.querySelectorAll('.lore-tab').forEach(b => b.classList.remove('active'));
+  section.querySelectorAll('.lore-pane').forEach(p => p.classList.remove('active'));
+  section.querySelector('[data-lore-tab="histoire"]').classList.add('active');
+  $('lore-pane-histoire').classList.add('active');
+
+  // Histoire — sections roman (pas d'accordéon)
+  const ROMANS = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII'];
+  const histoireEl = $('lore-histoire-list');
+  histoireEl.innerHTML = '';
+  (lore.histoire || []).forEach((moment, i) => {
+    const div = document.createElement('div');
+    div.className = 'lore-moment';
+    const paragraphs = moment.texte.split(/\n\n+/)
+      .map(p => p.trim()).filter(Boolean)
+      .map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
+    div.innerHTML = `
+      <div class="lore-moment-eyebrow">
+        <span class="lore-moment-num">${ROMANS[i] || i + 1}</span>
+        <span class="lore-moment-divline"></span>
+      </div>
+      <h3 class="lore-moment-title">${moment.titre}</h3>
+      <div class="lore-moment-body">${paragraphs}</div>`;
+    histoireEl.appendChild(div);
+  });
+
+  // Sorts
+  const sortsEl = $('lore-sorts-list');
+  sortsEl.innerHTML = '';
+  (lore.sorts || []).forEach(sort => {
+    const div = document.createElement('div');
+    div.className = 'lore-sort';
+    div.innerHTML = `<div class="lore-sort-name">${sort.nom}</div><div class="lore-sort-desc">${sort.description_lore}</div>`;
+    sortsEl.appendChild(div);
+  });
+
+  // Relations
+  const relEl = $('lore-relations-list');
+  relEl.innerHTML = '';
+  (lore.relations || []).forEach(rel => {
+    const div = document.createElement('div');
+    div.className = 'lore-relation';
+    div.innerHTML = `
+      <div class="lore-relation-header">
+        <span class="lore-relation-name" data-id="${rel.personnage_id}">${rel.nom}</span>
+        <span class="lore-relation-type">${rel.type}</span>
+      </div>
+      <div class="lore-relation-text">${rel.texte}</div>`;
+    div.querySelector('.lore-relation-name').addEventListener('click', () => {
+      const target = allChars.find(c => c.id === rel.personnage_id);
+      if (target) renderChar(target);
+    });
+    relEl.appendChild(div);
+  });
+
+  // Timeline header
+  const tlHeader = $('lore-timeline-header');
+  const tp = lore.timeline_position;
+  if (tp) {
+    $('lore-timeline-an').textContent = `An ${tp.an < 0 ? '−' + Math.abs(tp.an) : '+' + tp.an}`;
+    $('lore-timeline-lieu').textContent = tp.lieu;
+    $('lore-timeline-arc').textContent = tp.arc;
+    tlHeader.hidden = false;
+  } else {
+    tlHeader.hidden = true;
+  }
+
+  // Chapitre long — parser les blocs
+  const longEl = $('lore-long-text');
+  longEl.innerHTML = '';
+  const raw = (lore.lore_long || '').split('\n');
+  raw.forEach(line => {
+    const trimmed = line.trim();
+    if (!trimmed) return;
+    if (/^—$/.test(trimmed)) {
+      const s = document.createElement('span');
+      s.className = 'lore-sep';
+      s.textContent = '· · ·';
+      longEl.appendChild(s);
+    } else if (/^[IVX]+\.$/.test(trimmed)) {
+      const s = document.createElement('span');
+      s.className = 'lore-roman';
+      s.textContent = trimmed;
+      longEl.appendChild(s);
+    } else if (/^[A-ZÉÈÀÂÊÎÔÙ].{0,60}$/.test(trimmed) && !trimmed.endsWith('.') && !trimmed.includes(' — ') && longEl.lastElementChild?.className !== 'lore-chapter-title') {
+      // Titre de chapitre (ligne courte sans ponctuation finale, tout au début)
+      const s = document.createElement('span');
+      s.className = 'lore-chapter-title';
+      s.textContent = trimmed;
+      longEl.appendChild(s);
+    } else {
+      const p = document.createElement('p');
+      p.textContent = trimmed;
+      longEl.appendChild(p);
+    }
+  });
 }
 
 // ── GLB save to server ─────────────────────────────────────────
