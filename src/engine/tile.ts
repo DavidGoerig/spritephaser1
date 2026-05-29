@@ -254,44 +254,30 @@ export default class Tile implements ITile {
   }
 
   protected applyDirectionFrame() {
-    // Skip frame selection if this tile has an active animation
-    // (animations handle their own frame progression)
     const tkey = this.tileId !== null ? 't' + this.tileId : '';
     if (tkey && this.grid.anims.has(tkey) && this.sprite.anims.isPlaying) {
-      return; // Let the animation handle frames
+      return;
     }
 
-    let frameIndex: number;
-    
-    // For stairs (block id 2), combine the world-facing diagonal direction with view rotation
-    // StairDirection enum values (0-3) map to sprite frames:
-    //   0: SouthEastToNorthWest
-    //   1: SouthWestToNorthEast
-    //   2: NorthWestToSouthEast
-    //   3: NorthEastToSouthWest
-    if (this.tileId === 2 && this.tileDirection !== null) {
-      // Stairs: for diagonal directions, we need to subtract view rotation
-      // This correctly maps diagonal directions when rotating East/West
-      const stairDir = this.tileDirection as number;
-      const viewDir = this.grid.direction as number;
-      frameIndex = ((stairDir - viewDir + 4) % 4);
-    } else if (this.tileDirection !== null) {
-      // Other directional tiles: combine tile's facing direction with current view rotation
-      frameIndex = ((this.tileDirection as number) + this.grid.direction) % 4;
-    } else {
-      // Regular tiles: just rotate with view
-      frameIndex = this.grid.direction as number;
-    }
+    const dir = this.grid.direction as number;
 
-    // setFrame is safe even for single-frame textures;
-    // it will just keep frame 0 in that case.
-    if (this.sprite.texture.key) {
-      this.sprite.setFrame(frameIndex);
-    }
+    // In isometric space a 90° camera rotation is a horizontal mirror:
+    // East (1) and West (3) show the left/right side faces swapped vs North/South.
+    const doFlip = dir === 1 || dir === 3;
+    this.sprite.setFlipX(doFlip);
+    this.ssprite.setFlipX(doFlip);
 
-    if (this.ssprite.texture.key) {
-      this.ssprite.setFrame(frameIndex);
-    }
+    // If the spritesheet has 4 genuine directional frames, pick the right one.
+    // For single-frame images this is a safe no-op.
+    const sprFrames = this.sprite.texture.key
+      ? (this.sprite.texture.frameTotal - 1)   // -1 excludes the internal __BASE frame
+      : 0;
+    if (sprFrames > 1) this.sprite.setFrame(dir);
+
+    const ssprFrames = this.ssprite.texture.key
+      ? (this.ssprite.texture.frameTotal - 1)
+      : 0;
+    if (ssprFrames > 1) this.ssprite.setFrame(dir);
   }
 
   setTile(id: number) {
