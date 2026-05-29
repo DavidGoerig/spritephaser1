@@ -637,6 +637,8 @@ export class CombatManager {
         const isTerrain = sort.type.includes('Terrain');
         const isCtrl    = sort.type.includes('Contrôle');
         const isBuff    = sort.type.includes('Buff');
+        const isAoe     = /zone|rayon|cône|cone/i.test(sort.type);
+        const isLine    = /ligne|traînée|mur/i.test(sort.type);
 
         const inRange = enemies.filter(
           e => Math.abs(e.x - unit.x) + Math.abs(e.y - unit.y) <= sort.portee,
@@ -651,6 +653,22 @@ export class CombatManager {
         if (isHeal) {
           score = lowHP ? 30 : 4;
           tx = unit.x; ty = unit.y; tz = unit.z;
+        } else if (isDmg && (isAoe || isLine) && inRange.length > 0) {
+          // AoE/line: pick the target tile that maximises enemies hit
+          let bestHits = 0;
+          let bestTileScore = 0;
+          for (const candidate of inRange) {
+            const area = this.getSpellArea(sort, unit, candidate.x, candidate.y);
+            const hits = enemies.filter(
+              e => e.isAlive && area.some(a => a.x === e.x && a.y === e.y),
+            ).length;
+            const tileScore = hits * 15 + (candidate.currentPV < 40 ? 8 : 0);
+            if (tileScore > bestTileScore) {
+              bestTileScore = tileScore; bestHits = hits;
+              tx = candidate.x; ty = candidate.y; tz = candidate.z;
+            }
+          }
+          score = 18 + bestHits * 10;
         } else if (isDmg && weakest) {
           score = 20;
           if (weakest.currentPV < 40) score += 8;

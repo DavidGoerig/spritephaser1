@@ -320,7 +320,10 @@ export class CombatUnit {
     this.hasActed = false;
 
     // PM regen
+    const pmBefore = this.currentPM;
     this.currentPM = Math.min(this.maxPM, this.currentPM + PM_REGEN_PER_TURN);
+    const pmGained = this.currentPM - pmBefore;
+    if (pmGained > 0) this.floatText(`+${pmGained}PM`, '#4488FF');
 
     // Cooldown decay
     this.cooldowns = this.cooldowns.map(cd => Math.max(0, cd - 1));
