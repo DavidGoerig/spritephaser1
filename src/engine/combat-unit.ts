@@ -7,6 +7,7 @@ import { calculateIsoScreenPosition } from '../utils/math';
 import { CLASS_STATS, PM_REGEN_PER_TURN } from './combat-stats';
 import { ELEMENT_TINTS, UNIT_TEAM_COLORS } from './element-colors';
 import { CharSprite, type AnimState } from './char-sprite';
+import { sfxDamage, sfxBlock, sfxHeal, sfxDeath } from './sound-engine';
 
 // ── Status effect types ──────────────────────────────────────────────────────
 
@@ -243,6 +244,7 @@ export class CombatUnit {
         this.statusEffects = this.statusEffects.filter(e => e !== shield);
       }
       if (amount <= 0) {
+        sfxBlock();
         this.floatText('BLOQUÉ', '#AAAAFF');
         this.syncPosition();
         return;
@@ -253,9 +255,11 @@ export class CombatUnit {
     this.currentPV = Math.max(0, this.currentPV - amount);
     this._tweenHPBar();
     this.syncPosition();
+    sfxDamage(amount);
     this.floatText(`-${amount}`, '#FF4444');
     this.charSprite.flash();
     if (this.currentPV <= 0) {
+      sfxDeath();
       this.charSprite.play('die');
     } else {
       this.charSprite.play('hurt', () => this.charSprite.play('idle'));
@@ -266,6 +270,7 @@ export class CombatUnit {
     this.currentPV = Math.min(this.maxPV, this.currentPV + amount);
     this._tweenHPBar();
     this.syncPosition();
+    sfxHeal();
     this.floatText(`+${amount}`, '#44FF88');
   }
 

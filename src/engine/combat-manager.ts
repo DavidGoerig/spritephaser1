@@ -7,6 +7,7 @@ import { executeSpell } from './spell-executor';
 import { playSpellVFX } from './spell-vfx';
 import { ELEMENT_TINTS } from './element-colors';
 import { RangeOverlay } from './range-overlay';
+import { sfxSpell, sfxTurnStart, sfxVictory } from './sound-engine';
 
 export type CombatPhase = 'idle' | 'active' | 'victory';
 
@@ -111,6 +112,7 @@ export class CombatManager {
       return;
     }
 
+    sfxTurnStart();
     unit.setSelected(true);
     this.addLog(`Tour ${this.round} — ${unit.personnage.nom}`);
     this._applyTileEffects();
@@ -145,6 +147,7 @@ export class CombatManager {
       this.winner = victory;
       this.phase = 'victory';
       this.addLog(`Équipe ${victory === 0 ? 'A' : 'B'} gagne !`);
+      sfxVictory();
     }
   }
 
@@ -183,6 +186,7 @@ export class CombatManager {
       unit.hasActed = true;
       this.selectedSpellIndex = null;
       this.isAnimating = true;
+      sfxSpell(unit.personnage.element);
       playSpellVFX(this.scene, sort, unit, x, y, z, () => {
         const result = executeSpell(sort, unit, { x, y, z }, this);
         this.addLog(result.message);
@@ -595,6 +599,7 @@ export class CombatManager {
           unit.hasActed = true;
           this.isAnimating = true;
           this.addLog(`${unit.personnage.nom} est confus ! Attaque ${victim.personnage.nom}`);
+          sfxSpell(unit.personnage.element);
           playSpellVFX(this.scene, sort, unit, victim.x, victim.y, victim.z, () => {
             executeSpell(sort, unit, { x: victim.x, y: victim.y, z: victim.z }, this);
             this.applyTileElementTints();
@@ -673,6 +678,7 @@ export class CombatManager {
           unit.cooldowns[bestIdx] = sort.cooldown;
           unit.hasActed = true;
           this.isAnimating = true;
+          sfxSpell(unit.personnage.element);
           playSpellVFX(this.scene, sort, unit, bestTx, bestTy, bestTz, () => {
             const result = executeSpell(sort, unit, { x: bestTx, y: bestTy, z: bestTz }, this);
             this.addLog(result.message);
