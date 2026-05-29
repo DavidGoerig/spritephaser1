@@ -141,8 +141,10 @@ async function init() {
     return;
   }
 
+  await loadTeams();
   populateFilters();
   applyFilters();
+  initTeamBuilder();
 
   // Init Three.js viewer
   viewer = new GLBViewer($('viewer-canvas'));
@@ -383,8 +385,44 @@ function renderList() {
     idSpan.className = 'char-id';
     idSpan.textContent = `#${String(char.id).padStart(3, '0')}`;
 
-    item.append(dot, name, idSpan);
-    item.addEventListener('click', () => selectChar(char));
+    // Team mode: add "+A" / "+B" buttons and team membership markers
+    const inA = teamA.some(c => c.id === char.id);
+    const inB = teamB.some(c => c.id === char.id);
+    if (inA) item.classList.add('in-team-a');
+    if (inB) item.classList.add('in-team-b');
+
+    const btnA = document.createElement('button');
+    btnA.className = 'team-add-btn';
+    btnA.dataset.team = 'A';
+    btnA.title = 'Ajouter à l\'équipe A';
+    btnA.textContent = inA ? '✓A' : '+A';
+    btnA.addEventListener('click', e => {
+      e.stopPropagation();
+      if (inA) removeFromTeam('A', teamA.findIndex(c => c.id === char.id));
+      else addToTeam('A', char);
+      renderList();
+    });
+
+    const btnB = document.createElement('button');
+    btnB.className = 'team-add-btn';
+    btnB.dataset.team = 'B';
+    btnB.title = 'Ajouter à l\'équipe B';
+    btnB.textContent = inB ? '✓B' : '+B';
+    btnB.addEventListener('click', e => {
+      e.stopPropagation();
+      if (inB) removeFromTeam('B', teamB.findIndex(c => c.id === char.id));
+      else addToTeam('B', char);
+      renderList();
+    });
+
+    item.append(dot, name, idSpan, btnA, btnB);
+    item.addEventListener('click', () => {
+      if (!$('team-panel').hidden) {
+        addToTeam(activeTeam, char);
+      } else {
+        selectChar(char);
+      }
+    });
     charList.appendChild(item);
   }
 }
@@ -2081,6 +2119,136 @@ async function saveAnimsToBank(viewerInst, statusId) {
 
   await loadAnimBank();
   if (statusEl) statusEl.textContent = `✓ ${newEntries.length} anim. sauvegardée(s)`;
+}
+
+// ── Team Builder ───────────────────────────────────────────────
+
+const TEAM_SIZE = 5;
+
+let teamA = [];
+let teamB = [];
+let activeTeam = 'A'; // which team receives clicks from char list
+
+const ELEM_COLORS_HEX = {
+  'Feu': '#e25822', 'Eau': '#1e90ff', 'Glace': '#88ddff', 'Electrique': '#ffd700',
+  'Plante': '#4caf50', 'Sol': '#c8a462', 'Roche': '#9e9e9e', 'Vent': '#b0e0e6',
+  'Dragon': '#9c27b0', 'Insecte': '#8bc34a', 'Nuee': '#8bc34a', 'Psy': '#e040fb',
+  'Ténèbres': '#5c35a8', 'Fée': '#f48fb1', 'Poison': '#7cb342', 'Spectre': '#80deea',
+  'Gravité': '#607d8b', 'Gravite': '#607d8b', 'Combat': '#f44336', 'Normal': '#aaaaaa',
+};
+
+function teamBuilderOpen() {
+  $('team-panel').hidden = false;
+  $('detail').hidden = true;
+  $('empty-state').hidden = true;
+  $('create-panel').hidden = true;
+  $('btn-team-builder').classList.add('active');
+  document.body.classList.add('team-mode');
+  renderTeamPanel();
+  renderList();
+}
+
+function teamBuilderClose() {
+  $('team-panel').hidden = true;
+  $('btn-team-builder').classList.remove('active');
+  document.body.classList.remove('team-mode');
+  renderList();
+  if (!activeChar) $('empty-state').hidden = false;
+}
+
+function addToTeam(team, char) {
+  const arr = team === 'A' ? teamA : teamB;
+  if (arr.length >= TEAM_SIZE) return;
+  if (arr.find(c => c.id === char.id)) return; // already in
+  arr.push({ id: char.id, nom: char.nom, element: char.element, classe: char.classe });
+  renderTeamPanel();
+  renderList();
+}
+
+function removeFromTeam(team, idx) {
+  if (team === 'A') teamA.splice(idx, 1);
+  else teamB.splice(idx, 1);
+  renderTeamPanel();
+  renderList();
+}
+
+function renderTeamSlots(containerId, team) {
+  const arr = team === 'A' ? teamA : teamB;
+  const container = $(containerId);
+  container.innerHTML = '';
+  for (let i = 0; i < TEAM_SIZE; i++) {
+    const slot = document.createElement('div');
+    const char = arr[i];
+    if (char) {
+      slot.className = 'team-slot';
+      const color = ELEM_COLORS_HEX[char.element] ?? '#aaaaaa';
+      slot.innerHTML = `
+        <span class="slot-dot" style="background:${color}"></span>
+        <div class="slot-info">
+          <div class="slot-name">${char.nom}</div>
+          <div class="slot-meta">${char.element} · ${char.classe}</div>
+        </div>
+        <button class="slot-remove" title="Retirer">×</button>
+      `;
+      slot.querySelector('.slot-remove').addEventListener('click', () => removeFromTeam(team, i));
+    } else {
+      slot.className = 'team-slot empty';
+      slot.textContent = `Slot ${i + 1} — vide`;
+    }
+    container.appendChild(slot);
+  }
+}
+
+function renderTeamPanel() {
+  renderTeamSlots('team-slots-a', 'A');
+  renderTeamSlots('team-slots-b', 'B');
+  $('team-count-a').textContent = `${teamA.length}/${TEAM_SIZE}`;
+  $('team-count-b').textContent = `${teamB.length}/${TEAM_SIZE}`;
+  // Highlight active tab
+  document.querySelectorAll('.team-tab').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.team === activeTeam);
+  });
+}
+
+async function saveTeams() {
+  const statusEl = $('team-status');
+  statusEl.textContent = 'Sauvegarde…';
+  try {
+    const res = await fetch('/api/save-file', {
+      method: 'POST',
+      headers: { 'X-File-Path': 'characters/teams.json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ teamA, teamB }, null, 2),
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    statusEl.textContent = `✓ Équipes sauvegardées (A: ${teamA.length}, B: ${teamB.length})`;
+  } catch (err) {
+    statusEl.textContent = `⚠ Erreur : ${err.message}`;
+  }
+}
+
+async function loadTeams() {
+  try {
+    const res = await fetch('teams.json?' + Date.now());
+    if (!res.ok) return;
+    const data = await res.json();
+    teamA = Array.isArray(data.teamA) ? data.teamA : [];
+    teamB = Array.isArray(data.teamB) ? data.teamB : [];
+  } catch { /* no teams saved yet */ }
+}
+
+// Wire up team builder buttons (called once DOM is ready)
+function initTeamBuilder() {
+  $('btn-team-builder').addEventListener('click', () => {
+    if (!$('team-panel').hidden) teamBuilderClose();
+    else teamBuilderOpen();
+  });
+  document.querySelectorAll('.team-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeTeam = btn.dataset.team;
+      renderTeamPanel();
+    });
+  });
+  $('btn-save-teams').addEventListener('click', saveTeams);
 }
 
 // ── Boot ───────────────────────────────────────────────────────

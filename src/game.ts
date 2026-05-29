@@ -17,7 +17,7 @@ import { loadCharSprites, BAKED_CHARS } from "./utils/load-char-sprites";
 import { getAllVFXIds } from "./data/spell-vfx-map";
 
 // ── Preset definitions ─────────────────────────────────────────
-interface CombatPreset { name: string; elementA: string; elementB: string; teamSize?: 2 | 3; }
+interface CombatPreset { name: string; elementA: string; elementB: string; teamSize?: 2 | 3 | 5; }
 
 const PRESET_DEFS: CombatPreset[] = [
   // 2v2
@@ -59,6 +59,8 @@ export default class Game extends Phaser.Scene {
 
   // Character database (loaded from characters.json)
   private charDB = new Map<number, Personnage>();
+  // Custom teams saved from the character bank
+  private customTeams: { teamA: Personnage[]; teamB: Personnage[] } | null = null;
 
   // Block palette (sculpt mode)
   private selectedBlockId = 1;
@@ -93,6 +95,7 @@ export default class Game extends Phaser.Scene {
 
     // Character database — source of truth for all combat units
     this.load.json('chardb', '/characters/characters.json');
+    this.load.json('teams', '/characters/teams.json');
 
     for (let i = 1; i <= 101; i++) {
       this.grid.loadTile(`/blocks/blocks_${i}.png`, 64, 64);
@@ -368,6 +371,26 @@ export default class Game extends Phaser.Scene {
       this.charDB.set(r.id, p);
     }
     console.log(`CharDB loaded: ${this.charDB.size} characters`);
+
+    // Load custom teams saved from the character bank
+    const raw = this.cache.json.get('teams') as { teamA: { id: number }[]; teamB: { id: number }[] } | null;
+    if (raw?.teamA?.length && raw?.teamB?.length) {
+      const resolve = (list: { id: number }[]) =>
+        list.map(e => this.charDB.get(e.id)).filter((p): p is Personnage => !!p);
+      const a = resolve(raw.teamA);
+      const b = resolve(raw.teamB);
+      if (a.length > 0 && b.length > 0) {
+        this.customTeams = { teamA: a, teamB: b };
+        const rawSz = Math.max(a.length, b.length);
+        const sz: 2 | 3 | 5 = rawSz >= 5 ? 5 : rawSz >= 3 ? 3 : 2;
+        PRESET_DEFS.unshift({
+          name: `⚔ Équipes personnalisées`,
+          elementA: a[0].element,
+          elementB: b[0].element,
+          teamSize: sz,
+        });
+      }
+    }
   }
 
   // ── Preset UI ─────────────────────────────────────────────
@@ -419,24 +442,33 @@ export default class Game extends Phaser.Scene {
     this.hud.setManager(this.combatManager);
 
     const preset = PRESET_DEFS[this.selectedPreset];
+    const isCustom = this.customTeams !== null && this.selectedPreset === 0 && preset.name.startsWith('⚔');
     const sz = preset.teamSize ?? 2;
-    const teamA = this._pickN(preset.elementA, sz);
-    const teamB = this._pickN(preset.elementB, sz);
+
+    const teamA = isCustom ? this.customTeams!.teamA.slice(0, sz) : this._pickN(preset.elementA, sz);
+    const teamB = isCustom ? this.customTeams!.teamB.slice(0, sz) : this._pickN(preset.elementB, sz);
 
     if (!teamA || !teamB) {
       console.error(`Cannot start "${preset.name}" — missing characters in DB`);
       return;
     }
 
-    // Spawn positions: A on north-west row, B on south-east row
-    const posA: [number, number][] = sz === 3
-      ? [[1, 2], [2, 2], [3, 2]]
-      : [[2, 2], [3, 2]];
-    const posB: [number, number][] = sz === 3
-      ? [[6, 7], [7, 7], [8, 7]]
-      : [[7, 7], [6, 7]];
+    // Spawn positions per team size
+    const POS_A: Record<number, [number, number][]> = {
+      2: [[2, 2], [3, 2]],
+      3: [[1, 2], [2, 2], [3, 2]],
+      5: [[1, 1], [1, 3], [2, 2], [1, 5], [1, 7]],
+    };
+    const POS_B: Record<number, [number, number][]> = {
+      2: [[7, 7], [6, 7]],
+      3: [[6, 7], [7, 7], [8, 7]],
+      5: [[8, 2], [8, 4], [7, 3], [8, 6], [8, 8]],
+    };
+    const posA = POS_A[sz] ?? POS_A[2];
+    const posB = POS_B[sz] ?? POS_B[2];
 
-    for (let i = 0; i < sz; i++) {
+    const actualSz = Math.min(sz, teamA.length, teamB.length);
+    for (let i = 0; i < actualSz; i++) {
       const [ax, ay] = posA[i];
       const [bx, by] = posB[i];
       this.combatManager.addUnit(teamA[i], ax, ay, this.grid.getTopTile(ax, ay)?.z ?? 0, 0);

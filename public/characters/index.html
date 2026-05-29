@@ -15,6 +15,7 @@
       <div id="sidebar-header">
         <a href="/" id="btn-back-game" title="Retour au jeu">←</a>
         <h1>Character Bank</h1>
+        <button id="btn-team-builder" title="Créer des équipes">⚔</button>
         <button id="btn-new-char" title="Nouveau personnage">+</button>
       </div>
       <a href="/characters/timeline.html" id="btn-timeline" title="Frise chronologique du lore">📜 Frise Lore</a>
@@ -270,6 +271,34 @@
         </div>
 
       </div><!-- /detail -->
+
+      <!-- ── Team Builder ── -->
+      <div id="team-panel" hidden>
+        <div id="team-panel-header">
+          <h2>⚔ Équipes de combat</h2>
+          <div id="team-panel-tabs">
+            <button class="team-tab active" data-team="A">Équipe A</button>
+            <button class="team-tab" data-team="B">Équipe B</button>
+          </div>
+          <div id="team-panel-actions">
+            <button id="btn-save-teams">💾 Sauvegarder</button>
+            <a href="/" id="btn-launch-combat">⚔ Lancer le combat</a>
+          </div>
+        </div>
+        <p id="team-status"></p>
+        <div id="team-columns">
+          <div class="team-column" id="team-col-a">
+            <h3>Équipe A <span class="team-count" id="team-count-a">0/5</span></h3>
+            <div class="team-slots" id="team-slots-a"></div>
+          </div>
+          <div class="team-column" id="team-col-b">
+            <h3>Équipe B <span class="team-count" id="team-count-b">0/5</span></h3>
+            <div class="team-slots" id="team-slots-b"></div>
+          </div>
+        </div>
+        <p class="team-hint">← Clique sur un personnage dans la liste pour l'ajouter à l'équipe active</p>
+      </div>
+
     </main>
 
   </div><!-- /app -->

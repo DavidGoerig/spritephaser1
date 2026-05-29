@@ -270,7 +270,7 @@ export class HUD {
     // ── Initiative strip ─────────────────────────────────────────
     const IY = 47;
     this.initBg = this.sf0(this.scene.add.rectangle(W / 2, IY, W, 14, 0x000000, 0.48)) as Phaser.GameObjects.Rectangle;
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 10; i++) {
       this.initUnitTexts.push(
         this.scene.add.text(0, IY, '', { fontSize: '8px', color: '#888888' })
           .setScrollFactor(0).setDepth(DEPTH + 1).setVisible(false),
@@ -397,9 +397,9 @@ export class HUD {
       const units = this.manager.units;
       const cur = this.manager.currentUnit;
       const ci = cur ? units.indexOf(cur) : 0;
-      const count = Math.min(units.length, 8);
+      const count = Math.min(units.length, 10);
       const slotW = count > 0 ? (W - 24) / count : W;
-      for (let i = 0; i < 8; i++) {
+      for (let i = 0; i < 10; i++) {
         const t = this.initUnitTexts[i];
         if (i >= count) { t.setVisible(false); continue; }
         const j = (ci + i) % units.length;

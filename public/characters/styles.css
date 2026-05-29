@@ -1599,3 +1599,84 @@ html, body { height: 100%; font-family: system-ui, sans-serif; background: var(-
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ── Team builder ───────────────────────────────────────── */
+
+#team-panel { padding: 24px; display: flex; flex-direction: column; gap: 20px; height: 100%; overflow-y: auto; }
+#team-panel[hidden] { display: none; }
+
+#team-panel-header { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+#team-panel-header h2 { font-size: 18px; color: var(--accent); flex: 1; }
+
+#team-panel-tabs { display: flex; gap: 6px; }
+.team-tab {
+  padding: 5px 18px; border-radius: 20px;
+  border: 1px solid var(--border); background: var(--bg3);
+  color: var(--text2); font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+}
+.team-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.team-tab[data-team="A"].active { background: #2255cc; border-color: #2255cc; }
+.team-tab[data-team="B"].active { background: #cc3322; border-color: #cc3322; }
+.team-tab:not(.active):hover { border-color: var(--accent); color: var(--accent); }
+
+#team-panel-actions { display: flex; gap: 10px; align-items: center; }
+#btn-save-teams {
+  padding: 6px 16px; border: 1px solid var(--border);
+  background: var(--bg3); border-radius: var(--radius);
+  color: var(--text); font-size: 13px; cursor: pointer; transition: border-color 0.1s;
+}
+#btn-save-teams:hover { border-color: var(--accent); color: var(--accent); }
+#btn-launch-combat {
+  padding: 6px 18px; background: var(--accent); border-radius: var(--radius);
+  color: #fff; font-size: 13px; font-weight: 700; text-decoration: none; transition: opacity 0.1s;
+}
+#btn-launch-combat:hover { opacity: 0.85; }
+
+#team-status { font-size: 12px; color: var(--text2); min-height: 18px; }
+
+#team-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+.team-column h3 { font-size: 14px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+#team-col-a h3 { color: #5599ff; }
+#team-col-b h3 { color: #ff6655; }
+
+.team-count { font-size: 11px; font-weight: 400; color: var(--text2); background: var(--bg3); padding: 1px 7px; border-radius: 10px; }
+
+.team-slots { display: flex; flex-direction: column; gap: 6px; }
+
+.team-slot {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: var(--radius);
+  border: 1px solid var(--border); background: var(--bg2); min-height: 54px;
+}
+.team-slot.empty { border-style: dashed; color: var(--text2); font-size: 12px; justify-content: center; }
+.team-slot .slot-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.team-slot .slot-info { flex: 1; min-width: 0; }
+.team-slot .slot-name { font-weight: 600; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.team-slot .slot-meta { font-size: 11px; color: var(--text2); }
+.team-slot .slot-remove {
+  background: none; border: none; color: var(--text2); cursor: pointer;
+  font-size: 16px; line-height: 1; padding: 2px 4px; border-radius: 4px; transition: color 0.1s;
+}
+.team-slot .slot-remove:hover { color: var(--accent2); }
+
+.team-hint { font-size: 12px; color: var(--text2); font-style: italic; }
+
+/* char-list in team mode: show +A / +B buttons */
+.char-item .team-add-btn {
+  display: none; padding: 2px 7px; background: var(--bg3);
+  border: 1px solid var(--border); border-radius: 4px;
+  color: var(--text2); font-size: 11px; font-weight: 700;
+  cursor: pointer; flex-shrink: 0; transition: all 0.1s;
+}
+body.team-mode .char-item .team-add-btn { display: block; }
+body.team-mode .char-item .team-add-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+#btn-team-builder {
+  width: 28px; height: 28px; border-radius: 50%;
+  border: 1px solid var(--border); background: transparent;
+  color: var(--text2); font-size: 14px; cursor: pointer; transition: all 0.15s;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+#btn-team-builder:hover, #btn-team-builder.active { border-color: var(--accent); color: var(--accent); background: rgba(108,99,255,0.1); }
