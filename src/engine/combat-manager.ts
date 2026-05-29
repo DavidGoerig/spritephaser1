@@ -178,6 +178,10 @@ export class CombatManager {
         this.addLog(`Hors de portée (max ${sort.portee} cases)`);
         return;
       }
+      if (!this._hasLineOfSight(unit.x, unit.y, unit.z, x, y, z)) {
+        this.addLog(`Ligne de vue bloquée !`);
+        return;
+      }
       if (!unit.spendPM(sort.coutPM)) {
         this.addLog(`PM insuffisants (${unit.currentPM}/${sort.coutPM})`);
         return;
@@ -228,6 +232,10 @@ export class CombatManager {
       const atkDist = Math.abs(x - unit.x) + Math.abs(y - unit.y);
       if (atkDist > sort.portee) {
         this.addLog(`Hors de portée (attaque de base : ${sort.portee} cases)`);
+        return;
+      }
+      if (!this._hasLineOfSight(unit.x, unit.y, unit.z, x, y, z)) {
+        this.addLog(`Ligne de vue bloquée !`);
         return;
       }
       if (unit.spendPM(sort.coutPM)) {
@@ -386,6 +394,26 @@ export class CombatManager {
 
   clearSpellAreaPreview() {
     this.rangeOverlay.clearArea();
+  }
+
+  /**
+   * Returns false when elevated terrain sits between caster and target
+   * at a height strictly above both combatants' z level.
+   * Adjacent (dist ≤ 1) casts are always unobstructed.
+   */
+  _hasLineOfSight(cx: number, cy: number, cz: number, tx: number, ty: number, tz: number): boolean {
+    const dx = tx - cx, dy = ty - cy;
+    const steps = Math.max(Math.abs(dx), Math.abs(dy));
+    if (steps <= 1) return true;
+    const ceiling = Math.max(cz, tz);
+    for (let i = 1; i < steps; i++) {
+      const ix = Math.round(cx + dx * i / steps);
+      const iy = Math.round(cy + dy * i / steps);
+      if (ix === tx && iy === ty) break;
+      const wallZ = this.scene.grid.getTopTile(ix, iy)?.z ?? -1;
+      if (wallZ > ceiling) return false;
+    }
+    return true;
   }
 
   private _showDefaultOverlay() {
@@ -641,7 +669,8 @@ export class CombatManager {
         const isLine    = /ligne|traînée|mur/i.test(sort.type);
 
         const inRange = enemies.filter(
-          e => Math.abs(e.x - unit.x) + Math.abs(e.y - unit.y) <= sort.portee,
+          e => Math.abs(e.x - unit.x) + Math.abs(e.y - unit.y) <= sort.portee
+            && this._hasLineOfSight(unit.x, unit.y, unit.z, e.x, e.y, e.z),
         );
         const weakest = inRange.length
           ? inRange.reduce((a, b) => a.currentPV <= b.currentPV ? a : b)

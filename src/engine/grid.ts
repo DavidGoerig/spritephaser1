@@ -251,31 +251,48 @@ export default class Grid {
 
   /**
    * Get tile at isometric screen position.
-   * Optimized with early exit - checks tiles from top to bottom,
-   * returns the first (topmost) tile that contains the point.
+   * Uses inverse isometric projection for exact, ambiguity-free picking.
+   * Iterates z from high to low so elevated tiles take priority.
    */
-  getTileByIsoPos(x: number, y: number): Tile | null {
-    // Check all z-levels from top to bottom, find topmost cube under cursor
-    // Early exit optimization: once we find a tile at a z-level, we can skip lower z-levels
-    // at the same (x,y) position since they would be hidden
+  getTileByIsoPos(worldX: number, worldY: number): Tile | null {
     for (let z = this.config.maxZ; z >= 0; z--) {
-      // Iterate through grid positions
-      for (let gy = 0; gy < this.config.row; gy++) {
-        for (let gx = 0; gx < this.config.column; gx++) {
-          const tile = this.tiles[z][gy][gx];
-          if (!tile) continue;
-
-          // Check if point is within tile bounds
-          if (tile.containsPoint(x, y)) {
-            // Found a tile at this z-level containing the point
-            // Since we iterate top-to-bottom, this is the topmost visible tile
-            return tile;
-          }
-        }
-      }
+      const [gx, gy] = this._screenToGridXY(worldX, worldY, z);
+      if (gx < 0 || gx >= this.config.column || gy < 0 || gy >= this.config.row) continue;
+      const tile = this.tiles[z][gy][gx];
+      if (tile) return tile;
     }
-
     return null;
+  }
+
+  /**
+   * Inverse isometric projection: screen (worldX, worldY) → grid (gx, gy) at the given z level.
+   * Exact — no bounding-box ambiguity between adjacent tiles.
+   */
+  private _screenToGridXY(worldX: number, worldY: number, z: number): [number, number] {
+    const OX = Grid.OFFSET_X, OY = Grid.OFFSET_Y, OZ = Grid.OFFSET_Z;
+    const W = Grid.WIDTH, H = Grid.HEIGHT;
+
+    // Undo z-elevation from screen Y, then invert the isometric projection.
+    // Forward: sx = (cx-cy)/2 + OX,  sy = (cx+cy)/4 + OY - OZ*z
+    // → cx-cy = 2*(sx-OX),  cx+cy = 4*(sy+OZ*z-OY)
+    const sdx = worldX - OX;
+    const sdy = worldY + OZ * z - OY;
+    const cx = sdx + 2 * sdy;   // cartesian X (pixels)
+    const cy = 2 * sdy - sdx;   // cartesian Y (pixels)
+
+    // Invert getRenderCartCoords for each rotation direction.
+    switch (this.direction) {
+      case Direction.North:
+        return [Math.floor(cx / W), Math.floor(cy / H)];
+      case Direction.East:
+        return [(this.config.column - 1) - Math.floor(cy / H), Math.floor(cx / W)];
+      case Direction.South:
+        return [(this.config.column - 1) - Math.floor(cx / W), (this.config.row - 1) - Math.floor(cy / H)];
+      case Direction.West:
+        return [Math.floor(cy / H), (this.config.row - 1) - Math.floor(cx / W)];
+      default:
+        return [Math.floor(cx / W), Math.floor(cy / H)];
+    }
   }
 
   /**
