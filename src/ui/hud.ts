@@ -48,6 +48,8 @@ export class HUD {
   private victoryText!: Phaser.GameObjects.Text;
   private victorySubText!: Phaser.GameObjects.Text;
   private victoryHint!: Phaser.GameObjects.Text;
+  private victoryRestartBtn!: Phaser.GameObjects.Rectangle;
+  private victoryRestartLabel!: Phaser.GameObjects.Text;
   private victoryShown = false;
 
   private statusLine!: Phaser.GameObjects.Text;
@@ -88,6 +90,8 @@ export class HUD {
     this.victoryText.setVisible(false).setAlpha(0).setScale(1);
     this.victorySubText.setVisible(false).setAlpha(0);
     this.victoryHint.setVisible(false).setAlpha(0);
+    this.victoryRestartBtn.setVisible(false).setAlpha(0);
+    this.victoryRestartLabel.setVisible(false).setAlpha(0);
   }
 
   setVisible(v: boolean) {
@@ -249,9 +253,19 @@ export class HUD {
     this.victorySubText = this.scene.add.text(W / 2, H / 2 + 18, '', {
       fontSize: '16px', color: '#ffffff',
     }).setOrigin(0.5).setScrollFactor(0).setDepth(20001).setVisible(false).setAlpha(0);
-    this.victoryHint = this.scene.add.text(W / 2, H / 2 + 46, '[Esc] pour quitter le combat', {
-      fontSize: '13px', color: '#888888',
+    this.victoryHint = this.scene.add.text(W / 2, H / 2 + 46, '[Esc] pour revenir au menu', {
+      fontSize: '11px', color: '#888888',
     }).setOrigin(0.5).setScrollFactor(0).setDepth(20001).setVisible(false).setAlpha(0);
+
+    this.victoryRestartBtn = this.scene.add.rectangle(W / 2, H / 2 + 82, 180, 34, 0x224422, 0.92)
+      .setScrollFactor(0).setDepth(20001).setVisible(false).setAlpha(0).setInteractive();
+    this.victoryRestartLabel = this.scene.add.text(W / 2, H / 2 + 82, 'REJOUER', {
+      fontSize: '15px', color: '#88FF88', fontStyle: 'bold',
+    }).setOrigin(0.5).setScrollFactor(0).setDepth(20002).setVisible(false).setAlpha(0);
+
+    this.victoryRestartBtn.on('pointerover', () => this.victoryRestartBtn.setFillStyle(0x448844));
+    this.victoryRestartBtn.on('pointerout',  () => this.victoryRestartBtn.setFillStyle(0x224422));
+    this.victoryRestartBtn.on('pointerup',   () => this.scene.stopCombat());
 
     // ── Initiative strip ─────────────────────────────────────────
     const IY = 47;
@@ -356,6 +370,8 @@ export class HUD {
         this.victoryText.setVisible(true).setText(isA ? 'ÉQUIPE A GAGNE !' : 'ÉQUIPE B GAGNE !').setColor(winColor).setScale(0.1);
         this.victorySubText.setVisible(true).setText(names);
         this.victoryHint.setVisible(true);
+        this.victoryRestartBtn.setVisible(true);
+        this.victoryRestartLabel.setVisible(true);
 
         this.scene.tweens.add({ targets: this.victoryBg, alpha: 0.72, duration: 450, ease: 'Linear' });
         this.scene.tweens.add({
@@ -368,6 +384,7 @@ export class HUD {
         });
         this.scene.tweens.add({ targets: this.victorySubText, alpha: 1, duration: 700, delay: 400, ease: 'Linear' });
         this.scene.tweens.add({ targets: this.victoryHint, alpha: 1, duration: 700, delay: 800, ease: 'Linear' });
+        this.scene.tweens.add({ targets: [this.victoryRestartBtn, this.victoryRestartLabel], alpha: 1, duration: 600, delay: 1100, ease: 'Power2' });
       }
       return;
     }

@@ -17,15 +17,20 @@ import { loadCharSprites, BAKED_CHARS } from "./utils/load-char-sprites";
 import { getAllVFXIds } from "./data/spell-vfx-map";
 
 // ── Preset definitions ─────────────────────────────────────────
-interface CombatPreset { name: string; elementA: string; elementB: string; }
+interface CombatPreset { name: string; elementA: string; elementB: string; teamSize?: 2 | 3; }
 
 const PRESET_DEFS: CombatPreset[] = [
+  // 2v2
   { name: 'Feu vs Eau',          elementA: 'Feu',        elementB: 'Eau'       },
   { name: 'Electrique vs Glace', elementA: 'Electrique', elementB: 'Glace'     },
   { name: 'Ténèbres vs Combat',  elementA: 'Ténèbres',   elementB: 'Combat'    },
   { name: 'Plante vs Poison',    elementA: 'Plante',     elementB: 'Poison'    },
   { name: 'Dragon vs Psy',       elementA: 'Dragon',     elementB: 'Psy'       },
   { name: 'Vent vs Sol',         elementA: 'Vent',       elementB: 'Sol'       },
+  // 3v3
+  { name: 'Feu vs Eau  [3v3]',      elementA: 'Feu',      elementB: 'Eau',    teamSize: 3 },
+  { name: 'Dragon vs Spectre [3v3]', elementA: 'Dragon',   elementB: 'Spectre',teamSize: 3 },
+  { name: 'Psy vs Fée  [3v3]',      elementA: 'Psy',      elementB: 'Fée',    teamSize: 3 },
 ];
 
 export default class Game extends Phaser.Scene {
@@ -370,10 +375,11 @@ export default class Game extends Phaser.Scene {
   private _updatePresetUI() {
     const p = PRESET_DEFS[this.selectedPreset];
     const num = this.selectedPreset + 1;
-    this.presetTitle.setText(`[ ${num} / ${PRESET_DEFS.length} ]   ${p.name}`);
+    const sz = p.teamSize ?? 2;
+    this.presetTitle.setText(`[ ${num} / ${PRESET_DEFS.length} ]   ${p.name}  (${sz}v${sz})`);
     const poolInfo = (el: string) => {
       const n = [...this.charDB.values()].filter(c => c.element === el).length;
-      return `${el}  (${n} combattants disponibles — tirage aléatoire)`;
+      return `${el}  (${n} disponibles)`;
     };
     this.presetTeamA.setText(`A : ${poolInfo(p.elementA)}`);
     this.presetTeamB.setText(`B : ${poolInfo(p.elementB)}`);
@@ -392,13 +398,19 @@ export default class Game extends Phaser.Scene {
 
   // ── Combat lifecycle ──────────────────────────────────────
 
-  private _pickTwo(element: string): [Personnage, Personnage] | null {
+  private _pickN(element: string, n: number): Personnage[] | null {
     const pool = [...this.charDB.values()].filter(p => p.element === element);
     if (pool.length === 0) return null;
     const shuffled = [...pool].sort(() => Math.random() - 0.5);
-    const a = shuffled[0];
-    const b = shuffled.find(c => c.id !== a.id) ?? a;
-    return [a, b];
+    const picked: Personnage[] = [];
+    for (let i = 0; i < n; i++) {
+      picked.push(shuffled[i % shuffled.length]);
+    }
+    // Ensure no duplicate IDs if pool is large enough
+    if (pool.length >= n) {
+      return shuffled.slice(0, n);
+    }
+    return picked;
   }
 
   private startCombat() {
@@ -407,20 +419,30 @@ export default class Game extends Phaser.Scene {
     this.hud.setManager(this.combatManager);
 
     const preset = PRESET_DEFS[this.selectedPreset];
-    const teamA = this._pickTwo(preset.elementA);
-    const teamB = this._pickTwo(preset.elementB);
+    const sz = preset.teamSize ?? 2;
+    const teamA = this._pickN(preset.elementA, sz);
+    const teamB = this._pickN(preset.elementB, sz);
 
     if (!teamA || !teamB) {
       console.error(`Cannot start "${preset.name}" — missing characters in DB`);
       return;
     }
-    const [pA1, pA2] = teamA;
-    const [pB1, pB2] = teamB;
 
-    this.combatManager.addUnit(pA1, 2, 2, this.grid.getTopTile(2, 2)?.z ?? 0, 0);
-    this.combatManager.addUnit(pA2, 3, 2, this.grid.getTopTile(3, 2)?.z ?? 0, 0);
-    this.combatManager.addUnit(pB1, 7, 7, this.grid.getTopTile(7, 7)?.z ?? 0, 1);
-    this.combatManager.addUnit(pB2, 6, 7, this.grid.getTopTile(6, 7)?.z ?? 0, 1);
+    // Spawn positions: A on north-west row, B on south-east row
+    const posA: [number, number][] = sz === 3
+      ? [[1, 2], [2, 2], [3, 2]]
+      : [[2, 2], [3, 2]];
+    const posB: [number, number][] = sz === 3
+      ? [[6, 7], [7, 7], [8, 7]]
+      : [[7, 7], [6, 7]];
+
+    for (let i = 0; i < sz; i++) {
+      const [ax, ay] = posA[i];
+      const [bx, by] = posB[i];
+      this.combatManager.addUnit(teamA[i], ax, ay, this.grid.getTopTile(ax, ay)?.z ?? 0, 0);
+      this.combatManager.addUnit(teamB[i], bx, by, this.grid.getTopTile(bx, by)?.z ?? 0, 1);
+    }
+
     this._applyPresetTerrain(this.selectedPreset);
     this.combatManager.start();
 
@@ -432,7 +454,7 @@ export default class Game extends Phaser.Scene {
     this.infoText.setVisible(false);
   }
 
-  private stopCombat() {
+  stopCombat() {
     if (!this.combatMode) return;
     for (const unit of [...this.combatManager.units]) unit.destroy();
     this.combatMode = false;
@@ -473,6 +495,21 @@ export default class Game extends Phaser.Scene {
       [ // 5: Vent vs Sol
         ...rect(1, 1, 4, 4, 'Vent'), ...rect(5, 5, 8, 8, 'Sol'),
         { x: 4, y: 5, el: 'Roche' }, { x: 5, y: 4, el: 'Roche' },
+      ],
+      [ // 6: Feu vs Eau 3v3 — battlefield with scattered Vapeur mid-zone
+        ...rect(0, 0, 3, 4, 'Feu'), ...rect(6, 5, 9, 9, 'Eau'),
+        ...rect(4, 4, 5, 5, 'Vapeur'),
+        { x: 3, y: 5, el: 'Vapeur' }, { x: 6, y: 4, el: 'Vapeur' },
+      ],
+      [ // 7: Dragon vs Spectre 3v3 — contested Ténèbres mid
+        ...rect(0, 0, 3, 4, 'Dragon'), ...rect(6, 5, 9, 9, 'Spectre'),
+        ...rect(4, 3, 5, 6, 'Ténèbres'),
+        { x: 3, y: 4, el: 'Dragon' }, { x: 6, y: 5, el: 'Spectre' },
+      ],
+      [ // 8: Psy vs Fée 3v3 — central combat arena
+        ...rect(0, 0, 3, 4, 'Psy'), ...rect(6, 5, 9, 9, 'Fée'),
+        ...rect(4, 4, 5, 5, 'Combat'),
+        { x: 3, y: 5, el: 'Plante' }, { x: 6, y: 4, el: 'Plante' },
       ],
     ];
     for (const tile of DEFS[presetIndex] ?? []) {
