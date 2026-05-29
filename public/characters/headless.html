@@ -62,6 +62,24 @@
       return await viewer._blobToBase64(blob);
     };
 
+    /**
+     * Inject animations from a bank GLB without replacing existing clips.
+     * @param {string} url - absolute URL
+     * @returns {{ injected: string[] }}
+     */
+    window.loadAndInjectBank = async function(url) {
+      return await viewer.loadAndInjectBank(url);
+    };
+
+    /**
+     * Bake spritesheets for all mapped animation slots.
+     * @param {{ frameW?: number, frameH?: number }} [options]
+     * @returns {{ [slot]: { [dir]: 'data:image/png;base64,...' } }}
+     */
+    window.captureSpritesheetsByDir = async function(options = {}) {
+      return await viewer.captureSpritesheetsByDir(options);
+    };
+
     window.__viewerReady = true;
     console.log('[headless] GLBViewer ready');
   </script>

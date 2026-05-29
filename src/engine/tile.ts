@@ -23,6 +23,7 @@ export default class Tile implements ITile {
   protected tacticalMode2Active: boolean = false;  // Track if tactical mode 2 is enabled (show all cubes)
   protected tacticalTint: number | null = null;  // Store tactical mode tint color
   protected originalAlpha: number = 1.0;  // Store original alpha for mode 2
+  protected customTint: number | null = null;  // Element/combat tint set externally
   isTopCube: boolean = true;  // Track if this is the top cube at its position (public for interface)
   object: number | null;
   
@@ -147,10 +148,15 @@ export default class Tile implements ITile {
         this.zLevelText.setText(`z${this.z}`);
       }
     } else {
-      // Clear tint
+      // Clear tint — restore custom element tint if set
       this.tacticalTint = null;
-      this.sprite.clearTint();
-      this.ssprite.clearTint();
+      if (this.customTint !== null) {
+        this.sprite.setTint(this.customTint);
+        this.ssprite.setTint(this.customTint);
+      } else {
+        this.sprite.clearTint();
+        this.ssprite.clearTint();
+      }
 
       // Hide z-level text
       if (this.zLevelText) {
@@ -341,6 +347,19 @@ export default class Tile implements ITile {
       }
     } catch (error) {
       console.error(`Error setting object texture '${okey}':`, error);
+    }
+  }
+
+  setCustomTint(color: number | null) {
+    this.customTint = color;
+    if (!this.tacticalModeActive) {
+      if (color !== null) {
+        this.sprite.setTint(color);
+        this.ssprite.setTint(color);
+      } else {
+        this.sprite.clearTint();
+        this.ssprite.clearTint();
+      }
     }
   }
 

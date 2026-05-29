@@ -1627,4 +1627,210 @@ export class GLBViewer {
       reader.readAsDataURL(blob);
     });
   }
+
+  // ── Spritesheet baking ───────────────────────────────────────
+
+  /**
+   * Load a GLB animation bank and merge its clips into _animClips.
+   * Unlike loadAnimationBank which replaces clips, this ADDS to the pool.
+   */
+  loadAndInjectBank(url) {
+    return new Promise((resolve, reject) => {
+      const loader = new GLTFLoader();
+      loader.load(url, (gltf) => {
+        gltf.animations.forEach(clip => this.injectClip(clip));
+        resolve({ injected: gltf.animations.map(c => c.name) });
+      }, null, (err) => reject(new Error(String(err?.message ?? err))));
+    });
+  }
+
+  /**
+   * Find the best-matching animation clip for a game slot name.
+   * Checks: exact name → normalized name → MESHY_TO_SLOT reverse table.
+   */
+  _findClipForSlot(slot) {
+    if (!this._animClips.length) return null;
+    const norm = s => s.toLowerCase().replace(/[\s_]+/g, '-');
+
+    let c = this._animClips.find(x => x.name === slot || norm(x.name) === slot);
+    if (c) return c.name;
+
+    const MAP = {
+      idle:       ['idle', 'idle 02', 'idle_02', 'idle 03', 'idle_03', 'alert', 'unarmed-idle', 'relax-idle'],
+      run:        ['walking', 'running', 'run', 'run 02', 'run_02', 'runfast', 'unarmed-run-forward', 'relax-run-forward'],
+      hurt:       ['behit_flyup', 'hurt', 'hit', 'hit reaction', 'be hit'],
+      die:        ['dead', 'die', 'death', 'dying', 'defeated'],
+      'attack-01': ['attack', 'attack 01', 'slash', 'unarmed-attack-kick-r1'],
+      'attack-02': ['skill_01', 'skill 01', 'attack 02', 'punch'],
+      'attack-03': ['skill_02', 'skill 02', 'attack 03', 'kick'],
+      'attack-04': ['skill_03', 'skill 03', 'attack 04', 'double combo attack'],
+      'attack-05': ['skill_04', 'skill 04', 'attack 05', 'magic attack', 'action 004', 'action_004'],
+      'attack-06': ['skill_05', 'skill 05', 'attack 06', 'heavy attack', 'action 005', 'action_005'],
+      'attack-07': ['skill_06', 'skill 06', 'attack 07', 'action 006', 'action_006', 'action 007', 'action_007'],
+      'attack-08': ['skill_07', 'skill 07', 'attack 08', 'action 008', 'action_008', 'action 007', 'action_007'],
+      'attack-09': ['skill_08', 'skill 08', 'attack 09', 'action 009', 'action_009', 'action 010', 'action_010'],
+      'attack-10': ['skill_09', 'skill 09', 'attack 10', 'action 010', 'action_010', 'action 011', 'action_011'],
+    };
+    for (const candidate of (MAP[slot] ?? [])) {
+      c = this._animClips.find(x =>
+        x.name.toLowerCase() === candidate.toLowerCase() || norm(x.name) === candidate
+      );
+      if (c) return c.name;
+    }
+    return null;
+  }
+
+  /**
+   * Render a single animation direction as a horizontal-strip PNG blob.
+   * frameW×frameH per frame, frameCount frames wide.
+   */
+  async _captureDirStrip(clip, frameCount, frameW, frameH, azimuth) {
+    if (!this._model) return null;
+
+    const SCALE = 4;
+    const renderW = frameW * SCALE;
+    const renderH = frameH * SCALE;
+
+    // Activate the target clip on the mixer
+    const savedAction = this._activeAction;
+    const action = this._mixer.clipAction(clip, this._model);
+    if (this._activeAction) this._activeAction.stop();
+    this._activeAction = action;
+    action.reset().play();
+
+    // Save camera state
+    const savedPos = this._camera.position.clone();
+    const savedTop = this._camera.top;
+    const savedBot = this._camera.bottom;
+
+    // Adjust frustum for non-square frame aspect (portrait orientation)
+    if (frameH !== frameW) {
+      const ratio = frameH / frameW;
+      this._camera.top    =  this._camera.right * ratio;
+      this._camera.bottom = -this._camera.right * ratio;
+      this._camera.updateProjectionMatrix();
+    }
+
+    // Position camera for this direction
+    const elev = Math.atan(1 / Math.SQRT2);
+    const dist = 10;
+    this._camera.position.set(
+      dist * Math.cos(elev) * Math.cos(azimuth),
+      dist * Math.sin(elev),
+      dist * Math.cos(elev) * Math.sin(azimuth),
+    );
+    this._camera.lookAt(0, 1, 0);
+    this._camera.updateMatrixWorld();
+
+    const rt = new THREE.WebGLRenderTarget(renderW, renderH);
+
+    const outCanvas = document.createElement('canvas');
+    outCanvas.width  = frameW * frameCount;
+    outCanvas.height = frameH;
+    const outCtx = outCanvas.getContext('2d');
+    outCtx.imageSmoothingEnabled = false;
+
+    const readCanvas = document.createElement('canvas');
+    readCanvas.width = renderW; readCanvas.height = renderH;
+    const readCtx = readCanvas.getContext('2d');
+
+    const frameCanvas = document.createElement('canvas');
+    frameCanvas.width = frameW; frameCanvas.height = frameH;
+    const frameCtx = frameCanvas.getContext('2d');
+    frameCtx.imageSmoothingEnabled = false;
+
+    for (let fi = 0; fi < frameCount; fi++) {
+      const t = (fi / frameCount) * clip.duration;
+      this._mixer.setTime(t);
+
+      this._renderer.setRenderTarget(rt);
+      this._renderer.render(this._scene, this._camera);
+      this._renderer.setRenderTarget(null);
+
+      // Read pixels from GPU + flip Y (WebGL origin = bottom-left)
+      const pixels = new Uint8Array(renderW * renderH * 4);
+      this._renderer.readRenderTargetPixels(rt, 0, 0, renderW, renderH, pixels);
+
+      const imgData = readCtx.createImageData(renderW, renderH);
+      for (let row = 0; row < renderH; row++) {
+        const src = (renderH - 1 - row) * renderW * 4;
+        imgData.data.set(pixels.subarray(src, src + renderW * 4), row * renderW * 4);
+      }
+      readCtx.putImageData(imgData, 0, 0);
+
+      frameCtx.clearRect(0, 0, frameW, frameH);
+      frameCtx.drawImage(readCanvas, 0, 0, frameW, frameH);
+      outCtx.drawImage(frameCanvas, fi * frameW, 0);
+    }
+
+    // Restore camera
+    this._camera.position.copy(savedPos);
+    this._camera.top    = savedTop;
+    this._camera.bottom = savedBot;
+    this._camera.updateProjectionMatrix();
+    this._camera.lookAt(0, 1, 0);
+    this._camera.updateMatrixWorld();
+
+    // Restore active action
+    action.stop();
+    this._activeAction = savedAction;
+    if (savedAction) {
+      try { savedAction.reset().play(); } catch (_) {}
+    }
+
+    rt.dispose();
+    return new Promise(res => outCanvas.toBlob(res, 'image/png'));
+  }
+
+  /**
+   * Capture all animation slots in all needed directions.
+   * Returns { [slot]: { [dir]: dataUrl } }
+   *   dir: 0=North, 1=East, 2=South, 3=West
+   * Non-directional states (hurt, die) only include dir 2 (South).
+   */
+  async captureSpritesheetsByDir(options = {}) {
+    const { frameW = 128, frameH = 192 } = options;
+
+    const SLOT_FRAMES = {
+      idle: 8, run: 8, hurt: 4, die: 10,
+      'attack-01': 6, 'attack-02': 6, 'attack-03': 6, 'attack-04': 6,
+      'attack-05': 6, 'attack-06': 6, 'attack-07': 6, 'attack-08': 6,
+      'attack-09': 6, 'attack-10': 6,
+    };
+    const DIRECTIONAL = new Set([
+      'idle', 'run',
+      'attack-01', 'attack-02', 'attack-03', 'attack-04', 'attack-05',
+      'attack-06', 'attack-07', 'attack-08', 'attack-09', 'attack-10',
+    ]);
+
+    // Camera azimuth → game facing direction
+    // "Camera at SE" means the character is seen from SE, so it faces South (dir=2).
+    const DIR_AZ = [
+      { az: 5 * Math.PI / 4, dir: 0 }, // NW camera → character faces North
+      { az: 7 * Math.PI / 4, dir: 1 }, // NE camera → character faces East
+      { az: 1 * Math.PI / 4, dir: 2 }, // SE camera → character faces South
+      { az: 3 * Math.PI / 4, dir: 3 }, // SW camera → character faces West
+    ];
+
+    const result = {};
+    for (const [slot, fc] of Object.entries(SLOT_FRAMES)) {
+      const clipName = this._findClipForSlot(slot);
+      if (!clipName) {
+        console.log(`[bake] no clip for slot "${slot}" — skipped`);
+        continue;
+      }
+      const clip = this._animClips.find(c => c.name === clipName);
+      if (!clip) continue;
+
+      console.log(`[bake] ${slot} → "${clipName}" (${fc} frames × ${DIRECTIONAL.has(slot) ? 4 : 1} dirs)`);
+      result[slot] = {};
+
+      const dirs = DIRECTIONAL.has(slot) ? DIR_AZ : [DIR_AZ[2]]; // South only for hurt/die
+      for (const { az, dir } of dirs) {
+        const blob = await this._captureDirStrip(clip, fc, frameW, frameH, az);
+        if (blob) result[slot][dir] = await this._blobToBase64(blob);
+      }
+    }
+    return result;
+  }
 }

@@ -1,0 +1,26 @@
+export const ELEMENT_TINTS: Record<string, number> = {
+  Feu:        0xFF5511,
+  Eau:        0x1188FF,
+  Glace:      0x88DDFF,
+  Electrique: 0xFFDD00,
+  Plante:     0x22BB44,
+  Sol:        0xBB8833,
+  Roche:      0x999999,
+  Vent:       0xCCEEFF,
+  Dragon:     0xFF7700,
+  Insecte:    0x99BB00,
+  Psy:        0xFF88EE,
+  Ténèbres:   0x7733AA,
+  Fée:        0xFFAAFF,
+  Poison:     0x66BB22,
+  Spectre:    0xBB99FF,
+  Gravité:    0x666677,
+  Combat:     0xDD3322,
+  Normal:     0xCCCCCC,
+  Magma:      0xFF6600,
+  Vapeur:     0xEEEECC,
+  Acier:      0xAABBCC,
+  Stellaire:  0xFFFFAA,
+};
+
+export const UNIT_TEAM_COLORS: [number, number] = [0x4488FF, 0xFF4444];

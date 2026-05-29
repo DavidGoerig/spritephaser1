@@ -3859,11 +3859,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   261: {
     timeline_position: { an: -1, lieu: 'Isthme', arc: 'Second Avatar' },
     histoire: [
-      { titre: 'Douze ans de confiance', texte: 'Sarevorn a aidé à cacher le Second Avatar pendant 2 ans avec Sarath — pas parce qu\'on lui avait tout expliqué, mais parce qu\'il connaissait Sarath depuis 12 ans et que ça suffisait.' },
-      { titre: 'L\'abri en 14 maisons', texte: 'Deux ans, 14 maisons différentes, 9 fausses identités. Il avait su qui était l\'Avatar au bout d\'une semaine — pas parce qu\'on lui avait dit, parce qu\'il avait vu comment l\'Empire cherchait.' },
-      { titre: 'La mort de Sarath', texte: 'Sarath est mort. Sarevorn n\'était pas là. Il a appris le résultat, pas le processus. Le seul autre à savoir ce qu\'ils avaient fait ensemble.' },
-      { titre: 'L\'ignorance délibérée', texte: 'Il ne sait pas où est l\'Avatar maintenant. C\'est un choix. Un réseau où trop de gens savent où est la cible la plus recherchée de l\'Empire est un réseau vulnérable.' },
-      { titre: 'Ce qui reste', texte: 'Il vit avec quelque chose qui ne nécessite pas de confirmation extérieure — une grandeur silencieuse. Il referait.' },
+      { titre: "L'isthme et le passage", texte: "Né à l'Isthme — la région de transit entre l'Empire et les territoires libres. Sa famille tenait une auberge sur une route marchande. Depuis l'enfance il avait une connaissance pratique des gens qui ne voulaient pas être vus et des routes qui permettaient ça." },
+      { titre: "Le recrutement Dissident", texte: "Rejoint les Dissidentes à 27 ans — naturellement, via le réseau de l'auberge familiale. Il n'avait pas une idéologie précise, il avait une compétence : des itinéraires sûrs, des maisons de confiance, un sens de la logistique clandestine. Le réseau avait eu besoin exactement de ça." },
+      { titre: "Sarath et la proposition", texte: "À 39 ans, Sarath (61) lui avait fait une proposition sans détail — une cache longue durée pour \"un sujet dont la sécurité était absolument prioritaire\". Sarath n'avait pas dit qui. Sarevorn avait dit oui parce qu'il connaissait Sarath depuis 12 ans et que 12 ans de confiance suffisaient." },
+      { titre: "Le Second Avatar", texte: "Il avait su au bout d'une semaine. Pas parce qu'on lui avait dit — parce qu'il avait vu la façon dont l'Empire cherchait, l'intensité de la recherche, les ressources déployées. Il avait recalculé le risque à la hausse et avait continué quand même. Les deux ans qui avaient suivi étaient les deux ans les plus importants de sa vie." },
+      { titre: "La fin sans fin", texte: "Sarath est mort il y a un an. L'Avatar est parti — Sarevorn ne sait pas où. Il n'a pas cherché à savoir, parce que ne pas savoir est une protection. Il vit à l'Isthme, travaille du côté logistique du réseau Dissident, et porte ce qu'il a fait comme quelque chose qui ne nécessite pas de confirmation extérieure." }
     ],
     sorts: ['Frappe de terrain', 'Camouflage itinérant', 'Orientation tactique'],
     relations: [
@@ -3917,11 +3917,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   264: {
     timeline_position: { an: -1, lieu: 'Isthme', arc: 'Second Avatar' },
     histoire: [
-      { titre: 'L\'identité parfaite', texte: 'Il y a 4 ans, Sylkavel a créé une fausse identité pour le Second Avatar — corroborée par 4 registres, cohérente sur 12 ans. Elle en était fière.' },
-      { titre: 'Le vieillissement mal', texte: 'Il y a 18 mois, les premières failles : formats de signature anachroniques. Elle a commencé à corriger à distance. Une faille nouvelle par mois en moyenne.' },
-      { titre: 'La course silencieuse', texte: 'Elle surveille l\'identité via 3 contacts dans des cités-relais. La dernière vérification : il y a 11 jours, un port de l\'Isthme. Le document a résisté. Elle a dormi 4 heures cette nuit-là.' },
-      { titre: 'Nyreth sans contact', texte: 'Elle a appris la méthode de Nyreth par analyse comparative de ses œuvres. Transmission sans rencontre.' },
-      { titre: 'La prochaine faille', texte: 'Identifiée ce matin : un registre militaire réindexé. 2 jours pour corriger avant qu\'un vérificateur attentif remarque le décalage.' },
+      { titre: "Les documents qui mentent", texte: "Née dans une famille de l'Isthme, son père était marchand qui traversait régulièrement les frontières impériales avec des documents \"arrangés\". À 10 ans elle avait compris comment les arrangements fonctionnaient. À 14 ans elle avait identifié 3 erreurs dans les documents paternels sans lui demander de les montrer. Il les avait fait corriger sans commentaire." },
+      { titre: "Le réseau et les identités", texte: "Recrutée à 27 ans par les Dissidentes précisément pour ce talent. Sa capacité à créer des identités documentaires suffisamment étayées pour résister aux vérifications impériales standard avait été recommandée par un contact de l'Isthme. Elle n'avait pas hésité." },
+      { titre: "L'identité du Second Avatar", texte: "Il y a 4 ans, Sarath (61) lui avait demandé une identité pour \"un sujet dont la sécurité dépassait tout ce qu'elle avait fait jusqu'ici\". Elle avait travaillé 3 semaines. L'identité était parfaite à l'époque — corroborée par 4 registres distincts, cohérente sur 12 ans de fausse histoire. Elle en était fière." },
+      { titre: "Le vieillissement mal", texte: "Il y a 18 mois, en auditant ses créations passées, elle avait identifié les premières failles. Le format de signature d'un document avait été mis à jour par l'Empire — l'identité du Second Avatar utilisait l'ancien format, ce qui était techniquement anachronique mais non détectable sans comparaison directe. Elle avait commencé à corriger à distance. Depuis, elle en trouve une nouvelle par mois en moyenne." },
+      { titre: "La course", texte: "Elle surveille l'identité depuis Isthme via des contacts dans 3 cités-relais qui peuvent vérifier si les documents ont été consultés par des systèmes impériaux. Dernière alerte : il y a 11 jours, une vérification de routine dans un port de l'Isthme. Le document avait résisté. Elle avait passé 2 heures à vérifier qu'il n'y avait pas eu de signalement suivant. Il n'y en avait pas. Elle avait dormi 4 heures cette nuit-là." }
     ],
     sorts: ['Croissance documentaire', 'Enchantement fée', 'Trace végétale'],
     relations: [
@@ -4055,11 +4055,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   271: {
     timeline_position: { an: -1, lieu: 'Isthme', arc: 'Second Avatar' },
     histoire: [
-      { titre: 'La phrase', texte: '"Je ne signerai jamais une loi qui traite les gens comme des ressources à cataloguer." Le Premier Avatar avait dit ça 3 mois avant de signer. Tharaevorn l\'avait entendu dire des versions de ça pendant 15 ans.' },
-      { titre: 'Le lendemain de la signature', texte: 'Il a lu la loi dans les annonces officielles. N\'a pas écrit au Premier. A rendu son insigne par les procédures normales. Est parti.' },
-      { titre: 'Sarath et les Dissidentes', texte: 'Sarath (61) était son ancrage — le seul qui comprenait le contexte sans explication. Sa mort a laissé une absence de mémoire partagée.' },
-      { titre: 'Le Second Avatar', texte: 'Il l\'a vu une fois brièvement. Représente ce que le Premier aurait pu rester. Il sait que c\'est une projection. La projection a une utilité.' },
-      { titre: 'Le prénom', texte: 'Il parle du Premier par son prénom. Personne dans les Dissidentes ne fait ça. Ça les met légèrement mal à l\'aise.' },
+      { titre: "Avant la loi", texte: "Né dans une famille de fonctionnaires impériaux de second rang. Il avait grandi avec l'Empire comme évidence de la même façon qu'on grandit avec le ciel — pas aimé, pas questionné. Son élément Électrique faible le plaçait dans la catégorie des Élus ordinaires, suffisamment pour être enregistré, pas assez pour être convoqué." },
+      { titre: "L'amitié avant le trône", texte: "Il avait rencontré le Premier Avatar à 22 ans — avant que l'Empire soit une idée sérieuse, quand le Premier était encore quelqu'un qui cherchait à comprendre le monde. Ils avaient eu 15 ans d'amitié. Ce qu'il connaissait du Premier était réel — une personne avec des doutes, une aversion sincère pour les systèmes coercitifs, une conviction qu'on lui avait entendue plusieurs fois." },
+      { titre: "La conversation de trois mois avant", texte: "Trois mois avant la signature de la loi d'enregistrement obligatoire, ils avaient discuté de l'enregistrement. Le Premier avait dit : \"je ne signerai jamais une loi qui traite les gens comme des ressources à cataloguer.\" Tharaevorn avait cru ça. Il avait des raisons de croire ça — 15 ans de raisons." },
+      { titre: "La signature", texte: "Le Premier a signé. Tharaevorn a lu la loi le lendemain dans les annonces officielles. Il n'a pas écrit au Premier. Il n'a pas demandé d'explication. Il a rendu son insigne cet après-midi, a quitté son poste par les procédures normales, et est parti rejoindre les Dissidentes via Sarath (61) — qu'il connaissait depuis 3 ans comme quelqu'un qui avait quitté l'Empire pour des raisons similaires." },
+      { titre: "Pour le Second", texte: "Il travaille pour les Dissidentes depuis 20 ans. Il a vu le Second Avatar une fois — il ne lui a pas parlé, mais il était là quand Sarath l'avait présenté comme \"quelqu'un d'important\". Il avait su immédiatement. Le Second Avatar est ce que le Premier aurait pu être. Cette conviction l'aide à travailler. Elle ne résout rien sur le Premier, mais elle lui donne une direction." }
     ],
     sorts: ['Arc Électrique', 'Résistance normale', 'Intuition de terrain'],
     relations: [
@@ -4093,11 +4093,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   273: {
     timeline_position: { an: -1, lieu: 'Isthme', arc: 'Second Avatar' },
     histoire: [
-      { titre: 'L\'abri de Sarath', texte: 'Il y a 3 semaines, Kaelorveth a trouvé l\'abri où Sarath cachait le Second Avatar. Les traces étaient claires. Il a reconnu le mode opératoire de Sarath. Il a perçu la résonance élémentaire de l\'autre personne — dense, chaud, fort.' },
-      { titre: 'Le rapport rédigé', texte: 'Il l\'a rédigé le soir même. Procédure standard : transmettre à Avel. Il l\'a mis dans sa poche pour le lendemain.' },
-      { titre: 'Trois semaines', texte: 'Le rapport est dans sa poche depuis 3 semaines. Il a dit à Avel qu\'il viendrait dans les prochains jours. Il n\'est pas venu. Avel ne l\'a pas relancé.' },
-      { titre: 'Les raisons valides et insuffisantes', texte: 'Vérifier une dernière fois. Confirmer. Attendre un meilleur moment. Ces raisons sont techniquement vraies et insuffisantes.' },
-      { titre: 'La vraie question', texte: 'Il s\'approche de la formuler : si je transmets ça, qu\'est-ce que ça fait à la personne qui était dans cet abri ?' },
+      { titre: "L'enfant qui cherchait", texte: "Né à l'Isthme dans une famille de marchands. À 10 ans il résolvait les litiges commerciaux de son père en trouvant les incohérences dans les témoignages — un talent qu'il n'avait pas cherché et qui l'avait simplement toujours été là." },
+      { titre: "L'Empire comme structure", texte: "Recruté à 22 ans par les services d'investigation impériaux pour sa capacité à lire les scènes et à reconstruire des événements depuis les traces physiques. Il n'avait pas d'idéologie impériale particulière — l'Empire avait une structure, la structure avait des procédures, les procédures lui convenaient." },
+      { titre: "La mission post-Sarath", texte: "Envoyé il y a 3 semaines pour examiner un abri abandonné dans les Déserts de l'Isthme — signalé par un contact local comme un lieu de cache récent. Il avait trouvé les traces de Sarath (61), mort il y a un an — un nom dans les archives des Dissidentes, un mode opératoire reconnaissable. Et les traces d'une deuxième présence — quelqu'un dont Sarath prenait un soin particulier." },
+      { titre: "Le rapport dans la poche", texte: "Il avait rédigé le rapport le soir même. Il avait la procédure standard : transmetttre à son supérieur indirect Avel (64), qui transmettrait à la Citadelle, qui transmettrait aux capteurs impériaux. Il l'avait mis dans sa poche pour le transmettre le lendemain. Trois semaines plus tard, il est encore dans sa poche." },
+      { titre: "La question sans réponse", texte: "Il a passé 3 semaines à trouver des raisons de ne pas encore transmettre — vérifier une dernière fois, confirmer l'identité, attendre un meilleur moment pour approcher Avel. Ce sont des raisons valides et insuffisantes. La vraie question — ce qu'il n'a pas encore formulé clairement — c'est : si je transmets ça, qu'est-ce que ça fait à la personne qui était dans cet abri ?" }
     ],
     sorts: ['Frappe d\'investigation', 'Ancrage de Sol', 'Lecture de trace'],
     relations: [
@@ -4112,11 +4112,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   274: {
     timeline_position: { an: -1, lieu: 'Isthme', arc: 'Second Avatar' },
     histoire: [
-      { titre: 'Sept corridors', texte: 'Vethyskel a tracé 7 corridors depuis Virex sur 17 ans. Chacun a été utilisé au moins une fois. Il tient un registre des réussites et des échecs, avec les raisons.' },
-      { titre: 'Velath en parallèle', texte: 'Il y a 3 semaines, il a appris que Velath (49) travaille sur le même corridor sud indépendamment. Ils ont failli se croiser physiquement deux fois.' },
-      { titre: 'La coordination à établir', texte: 'Le corridor serait plus robuste s\'ils se coordonnaient. La coordination directe demande un protocole soigneux. Il prépare l\'approche. Il ne l\'a pas encore exécutée.' },
-      { titre: 'Le Second Avatar sur une route', texte: 'Un flux inhabituel il y a 8 mois sur un de ses corridors. Résonance élémentaire notable. Il ne sait pas que c\'était le Second Avatar.' },
-      { titre: 'Aelthys', texte: 'Aelthys (268) utilise ses cartes anonymisées sans savoir qu\'elles viennent de lui.' },
+      { titre: "L'Isthme comme terrain", texte: "Né à l'Isthme dans une famille de géomètres. Il avait appris à lire le terrain avant d'apprendre à lire les mots. Son élément Spectre — perception des résidus de présence dans les espaces — lui donnait une façon de \"lire\" les routes utilisées et non-utilisées par leurs traces mémorielles." },
+      { titre: "Les Dissidentes et les corridors", texte: "Rejoint les Dissidentes à 34 ans après avoir été sollicité pour un projet de cartographie \"alternatif\". Il avait compris ce que ça signifiait. Il avait accepté parce qu'il avait une compétence qui pouvait faire quelque chose de concret." },
+      { titre: "Le premier corridor", texte: "Le premier corridor depuis Virex avait pris 4 mois à établir — terrain, couvertures, points de relais, alternatives en cas de blocage. Quand la première personne l'avait utilisé avec succès, il avait eu le sentiment que quelque chose d'utile existait là où il n'y avait pas eu de chemin." },
+      { titre: "La presque-rencontre avec Velath", texte: "Il y a 3 semaines, il avait reçu un message du réseau lui signalant qu'un \"autre acteur travaillait sur le corridor sud\" et qu'il y avait eu un doublonnement d'informations dans deux transmissions consécutives. Il avait reconstitué que c'était Velath (49) depuis les patterns de la transmission. Ils avaient failli se croiser physiquement deux fois sans se reconnaître. La compartimentation avait fait son travail — et l'avait peut-être rendu moins efficace." },
+      { titre: "Le contact à établir", texte: "Il cherche à établir un contact avec Velath sans compromettre la sécurité des deux — la coordination directe entre deux nœuds du réseau demande un protocole soigneux. Il prépare une approche qui lui permettrait de vérifier que c'est bien Velath avant d'envoyer quelque chose d'identifiable. Il a un plan pour ça. Il ne l'a pas encore exécuté." }
     ],
     sorts: ['Lecture de mémoire de lieu', 'Vent de couverture', 'Navigation Spectre'],
     relations: [
@@ -4189,11 +4189,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   278: {
     timeline_position: { an: -1, lieu: 'Citadelle', arc: 'Rupture Thermique' },
     histoire: [
-      { titre: 'Asterciel et les métaux', texte: 'Né dans les strates moyennes d\'Asterciel. Père forgeron Aéride spécialisé dans les alliages. L\'Electrique est apparu à 16 ans en travaillant sur une jonction — ce que ça signifiait pour les alliages conducteurs.' },
-      { titre: 'Le recrutement militaire', texte: 'L\'Empire l\'a recruté à 30 ans après avoir vu ses prototypes d\'alliages légers. Pas pour les plateformes — pour les armures. Un an à accepter la transition.' },
-      { titre: 'La première armure testée', texte: 'Son prototype a absorbé une attaque électrique qui aurait tué le régulateur qui le portait. Il a lu le rapport. Il a noté que l\'armure avait fonctionné. Il n\'a pas demandé ce que le régulateur faisait à Varkhôl.' },
-      { titre: 'La variante souterraine', texte: 'Commande de Thyss pour Ormn-Dur : armures pour vapeurs fongiques et pression variable. Problème techniquement différent. 4 mois de travail. Des incertitudes sur les propriétés à long terme — documentées dans ses notes, pas dans le rapport de livraison.' },
-      { titre: 'L\'adaptation automatique', texte: 'Il travaille sur une armure qui lit l\'élément d\'une attaque et ajuste sa conductivité avant l\'impact. Si ça fonctionne, c\'est le projet le plus élégant qu\'il ait réalisé.' },
+      { titre: "Asterciel et les métaux", texte: "Né dans les strates moyennes d'Asterciel d'un père forgeron Aéride spécialisé dans les alliages pour les structures des plateformes. L'élément Acier était naturel dans ce contexte. L'Electrique était apparu à 16 ans — une décharge accidentelle en travaillant sur une jonction de structure. Il avait compris ce que ça signifiait pour les alliages conducteurs." },
+      { titre: "Le recrutement militaire", texte: "L'Empire l'avait recruté à 30 ans après avoir vu ses prototypes d'alliages légers pour les plates-formes d'Asterciel. Pas pour les plates-formes — pour les armures. La transition lui avait pris un an à accepter. Ce qu'il avait accepté n'était pas l'Empire mais le problème technique : comment faire une armure qui conduise l'élément du porteur sans bloquer ses capacités ?" },
+      { titre: "La première armure testée", texte: "Son premier prototype testé en condition réelle : un régulateur l'avait portée dans une intervention à Varkhôl. Le régulateur était rentré. L'armure avait absorbé une attaque électrique qui aurait tué l'homme. Velrynth avait lu le rapport et avait noté que l'armure avait fonctionné. Il n'avait pas demandé ce que le régulateur faisait à Varkhôl." },
+      { titre: "La variante souterraine", texte: "La commande de Thyss pour Ormn-Dur : des armures pour opérations souterraines dans des environnements à vapeurs fongiques et pression variable. Le problème était techniquement différent de tout ce qu'il avait résolu. Il avait passé 4 mois dessus. La solution impliquait un alliage dont il n'était pas certain que les propriétés étaient entièrement comprises. Il avait documenté les incertitudes. Il avait livré." },
+      { titre: "Le catalogue grandissant", texte: "Il a maintenant 7 variantes opérationnelles d'armures conductrices. Chacune est optimisée pour un type d'environnement. Elles protègent les régulateurs. Les régulateurs font ce qu'ils font. Velrynth continue de résoudre les problèmes suivants — actuellement, une armure qui s'adapte automatiquement à l'élément de l'attaque entrante." }
     ],
     sorts: ['Armure conductrice', 'Arc de renvoi', 'Frappe structurelle'],
     relations: [
@@ -4207,11 +4207,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   279: {
     timeline_position: { an: -1, lieu: 'Ormn-Dur', arc: 'Fosse Interdite' },
     histoire: [
-      { titre: 'La frontière', texte: 'Née dans un port côtier face à la frontière d\'Ormn-Dur. Père marin Néréide, mère artisane avec du sang Chthonien — ce qui a donné l\'Acier. Grandie entre deux mondes.' },
-      { titre: 'Le premier outil', texte: 'À 26 ans, elle crée son premier outil électrique fonctionnant dans les conditions de mine — la combinaison Electrique/Acier permet de calibrer le champ selon la composition minérale locale, automatiquement.' },
-      { titre: 'La semaine sans eau', texte: 'Fermeture des canaux de maintenance. Elle réalise à quel point elle dépend physiquement de l\'eau — pas professionnellement, physiquement. Elle est Néréide.' },
-      { titre: 'La galerie non officielle', texte: 'Drekvar lui demande des outils calibrés pour une galerie sans coordonnées dans les plans officiels. Elle calibre. Elle ne demande pas. Elle garde trace dans un carnet personnel.' },
-      { titre: 'L\'atelier qui tourne', texte: 'Son atelier produit des outils pour une dizaine de clients réguliers. Seule artisane de la région à maîtriser la calibration électrique pour les environnements souterrains. Kaeleth lui envoie des commandes depuis Thalassyr.' },
+      { titre: "La frontière", texte: "Née dans un port côtier qui faisait face à la frontière terrestre d'Ormn-Dur. Son père était marin Néréide. Sa mère était artisane d'une famille installée à la frontière depuis trois générations — avec du sang Chthonien dans les ancêtres, ce qui avait donné l'Acier. Elle avait grandi entre deux mondes sans appartenir entièrement à aucun." },
+      { titre: "Le premier outil", texte: "À 22 ans, elle était entrée à Ormn-Dur comme apprentie d'un artisan local. À 26 ans, elle avait créé son premier outil électrique fonctionnant dans les conditions de la mine — ce que personne avant elle n'avait réussi parce que la combinaison Electrique/Acier permettait de calibrer le champ électrique selon la composition minérale locale, automatiquement." },
+      { titre: "L'eau qui manque", texte: "Il y a 4 ans, lors d'une semaine où les canaux d'eau d'Ormn-Dur étaient fermés pour maintenance, elle avait réalisé à quel point elle dépendait de l'eau pour fonctionner — pas professionnellement, physiquement. Elle avait passé cette semaine avec un malaise constant qu'elle n'avait pas su nommer jusqu'à ce qu'elle touche le premier filet d'eau réouvert." },
+      { titre: "La galerie interdite", texte: "Drekvar lui avait demandé de calibrer des outils pour une galerie dont il lui avait donné les coordonnées sans expliquer pourquoi elle n'était pas dans les plans officiels. Elle avait calibré. Les outils fonctionnaient. Elle n'avait pas demandé ce que Drekvar faisait dans cette galerie non officielle." },
+      { titre: "L'atelier qui tourne", texte: "Son atelier à Ormn-Dur produit maintenant des outils pour une dizaine de clients réguliers dans les mines. Elle est la seule artisane de la région à maîtriser la calibration électrique pour les environnements souterrains. Kaeleth lui envoie des commandes depuis Thalassyr pour des équipements hybrides réseau-port. C'est de l'exportation artisanale. Ça lui convient." }
     ],
     sorts: ['Surcharge d\'outil', 'Armature de forge', 'Calibration de terrain'],
     relations: [
@@ -4225,11 +4225,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   280: {
     timeline_position: { an: -1, lieu: 'Sylvera', arc: 'Faim des Racines' },
     histoire: [
-      { titre: 'L\'enfant qui entendait', texte: 'À 9 ans, elle commence à entendre les plantes — pas comme des voix, comme des états. Une plante en stress, une plante en paix, une plante qui porte quelque chose.' },
-      { titre: 'Le premier jardin', texte: 'À 20 ans, Thalorn lui confie son premier jardin-mémoire. Trois mois à comprendre ce qu\'il contient : émotions de la génération de la Faim des Racines — peur, perte, défiance.' },
-      { titre: 'Les visiteurs non informés', texte: 'Elle réalise que ses jardins enregistrent les émotions des visiteurs — y compris un Conservateur de rang dont les émotions contredisent son image publique. Elle garde ça.' },
-      { titre: 'La plante centenaire', texte: 'Leth vient lui demander ce que porte la plante centenaire — 100 ans d\'émotions Conservatrices. Elle lui donne une version choisie, pas mensongère. Accord implicite sur les limites.' },
-      { titre: 'L\'archive traduite', texte: 'Elle rédige une traduction des émotions les plus importantes — un document pour ceux qui viendraient après. Elle ne l\'a montré à personne.' },
+      { titre: "L'enfant qui entendait", texte: "Née dans une famille de Conservateurs de Sylvera, elle avait commencé à entendre les plantes à 9 ans — pas comme des voix, comme des états. Une plante en stress, une plante en paix, une plante qui portait quelque chose. L'élément Fée, apparu plus tard, lui avait donné un langage pour ces états." },
+      { titre: "Le premier jardin", texte: "À 20 ans, Thalorn lui avait confié son premier jardin-mémoire à entretenir — un jardin existant, pas créé par elle. Elle avait passé 3 mois à comprendre ce qu'il contenait. Les émotions enregistrées étaient de la génération de la Faim des Racines — peur, perte, quelque chose qui ressemblait à de la défiance. Elle les avait données à Thalorn. Il lui avait dit qu'elle avait trouvé juste." },
+      { titre: "Les visiteurs non informés", texte: "Deux ans après avoir commencé à gérer ses propres jardins, elle avait réalisé qu'un visiteur fréquent — un Conservateur de rang — laissait dans les plantes des émotions qu'il n'aurait probablement pas voulu partager. Elle n'avait rien lu devant lui. Elle avait gardé l'information. Elle cherchait encore à décider si elle devait la partager avec quelqu'un." },
+      { titre: "La plante qui avait tout enregistré", texte: "Un de ses jardins contenait une plante centenaire qui avait absorbé les émotions de plusieurs générations de Conservateurs. Leth était venu lui demander ce qu'elle portait. La réponse était complexe : une histoire émotionnelle de la faction Conservatrice en 100 ans, enregistrée sans filtre. Elle en avait donné une version partielle à Leth — en choisissant ce qu'elle partageait." },
+      { titre: "Le jardin et ses secrets", texte: "Elle entretient 7 jardins-mémoire de tailles différentes à Sylvera. Elle est la seule à pouvoir lire l'ensemble de ce qu'ils contiennent. Elle a commencé à rédiger une sorte de traduction des émotions les plus importantes — un document qu'elle n'a montré à personne mais qu'elle considère comme une archive pour ceux qui viendraient après." }
     ],
     sorts: ['Enracinement émotionnel', 'Brume de Fée', 'Croissance rapide'],
     relations: [
@@ -4279,11 +4279,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   283: {
     timeline_position: { an: -1, lieu: 'Sylvera', arc: 'Faim des Racines' },
     histoire: [
-      { titre: 'L\'enfant qui entendait creux', texte: 'À 12 ans — pendant la Faim des Racines — il frappe les troncs et certains sonnent différemment. Il ne sait pas ce que ça signifie. Sa mère meurt avant de répondre.' },
-      { titre: 'La question à Thalorn', texte: 'À 19 ans, Thalorn lui répond : ce qu\'il entend est la différence entre un arbre qui porte sa mémoire et un arbre dont la mémoire s\'est effacée. L\'effacement peut précéder la mort de plusieurs années.' },
-      { titre: 'L\'arbre qu\'il n\'a pas pu soigner', texte: 'Son premier arbre vide — 8 mois de traitement. L\'arbre survit physiquement 3 ans de plus. Succès de survie, échec de restauration mémorielle. Il documente les deux séparément.' },
-      { titre: 'Le pattern du vide', texte: 'Après 10 ans, il cartographie les arbres vides. Leurs positions dessinent des lignes qui ressemblent aux anciens réseaux racinaires de Thalindre — en négatif.' },
-      { titre: 'La carte de 12 ans', texte: 'Il montre la carte à Thalorn qui a l\'air surpris. Il ne l\'a montrée à personne d\'autre. Sylindra pourrait peut-être interpréter les lignes.' },
+      { titre: "L'enfant qui entendait creux", texte: "La capacité à sentir le \"vide\" des arbres était apparue à 12 ans — pendant la Faim des Racines, quand les premiers arbres commençaient à mourir. Il frappait les troncs et certains sonnaient différemment. Il ne savait pas ce que ça signifiait. Il avait demandé à sa mère, qui était morte sans avoir répondu." },
+      { titre: "La question à Thalorn", texte: "À 19 ans, il avait rejoint les Conservateurs et posé la question à Thalorn. Thalorn lui avait répondu : ce qu'il entendait était la différence entre un arbre qui portait sa mémoire et un arbre dont la mémoire s'était effacée. L'effacement pouvait précéder la mort physique de plusieurs années. C'était une information que personne d'autre ne pouvait détecter aussi tôt." },
+      { titre: "L'arbre qu'il n'a pas pu soigner", texte: "Son premier arbre \"vide\" qu'il avait essayé de soigner — 8 mois de traitement avant d'admettre que la mémoire était partie avant qu'il arrive. L'arbre avait survécu physiquement encore 3 ans. C'était un succès de survie et un échec de restauration. Il avait documenté les deux séparément." },
+      { titre: "Le pattern du vide", texte: "Après 10 ans, il avait commencé à cartographier les arbres vides — leur position dans la forêt, le moment de leur effacement, les patterns de propagation. Ce n'était pas simplement une répartition aléatoire. L'effacement suivait des lignes qu'il avait tracées sur une carte. Ces lignes ressemblaient aux anciens réseaux racinaires de Thalindre (Sylindra, 37) — mais en négatif." },
+      { titre: "La carte du vide", texte: "Sa carte des arbres vides couvre maintenant 12 ans d'observations. Il n'est pas certain de ce qu'elle signifie. Il l'a montrée à Thalorn qui avait eu l'air surpris. Il ne l'a montrée à personne d'autre. Sylindra (37) est la personne qui pourrait peut-être interpréter les lignes — mais il ne la connaît pas directement." }
     ],
     sorts: ['Diagnostic végétal', 'Résonance Fée', 'Soin racinaire'],
     relations: [
@@ -4335,11 +4335,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   286: {
     timeline_position: { an: -1, lieu: 'Sylvera', arc: 'Faim des Racines' },
     histoire: [
-      { titre: 'La plante et son usage', texte: 'Elle apprend la botanique sylvane avant de découvrir que certaines plantes ont des usages que ses professeurs n\'enseignent pas. L\'élément Poison à 18 ans change sa relation au végétal toxique.' },
-      { titre: 'L\'incident et la règle', texte: 'À 22 ans, un empoisonnement involontaire. Elle passe 6 mois à reformuler ses critères de ciblage. Les règles qu\'elle applique depuis ont une origine précise.' },
-      { titre: 'La première mission Dissidente', texte: 'Un agent impérial actif dans des opérations d\'extraction. Trois semaines à vérifier l\'identification. L\'opération dure 4 minutes.' },
-      { titre: 'La liste refusée', texte: 'Il y a 2 ans, une liste Dissidente inclut un nom hors-critères. Elle refuse. Friction. Friction passée. Elle sait que la prochaine liste pourra contenir un nom similaire.' },
-      { titre: 'La règle maintenue', texte: 'Elle continue avec sa règle : cibles actives dans des opérations directes uniquement. Elle peut expliquer pourquoi chaque personne sur sa liste correspondait.' },
+      { titre: "La plante et son usage", texte: "Née dans une famille Conservatrice, elle avait appris la botanique sylvane avant de découvrir que certaines plantes qu'elle étudiait avaient des usages que ses professeurs n'enseignaient pas. L'élément Poison était apparu à 18 ans et avait changé sa relation aux plantes toxiques — de l'étude à la pratique." },
+      { titre: "L'incident et la règle", texte: "À 22 ans, un empoisonnement involontaire — pas une cible, une erreur de contexte. Elle avait survécu. Sa cible aussi. Elle avait passé 6 mois à reformuler ses critères de ciblage, ses méthodes d'identification, ses seuils d'action. Les règles qu'elle applique depuis ont une origine précise : cet incident." },
+      { titre: "La première mission Dissidente", texte: "Son premier mandat des Dissidentes : un agent impérial actif dans des opérations d'extraction à Sylvera. Elle avait passé 3 semaines à vérifier l'identification. L'opération avait duré 4 minutes. Elle était la seule personne dans la pièce à savoir pourquoi cet homme était sa cible plutôt qu'un autre." },
+      { titre: "La liste étendue", texte: "Il y a 2 ans, les Dissidentes lui avaient transmis une liste qui incluait un nom qu'elle n'aurait pas choisi elle-même — pas un agent actif d'extraction, mais quelqu'un dont les actions avaient des conséquences indirectes sur les Élus. Sa règle disait non. Elle avait refusé. Ça avait créé une friction." },
+      { titre: "La règle maintenue", texte: "Elle continue à travailler pour les Dissidentes avec sa règle maintenue — cibles actives dans des opérations directes uniquement. La friction de la liste étendue est passée. Elle sait que la prochaine liste pourra contenir un nom similaire. Elle sait ce qu'elle fera." }
     ],
     sorts: ['Extrait ciblé', 'Brume végétale', 'Empoisonnement à distance'],
     relations: [
@@ -4550,11 +4550,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   298: {
     timeline_position: { an: -1, lieu: 'Sylvera', arc: 'Faim des Racines' },
     histoire: [
-      { titre: 'L\'absorption accidentelle', texte: 'À 30 ans — jeune pour une Fée — il touche un arbre-mémoire mourant pendant la Faim des Racines. L\'arbre lui transfère 300 ans de mémoire émotionnelle. Il reste inconscient 3 jours.' },
-      { titre: 'L\'apprentissage avec Orvketh', texte: 'Orvketh lui apprend une technique de séparation — comment distinguer ses souvenirs des souvenirs de l\'arbre. Il y travaille depuis 50 ans.' },
-      { titre: 'La première visite de Thalorn', texte: 'Thalorn vient avec curiosité scientifique. Orvkethyn décrit une interaction que l\'arbre avait eue avec Thalorn il y a 60 ans — depuis la perspective de l\'arbre. Thalorn s\'arrête.' },
-      { titre: 'La deuxième visite de Thalorn', texte: 'Cette fois, Thalorn veut savoir ce que l\'arbre a enregistré sur des événements spécifiques. La conversation dure 4 heures. Thalorn prend des notes.' },
-      { titre: 'Thalvelyn et la vérification', texte: 'Thalvelyn lui demande si les souvenirs de l\'arbre correspondent à ce que ses jardins enregistrent actuellement. Première utilisation concrète de ce qu\'il porte.' },
+      { titre: "L'absorption accidentelle", texte: "À 30 ans — jeune pour une Fée, adolescent fonctionnel — il avait touché un arbre-mémoire mourant pendant la Faim des Racines. L'arbre avait absorbé des émotions pendant 300 ans. En mourant, il avait cherché quelqu'un pour les porter. La Fée en contact avec lui avait reçu 300 ans de mémoire émotionnelle en quelques secondes. Il était resté inconscient 3 jours." },
+      { titre: "L'apprentissage avec Orvketh", texte: "Orvketh (129) — une Fée ancienne habituée à porter des mémoires d'une façon différente — l'avait aidé à comprendre ce qui lui était arrivé. Elle lui avait appris une technique de séparation — comment identifier si un souvenir lui appartient ou vient de l'arbre. Il y travaille depuis 50 ans." },
+      { titre: "La première visite de Thalorn", texte: "Thalorn était venu avec de la curiosité scientifique — un Fée portant la mémoire d'un arbre était théoriquement intéressant. Il avait posé des questions. Orvkethyn avait répondu. À un moment, il avait dit quelque chose que Thalorn avait reconnu — une interaction qu'il avait eue avec cet arbre spécifique il y a 60 ans, décrite de l'intérieur de l'arbre. Thalorn s'était arrêté." },
+      { titre: "La deuxième visite de Thalorn", texte: "La deuxième visite était différente. Thalorn voulait savoir ce que l'arbre avait enregistré sur des événements spécifiques. Orvkethyn avait répondu selon ses capacités à l'époque — une partie de l'accès aux souvenirs de l'arbre était encore incontrôlée. Thalorn avait pris des notes. La conversation avait duré 4 heures." },
+      { titre: "Les 50 ans de pratique", texte: "À 80 ans, il peut accéder aux souvenirs de l'arbre de façon plus contrôlée. Il ne les utilise pas activement — il les laisse disponibles si quelqu'un pose la bonne question. Thalorn sait qu'ils existent. Thalvelyn (280) lui a demandé si certains souvenirs de l'arbre correspondaient à ce que ses propres jardins enregistraient. La question était bonne." }
     ],
     sorts: ['Mémoire émotionnelle', 'Croissance ancienne', 'Absorption mémorielle'],
     relations: [
@@ -4818,11 +4818,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   313: {
     timeline_position: { an: -1, lieu: 'Ormn-Dur', arc: 'Fosse Interdite' },
     histoire: [
-      { titre: 'L\'ingénierie comme vocation', texte: 'Fils d\'un ingénieur structural. À 20 ans, il identifie les limites des méthodes standards pour les profondeurs extrêmes. À 25 ans, premiers prototypes de joints roche/acier.' },
-      { titre: 'Le premier tunnel profond', texte: 'À 30 ans, premier tunnel profond avec ses structures mixtes. La structure tient. La Technocratie lui ouvre les projets que les autres ingénieurs ne peuvent pas couvrir.' },
-      { titre: 'La commande de Thyss', texte: 'À 38 ans, Thyss (42) lui commande des structures pour une zone décrite comme "secteur de maintenance avancée". Les dimensions correspondent à un accès à la Fosse profonde. Il pose des questions. La réponse est vague. Il construit.' },
-      { titre: 'Les structures qu\'il reconnaît', texte: 'Sur un plan de la Fosse, il reconnaît ses propres structures dans des zones qu\'on lui avait décrites autrement lors des commandes. Ses tunnels ont étendu l\'accès à des parties de la Fosse qu\'il n\'avait pas l\'intention de rendre accessibles.' },
-      { titre: 'La commande en cours', texte: 'Nouvelle commande de Thyss pour les niveaux les plus profonds de la Fosse. Il reconnaît les spécifications. Il n\'a pas encore répondu. C\'est la première fois en 15 ans.' },
+      { titre: "L'ingénierie comme vocation", texte: "Fils d'un ingénieur structural de la Technocratie. Formé dès l'adolescence aux méthodes de construction souterraine standard. À 20 ans, il avait identifié les limites des méthodes standards pour les profondeurs extrêmes. À 25 ans, il avait développé ses premiers prototypes de joints roche/acier." },
+      { titre: "Le premier tunnel profond", texte: "À 30 ans, premier tunnel profond avec ses structures mixtes — une descente vers le niveau 7 d'un secteur minier que les ingénieurs standards refusaient de couvrir. La structure avait tenu. La Technocratie lui avait donné accès aux projets que les autres ingénieurs ne pouvaient pas couvrir." },
+      { titre: "La commande de Thyss", texte: "À 38 ans, Thyss (42) lui avait commandé des structures pour une zone qu'il lui avait décrite comme un secteur de maintenance avancée. Les dimensions et les spécifications correspondaient à un accès à la Fosse profonde — pas la zone de travail standard, mais les niveaux inférieurs. Il avait posé des questions sur la finalité. La réponse avait été suffisamment vague pour qu'il continue. Il avait construit." },
+      { titre: "Les structures qu'il reconnaît", texte: "Sur un plan de la Fosse qu'il avait eu accès pour un projet de maintenance, il avait reconnu des structures qui correspondaient à ses propres travaux des 3 dernières années — dans des zones qu'il ne savait pas être dans la Fosse. Ses structures mixtes avaient servi à étendre l'accès à des zones qu'on lui avait décrites autrement." },
+      { titre: "La demande en cours", texte: "Une nouvelle commande de Thyss (42) est sur son bureau — des structures pour un emplacement décrit comme un nouveau secteur de gestion de la pression fongique. Il reconnaît les spécifications. C'est un accès aux niveaux les plus profonds de la Fosse. Il n'a pas encore répondu à la commande." }
     ],
     sorts: ['Tunnel instantané', 'Armure d\'acier', 'Effritement contrôlé'],
     relations: [
@@ -4925,11 +4925,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   319: {
     timeline_position: { an: -1, lieu: 'Ormn-Dur', arc: 'Fosse Interdite' },
     histoire: [
-      { titre: 'Le laboratoire familial', texte: 'Né dans une famille de chimistes. À 12 ans, il mélange des compositions hors protocole dans le labo familial pour comprendre ce qui se passe à la frontière des propriétés connues. Son père le laisse faire si les résultats sont documentés.' },
-      { titre: 'Le premier alliage sol/acier', texte: 'À 27 ans, un alliage sol/acier avec résistance chimique supérieure aux standards — réponse à la corrosion par les émanations fongiques. La Technocratie intègre l\'alliage dans ses équipements de la Fosse.' },
-      { titre: 'L\'application inconnue', texte: 'À 36 ans, un rapport technique cite une de ses compositions dans une application qu\'il ne savait pas avoir aidé à créer. La Technocratie réutilise ses travaux sans l\'informer.' },
-      { titre: 'Les questions de Kaevorn', texte: 'Kaevorn (243) le contacte pour des questions sur ses alliages depuis la perspective d\'une autre région. Les questions sont précises et pertinentes. La conversation ouvre des pistes que ses mandats Technocratie ne couvrent pas.' },
-      { titre: 'Les trois projets en cours', texte: 'Trois projets d\'alliage en cours. Il a commencé à ajouter des mentions sur les usages recommandés et déconseillés dans ses soumissions. La Technocratie n\'a pas commenté ces ajouts.' },
+      { titre: "La laboratoire familiale", texte: "Né dans une famille de chimistes de la Technocratie. Le père travaillait les alliages standards. À 12 ans, il avait commencé à mélanger des compositions hors protocole dans le labo familial — pas pour désobéir, pour comprendre ce qui se passait à la frontière des propriétés connues. Son père l'avait laissé faire tant que les résultats étaient documentés." },
+      { titre: "Le premier alliage sol/acier", texte: "À 27 ans, il avait développé un alliage sol/acier avec des propriétés de résistance chimique supérieures aux standards — une réponse à la corrosion accélérée des équipements de la Fosse par les émanations fongiques. La Technocratie avait intégré l'alliage dans ses équipements de la Fosse. Il avait été reconnu comme spécialiste de la chimie des alliages pour environnements extrêmes." },
+      { titre: "L'application inconnue", texte: "À 36 ans, un rapport technique circulant en interne citait une composition d'alliage identique à l'une des siennes — sans attribution. L'application décrite était différente de ce qu'on lui avait demandé de développer : des contraintes d'un équipement d'extraction de la Fosse profonde qu'il n'avait pas connaissance d'avoir aidé à construire. La Technocratie réutilisait ses travaux sans l'informer." },
+      { titre: "Les questions de Kaevorn", texte: "Kaevorn (243) — un spécialiste d'une autre région — l'avait contacté pour des questions sur ses alliages sol/acier depuis une perspective différente : des applications à des environnements géologiques distincts de ceux de la Fosse. Les questions étaient précises et pertinentes. Kaevorn avait accès à ses publications techniques. La conversation avait été utile dans les deux sens." },
+      { titre: "Les trois projets en cours", texte: "Trois projets d'alliage en cours pour la Technocratie — des améliorations de résistance pour différentes zones de la Fosse. Il soumet ses compositions avec une documentation complète des propriétés et des limites. Il a commencé à ajouter une mention sur les usages recommandés et les usages déconseillés. La Technocratie n'a pas commenté ces ajouts." }
     ],
     sorts: ['Corrosion d\'acier', 'Sol traité', 'Alliage de protection'],
     relations: [
@@ -5213,11 +5213,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   335: {
     timeline_position: { an: -1, lieu: 'Crysalme', arc: 'Gel Éternel' },
     histoire: [
-      { titre: 'La première stase', texte: 'À 17 ans, son frère est blessé dans une zone de glace vive. Elle applique instinctivement une stase glacée sur la blessure. La blessure cesse de saigner. Un médecin Givrin confirme qu\'elle a fait exactement ce qu\'il fallait.' },
-      { titre: 'L\'intégration royale', texte: 'À 25 ans, Sylkra (53) la recrute pour les services médicaux royaux. Leth (34) lui est assigné comme référence Fée. Les deux développent ensemble la technique combinée stase-cohésion.' },
-      { titre: 'La stase politique', texte: 'À 34 ans, elle apprend que sa technique a été adaptée pour la préservation de prisonniers politiques. Elle demande à Sylkra. Il répond que les usages appartiennent à la Monarchie. Elle n\'a pas trouvé la réponse satisfaisante.' },
-      { titre: 'La durée irréversible', texte: 'Leth (34) calcule la limite de 18 jours au-delà de laquelle la stase devient irréversible. La Monarchie utilise des durées de 40 à 60 jours. Elle n\'a pas fourni la méthode pour ces durées — elle a été extrapolée.' },
-      { titre: 'Les 3 patients sans dossier', texte: '12 patients en stase actuellement. 3 sans dossier médical, assignés par ordre royal. Elle a demandé à Sylkra. Pas de réponse encore. Elle maintient la stase.' },
+      { titre: "La première stase", texte: "À 17 ans, son frère cadet avait été blessé lors d'une chute dans une zone de glace vive. Elle avait instinctivement appliqué une stase glacée sur la blessure — sans formation, par réflexe. La blessure avait cessé de saigner. Un médecin Givrin avait dit qu'elle avait fait exactement ce qu'il fallait. Elle avait compris qu'elle avait une capacité utile." },
+      { titre: "L'intégration médicale royale", texte: "À 25 ans, Sylkra (53) l'avait recrutée pour les services médicaux royaux après avoir observé sa technique. Elle avait demandé des ressources en Fée — Leth (34) lui avait été assigné comme référence. Les deux avaient développé ensemble la technique combinée stase-cohésion." },
+      { titre: "La stase politique", texte: "À 34 ans, elle avait appris que sa technique de stase prolongée avait été adaptée pour la préservation de prisonniers politiques. Elle avait demandé à Sylkra une explication. Sylkra avait répondu que les usages des techniques médicales royales appartenaient à la Monarchie. Elle n'avait pas insisté. Elle n'avait pas non plus trouvé la réponse satisfaisante." },
+      { titre: "La durée irréversible", texte: "Leth (34) avait calculé avec elle la durée maximale d'une stase avant que la cohésion tissulaire ne soit affectée de façon irréversible — au-delà de 18 jours pour un adulte Givrin. La technique de préservation politique utilisait des durées de 40 à 60 jours. Elle n'avait pas fourni la méthode pour ces durées. La méthode avait été extrapolée." },
+      { titre: "Les 12 patients en stase", texte: "Elle a 12 patients en stase actuellement — 9 blessés graves en attente d'intervention, 3 dont elle ne connaît pas le statut exact (assignés par ordre royal, sans dossier médical fourni). Les 3 sans dossier la préoccupent. Elle a demandé à Sylkra. Il n'a pas encore répondu." }
     ],
     sorts: ['Stase de préservation', 'Cohésion féerique', 'Barrière de glace médicale'],
     relations: [
@@ -5249,11 +5249,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   337: {
     timeline_position: { an: -1, lieu: 'Crysalme', arc: 'Gel Éternel' },
     histoire: [
-      { titre: 'Le premier dégel', texte: 'À 30 ans, il voit son premier dégel partiel — 8 ans où la glace se réduit d\'un tiers. Les gens de l\'époque pensaient que c\'était permanent. Il avait 30 ans — trop jeune pour savoir que c\'était un cycle. Il apprend ce fait 80 ans plus tard.' },
-      { titre: 'Les deux autres cycles', texte: 'Le deuxième cycle à ses 120 ans — 60 ans de gel intense suivi d\'un dégel partiel. Le troisième à 210 ans — 30 ans de gel puis dégel 20 ans. À 280 ans, le Gel Éternel commence. Plus intense. Les gens l\'appellent Éternel dès la 5ème année.' },
-      { titre: 'La dissonance institutionnelle', texte: 'La Monarchie veut utiliser ses récits pour normaliser le Gel Éternel. Il refuse — ce cycle a des caractéristiques qu\'il n\'a pas vues dans les précédents. Il ne va pas dire l\'inverse pour rassurer une institution.' },
-      { titre: 'La fenêtre de Velskrevyn', texte: 'Velskrevyn (342) lui présente ses calculs sur la fenêtre de 18 mois. Iskraeth écoute. Les calculs correspondent à des alignements qu\'il a observés avant le dégel du deuxième cycle. Il dit que ça correspond à quelque chose. Pas à une confirmation.' },
-      { titre: 'Les récits et les lacunes', texte: 'Il donne des récits réguliers à Karath (52) pour archivage. Sa mémoire des premières décennies présente des lacunes. Karath aide à les combler via des archives de l\'époque — elles-mêmes incomplètes.' },
+      { titre: "Le premier dégel", texte: "À 30 ans, il avait vu son premier dégel partiel — une période de 8 ans où la glace qui couvrait les basses terres de Crysalme s'était réduite d'un tiers. Les gens de cette époque pensaient que c'était permanent. Il avait 30 ans — trop jeune pour savoir que ce n'était qu'un cycle. Il avait appris ce fait 80 ans plus tard." },
+      { titre: "Les deux autres cycles", texte: "Le deuxième cycle avait commencé à ses 120 ans — un gel plus intense qui avait duré 60 ans avant de reculer. Le troisième à ses 210 ans — plus court, 30 ans de gel intense suivi d'un dégel partiel de 20 ans. À ses 280 ans, le Gel Éternel avait commencé. Il était plus intense que les précédents. Les gens l'appelaient Éternel dès la 5ème année." },
+      { titre: "La dissonance avec les institutions", texte: "La Monarchie avait voulu utiliser ses récits pour justifier que le Gel Éternel était une \"phase normale\". Il avait refusé cette interprétation — les cycles précédents avaient des signatures différentes. Le Gel Éternel avait des caractéristiques qu'il n'avait pas vues. Il ne savait pas ce que ça signifiait. Il n'allait pas dire l'inverse pour rassurer une institution." },
+      { titre: "La fenêtre de Velskrevyn", texte: "Velskrevyn (342) lui avait présenté ses calculs sur la \"fenêtre de 18 mois\" — une période astronomique où un dégel serait possible selon ses modèles stellaires. Iskraeth l'avait écouté. Les calculs correspondaient à des alignements qu'il avait observés pendant le deuxième cycle, juste avant le dégel. Il n'avait pas dit que ça confirmait tout. Il avait dit que ça correspondait à quelque chose." },
+      { titre: "Les récits en cours", texte: "Il donne des récits réguliers à Karath (52) pour archivage. Il parle aussi avec Syraris (164) — des conversations plus personnelles sur ce que ça signifie de voir une espèce traverser ses propres crises sur 300 ans. Il a des lacunes dans sa mémoire des premières décennies. Karath l'aide à combler les lacunes via les archives." }
     ],
     sorts: ['Gel de cycle', 'Mémoire féerique', 'Stase ancienne'],
     relations: [
@@ -5267,11 +5267,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   338: {
     timeline_position: { an: -1, lieu: 'Crysalme', arc: 'Gel Éternel' },
     histoire: [
-      { titre: 'La première gravure', texte: 'À 14 ans, elle grave un souvenir dans un bloc de glace pour une voisine âgée qui craint de perdre la mémoire de son mari. La gravure dure 20 ans. L\'apprentissage commence.' },
-      { titre: 'L\'intégration royale', texte: 'À 30 ans, Thyval (55) l\'approche pour archiver des souvenirs dynastiques. Sa technique combinée Glace/Fée produit des archives de qualité supérieure. Elle accepte sans comprendre entièrement ce qu\'implique travailler pour une institution.' },
-      { titre: 'Le souvenir compromettant', texte: 'À 45 ans, Thyval lui confie le souvenir d\'une décision royale qui a causé des morts. Elle le grave avec la même précision que les autres. Velkren (162) lui pose la question de la responsabilité de l\'archiviste.' },
-      { titre: 'Les souvenirs sélectifs', texte: 'Elle réalise que Thyval sélectionne ce qu\'il lui confie. Il y a des événements dont aucun souvenir ne lui a été soumis. Ses archives sont complètes sur les souvenirs reçus. Incomplètes sur l\'histoire.' },
-      { titre: 'Les 12 blocs pour Keldris', texte: 'Thyval demande que 12 blocs récents soient accessibles à Keldris (57), agent impérial. Elle exécute. Elle a demandé pourquoi. Thyval a dit "nécessité politique". Pas de détails supplémentaires.' },
+      { titre: "La première gravure", texte: "À 14 ans, elle avait gravé un souvenir dans un bloc de glace pour la première fois — pas un souvenir personnel, celui d'une voisine âgée qui avait peur de perdre la mémoire de son mari mort. La gravure avait duré 20 ans avant de se dégrader. L'apprentissage de la technique avait commencé ce jour-là." },
+      { titre: "L'intégration royale", texte: "À 30 ans, Thyval (55) l'avait approchée pour archiver des souvenirs dynastiques de la Monarchie Givrin. La technique qu'elle avait développée — la combinaison Glace/Fée — permettait des archives de qualité supérieure à ce qui existait. Elle avait accepté sans comprendre entièrement ce que ça impliquait de travailler pour une institution." },
+      { titre: "Le souvenir compromettant", texte: "À 45 ans, Thyval lui avait confié un souvenir d'une décision royale sur une révolte Givrin — une décision qui avait causé des morts. Elle avait gravé le souvenir comme les autres. Velkren (162) lui avait posé une question plus tard : est-ce qu'un archiviste est responsable de ce qu'il préserve ? Elle n'avait pas eu de réponse simple." },
+      { titre: "Les souvenirs sélectifs", texte: "Elle avait commencé à réaliser que Thyval (55) lui confiait des souvenirs sélectionnés — pas tous les souvenirs importants de la Monarchie, seulement ceux que la Monarchie voulait voir préservés. Il y avait des événements dont elle savait l'existence et dont aucun souvenir ne lui avait été confié. Les archives étaient complètes sur les souvenirs reçus. Elles étaient incomplètes sur l'histoire." },
+      { titre: "Les archives actuelles", texte: "Elle conserve 340 souvenirs gravés dans des blocs de glace de sa chambre d'archives. Thyval a demandé que 12 blocs récents soient rendus accessibles à Keldris (57) — un agent impérial. Elle a exécuté la demande. Elle a demandé pourquoi. Thyval a dit \"par nécessité politique\". Elle n'a pas obtenu plus de détails." }
     ],
     sorts: ['Gravure de gel', 'Mémoire féerique', 'Bloc de glace stable'],
     relations: [
@@ -5285,11 +5285,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   339: {
     timeline_position: { an: -1, lieu: 'Crysalme', arc: 'Gel Éternel' },
     histoire: [
-      { titre: 'La première sculpture', texte: 'À 12 ans, elle sculpte une figure dans la glace qui se dégrade en 3 ans. À 15 ans, la refait avec magie Fée intégrée. La figure tient 10 ans. Elle comprend la différence.' },
-      { titre: 'La commande de Karath', texte: 'À 28 ans, Karath (52) lui commande une sculpture mémorielle d\'un événement de 80 ans passé. Elle travaille 3 mois. La sculpture est intégrée à l\'archive de Crysalme.' },
-      { titre: 'La sculpture politique', texte: 'À 40 ans, la sculpture mémorielle d\'une décision monarchique controversée est créée avec précision. La Monarchie demande qu\'elle ne soit pas mise en circulation. Karath la garde en archives internes. Elle existe.' },
-      { titre: 'Les récits d\'Iskraeth', texte: 'Iskraeth (337) lui donne accès à ses récits sur les cycles précédents. Elle entame une série de sculptures sur ces cycles. Ils donnent une perspective sur le Gel Éternel actuel — il s\'inscrit dans une série.' },
-      { titre: 'La 5ème sculpture', texte: 'Série de 7 en cours. 4 terminées. La 5ème doit représenter le Gel Éternel actuel. Elle ne sait pas comment représenter un événement sans connaître son dénouement. Elle recommence ses esquisses.' },
+      { titre: "La première sculpture", texte: "À 12 ans, elle avait sculpté une figure dans la glace d'un mur de son quartier. La figure s'était dégradée en 3 ans. À 15 ans, elle recommençait la même figure avec sa magie Fée intégrée au processus. La figure tenait toujours 10 ans plus tard. Elle avait compris la différence." },
+      { titre: "La commande de Karath", texte: "À 28 ans, Karath (52) l'avait approchée avec une première commande — une sculpture mémorielle d'un événement de Crysalme il y a 80 ans. Il lui avait fourni des récits, des témoignages, des archives. Elle avait travaillé 3 mois. La sculpture avait été intégrée à l'archive de Crysalme. Elle était encore intacte." },
+      { titre: "La sculpture politique", texte: "À 40 ans, Karath lui avait demandé une sculpture mémorielle d'une décision monarchique controversée — une décision qui avait causé des morts, documentée dans ses archives. Elle avait créé la sculpture avec précision. La Monarchie avait demandé à Karath que la sculpture ne soit pas mise en circulation. Karath avait gardé la sculpture dans les archives internes. Elle était là, non visible. Elle existait." },
+      { titre: "Les récits d'Iskraeth", texte: "Iskraeth (337) lui avait donné accès à ses récits sur les cycles précédents — des récits détaillés d'un Givrin qui avait vu les cycles de l'intérieur. Elle avait commencé une série de sculptures sur ces cycles. Ces sculptures donnaient une perspective sur le Gel Éternel actuel — il était dans une série, pas une anomalie. Pas nécessairement rassurant." },
+      { titre: "La série en cours", texte: "Elle travaille sur une série de 7 sculptures sur les cycles de gel et dégel de Crysalme. Les 4 premières sont terminées. La 5ème sera sur le Gel Éternel actuel — elle ne sait pas encore comment le représenter sans savoir comment il se termine. Elle a commencé des esquisses. Elle les recommence." }
     ],
     sorts: ['Éclat de sculpture', 'Cohésion féerique', 'Forme figée'],
     relations: [
@@ -5303,11 +5303,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   340: {
     timeline_position: { an: -1, lieu: 'Crysalme', arc: 'Gel Éternel' },
     histoire: [
-      { titre: 'La glace comme miroir', texte: 'À 14 ans, elle découvre que le Lac Krael gelé réfléchit les étoiles avec une précision supérieure à un miroir poli. 3 nuits d\'observation et de notes. Première prédiction de trajectoire confirmée 6 mois plus tard.' },
-      { titre: 'L\'astronome royale', texte: 'À 27 ans, Thyval (55) l\'intègre à la cour. Sa méthode utilisant la glace comme instrument est plus précise que les instruments standard dans les conditions de Crysalme.' },
-      { titre: 'La décision avant la lecture', texte: 'À 35 ans, Thyval prend une décision politique et lui demande une lecture après coup — pas avant. Elle le signale. Il écoute. Ça recommence deux fois depuis.' },
-      { titre: 'La fenêtre de 18 mois', texte: 'Ses observations des alignements sur 6 mois correspondent exactement aux calculs de Velskrevyn (342). Elle présente la concordance à Thyval. Il dit "je le sais". Il savait déjà. Il ne lui avait pas dit d\'où.' },
-      { titre: 'Le suivi mensuel', texte: 'Elle observe la progression vers la fenêtre mensuellement. Elle rapporte à Thyval et partage avec Velkris (166) indépendamment — non demandé par la Monarchie, non interdit.' },
+      { titre: "La glace comme miroir", texte: "À 14 ans, elle avait découvert que la surface du Lac Krael gelé réfléchissait les étoiles avec une précision supérieure à un miroir poli. Elle avait passé 3 nuits d'hiver à observer et noter. Les notes avaient conduit à sa première prédiction de trajectoire confirmée 6 mois plus tard." },
+      { titre: "L'astronome royale", texte: "À 27 ans, Thyval (55) l'avait intégrée à la cour comme astronome royale. La Monarchie Givrin avait une tradition d'observation stellaire — mais ses méthodes utilisaient des instruments. Les siennes utilisaient la glace. Elle avait prouvé que sa méthode était plus précise dans les conditions de Crysalme." },
+      { titre: "La décision sans observation", texte: "À 35 ans, Thyval avait pris une décision politique en utilisant une \"lecture stellaire\" — mais une lecture qu'elle n'avait pas faite. Quelqu'un d'autre avait fourni l'interprétation astronomique. Elle avait confronté Thyval discrètement. Thyval avait dit que l'interprétation était \"cohérente avec ses méthodes\". Elle avait demandé à revoir toutes les lectures utilisées pour des décisions." },
+      { titre: "La fenêtre de 18 mois", texte: "Ses observations des alignements stellaires sur 6 mois correspondaient exactement aux calculs de Velskrevyn (342) — une convergence d'alignements dans les 18 prochains mois qui créerait des conditions favorables à un dégel. Elle avait présenté la concordance à Thyval. Thyval avait dit \"je le sais\". Thyval savait déjà. Il n'avait pas partagé l'information avec elle." },
+      { titre: "Le suivi de la fenêtre", texte: "Elle observe la progression vers la fenêtre de 18 mois avec une fréquence mensuelle maintenant. Les alignements progressent comme prévu. Elle rapporte à Thyval. Elle rapporte aussi à Velkris (166) indépendamment — un partage de données entre astronomes qui n'est pas demandé par la Monarchie." }
     ],
     sorts: ['Réfraction de glace', 'Éclat stellaire', 'Carte de glace'],
     relations: [
@@ -5321,11 +5321,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   341: {
     timeline_position: { an: -1, lieu: 'Crysalme', arc: 'Gel Éternel' },
     histoire: [
-      { titre: 'Le premier calcul', texte: 'À 19 ans, il calcule qu\'un cycle de gel correspond à un alignement stellaire sur 200 ans de données archivées. La correspondance est presque parfaite. Ses professeurs disent "intéressant" et n\'en reparlent plus.' },
-      { titre: 'La cour astronomique', texte: 'À 28 ans, Thyval (55) l\'inclut dans la cour pour sa méthode de calcul des cycles longs. Il calcule que l\'alignement du Gel Éternel n\'est pas à son point de retournement avant 80 à 120 ans. Ce n\'est pas le résultat attendu.' },
-      { titre: 'La marginalisation', texte: 'À 42 ans, la cour choisit la méthode de Velskrevyn (342) sur la fenêtre de 18 mois. Il présente ses contre-calculs. Il n\'est pas exclu formellement — les commandes se tarissent.' },
-      { titre: 'Les données d\'Iskraeth', texte: 'Iskraeth (337) lui partage 300 ans d\'observations directes. Il intègre ces données dans ses modèles sur 4 mois. Sa prédiction est ajustée à 60 à 90 ans. Pas une capitulation — une correction.' },
-      { titre: 'La prédiction révisée', texte: 'Sa prédiction actuelle : dégel dans 60 à 90 ans. Karath (52) l\'a archivée comme perspective minoritaire. Velkris (166) continue de débattre. Personne d\'autre ne l\'écoute.' },
+      { titre: "Le premier calcul", texte: "À 19 ans, il avait calculé qu'un cycle de gel intense à Crysalme correspondait à un alignement stellaire sur 200 ans de données archivées. La correspondance était presque parfaite. Il avait présenté la corrélation à ses professeurs. Ils avaient dit \"intéressant\" et n'en avaient plus parlé." },
+      { titre: "L'intégration à la cour astronomique", texte: "À 28 ans, Thyval (55) l'avait inclus dans la cour astronomique pour sa méthode de calcul des cycles longs. Il avait travaillé 12 ans avec la cour. Ses calculs sur le Gel Éternel avaient conclu que l'alignement responsable ne serait pas à son point de retournement avant 80 à 120 ans. Ce n'était pas le résultat attendu." },
+      { titre: "La marginalisation", texte: "À 42 ans, Velskrevyn (342) avait présenté ses calculs sur la \"fenêtre de 18 mois\". La cour astronomique avait accueilli ces calculs favorablement. Iskraven avait présenté ses contre-calculs. La cour avait choisi la méthode de Velskrevyn. Il n'avait pas été exclu formellement — les commandes s'étaient taries." },
+      { titre: "Les données d'Iskraeth", texte: "Iskraeth (337) lui avait partagé ses observations sur les cycles précédents — 300 ans de données directes. Iskraven avait passé 4 mois à intégrer ces données dans ses modèles. La conclusion avait changé marginalement — le retournement d'alignement était à 60 à 90 ans, pas 80 à 120. Il avait ajusté sa prédiction. Il n'avait pas abandonné la prédiction." },
+      { titre: "La prédiction révisée", texte: "Sa prédiction actuelle : le dégel possible dans 60 à 90 ans, pas 18 mois. Cette prédiction n'a pas d'oreilles à la cour. Karath (52) l'a archivée. Velkris (166) continue de débattre. Thyvalskren (340) n'a pas pris position publiquement sur le débat entre les deux méthodes." }
     ],
     sorts: ['Rayon stellaire', 'Tempête de glace', 'Alignement stellaire'],
     relations: [
@@ -5357,11 +5357,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   343: {
     timeline_position: { an: -1, lieu: 'Crysalme', arc: 'Gel Éternel' },
     histoire: [
-      { titre: 'Le Givrin impérial', texte: 'À 15 ans, il est recruté comme informateur pour un réseau impérial. Il est Givrin — accès naturel à des espaces que les agents non-Givrins ne peuvent pas atteindre facilement. Il accepte sans comprendre entièrement dans quoi il entre.' },
-      { titre: 'L\'affectation à Crysalme', texte: 'À 29 ans, Keldris (57) l\'affecte à la surveillance des calculs astronomiques givrins. Il construit son identité d\'astronome indépendant sur 2 ans avant d\'approcher les milieux scientifiques locaux.' },
-      { titre: 'Les calculs de Velskrevyn', texte: 'À 35 ans, il a accès aux travaux de Velskrevyn (342) avant leur présentation à la cour. Il les transmet à Keldris avant la présentation officielle. L\'Empire a l\'information en avance.' },
-      { titre: 'La concurrence avec la Monarchie', texte: 'Keldris lui précise que la Monarchie cherche à établir des accords préférentiels avant le dégel pour sécuriser des positions économiques. Sa surveillance des plans de Thyval (55) est liée à ces accords.' },
-      { titre: 'Les archives ouvertes', texte: 'Thyval (55) demande que des archives de Velkraeth (338) soient ouvertes à Keldris. Thyrkravel ne sait pas si c\'est une concession, un test, ou une manœuvre. Il attend l\'analyse de Keldris.' },
+      { titre: "Le Givrin impérial", texte: "À 15 ans, il avait été recruté comme informateur pour un réseau impérial par un agent qui avait identifié sa capacité Stellaire et ses aptitudes d'observation. Il était Givrin — ça lui donnait un accès naturel à des espaces que les agents non-Givrins ne pouvaient pas atteindre facilement. Il avait accepté sans comprendre entièrement dans quoi il entrait." },
+      { titre: "L'affectation à Crysalme", texte: "À 29 ans, Keldris (57) l'avait affecté spécifiquement à la surveillance des activités astronomiques de Crysalme — les calculs sur le dégel potentiel étaient devenus une priorité impériale. Il avait construit son identité d'astronome indépendant sur 2 ans avant d'approcher les milieux scientifiques locaux." },
+      { titre: "Les calculs de Velskrevyn", texte: "À 35 ans, il avait accès aux travaux de Velskrevyn (342) avant leur présentation à la cour — il fréquentait les mêmes espaces de travail. Il avait transmis les calculs à Keldris avant la présentation officielle. L'Empire avait eu l'information en avance. Il n'avait pas su ce que l'Empire en avait fait de spécifique." },
+      { titre: "La concurrence avec la Monarchie", texte: "Keldris lui avait précisé que la Monarchie cherchait à établir des accords préférentiels avec d'autres régions avant le dégel — pour sécuriser des positions économiques avant que l'Empire puisse réagir. Sa surveillance des plans de Thyval (55) était liée à ces accords. Le contexte était plus large que de l'astronomie." },
+      { titre: "La surveillance de Thyval", texte: "Il surveille actuellement les décisions de Thyval (55) concernant la fenêtre de 18 mois. Thyval a demandé à Velkraeth (338) d'ouvrir des archives à Keldris — une demande qui était peut-être un test de la position impériale. Thyrkravel attend des instructions de Keldris sur la signification de ce mouvement." }
     ],
     sorts: ['Éclat stellaire', 'Gel tactique', 'Camouflage stellaire'],
     relations: [
@@ -5429,11 +5429,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   347: {
     timeline_position: { an: -1, lieu: 'Crysalme', arc: 'Gel Éternel' },
     histoire: [
-      { titre: 'La première entrée dans le Champ', texte: 'À 20 ans, il accompagne un gardien senior dans le Champ pour la première fois. La pression des milliers de présences en suspension est physique — pas douloureuse, mais présente. Il comprend que ce lieu nécessite une attention particulière.' },
-      { titre: 'La nomination royale', texte: 'À 31 ans, Thyval (55) le nomme gardien du Champ après le départ du gardien précédent. Sa combinaison Glace/Spectre est adaptée à la navigation dans les deux couches du Champ.' },
-      { titre: 'La demande impériale refusée', texte: 'À 35 ans, Keldris (57) fait sa première demande d\'accès impérial au Champ. Il refuse. Keldris escalade vers Thyval. Thyval soutient le refus sans hésiter. Il note que Thyval a soutenu sans hésiter.' },
-      { titre: 'Les présences qui s\'organisent', texte: 'À 43 ans, il observe que certaines présences spectrales du Champ se déplacent de façon coordonnée. Velsa (58) dit que c\'est cohérent avec des processus spectraux anciens.' },
-      { titre: 'La surveillance actuelle', texte: 'Il surveille le Champ 4 jours par semaine. Il sait que Velthkra (345) et Iskravel (346) y entrent. Il n\'est pas intervenu. Velskra (169) a accès formel. Huitième demande de Keldris ce mois — refusée.' },
+      { titre: "La première entrée dans le Champ", texte: "À 20 ans, il avait accompagné un gardien senior dans le Champ pour la première fois. Les présences étaient perceptibles même sans capacité Spectre importante. La pression des milliers de présences en suspension était physique — pas douloureuse, mais présente. Il avait compris que ce lieu nécessitait une attention particulière." },
+      { titre: "La nomination royale", texte: "À 31 ans, Thyval (55) l'avait nommé gardien du Champ après le départ du gardien précédent. Sa combinaison Glace primaire et Spectre secondaire était adaptée à la navigation dans les deux couches du Champ — la couche physique glacée et la couche spectrale des présences." },
+      { titre: "La demande impériale", texte: "À 35 ans, Keldris (57) avait fait une première demande d'accès impérial au Champ — pour une \"étude des présences spectrales\". Il avait refusé en invoquant son mandat royal. Keldris avait escaladé vers Thyval. Thyval avait soutenu le refus. Il avait noté que Thyval avait soutenu le refus sans hésiter." },
+      { titre: "Les présences qui s'organisent", texte: "À 43 ans, il avait observé pour la première fois que certaines présences spectrales du Champ semblaient se déplacer de façon coordonnée — pas au hasard. Cette coordination était faible et irrégulière. Il n'avait pas de cadre pour l'interpréter. Il en avait informé Velsa (58). Velsa avait dit que c'était cohérent avec des processus spectraux anciens qu'elle avait observés dans d'autres contextes." },
+      { titre: "La surveillance actuelle", texte: "Il surveille le Champ 4 jours par semaine. Les présences de Velthkra (345) et Iskravel (346) sont connues de lui. Il n'est pas intervenu. Velskra (169) a accès formel et documente les présences. Keldris (57) a fait une nouvelle demande d'accès ce mois — sa huitième. Il a refusé comme les sept précédentes." }
     ],
     sorts: ['Mur de glace', 'Répulsion spectrale', 'Ancrage au Champ'],
     relations: [
@@ -5447,11 +5447,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   348: {
     timeline_position: { an: -1, lieu: 'Crysalme', arc: 'Gel Éternel' },
     histoire: [
-      { titre: 'La question initiale', texte: 'À 18 ans, lors d\'une visite du Champ avec son père, il pose à voix haute : "Est-ce qu\'ils ressentent quelque chose ?" Son père répond non. Il décide de vérifier.' },
-      { titre: 'L\'accès formel', texte: 'À 28 ans, Thyvalskra (347) lui accorde un accès formel pour une "étude non invasive". Les méthodes présentées étaient non invasives. Celles utilisées dans la pratique le sont moins. Il n\'a pas mentionné l\'écart.' },
-      { titre: 'L\'anomalie avec Velthkra', texte: 'À 34 ans, il commence à vérifier les affirmations de Velthkra (345). Les premiers tests produisent des résultats au-delà de la probabilité de coïncidence. Il documente une anomalie.' },
-      { titre: 'La question d\'Aethren', texte: 'Aethren (54) lui demande si ses résultats sur le Champ s\'appliqueraient aussi aux prisonniers en stase de la Monarchie. Il n\'avait pas anticipé cette connexion. Sa réponse a été prudente.' },
-      { titre: 'La 4ème catégorie', texte: '3 ans de données. 4 catégories de présences, dont une 4ème récente — des présences qui perturbent activement ses instruments. Thyvalskra (347) observe aussi une coordination entre présences. Ces deux observations pourraient être liées.' },
+      { titre: "La question initiale", texte: "À 18 ans, lors d'une visite du Champ avec son père, il avait posé la question à voix haute : \"Est-ce qu'ils ressentent quelque chose ?\" Son père avait répondu \"non, bien sûr que non\". Il avait décidé de vérifier. C'est le type de décision qui détermine une trajectoire." },
+      { titre: "L'accès formel", texte: "À 28 ans, Thyvalskra (347) lui avait accordé un accès formel au Champ pour une \"étude non invasive des présences spectrales\". Les méthodes qu'il avait proposées à Thyvalskra étaient non invasives. Celles qu'il utilisait dans la pratique l'étaient moins. Il n'avait pas mentionné l'écart." },
+      { titre: "L'anomalie avec Velthkra", texte: "À 34 ans, il avait commencé à vérifier les affirmations de Velthkra (345) sur ce qu'elle entendait dans le Champ. Les premiers tests avaient produit des résultats au-delà de la probabilité de coïncidence. Il n'avait pas conclu à l'authenticité — il avait documenté une anomalie et demandé plus de données." },
+      { titre: "La question d'Aethren", texte: "Aethren (54) l'avait contacté avec une question directe : si ses résultats confirmaient la conscience des soldats gelés, est-ce que ça s'appliquerait aussi aux prisonniers politiques maintenus en stase par la Monarchie ? Il n'avait pas anticipé cette connexion. Sa réponse avait été prudente — \"la méthode de stase est différente\". Mais la question restait." },
+      { titre: "Les données actuelles", texte: "Ses données sur 3 ans d'observation montrent 4 catégories de présences dans le Champ — des présences avec des réponses cohérentes aux stimuli, des présences avec des réponses incohérentes, des présences sans réponse détectable, et des présences qui semblent perturber activement ses instruments. La 4ème catégorie est la plus récente et la moins comprise." }
     ],
     sorts: ['Sonde spectrale', 'Barrière de glace analytique', 'Perturbation de zone'],
     relations: [
@@ -5465,11 +5465,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   349: {
     timeline_position: { an: -1, lieu: 'Crysalme', arc: 'Gel Éternel' },
     histoire: [
-      { titre: 'La première traversée spectrale', texte: 'À 15 ans, elle découvre accidentellement qu\'elle peut naviguer la couche spectrale de la glace. Elle y reste 20 minutes avant de comprendre comment en sortir. Elle y retourne le lendemain.' },
-      { titre: 'Le réseau Dissident', texte: 'À 22 ans, Thyrkra (168) la contacte via des intermédiaires. Le réseau a besoin d\'un passeur pour les zones de gel vif inaccessibles physiquement. Elle pose des conditions sur les passages. Thyrkra accepte.' },
-      { titre: 'Le passage refusé', texte: 'À 27 ans, Thyrkra lui propose un profil de passage dont les antécédents sont vagues de façon suspecte. Elle refuse. Thyrkra refuse à son tour. Elle note que Thyrkra a soutenu son refus sans pression.' },
-      { titre: 'La comparaison avec Velath', texte: 'Velath (49) lui partage ses méthodes de passage physiques d\'une autre région. La comparaison est instructive. Il note l\'avantage de sa méthode spectrale : les traces se dissipent plus vite que les traces physiques.' },
-      { titre: 'Les routes instables', texte: '6 routes actives, 2 avec sections instables. Thyrkra lui dit que la "fenêtre de 18 mois" va augmenter la demande. Besoin de reconsolidation avant l\'augmentation.' },
+      { titre: "La première traversée dans la couche spectrale", texte: "À 15 ans, elle avait découvert accidentellement qu'elle pouvait naviguer la couche spectrale de la glace — un espace entre la surface physique et la présence spectrale de la glace ancienne. Elle y était restée 20 minutes avant de comprendre comment en sortir. Elle y était retournée le lendemain." },
+      { titre: "Le réseau Dissident", texte: "À 22 ans, Thyrkra (168) l'avait contactée via une chaîne d'intermédiaires. Le réseau avait besoin d'un passeur qui pouvait franchir des zones de gel vif inaccessibles physiquement. Elle avait demandé des conditions sur les passages. Thyrkra avait accepté les conditions." },
+      { titre: "Le passage refusé", texte: "À 27 ans, Thyrkra lui avait proposé un passage dont le profil ne correspondait pas à ses conditions — une personne dont les antécédents étaient vagues de façon suspecte. Elle avait refusé. Thyrkra avait refusé le passage à son tour. Elle avait noté que Thyrkra avait soutenu son refus sans pression." },
+      { titre: "La comparaison avec Velath", texte: "Velath (49) lui avait partagé ses méthodes de passage à travers des zones différentes de Crysalme — des méthodes plus physiques que les siennes. La comparaison avait été instructive dans les deux sens. Il avait dit que sa méthode spectrale avait un avantage qu'il ne pouvait pas répliquer : les traces dans la couche spectrale se dissipent plus vite que les traces physiques." },
+      { titre: "Les routes actuelles", texte: "Elle maintient 6 routes actives à travers les zones glacées de Crysalme. Deux routes sont en cours de reconsolidation — des changements récents dans les zones spectrales de la glace ont rendu des sections instables. Elle a effectué 3 passages ce mois, 2 prévus pour le suivant. Thyrkra lui a dit que la \"fenêtre de 18 mois\" va augmenter la demande." }
     ],
     sorts: ['Traversée de glace', 'Gel spectral', 'Projection fantôme'],
     relations: [
@@ -5789,11 +5789,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   367: {
     timeline_position: { an: -1, lieu: 'Isthme', arc: 'Confluence Psy-Stellaire' },
     histoire: [
-      { titre: 'La résonance différente', texte: 'À 19 ans, il rencontre un pur élémentaire sans le savoir. Il perçoit une signature psychique d\'une qualité différente — plus stable et plus intense. Il commence à documenter cette différence.' },
-      { titre: 'L\'intégration Convergence', texte: 'À 27 ans, Sykavel (242) le recrute. La Convergence a besoin d\'analystes psycho-stellaires pour les résonances élémentaires. Les réponses sont partielles mais suffisamment intéressantes.' },
-      { titre: 'Les données de Sethara', texte: 'Sethara (238) lui fournit des données sur les purs élémentaires Feu. Une signature reconnaissable mais pas encore distincte d\'un Élu à très haute résonance.' },
-      { titre: 'La convergence partielle', texte: 'Les données de Shyrethvon (225) sur les purs élémentaires Eau montrent un pattern commun avec les données Feu. Première piste vers une signature universelle. 4 types élémentaires supplémentaires manquants.' },
-      { titre: 'La signature incomplète', texte: 'Pattern Feu/Eau identifié. 4 types élémentaires manquants. La Convergence attend une présentation dans 6 semaines. Il n\'est pas sûr que ce soit réaliste.' },
+      { titre: "La résonance différente", texte: "À 19 ans, il avait rencontré pour la première fois un pur élémentaire sans savoir ce qu'il était. Il avait perçu une signature psychique d'une qualité différente — plus stable et plus intense à la fois. Il avait commencé à documenter cette différence." },
+      { titre: "L'intégration à la Convergence", texte: "À 27 ans, Sykavel (242) l'avait recruté. La Convergence avait besoin d'analystes psycho-stellaires pour des recherches sur les résonances élémentaires. Il avait posé des questions sur la nature de ces recherches. Les réponses avaient été partielles mais suffisamment intéressantes." },
+      { titre: "Les données de Sethara", texte: "Sethara (238) lui avait fourni des données sur des purs élémentaires Feu. Ces données montraient une stabilité psychique particulière — une signature reconnaissable mais pas encore distincte d'un Élu à très haute résonance. Il avait besoin d'autres éléments pour trouver le facteur universel." },
+      { titre: "La convergence partielle", texte: "Les données de Shyrethvon (225) sur les purs élémentaires eau montraient des convergences avec les données Feu de Sethara — un pattern commun malgré la différence élémentaire. Ce pattern était sa première piste vers une signature universelle. Il avait 3 éléments supplémentaires à analyser pour confirmer." },
+      { titre: "La signature incomplète", texte: "Il a identifié un pattern commun dans les signatures psycho-stellaires de purs élémentaires Feu et Eau. Il lui manque les données pour 4 autres types élémentaires. La Convergence lui a demandé un délai pour sa première présentation de résultats. Il a dit 6 semaines. Il n'est pas sûr que ce soit réaliste." }
     ],
     sorts: ['Lecture de résonance', 'Alignement d\'analyse', 'Projection d\'identification'],
     relations: [
@@ -5897,11 +5897,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   373: {
     timeline_position: { an: -1, lieu: 'Ormn-Dur', arc: 'Fosse Interdite' },
     histoire: [
-      { titre: 'Le premier effondrement', texte: 'À 15 ans, un tunnel minier s\'effondre partiellement — 3 blessés. Il analyse les fractures et réalise qu\'un champ gravitationnel minimal aurait suffi à prévenir. Il commence à étudier la relation gravité/stabilité structurelle.' },
-      { titre: 'L\'intégration Technocratie', texte: 'À 24 ans, Drekvar (131) le recrute. Sa méthode gravitationnelle est plus efficace que les structures physiques standard dans les zones à roches friables.' },
-      { titre: 'L\'extraction de Kargesh', texte: 'À 29 ans, Kargesh (133) crée des vibrations excessives dans une zone stabilisée. Intervention d\'urgence requise. Accord de coordination formel obtenu, partiel dans la pratique.' },
-      { titre: 'Les anomalies croissantes', texte: 'Depuis 6 mois, les zones proches de la Fosse montrent des anomalies gravitationnelles croissantes qui interfèrent avec ses stabilisations. Rapporté à Drekvar. Drekvar : continuer et documenter.' },
-      { titre: 'Les 5 zones critiques', texte: '5 zones de stabilisation actives. 2 nécessitent une maintenance plus fréquente. Il demande un arrêt temporaire de l\'extraction dans ces 2 zones. Drekvar refuse. Dossier technique constitué.' },
+      { titre: "Le premier effondrement", texte: "À 15 ans, un tunnel minier près de son quartier s'était effondré partiellement — 3 Chthoniens blessés. Il avait analysé les fractures après l'effondrement et réalisé qu'un champ gravitationnel minimal aurait suffi à prévenir la fracture principale. Il avait commencé à étudier la relation entre gravité et stabilité structurelle." },
+      { titre: "L'intégration Technocratie", texte: "À 24 ans, Drekvar (131) l'avait recruté pour les équipes de stabilisation. Sa méthode gravitationnelle était plus efficace que les structures physiques standard dans les zones où les roches étaient trop friables pour des supports mécaniques." },
+      { titre: "L'extraction de Kargesh", texte: "À 29 ans, Kargesh (133) avait utilisé une méthode d'extraction qui créait des vibrations excessives dans une zone qu'il venait de stabiliser. Les vibrations avaient mis en danger la stabilisation — il avait dû intervenir en urgence. Il avait demandé une coordination préalable. Kargesh avait accepté formellement. La coordination était partielle dans la pratique." },
+      { titre: "Les anomalies gravitationnelles croissantes", texte: "Depuis 6 mois, les zones proches de la Fosse Interdite montrent des anomalies gravitationnelles croissantes qui interfèrent avec ses stabilisations — les champs qu'il crée réagissent aux anomalies ambiantes de façon imprévisible. Il a rapporté à Drekvar. Drekvar lui a dit de continuer et de documenter." },
+      { titre: "Les 5 zones critiques", texte: "Il a 5 zones de stabilisation actives dans des tunnels proches de la Fosse. 2 de ces zones nécessitent des interventions de maintenance plus fréquentes que les 6 premiers mois — les anomalies ambiantes s'intensifient. Il a demandé un arrêt temporaire de l'extraction dans ces 2 zones. Drekvar a refusé." }
     ],
     sorts: ['Ancrage de sol', 'Champ de contre-pression', 'Fracture contrôlée'],
     relations: [
@@ -5915,11 +5915,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   374: {
     timeline_position: { an: -1, lieu: 'Déserts', arc: 'Fosse Interdite' },
     histoire: [
-      { titre: 'Les eaux de la Fosse', texte: 'À 14 ans, elle passe du temps dans les courants sous-marins convergeant vers la Fosse. Les anomalies gravitationnelles lui semblent fascinantes, pas dangereuses. Elle apprend à naviguer dans ces anomalies.' },
-      { titre: 'Le premier régulateur', texte: 'À 22 ans, Velrynth (278) mène une opération dans une zone des Déserts. Elle est présente. Elle dévie la trajectoire de l\'unité, permettant à 4 personnes d\'échapper. Elle devient une cible.' },
-      { titre: 'Le piège de Velrynth', texte: 'À 25 ans, Velrynth monte un piège dans une zone de la Fosse qu\'il sait qu\'elle fréquente. Elle sent l\'anomalie des équipements d\'embuscade. Elle évite et utilise les anomalies de la Fosse contre l\'unité.' },
-      { titre: 'Les connaissances de Narev', texte: 'Narev (21) lui fournit des informations sur les cycles gravitationnels. Elle demande comment il sait. Il dit "mesures". Elle ne croit pas que c\'est toute la réponse.' },
-      { titre: 'Le pic du 4ème cycle', texte: 'Les anomalies du pic du 4ème cycle amplifient ses capacités dans les zones de la Fosse. Velrynth (278) évite maintenant ces zones. Elle l\'y cherche.' },
+      { titre: "Les eaux de la Fosse", texte: "À 14 ans, elle avait passé du temps dans les courants sous-marins qui convergeaient vers les zones de la Fosse — une zone que peu de Néréides exploraient. Les anomalies gravitationnelles lui avaient semblé fascinantes, pas dangereuses. Elle avait appris à naviguer dans ces anomalies." },
+      { titre: "Le premier régulateur", texte: "À 22 ans, Velrynth (278) avait mené une opération de régulation dans une zone des Déserts proches de la Fosse — des Élus extraits, des Chthoniens déplacés. Elle avait été présente. Elle avait utilisé ses capacités gravitationnelles pour dérouter l'unité de Velrynth, permettant à 4 personnes d'échapper. Elle était devenue une cible." },
+      { titre: "La cible de Velrynth", texte: "À 25 ans, Velrynth avait mis en place une opération spécifiquement dirigée contre elle — un piège dans une zone de la Fosse qu'il savait qu'elle fréquentait. Elle avait senti l'anomalie gravitationnelle créée par les équipements de l'unité d'embuscade. Elle avait évité le piège et utilisé les anomalies de la Fosse contre l'unité." },
+      { titre: "Les connaissances de Narev", texte: "Narev (21) lui avait fourni des informations sur les cycles gravitationnels de la Fosse — des informations qui lui permettaient d'utiliser les anomalies du 4ème cycle comme outil de combat. Elle avait demandé comment Narev savait. Il avait dit \"mesures\". Elle ne croyait pas que c'était toute la réponse." },
+      { titre: "Le pic du 4ème cycle", texte: "Les anomalies gravitationnelles du pic du 4ème cycle rendent les zones proches de la Fosse particulièrement avantageuses pour elle — ses capacités interagissent avec les anomalies ambiantes pour produire des effets multiplicateurs. Velrynth (278) évite maintenant ces zones. Elle l'y cherche." }
     ],
     sorts: ['Déviation gravitationnelle', 'Décharge de choc', 'Zone d\'anomalie'],
     relations: [
@@ -5969,11 +5969,11 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
   377: {
     timeline_position: { an: -1, lieu: 'Noctéa', arc: 'Zones de Transition' },
     histoire: [
-      { titre: 'Les noctèmes du quartier', texte: 'À 11 ans, il apprend à communiquer avec les noctèmes par des patterns de lumière et de mouvement. Il est le seul de son quartier à les approcher sans peur.' },
-      { titre: 'La première diversion', texte: 'À 21 ans, il libère un essaim lors d\'une opération impériale menaçant un réseau Dissident. 4 minutes de confusion — suffisantes pour évacuer. Thyrkra (168) le contacte 3 jours plus tard.' },
-      { titre: 'L\'essaim de trop', texte: 'À 26 ans, une installation avec des écrans anti-luminescence lui coûte 70% d\'un essaim. Il refuse désormais les missions à écrans sans reconnaissance préalable.' },
-      { titre: 'L\'information de Nyrshyx', texte: 'Nyrshyx (332) signale des essaims modifiés dans les zones de transition — luminescence à fréquence différente des noctèmes naturels. Risque de signature identifiable si ces fréquences se répandent.' },
-      { titre: 'La commande prioritaire', texte: 'Thyrkra (168) demande une diversion prioritaire dans 5 jours sur une installation à écrans anti-luminescence. 2 jours de reconnaissance requis. Mission conditionnelle à l\'évaluation des écrans.' },
+      { titre: "Les noctèmes du quartier", texte: "À 11 ans, il avait commencé à s'intéresser aux noctèmes — des insectes Umbrien dont la bioluminescence servait à la communication dans les zones sans lumière ambiante. Il avait appris à communiquer avec eux par des patterns de lumière et de mouvement. Il était le seul de son quartier à les approcher sans peur." },
+      { titre: "La première diversion", texte: "À 21 ans, une opération impériale dans son quartier menaçait de localiser un réseau Dissident. Il avait libéré un essaim de noctèmes dans la zone d'opération — la lumière intense avait désorganisé l'unité pendant 4 minutes. 4 minutes suffisantes pour évacuer ce qu'il fallait évacuer. Thyrkra (168) l'avait contacté 3 jours plus tard." },
+      { titre: "L'essaim de trop", texte: "À 26 ans, Thyrkra avait demandé une diversion dans une installation impériale protégée par des écrans lumineux — des dispositifs qui neutralisaient les noctèmes avant qu'ils puissent atteindre leurs positions. Il avait perdu 70% d'un essaim dans l'approche. Il avait refusé les missions avec des écrans similaires sans reconnaissance préalable." },
+      { titre: "L'information de Nyrshyx", texte: "Nyrshyx (332) lui avait signalé que des essaims modifiés — dont certains spécimens provenaient de Thyrvinsek (375) via la Convergence — avaient été identifiés dans des zones de transition. Ces essaims modifiés avaient une luminescence d'une fréquence différente des noctèmes naturels. Il ne savait pas si cette modification affecterait ses propres essaims." },
+      { titre: "La commande prioritaire de Thyrkra", texte: "Thyrkra (168) lui a demandé une diversion prioritaire dans 5 jours — une installation impériale dans les zones de transition qui collecte des données sur les routes Dissidentes de Noctéa. Cette installation a des écrans anti-luminescence. Il doit reconnaître les écrans avant d'engager l'opération." }
     ],
     sorts: ['Nuée lumineuse', 'Manteau d\'ombre', 'Invasion bioluminescente'],
     relations: [
@@ -6163,5 +6163,4605 @@ Le code "DV-418". Razhal qui observe. Il continue de travailler. Il ne sait pas 
     lore_long: `Saelrethkael, 11 ans, vit parmi les 39 enfants Élus de Virex. Sa multi-résonance est plus instable que Thyrekavel (275) — son élément change avec son état émotionnel. Le brouillage de Thyrsaevyn (359) qui la protège est l'un des 3 en expiration imminente. Sa signature oscillante est exactement ce que le prototype de Kasevolt (360) cherche à détecter. Kaelvenorm (383) l'aide à se stabiliser — insuffisant pour la crise imminente.`,
   },
 
-};
 
+
+  // ═══════════════════════════════════════════════════════════════
+  // SECONDARY CHARACTERS — IDs 66-230 (generated from lore.ts)
+  // ═══════════════════════════════════════════════════════════════
+
+  // ── 66 · KORVEL ────────────────────────────────────────
+  66: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "La Forge Silencieuse", texte: "Né à Varkhôl dans une famille de petits marchands. La Forge Silencieuse était le marché de sa jeunesse — les petits artisans qui vendaient à prix fixe sans négocier avec les grandes guildes. Il y avait appris le commerce avant d'y avoir un stand." },
+      { titre: "Les métaux", texte: "À 30 ans, il s'était spécialisé dans les métaux recyclés — une niche que personne ne voulait, trop proche de la récupération sur décombres pour être respectable. Il avait décidé que la respectabilité était surévaluée." },
+      { titre: "La Rupture", texte: "La Rupture Thermique avait détruit le Quatrième District et créé le plus grand stock de métaux récupérables que Varkhôl ait jamais vu. Korvel avait compris ce que ça représentait avant que les guildes bougent. Il était déjà sur les décombres." },
+      { titre: "La règle", texte: "Un acheteur lui avait demandé une fois d'où venait une pièce de métal particulière. Korvel avait répondu qu'il ne posait pas de questions sur l'origine. L'acheteur avait insisté. Korvel avait remballé ses affaires. La règle s'était établie à partir de là." },
+      { titre: "Le marché", texte: "Il opère à la Forge Silencieuse avec un stock qui grossit régulièrement. Skarith (9) achète des métaux pour ses projets. D'autres achètent pour d'autres projets. Korvel vend. C'est suffisant." }
+    ],
+    sorts: ['Frappe thermique (Feu) — chaleur concentrée dans les paumes — repousse les agresseurs à courte distance', 'Résistance à la chaleur (Feu) — immunité aux températures extrêmes — protection passive liée à son travail'],
+    relations: [
+      { id: 9, nom: "Skarith", type: "contact", note: "Client régulier. Transactions honnêtes." }
+    ],
+    lore_long: `Korvel vend des métaux recyclés à la Forge Silencieuse de Varkhôl depuis 20 ans. La Rupture Thermique lui a fourni le plus grand stock de sa carrière.
+
+Il ne demande pas l'origine des métaux qu'il achète. Skarith (9) est un client régulier. Les deux faits coexistent.
+
+Ce qu'il sait sur la provenance de certains métaux — et à qui ils ont été vendus — est une information qu'il n'a jamais utilisée.`,
+  },
+
+  // ── 68 · THYRAK ────────────────────────────────────────
+  68: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "L'élément comme outil", texte: "Né dans une famille de techniciens de la Technocratie. Son élément Feu avait été identifié tôt comme particulièrement sensible aux variations thermiques — une précision instrumentale rare. La Technocratie l'avait orienté vers la recherche." },
+      { titre: "La spécialisation", texte: "À 28 ans, il s'était spécialisé dans l'analyse des événements thermiques majeurs — volcanismes, surcharges élémentaires, catastrophes industrielles. La Rupture Thermique de Varkhôl était le plus grand événement de sa spécialité en 50 ans." },
+      { titre: "Les données", texte: "Ses relevés post-Rupture étaient exceptionnels — il avait commencé les mesures dans les 6 heures suivant l'événement. La Technocratie lui avait offert un financement considérable pour continuer. Il avait accepté sans poser de questions sur l'usage." },
+      { titre: "La transmission", texte: "Il avait appris indirectement que ses données avaient été transmises à une \"instance supérieure\". Il avait supposé un comité académique. Il n'avait pas cherché à confirmer." },
+      { titre: "Les mesures continuent", texte: "Il continue ses relevés. Les thermiques résiduelles de la Rupture durent encore — un phénomène scientifiquement remarquable. Ses publications sont citées dans des contextes qu'il ne lit pas." }
+    ],
+    sorts: ['Mesure thermique (Feu) — lecture précise des températures ambiantes — diagnostic des surcharges élémentaires', 'Neutralisation de chaleur (Feu) — absorption des thermiques résiduelles — protection de zone limitée'],
+    relations: [
+      { id: 12, nom: "Valdris", type: "contact", note: "Référence professionnelle. Leurs domaines se croisent." }
+    ],
+    lore_long: `Thyrak est le scientifique qui a fait les relevés thermiques les plus précis de la Rupture Thermique. Ses données sont exceptionnelles.
+
+La Technocratie les a transmises à l'Empire. Il ne sait pas cette partie.
+
+Ses publications sont citées dans des contextes qu'il ne lit pas. Il continue ses mesures.`,
+  },
+
+  // ── 69 · BRASK ─────────────────────────────────────────
+  69: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le Quatrième District", texte: "Né et grandi dans le Quatrième District de Varkhôl. Sa famille y vivait depuis trois générations. Il avait 20 ans quand la Rupture l'avait effacé. Il avait survécu. Sa famille avait partiellement survécu." },
+      { titre: "Le Parti du Feu", texte: "Après la Rupture, il avait erré pendant 2 ans. Orkhael (11) l'avait recruté en lui demandant de raconter son histoire en public. Il avait dit \"oui\" parce que personne d'autre ne lui avait jamais posé cette question." },
+      { titre: "L'orateur", texte: "Il avait commencé à parler lors de petites réunions. Il était bon — sa colère était réelle, ses souvenirs étaient précis, il n'exagérait pas. C'est ce qui le rendait efficace. Orkhael lui avait dit de ne pas changer ça. Il ne changeait pas." },
+      { titre: "La différence", texte: "Un jour, Kraevolt (77) — autre mémorialiste du Parti — lui avait montré ses propres archives exagérées des victimes de la Rupture. Brask avait dit que ce n'était pas exact. Kraevolt avait dit que l'exactitude n'était pas le but. Brask n'avait pas su quoi répondre." },
+      { titre: "La voix", texte: "Il continue à parler. Ses discours attirent des réfugiés qui se reconnaissent dans ce qu'il dit. Il ne sait pas entièrement ce que le Parti fait de ces rassemblements." }
+    ],
+    sorts: ['Aura de conviction (Feu) — chaleur rayonnante amplifiée par l\'émotion — présence intimidante en discours', 'Frappe enflammée (Feu) — attaque directe de Feu — force brute dans une situation de danger réel'],
+    relations: [
+      { id: 11, nom: "Orkhael", type: "allié", note: "Chef du Parti du Feu. L'utilise. Brask ne le sait pas entièrement." },
+      { id: 3, nom: "Gravel", type: "contact", note: "Figure de référence dans ses discours — la résistance réelle." }
+    ],
+    lore_long: `Brask est l'orateur sincère du Parti du Feu. Réfugié du Quatrième District. Il croit à chaque mot qu'il dit.
+
+Orkhael (11) le sait et l'utilise. Brask n'examine pas cette différence.
+
+Sa sincérité est ce qui rend ses discours efficaces. C'est aussi ce qui le rend utilisable.`,
+  },
+
+  // ── 70 · VRASSYN ───────────────────────────────────────
+  70: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "L'administration", texte: "Formé dans les services administratifs de l'Empire depuis l'âge de 18 ans. Il n'avait pas demandé à être affecté à Varkhôl — c'était une promotion de facto après la Rupture." },
+      { titre: "La zone de deuil", texte: "Arrivé à Varkhôl 3 mois après la Rupture pour administrer la \"zone de reconstruction et de deuil\". Ses premières semaines avaient été un choc qu'il avait géré en se concentrant sur les procédures." },
+      { titre: "Les premiers rapports", texte: "Son premier rapport contenait des chiffres précis. Son supérieur l'avait renvoyé avec une note : \"chiffres à réviser\". Il avait compris ce que \"réviser\" signifiait. Il avait révisé." },
+      { titre: "La routine", texte: "Après 6 mois, minimiser les chiffres était devenu une procédure standard. Il ne pensait plus à ce que ça effaçait. Il pensait aux délais de soumission." },
+      { titre: "Les dossiers", texte: "Ses rapports circulent dans l'Empire. Ils sont cités dans des documents officiels. Les chiffres réels — ceux qu'il n'a jamais écrits — existent seulement dans sa mémoire." }
+    ],
+    sorts: ['Contrôle de flamme (Feu) — manipulation précise des sources de chaleur — étouffement discret sans traces', 'Résistance thermique (Feu) — protection passive contre les éléments ambiants'],
+    relations: [
+      { id: 6, nom: "Pyrion", type: "contact", note: "Connaît son réseau. L'observe sans y participer." }
+    ],
+    lore_long: `Vrassyn administre la zone de deuil post-Rupture de Varkhôl pour l'Empire. Ses rapports minimisent les chiffres de victimes.
+
+Il sait que ses chiffres sont faux. Il les écrit quand même. Cette décision est quelque chose qu'il a appris à ne pas regarder.
+
+Les vrais chiffres existent seulement dans sa mémoire.`,
+  },
+
+  // ── 71 · KELVETH ───────────────────────────────────────
+  71: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "L'architecture", texte: "Né dans une famille de maçons Pyriens. L'élément Roche était naturel dans son métier. À 22 ans, il avait rejoint l'atelier de Valdris — la meilleure formation d'architecture de Varkhôl." },
+      { titre: "Les archives", texte: "À 28 ans, il avait eu accès aux archives internes pour un projet de rénovation. Les plans du district Nord étaient là. Il avait vu les défauts — des calculs de charge incorrects, des fondations sous-dimensionnées pour ce qu'elles supportaient." },
+      { titre: "La première occasion", texte: "Il avait failli en parler à Valdris 4 fois. Les 4 fois, il avait décidé qu'il devait mieux comprendre avant de parler. Il comprenait depuis longtemps. Il ne parlait toujours pas." },
+      { titre: "Les effondrements", texte: "Quand certains secteurs avaient montré des signes d'instabilité post-Rupture, Kelveth avait relu ses notes. Les effondrements correspondaient aux zones des plans défectueux. Il avait toujours rien dit." },
+      { titre: "Le silence", texte: "Il continue à travailler pour Valdris. Il continue à ne rien dire. Son silence devient plus lourd à chaque rapport d'instabilité structurelle." }
+    ],
+    sorts: ['Analyse structurelle (Roche) — perception des tensions dans les matériaux — identification des points de rupture', 'Frappe de roche (Roche) — impact amplifié par l\'élément — usage défensif seulement'],
+    relations: [
+      { id: 12, nom: "Valdris", type: "allié", note: "Supérieur hiérarchique. Respecté. Kelveth ne peut pas lui dire ce qu'il sait." }
+    ],
+    lore_long: `Kelveth connaît les défauts dans les plans du district Nord de Varkhôl. Il les a vus dans les archives de Valdris (12) il y a 4 ans.
+
+Il n'a jamais dit à personne. Son silence a peut-être des conséquences dans les effondrements post-Rupture.
+
+Il admire Valdris. Les plans défectueux sont signés Valdris. Ces deux faits ensemble ne font pas un tout qu'il peut accepter.`,
+  },
+
+  // ── 72 · THRAEL ────────────────────────────────────────
+  72: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Post-Rupture", texte: "Né juste avant la Rupture. A grandi dans les quartiers périphériques de Varkhôl pendant la reconstruction — entre les décombres et les marchés improvisés. À 16 ans, il courait déjà des messages informels pour des marchands." },
+      { titre: "Le réseau", texte: "À 18 ans, un contact du réseau de Brasia l'avait approché. Il avait dit oui parce que la paie était meilleure et les missions plus claires que le travail informel. L'idéologie était venue après — ou pas encore entièrement." },
+      { titre: "Le premier message important", texte: "Il avait transporté un message qui avait déclenché quelque chose — il ne savait pas quoi, exactement. Il avait vu des conséquences sans comprendre la chaîne. Il avait continué à courir." },
+      { titre: "Thessandra", texte: "Une rencontre avec Thessandra (10) lors d'une livraison lui avait donné un contexte qu'il n'avait pas cherché. Elle lui avait dit que ce qu'il faisait comptait. Il l'avait cru. Il n'avait pas demandé pourquoi." },
+      { titre: "En course", texte: "Il court encore. Il comprend un peu plus à chaque mission. Ce qu'il comprend change lentement sa façon de voir ce qu'il fait." }
+    ],
+    sorts: ['Accélération thermique (Feu) — bouffée de chaleur aux jambes — sprint court de survie', 'Résistance à la chaleur (Feu) — immunité aux surfaces brûlantes — passage dans des zones endommagées'],
+    relations: [
+      { id: 1, nom: "Brasia", type: "allié", note: "Source des missions. Vue de loin. Loyauté réelle sans relation directe." },
+      { id: 10, nom: "Thessandra", type: "contact", note: "Rencontrée une fois. A donné un contexte partiel. Lui semble importante." }
+    ],
+    lore_long: `Thrael court des messages pour le réseau de Brasia (1) à Varkhôl. Il a 20 ans.
+
+Il court sans comprendre entièrement pourquoi. Cette ignorance est sa protection — et une limite.
+
+Sa loyauté est réelle. Sa compréhension de ce à quoi il participe grandit lentement.`,
+  },
+
+  // ── 73 · NYROLT ────────────────────────────────────────
+  73: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le commerce entre régions", texte: "Né dans une famille de petits commerçants à Varkhôl. À 18 ans, il avait fait son premier trajet Varkhôl-Ormn-Dur en tant qu'assistant de chargement. À 25 ans, il avait son propre stock et ses propres routes." },
+      { titre: "La tension politique", texte: "Les tensions politiques entre les deux villes avaient compliqué les routes officielles. Nyrolt avait développé des routes alternatives moins contrôlées. Ses marges avaient augmenté avec le risque." },
+      { titre: "Le Parti de l'Acier", texte: "Il avait rejoint le Parti de l'Acier parce qu'une alliance formelle entre Varkhôl et Ormn-Dur lui aurait simplifié la vie commercialement. L'idéologie était secondaire. Les membres du Parti avaient de bons réseaux." },
+      { titre: "La Rupture comme opportunité", texte: "La Rupture Thermique avait perturbé les routes officielles. Nyrolt avait les routes alternatives. Il avait triplé son chiffre d'affaires en 18 mois. Il n'avait pas formulé ça comme \"profiter de la catastrophe\". Il l'avait formulé comme \"rester actif quand d'autres s'arrêtent\"." },
+      { titre: "Les routes", texte: "Il continue à négocier entre les deux villes. Ses routes sont discrètes. Son chiffre d'affaires est stable. La tension politique continue à générer des marges." }
+    ],
+    sorts: ['Frappe commerciale (Feu) — pas un combattant — utilise l\'élément Feu uniquement en dernier recours', 'Résistance thermique (Feu) — protection contre les conditions climatiques extrêmes des routes'],
+    relations: [
+      { id: 4, nom: "Thryss", type: "contact", note: "Client important. Connexions Ormn-Dur." }
+    ],
+    lore_long: `Nyrolt négocie entre Varkhôl et Ormn-Dur depuis 20 ans. La tension politique entre les deux villes crée des marges commerciales qu'il monétise.
+
+Parti de l'Acier par intérêt commercial. La Rupture a triplé son chiffre d'affaires.
+
+Ses routes discrètes sont une ressource stratégique qu'il n'a pas encore été forcé de défendre.`,
+  },
+
+  // ── 74 · DRAVEL ────────────────────────────────────────
+  74: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "L'élément Acier", texte: "Né dans une famille de forgerons Pyriens. L'élément Acier était inattendu — plus souvent Chthonien — mais sa famille l'avait utilisé comme avantage professionnel. Il avait appris à forger avant de savoir lire." },
+      { titre: "L'ambulant", texte: "À 28 ans, il avait décidé de se spécialiser dans la réparation mobile plutôt que dans un atelier fixe. Plus de clients, moins de concurrence. La Rupture avait explosé sa demande." },
+      { titre: "Ce qu'il voyait", texte: "En réparant des structures, il avait commencé à voir leur état réel — pas l'état dans les rapports, l'état dans les murs. Certains abris tenaient par habitude plus que par physique. Il réparait. Il ne transmettait pas ses observations." },
+      { titre: "Valdris et les plans", texte: "Il avait réparé plusieurs structures signées Valdris. Les défauts qu'il avait réparés n'auraient pas dû exister dans des plans de cette qualité. Il avait conclu que les plans avaient été modifiés en cours de construction — ou que quelque chose d'autre s'était passé." },
+      { titre: "Les réparations continuent", texte: "Il continue à se déplacer entre les quartiers de Varkhôl. Sa connaissance des structures est la plus précise disponible en dehors des archives officielles — et plus à jour." }
+    ],
+    sorts: ['Frappe d\'acier (Acier) — impact amplifié par l\'élément — dommage concentré sur les équipements et armures', 'Renforcement (Acier) — durcissement temporaire d\'une structure — réparation d\'urgence sous pression'],
+    relations: [
+      { id: 12, nom: "Valdris", type: "contact", note: "A réparé ses structures. Les défauts réparés parlent des plans originaux." },
+      { id: 9, nom: "Skarith", type: "contact", note: "Zones proches. Contact indirect." }
+    ],
+    lore_long: `Dravel répare les abris endommagés de Varkhôl depuis la Rupture. Son élément Acier combiné à son travail de terrain lui a donné une connaissance des défauts structurels plus précise que n'importe quel architecte.
+
+Il connaît des défauts importants dans des structures habitées. Il répare. C'est ce qu'on lui demande.
+
+Sa connaissance informelle est une ressource que personne n'a encore demandé à exploiter.`,
+  },
+
+  // ── 75 · THYSSEL ───────────────────────────────────────
+  75: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le service", texte: "À 18 ans, il avait rejoint le service de courrier impérial à Varkhôl — une des rares positions stables disponibles. Son élément Feu l'avait naturellement orienté vers les missions rapides." },
+      { titre: "Les routes", texte: "En 8 ans, il avait mémorisé toutes les routes de Varkhôl et leurs variations selon l'état des rues post-Rupture. Sa réputation de fiabilité lui avait valu des missions de plus en plus sensibles." },
+      { titre: "Le doute", texte: "Il avait livré un message et vu, deux jours après, une arrestation dans le quartier du destinataire. Il avait fait le lien. Il avait décidé de ne pas faire le lien. La règle disait qu'il ne lisait pas les messages." },
+      { titre: "Les habitudes", texte: "Certains détails s'accumulaient malgré sa règle de non-lecture : des horaires, des réactions à sa livraison, des quartiers ciblés. Il savait plus qu'un courrier neutre ne devrait savoir." },
+      { titre: "La livraison continue", texte: "Il continue à livrer. Sa neutralité professionnelle est intacte dans sa définition. Elle est moins intacte dans les faits." }
+    ],
+    sorts: ['Sprint de Feu (Feu) — accélération rapide — fuite ou poursuite d\'urgence', 'Frappe thermique (Feu) — attaque basique — usage défensif uniquement'],
+    relations: [
+      { id: 2, nom: "Cendrix", type: "contact", note: "A livré des messages à ses contacts sans savoir ce que c'était." },
+      { id: 1, nom: "Brasia", type: "adversaire", note: "Destinataire indirecte de certains ordres. Adversaire sans contact direct." }
+    ],
+    lore_long: `Thyssel est courrier impérial à Varkhôl depuis 8 ans. Il transporte des ordres sans les lire — règle professionnelle standard.
+
+Certains de ces ordres visent les Dissidentes. Il a fait des connexions involontaires entre ses livraisons et leurs effets.
+
+Sa neutralité professionnelle est une décision, pas une ignorance. Il choisit de ne pas articuler ce qu'il sait.`,
+  },
+
+  // ── 76 · BRESSYN ───────────────────────────────────────
+  76: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "La formation", texte: "Formation médicale standard dans les structures de Varkhôl. Elle était compétente et promise à une position stable. À 26 ans, elle avait soigné un blessé Dissident qui lui avait demandé de ne pas le signaler. Elle avait dit oui." },
+      { titre: "Le premier oui", texte: "Ce premier oui avait mené à un deuxième, puis à un troisième. À 27 ans, Brasia lui avait proposé une intégration formelle dans le réseau. Elle avait quitté sa position officielle. C'était irréversible et elle le savait." },
+      { titre: "Les 12 ans", texte: "En 12 ans, elle avait soigné des dizaines de blessés du réseau dans des conditions variables — caves, marchés nocturnes, ruines. Elle avait appris à travailler avec ce qu'elle avait." },
+      { titre: "La durée", texte: "12 ans sans être prise est exceptionnel. Elle avait analysé pourquoi : pas de routine, changement constant de caches, réseau minimal de contacts. Sa survie était méthodique." },
+      { titre: "Le service continue", texte: "Elle soigne. Le réseau la protège. La durée de son service est en elle-même une forme de légitimité dans le réseau." }
+    ],
+    sorts: ['Chaleur thérapeutique (Feu) — application de chaleur précise sur les blessures — accélération de la coagulation', 'Aura de soin (Feu) — chaleur régénératrice à courte portée — stabilisation des blessés graves'],
+    relations: [
+      { id: 1, nom: "Brasia", type: "allié", note: "Source du réseau. Contact rare mais fondamental." },
+      { id: 10, nom: "Thessandra", type: "contact", note: "Contact régulier. Terrain médical partagé." }
+    ],
+    lore_long: `Bressyn soigne les blessés du réseau Dissident de Brasia (1) à Varkhôl depuis 12 ans. Elle n'a jamais été prise.
+
+Sa survie est méthodique — pas de routine, caches variables, contacts minimaux.
+
+Elle a choisi de quel camp elle soigne. Ce choix est fait depuis longtemps.`,
+  },
+
+  // ── 77 · KRAEVOLT ──────────────────────────────────────
+  77: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "La Rupture", texte: "Il était dans le Quatrième District quand la Rupture s'est produite. Il avait 37 ans. Il avait survécu en se mettant à l'abri dans un sous-sol. Il était ressorti dans des décombres. Ce qu'il avait vu avait changé quelque chose dans sa façon de voir les nombres." },
+      { titre: "L'archive", texte: "Dans les mois suivant la Rupture, il avait commencé à collecter des témoignages. Au début, ses chiffres étaient précis. Ensuite, il avait compris que les chiffres précis ne créaient pas assez d'indignation. Il avait ajusté." },
+      { titre: "La confrontation", texte: "Brask (69) — orateur plus jeune — lui avait dit une fois que ses chiffres ne correspondaient pas à ce qu'il avait lui-même vu. Kraevolt avait répondu que Brask n'avait pas accès à toutes les sources. Brask avait laissé tomber." },
+      { titre: "L'usage des archives", texte: "Orkhael (11) avait cité ses archives dans un discours public sans le corriger. Kraevolt y avait vu une validation. Il n'avait pas compris que c'était de l'utilisation." },
+      { titre: "Les archives", texte: "Ses archives circulent dans le mouvement. Personne dans le mouvement ne les vérifie — elles confirment ce que les gens veulent croire." }
+    ],
+    sorts: ['Aura de mémoire (Feu) — chaleur émotionnelle rayonnante — amplification de la présence lors des discours', 'Frappe de conviction (Feu) — attaque désorganisée mais chargée — peu efficace en combat réel'],
+    relations: [
+      { id: 11, nom: "Orkhael", type: "allié", note: "Le sert sans en être conscient. Orkhael ne corrige pas ses chiffres." },
+      { id: 3, nom: "Gravel", type: "contact", note: "Figure de référence dans ses archives. Citation sans contact direct." }
+    ],
+    lore_long: `Kraevolt est le mémorialiste auto-proclamé de la Rupture Thermique. Il a survécu. Il archive.
+
+Ses archives exagèrent les chiffres pour amplifier la colère. Il croit que c'est juste. La vérité émotionnelle vaut, selon lui, plus que la vérité factuelle.
+
+Orkhael (11) utilise ses archives sans les corriger. Kraevolt l'interprète comme une validation.`,
+  },
+
+  // ── 78 · VELDAR ────────────────────────────────────────
+  78: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le service", texte: "À 22 ans, il avait rejoint la garde civile de Varkhôl. La formation, le service, les années de patrouille. À 40 ans, il était sous les ordres de Skarith — une période qu'il décrit, quand on lui demande, comme \"correcte\"." },
+      { titre: "La Rupture", texte: "La Rupture avait tout changé. Il avait été déployé dans les décombres pendant les premières semaines. Ce qu'il avait vu l'avait changé d'une façon qu'il n'avait pas entièrement articulée. À 42 ans, il avait demandé une reconversion." },
+      { titre: "La reconversion", texte: "Quitter la garde civile pendant une crise avait été mal perçu. On lui avait offert une transition vers des fonctions administratives. Il avait refusé. Il avait fini gardien de marché à la Forge Silencieuse." },
+      { titre: "Le marché", texte: "Le marché avait des conflits — vol, disputes commerciales, quelques altercations. Rien de comparable à ce qu'il avait vu en service. Sa présence suffisait généralement. C'était une révélation par contraste." },
+      { titre: "La paix du marché", texte: "Il garde le marché. Les commerçants l'ont accepté. Les factions qui opèrent dans le marché le respectent parce qu'il ne choisit pas de camp. Sa neutralité coûte — elle prive les deux camps d'un allié." }
+    ],
+    sorts: ['Frappe de garde (Feu) — coup contrôlé pour neutraliser sans blesser — dissuasion de marché', 'Résistance thermique (Feu) — protection passive — habitude d\'un service de terrain'],
+    relations: [
+      { id: 9, nom: "Skarith", type: "contact", note: "Ancien supérieur. Relation intacte sans être active." }
+    ],
+    lore_long: `Veldar était garde civile sous Skarith (9) à Varkhôl. La Rupture l'a changé. Il a quitté le service et est devenu gardien de marché.
+
+Neutre épuisé. Il a vu suffisamment pour savoir que tous les côtés ont des raisons et des torts.
+
+La paix d'un marché est une ambition à sa mesure maintenant.`,
+  },
+
+  // ── 79 · THYRSK ────────────────────────────────────────
+  79: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "La Confédération", texte: "Rejoint la Confédération à 20 ans pour un poste administratif. Orienté vers la liaison inter-régions à 25 ans — son élément Sol le rendait naturellement adapté aux positions qui nécessitent de rester ancré dans plusieurs contextes à la fois." },
+      { titre: "La Rupture et les routes", texte: "La Rupture avait coupé plusieurs routes commerciales entre Varkhôl et Ormn-Dur. La Confédération l'avait envoyé négocier les alternatives. Il avait trouvé 3 routes alternatives viables dans les 6 semaines suivantes." },
+      { titre: "La neutralité en tension", texte: "Les deux villes avaient des intérêts différents dans les routes alternatives. Thyrsk avait négocié un accord qui satisfaisait les deux sans avantager ni l'une ni l'autre. Les deux parties avaient été légèrement mécontentes — ce qu'il avait interprété comme un succès." },
+      { titre: "La durée", texte: "10 ans sur les mêmes routes. Les personnes changeaient, les tensions changeaient, les routes restaient. Il avait compris que sa valeur était la continuité — il était le seul à connaître l'historique complet." },
+      { titre: "Les routes maintenues", texte: "Les routes fonctionnent. Les tensions politiques fluctuent mais n'ont pas coupé les routes en 10 ans. Il considère ça comme un succès modeste et réel." }
+    ],
+    sorts: ['Ancrage au sol (Sol) — stabilisation de position — résistance aux déplacements forcés', 'Frappe tellurique (Sol) — impact au sol — perturbation de terrain'],
+    relations: [
+      { id: 40, nom: "Draven II", type: "contact", note: "Contact Ormn-Dur. Routes commerciales en commun." }
+    ],
+    lore_long: `Thyrsk maintient les routes commerciales entre Varkhôl et Ormn-Dur pour la Confédération depuis 10 ans. La Rupture Thermique avait coupé les routes originales. Il en a trouvé 3 alternatives.
+
+Sa valeur est la neutralité et la continuité. Les deux parties lui font confiance parce qu'il ne favorise personne.
+
+En 10 ans, il est devenu le seul à connaître l'historique complet des négociations de routes.`,
+  },
+
+  // ── 80 · KOSSAEL ───────────────────────────────────────
+  80: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le Quatrième District", texte: "Né et grandi dans le Quatrième District de Varkhôl. Troisième génération dans le même quartier. À 35 ans, la Rupture l'avait effacé. Il était un des rares à avoir survécu dans le District lui-même." },
+      { titre: "Le refus", texte: "Dans les jours suivant la Rupture, l'administration avait évacué le District. Kossael avait attendu que les agents partent et était retourné dans les ruines. Ça s'était produit trois fois. La quatrième fois, personne n'avait essayé de le faire partir." },
+      { titre: "Les années", texte: "Les premières années avaient été difficiles — eau des pluies, nourriture de ce qu'il pouvait récupérer ou acheter discrètement, abri dans les structures les moins endommagées. Il avait appris à lire les ruines. Il savait quelle structure tiendrait encore une saison." },
+      { titre: "Les visiteurs", texte: "Périodiquement, des gens venaient — curieux, journalistes du Parti, factions diverses. Il leur parlait. Il décrivait le District tel qu'il était, pas tel qu'ils voulaient l'entendre. Certains revenaient. La plupart ne revenaient pas." },
+      { titre: "Le dernier habitant", texte: "Il est seul dans les ruines du Quatrième District. Sa présence est connue. Aucune faction ne l'a utilisé de façon directe. Aucune faction ne l'a fait partir non plus." }
+    ],
+    sorts: ['Feu de survie (Feu) — flamme contrôlée dans les conditions difficiles — chaleur et lumière dans les ruines', 'Aura d\'endurance (Feu) — résistance aux conditions extrêmes — adaptation aux structures endommagées'],
+    relations: [
+      { id: 3, nom: "Gravel", type: "contact", note: "Figure de résistance différente. Respect sans adhésion." }
+    ],
+    lore_long: `Kossael vit dans les ruines du Quatrième District de Varkhôl depuis 15 ans — depuis la Rupture Thermique. Il refuse de partir.
+
+Son refus n'est pas de l'entêtement aveugle. C'est une déclaration : ces ruines sont son quartier.
+
+Il est le seul témoin direct de ce qu'est le District 15 ans après. Son témoignage ne sert aucun camp entièrement.`,
+  },
+
+  // ── 81 · VELARA ────────────────────────────────────────
+  81: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "La bureaucratie", texte: "Formée dans les services diplomatiques de la Confédération depuis l'âge de 20 ans. Le filtrage des communications est sa spécialité — une compétence valorisée dans une structure où l'information est une ressource." },
+      { titre: "Thalassyr", texte: "Affectée à Thalassyr à 28 ans. Le contexte post-Silence des Vents avait multiplié les communications à filtrer. Sa charge de travail avait doublé en 3 ans." },
+      { titre: "Le filtre", texte: "Elle avait filtré une communication concernant une anomalie qu'elle avait personnellement observée dans les courants artificiels. La communication avait été classée \"non-urgence\". Elle avait continué son travail." },
+      { titre: "Shaleth", texte: "En 3 ans, elle avait compris que Shaleth (16) filtrait les communications au-dessus d'elle. Ce que cela signifiait pour ce qui remontait réellement — elle n'y pensait pas directement." },
+      { titre: "Le travail continue", texte: "Elle filtre. Le flux de communications continue. Le Silence des Vents génère des anomalies que personne ne lit entièrement." }
+    ],
+    sorts: ['Flux d\'eau (Eau) — manipulation d\'un courant d\'eau — déplacement ou obstacle', 'Voile aquatique (Eau) — rideau d\'eau — protection visuelle temporaire'],
+    relations: [
+      { id: 16, nom: "Shaleth", type: "contact", note: "Supérieur indirect. Filtre au-dessus d'elle. Elle ne mesure pas encore l'écart." }
+    ],
+    lore_long: `Velara filtre les communications de la Confédération à Thalassyr depuis 3 ans. Elle fait son travail bien.
+
+Elle ne sait pas que Shaleth (16) fait la même chose à un niveau plus élevé — et que leurs filtres se superposent.
+
+L'écart entre ce qu'elle laisse passer et ce que Shaleth retient révèle quelque chose que personne ne compare.`,
+  },
+
+  // ── 82 · SORTHEL ───────────────────────────────────────
+  82: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "La mer", texte: "En mer depuis l'âge de 12 ans. Ses premières routes avaient été apprises de son père, qui les avait apprises du sien. Un savoir navigateur entièrement oral et pratique." },
+      { titre: "Le Silence des Vents", texte: "Le Silence des Vents avait changé la navigation à Thalassyr radicalement. Les routes naturelles — celles qu'il avait apprises — ne fonctionnaient plus de la même façon. Il avait mis 2 ans à développer les routes alternatives adaptées." },
+      { titre: "L'illégalité", texte: "L'Empire avait déclaré certaines routes maritimes hors des routes officielles illégales. Ses cartes — avec les routes naturelles d'avant — correspondaient à des zones maintenant interdites. Il avait continué à les utiliser." },
+      { titre: "Vel", texte: "Vel (17) l'avait contacté pour des informations sur des routes spécifiques. Sorthel avait fourni sans demander le pourquoi. Le réseau avait des utilisateurs qu'il ne connaissait pas directement." },
+      { titre: "Les routes persistent", texte: "Il navigue encore. Ses cartes illégales restent dans sa veste. La mer ne change pas selon les décrets impériaux." }
+    ],
+    sorts: ['Maîtrise des courants (Eau) — navigation précise dans des conditions difficiles — avantage tactique en mer', 'Vague de pression (Eau) — onde de choc aquatique — défense à distance sur l\'eau'],
+    relations: [
+      { id: 17, nom: "Vel", type: "contact", note: "Contact réseau. Lui fournit des informations maritimes." }
+    ],
+    lore_long: `Sorthel navigue à Thalassyr avec des cartes des routes pré-Silence des Vents. Ces routes sont maintenant illégales.
+
+Il les garde. La mer a des routes depuis toujours — les décrets impériaux ne les effacent pas.
+
+Il est dans le réseau de Vel (17), fournissant des informations maritimes sans en connaître l'usage complet.`,
+  },
+
+  // ── 83 · TYRANETH ──────────────────────────────────────
+  83: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "L'élément Psy", texte: "Son élément Psy l'avait orientée vers l'analyse psychique dès son éducation confédérale. La surveillance des signatures élémentaires était une application directe de sa compétence." },
+      { titre: "Thalassyr", texte: "Affectée à Thalassyr à 30 ans pour surveiller les anomalies élémentaires dans une région marquée par le Silence des Vents. La densité d'Élus non-enregistrés était plus haute que prévu." },
+      { titre: "La chaîne", texte: "Elle avait demandé une fois à qui ses rapports étaient destinés au-delà de Shaleth. On lui avait répondu \"protocole standard\". Elle avait arrêté de demander." },
+      { titre: "Les arrestations", texte: "Elle avait constaté que certaines personnes qu'elle avait signalées avaient été arrêtées rapidement — plus vite que les procédures confédérales ne l'auraient permis. Elle avait classé ça comme \"système efficace\"." },
+      { titre: "L'analyse continue", texte: "Elle continue à surveiller et à signaler. Ses rapports continuent à circuler dans une chaîne dont elle ne connaît pas entièrement les nœuds." }
+    ],
+    sorts: ['Lecture psychique (Psy) — analyse des signatures élémentaires à distance — identification sans contact', 'Brouillage de perception (Psy) — interférence dans les sens d\'une cible — outil de surveillance défensive'],
+    relations: [
+      { id: 16, nom: "Shaleth", type: "contact", note: "Dans sa chaîne de reporting. Nœud de transmission qu'elle ne questionne pas." },
+      { id: 2, nom: "Cendrix", type: "contact", note: "Reçoit ses rapports via le réseau impérial. Elle ne connaît pas ce lien." }
+    ],
+    lore_long: `Tyraneth surveille les Élus non-enregistrés à Thalassyr pour la Confédération. Ses rapports arrivent à l'Empire via Shaleth (16).
+
+Elle croit travailler pour la Confédération. La distinction lui échappe encore.
+
+Certaines arrestations rapides qu'elle a constatées lui ont semblé indiquer "système efficace".`,
+  },
+
+  // ── 84 · NAREVAEL ──────────────────────────────────────
+  84: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "La pêche", texte: "Né dans une famille de pêcheurs Néréides à Thalassyr. La mer était son travail et son territoire depuis l'enfance. Le Silence des Vents avait compliqué la pêche traditionnelle." },
+      { titre: "La conversion", texte: "À 35 ans, un contact Dissident lui avait proposé une activité parallèle à la pêche — transporter des contenants étanches le long de routes maritimes spécifiques. La paie était convenable. Les risques étaient clairs. Il avait accepté." },
+      { titre: "Thariel", texte: "La nature des contenants avait évolué — d'objets à des données encodées. Il avait rencontré Thariel (18) une fois pour comprendre la nouvelle procédure. Il avait réalisé que ce qu'il transportait avait une valeur différente." },
+      { titre: "La chaîne", texte: "Il ne sait pas entièrement ce que les données de Thariel contiennent ni ce que le réseau Dissident en fait. Cette ignorance est choisie — il ne veut pas savoir plus que nécessaire." },
+      { titre: "La livraison", texte: "Il pêche. Il livre. Les deux activités coexistent dans ses journées sans conflit apparent." }
+    ],
+    sorts: ['Courant défensif (Eau) — manipulation d\'un courant marin — déstabilisation d\'un poursuivant', 'Plongée furtive (Eau) — immersion rapide et silencieuse — disparition en mer'],
+    relations: [
+      { id: 18, nom: "Thariel", type: "allié", note: "Source des données. Contact rare et codé." },
+      { id: 49, nom: "Velath", type: "allié", note: "Destination du réseau Dissident." }
+    ],
+    lore_long: `Narevael est pêcheur à Thalassyr et transporte les données de Thariel (18) vers Velath (49) pour les Dissidentes.
+
+Il ne lit pas les données. Il les livre. Cette ignorance est choisie.
+
+Il est la courroie de transmission physique entre deux réseaux — la seule vulnérabilité de la chaîne.`,
+  },
+
+  // ── 85 · ISARATH ───────────────────────────────────────
+  85: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "La famille", texte: "Née à Thalassyr dans une famille de pêcheurs. Son fils avait manifesté deux éléments distincts à l'âge de 8 ans — une anomalie qu'elle avait signalée aux autorités comme demandé. Elles l'avaient enregistré et informée que Virex avait des structures d'accueil adaptées." },
+      { titre: "Le départ", texte: "Son fils avait été orienté vers Virex à 10 ans. Elle avait accepté parce que les alternatives disponibles à Thalassyr étaient inexistantes pour un enfant double-puissance. Les 2 premières années, il avait écrit." },
+      { titre: "Le silence", texte: "Il y a 2 ans, les lettres avaient cessé. Elle avait contacté les structures officielles. Elle avait reçu une réponse générique la première fois. Plus rien après." },
+      { titre: "L'absence de réponse", texte: "Elle avait compris que l'absence de réponse était une réponse — mais pas une réponse qu'elle pouvait interpréter. Mort ? Transfert ? Changement de statut ? Les structures officielles ne lui disaient rien de précis." },
+      { titre: "L'attente", texte: "Elle continue à attendre à Thalassyr. Elle n'a pas les ressources pour se rendre à Virex. Elle n'appartient à aucun réseau qui pourrait l'aider." }
+    ],
+    sorts: ['Courant de protection (Eau) — barrière aqueuse — défense instinctive', 'Flux d\'eau (Eau) — manipulation d\'eau ambiante — usage utilitaire'],
+    relations: [
+      { id: 62, nom: "Thyven", type: "contact", note: "Administrateur de Virex. A écrit deux fois sans réponse directe." },
+      { id: 63, nom: "Lysael", type: "contact", note: "Ne sait pas que Lysael opère à Virex." }
+    ],
+    lore_long: `Isarath est mère d'un des 39 enfants double-puissance de Virex. Elle n'a pas de nouvelles depuis 2 ans.
+
+Elle a fait confiance aux structures officielles. Les structures ne répondent plus.
+
+Elle est à Thalassyr, sans ressources pour agir, dans une situation que personne dans son entourage ne peut résoudre.`,
+  },
+
+  // ── 86 · KAELETH ───────────────────────────────────────
+  86: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "L'apprentissage", texte: "Identifié jeune comme Élu Electrique avec une aptitude pour les systèmes techniques. Orven (15) l'avait recruté comme apprenti à 20 ans — une occasion rare. L'apprentissage avait duré 5 ans." },
+      { titre: "La maintenance", texte: "Quand Orven avait quitté ou réduit son activité directe, Kaeleth était devenu le technicien principal de maintenance. Il avait pris en charge des systèmes qu'il avait aidé à construire mais dont Orven avait gardé la compréhension globale." },
+      { titre: "Les défaillances", texte: "Les premières défaillances importantes avaient révélé des limites dans sa compréhension. Il réparait les symptômes mais les causes systémiques restaient floues. Il n'avait pas dit à ses supérieurs que sa compréhension était partielle." },
+      { titre: "Le Silence", texte: "Le Silence des Vents avait changé le contexte du réseau artificiel. Les paramètres qu'Orven avait calculés pour des vents naturels présents n'étaient plus les mêmes. Kaeleth adaptait en permanence sans documentation de base." },
+      { titre: "La maintenance continue", texte: "Le réseau fonctionne. Ses réparations tiennent. Sa compréhension partielle n'a pas encore créé de défaillance catastrophique. Mais le système vieillit." }
+    ],
+    sorts: ['Surcharge électrique (Electrique) — décharge concentrée — neutralisation d\'équipement ou de personne', 'Réseau conducteur (Electrique) — utilisation du réseau artificiel comme amplificateur — portée étendue dans les zones d\'infrastructure'],
+    relations: [
+      { id: 15, nom: "Orven", type: "contact", note: "Mentor dont il a perdu le contact. Sa compréhension du réseau est incomplète sans lui." },
+      { id: 16, nom: "Shaleth", type: "contact", note: "Supérieur hiérarchique confédéral." }
+    ],
+    lore_long: `Kaeleth entretient le réseau artificiel de vent de Thalassyr. Ancien apprenti d'Orven (15), il a hérité de la maintenance sans avoir entièrement hérité de la compréhension globale.
+
+Il répare les symptômes. Les causes systémiques restent floues.
+
+Le réseau vieillit dans un contexte que ses paramètres originaux ne couvraient pas.`,
+  },
+
+  // ── 87 · VORNAEL ───────────────────────────────────────
+  87: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "Les profondeurs", texte: "Né dans une famille de Néréides plongeurs. Il avait développé une capacité exceptionnelle à rester sous l'eau longtemps — et à observer dans l'obscurité des profondeurs." },
+      { titre: "Les archives", texte: "À 35 ans, il avait commencé à documenter systématiquement ce qu'il observait dans ses plongées. Pas pour une institution — par curiosité méthodique. Ses archives couvraient maintenant 25 ans d'observations." },
+      { titre: "Le Silence des Vents", texte: "Le Silence des Vents avait laissé des traces dans les courants sous-marins. Ses archives en avaient une documentation qui précédait et suivait l'événement. Cette continuité était rare." },
+      { titre: "La valeur", texte: "Un contact lui avait offert une somme significative pour ses archives sur le Silence des Vents. Il avait refusé. La valeur de ses archives venait de leur indépendance. La vente les aurait changées." },
+      { titre: "L'archivage continue", texte: "Il plonge et documente. Ses archives s'accumulent dans des caches sous-marines que lui seul connaît." }
+    ],
+    sorts: ['Pression sous-marine (Eau) — compression d\'eau autour d\'une cible — immobilisation sous l\'eau', 'Courant d\'esquive (Eau) — déplacement rapide dans l\'eau — fuite'],
+    relations: [
+      { id: 18, nom: "Thariel", type: "contact", note: "Parallèle ignoré. Deux archives qui couvrent les mêmes zones." }
+    ],
+    lore_long: `Vornael archive les phénomènes sous-marins de Thalassyr depuis 25 ans. Ses archives couvrent le Silence des Vents avant et après.
+
+Il travaille en parallèle de Thariel (18) sans le savoir. Leurs archives se complètent.
+
+Son indépendance est sa protection. Si quelqu'un comprend la valeur de ses archives, cette protection disparaît.`,
+  },
+
+  // ── 88 · LYSETH ────────────────────────────────────────
+  88: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "Les Dissidentes", texte: "Rejoint les Dissidentes à 22 ans. Activité de bas niveau jusqu'à cette année. Il est agent depuis 4 ans, junior en termes de responsabilités." },
+      { titre: "Les caches", texte: "Sa mission avait été de surveiller certaines caches dans Thalassyr — des points de dépôt pour des échanges d'informations. Trois semaines avant, il avait trouvé quelque chose dans une cache qui n'aurait pas dû être là : des journaux privés." },
+      { titre: "La lecture", texte: "Il avait commencé à lire. Les journaux de Shaleth décrivaient des situations que la version officielle de Shaleth — agent double à la solde de l'Empire — ne couvrait pas entièrement. Des doutes, des hésitations, des informations qu'il avait retenues pour des raisons qui n'étaient pas uniquement la trahison." },
+      { titre: "La complexité", texte: "Shaleth n'était pas un traître simple. Les journaux montraient quelqu'un qui naviguait des contraintes que Lyseth ne comprenait pas encore. Cette complexité ne l'excusait pas — mais elle changeait la façon dont Lyseth devait traiter l'information." },
+      { titre: "La décision", texte: "Il a les journaux. Il ne sait pas encore à qui les donner ni comment. Vel (17) ? Thariel (18) ? Quelqu'un d'autre ? La décision change le cours de quelque chose." }
+    ],
+    sorts: ['Vague défensive (Eau) — bouclier d\'eau — protection à courte portée', 'Courant de fuite (Eau) — accélération dans l\'eau — disparition rapide'],
+    relations: [
+      { id: 16, nom: "Shaleth", type: "adversaire", note: "La personne dont il a les journaux. Plus complexe que prévu." },
+      { id: 17, nom: "Vel", type: "allié", note: "Contact de réseau. Pas encore informé de la découverte." }
+    ],
+    lore_long: `Lyseth a trouvé les journaux privés de Shaleth (16) dans des caches à Thalassyr il y a 3 semaines.
+
+Ce qu'il y a lu est plus compliqué que la trahison attendue. Shaleth y apparaît comme quelqu'un naviguant des contraintes, pas uniquement comme un traître simple.
+
+Lyseth ne sait pas encore à qui transmettre les journaux. Cette décision change quelque chose.`,
+  },
+
+  // ── 89 · ORAVETH ───────────────────────────────────────
+  89: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "L'élément Psy", texte: "Son élément Psy avait été identifié et recruté par l'Empire à 18 ans. La formation d'interrogateur avait duré 7 ans. Il était efficace depuis le début." },
+      { titre: "Thalassyr", texte: "Affecté à Thalassyr pour surveiller les Élus enregistrés post-Silence des Vents. La région avait des taux d'anomalie élémentaire plus élevés que la moyenne." },
+      { titre: "Shaleth", texte: "Sa relation avec Shaleth (16) avait évolué vers quelque chose qui n'était pas entièrement professionnel. Il savait des choses sur Shaleth qu'il n'avait pas entièrement transmises à ses supérieurs." },
+      { titre: "La sélectivité", texte: "Il avait compris à un moment que sa sélectivité dans les rapports était une décision avec des conséquences. Il l'avait acceptée. Les conséquences étaient gérables tant que le réseau de Shaleth tenait." },
+      { titre: "Les interrogatoires", texte: "Il continue à tester les loyautés. Son taux de rapport \"loyal\" est stable. Son taux réel de détection est plus haut." }
+    ],
+    sorts: ['Lecture psychique (Psy) — analyse des états mentaux — détection de mensonges et d\'intentions', 'Contrainte mentale (Psy) — pression psychique — compliance forcée temporaire'],
+    relations: [
+      { id: 16, nom: "Shaleth", type: "contact", note: "Dans son réseau. A des informations retenues à son sujet." },
+      { id: 20, nom: "Crysta", type: "contact", note: "A interrogée. Classé \"non-concluant\" alors qu'il sait autre chose." }
+    ],
+    lore_long: `Oraveth est interrogateur impérial à Thalassyr. Il teste la loyauté des Élus enregistrés.
+
+Il est dans le réseau de Shaleth (16). Ce qu'il sait sur Shaleth n'a pas entièrement été transmis à ses supérieurs.
+
+Sa sélectivité dans les rapports est une décision avec des conséquences. Elle le rend vulnérable si le réseau de Shaleth se désintègre.`,
+  },
+
+  // ── 90 · SHYRAEL ───────────────────────────────────────
+  90: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "La plongée", texte: "Née dans une famille de Néréides plongeurs. Son élément Gravité l'avait rendue naturellement adaptée aux grandes profondeurs — la pression ne l'affectait pas comme les autres." },
+      { titre: "Les caves", texte: "Elle avait cartographié les caves sous-marines de Thalassyr sur 10 ans. Une des caves contenait des structures artificielles — récentes. Elle avait compris que c'était un lieu de cache." },
+      { titre: "La découverte", texte: "En examinant les caches, elle avait compris qu'elles contenaient des données encodées. Elle n'avait pas les moyens de les déchiffrer. Elle avait décidé que les caches n'étaient pas ses affaires." },
+      { titre: "Thariel", texte: "Elle avait inféré que les caches appartenaient à Thariel (18) — une archiviste dont elle avait entendu parler dans son réseau de plongeurs. Elle n'avait pas fait le contact direct." },
+      { titre: "La connaissance silencieuse", texte: "Elle sait. Elle n'a pas dit. Thariel cache toujours dans les mêmes caves. La situation n'a pas changé depuis 2 ans." }
+    ],
+    sorts: ['Manipulation gravitationnelle (Gravité) — modification locale de la pesanteur — déplacement ou immobilisation', 'Compression sous-marine (Gravité) — amplification de la pression — dommage concentré en milieu aquatique'],
+    relations: [
+      { id: 18, nom: "Thariel", type: "contact", note: "Connaît ses caches sans la connaître directement." },
+      { id: 21, nom: "Narev", type: "contact", note: "Réseau de plongeurs en commun." }
+    ],
+    lore_long: `Shyrael plonge dans les caves sous-marines de Thalassyr. Elle a trouvé les caches de données de Thariel (18) il y a 2 ans.
+
+Elle n'en a parlé à personne. Ce n'est pas du soutien actif — c'est de la non-interférence.
+
+Thariel cache toujours dans les mêmes caves. Shyrael sait. Le silence dure depuis 2 ans.`,
+  },
+
+  // ── 91 · SOLVARA ───────────────────────────────────────
+  91: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "Le droit", texte: "Formation juridique confédérale. Spécialisée dans les droits élémentaires à 28 ans — une niche peu attractive, peu payée, avec des résultats difficiles." },
+      { titre: "Les Élus non-enregistrés", texte: "Son premier client non-enregistré avait été une erreur d'aiguillage — elle avait été assignée par défaut. Elle avait perdu le procès. Mais l'argument avait tenu plus longtemps qu'elle ne l'avait prévu. Elle avait continué." },
+      { titre: "La systématicité", texte: "Après 10 procès perdus, elle avait compris que la perte était systémique — pas une question de qualité d'argument, mais de cadre légal. Elle avait décidé que changer le cadre prenait du temps, et que ses pertes étaient du travail préparatoire." },
+      { titre: "Les archives", texte: "Ses argumentaires étaient archivés dans les registres confédéraux. Quelqu'un qui cherchait les arguments pour les droits élémentaires trouverait 12 ans de son travail. C'était sa contribution — pas les victoires." },
+      { titre: "Le prochain procès", texte: "Elle prépare le prochain dossier. Elle va le perdre. Les arguments seront dans les archives." }
+    ],
+    sorts: ['Barrière aqueuse (Eau) — protection défensive — outil de survie pas de combat', 'Flux persuasif (Eau) — courant d\'eau dirigé — utilisation utilitaire'],
+    relations: [
+      { id: 16, nom: "Shaleth", type: "adversaire", note: "Figure institutionnelle dans son champ de vision. Opposition légale." }
+    ],
+    lore_long: `Solvara défend les droits des Élus non-enregistrés à Thalassyr depuis 12 ans. Ses procès sont systématiquement perdus.
+
+Elle continue. Ses argumentaires dans les archives confédérales sont son vrai travail — des arguments pour un futur cadre légal.
+
+La perte systémique n'est pas un échec pour elle. C'est du travail préparatoire.`,
+  },
+
+  // ── 92 · TYRANEL ───────────────────────────────────────
+  92: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "La construction navale", texte: "Formé dans la construction navale à Thalassyr depuis l'enfance. Troisième génération dans les mêmes chantiers. L'eau et le bois sont ses matériaux naturels." },
+      { titre: "La première demande", texte: "Il y a 15 ans, un client lui avait demandé des \"compartiments étanches supplémentaires\" avec des spécifications inhabituelles. Il avait construit selon les plans fournis et posé une seule question : \"ces compartiments sont-ils légaux en tant que structures ?\" On lui avait répondu oui. Il avait arrêté là." },
+      { titre: "La règle", texte: "Après plusieurs demandes similaires, il avait formalisé sa règle : questions structurelles uniquement, pas d'usage. Cette règle lui permettait de travailler sans fardeau éthique immédiat." },
+      { titre: "Les bateaux", texte: "Il avait construit peut-être 30 bateaux avec des compartiments de cache en 15 ans. Aucun n'avait été saisi ou incriminé. Sa règle avait résisté au temps." },
+      { titre: "La commande continue", texte: "Les commandes arrivent. Il construit. Les bateaux partent dans la mer de Thalassyr avec des compartiments dont il connaît l'usage sans l'avoir demandé." }
+    ],
+    sorts: ['Construction de barrière (Eau) — manipulation d\'eau pour créer une structure — usage défensif', 'Résistance aux courants (Eau) — navigation dans des conditions difficiles — mobilité maritime'],
+    relations: [
+      { id: 17, nom: "Vel", type: "contact", note: "Client régulier pour les modifications." },
+      { id: 1, nom: "Brasia", type: "contact", note: "Réseau indirect. Certaines commandes viennent de là." }
+    ],
+    lore_long: `Tyranel construit des bateaux à Thalassyr avec des compartiments de cache Dissidents depuis 15 ans. Il ne pose pas de questions sur l'usage.
+
+Sa règle : questions structurelles uniquement. Cette règle lui permet de travailler sans fardeau éthique immédiat.
+
+30 bateaux avec des caches en 15 ans. Aucun saisi jusqu'ici.`,
+  },
+
+  // ── 93 · NAELETH ───────────────────────────────────────
+  93: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "La Convergence", texte: "Née dans une famille proche de la Convergence. Son élément Psy l'avait orientée vers le travail de terrain — identifier les profils compatibles avec la doctrine." },
+      { titre: "Thalassyr", texte: "Affectée à Thalassyr à 28 ans. La région avait une densité d'Élus intéressante pour la Convergence — beaucoup d'Élus Eau, quelques profils plus rares." },
+      { titre: "La méthode", texte: "Elle avait développé sa méthode sur le terrain : identifier avant d'approcher, approcher avec le bon argument par personne, ne pas expliquer entièrement le rôle de la Convergence au début. Cette méthode fonctionnait." },
+      { titre: "Crysta", texte: "Ce que Crysta (20) faisait des profils qu'elle envoyait n'était pas toujours clair pour Naeleth. Les profils devenaient des ressources dans un système plus large qu'elle ne contrôlait pas." },
+      { titre: "Le recrutement", texte: "Elle recrute. Les profils circulent. Elle préfère ne pas savoir exactement ce qu'ils deviennent." }
+    ],
+    sorts: ['Empathie instrumentalisée (Psy) — identification précise des besoins d\'une cible — approche sur-mesure', 'Brouillage de perception (Psy) — interruption de la conscience d\'une cible — protection lors d\'une fuite'],
+    relations: [
+      { id: 20, nom: "Crysta", type: "allié", note: "Sa destinataire. Reçoit les profils recrutés." },
+      { id: 48, nom: "Shael", type: "contact", note: "Réseau étendu. Activités qui se superposent." }
+    ],
+    lore_long: `Naeleth recrute des profils d'Élus purs pour Crysta (20) à Thalassyr. Sa méthode : identifier avec l'élément Psy, approcher avec l'empathie.
+
+Elle utilise de l'information que ses cibles ne lui ont pas donnée volontairement.
+
+Ce que Crysta fait des profils n'est pas toujours clair pour elle. Elle préfère ne pas demander.`,
+  },
+
+  // ── 94 · CORVETH ───────────────────────────────────────
+  94: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "La mer", texte: "Formation de marin depuis l'enfance. Combat naval appris dans les guildes de sécurité maritime de Thalassyr. À 28 ans, il avait aidé à faire fuir un ami non-enregistré par hasard. Il avait continué." },
+      { titre: "Le réseau", texte: "Velath (49) l'avait contacté à 30 ans. Le réseau avait besoin d'un combattant maritime avec des routes maritimes. Corveth correspondait exactement." },
+      { titre: "La première protection", texte: "Son premier escorte avait duré 3 jours sur des routes maritimes difficiles avec des agents impériaux en poursuite. Il avait réussi. Ce succès avait fixé son rôle dans le réseau." },
+      { titre: "Le coût", texte: "Les routes de fuite avaient un coût humain. Pas toujours réussi. Il avait perdu 2 personnes en 8 ans. Ces deux échecs étaient dans sa mémoire d'une façon particulière." },
+      { titre: "La protection", texte: "Il continue à protéger les routes. Les demandes d'escorte augmentent depuis l'intensification de la surveillance impériale." }
+    ],
+    sorts: ['Vague de combat (Eau) — manipulation offensive d\'un courant — renversement d\'une cible', 'Bouclier aquatique (Eau) — barrière d\'eau dense — protection des personnes escortées'],
+    relations: [
+      { id: 49, nom: "Velath", type: "allié", note: "Contact réseau principal. Coordination des routes." },
+      { id: 82, nom: "Sorthel", type: "contact", note: "Fournit les routes maritimes alternatives." }
+    ],
+    lore_long: `Corveth protège les routes de fuite des Élus non-enregistrés à Thalassyr. Marin de combat Dissident depuis 8 ans.
+
+Il a perdu 2 personnes en 8 ans. Ces échecs sont dans sa mémoire d'une façon particulière.
+
+La surveillance impériale augmente. Les demandes d'escorte aussi.`,
+  },
+
+  // ── 95 · TARYNEL ───────────────────────────────────────
+  95: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "Le marché", texte: "Née dans une famille de marchands de Thalassyr. Le marché aux poissons est son territoire depuis l'enfance. Elle y a passé sa vie." },
+      { titre: "Les caisses", texte: "À un moment — elle ne saurait pas dire exactement quand — des clients réguliers avaient commencé à laisser des pourboires en glissant quelque chose dans ses caisses. Elle avait supposé des notes de remerciement ou des billets supplémentaires. Elle n'avait pas vérifié." },
+      { titre: "L'ignorance maintenue", texte: "Elle était passée proche de voir ce que les caisses contenaient une fois — une caisse avait versé. Elle avait ramassé les poissons sans regarder ce qui était tombé à l'intérieur. Ce n'était pas de la discrétion. C'était de l'inattention." },
+      { titre: "La routine", texte: "La routine s'était établie sans qu'elle en ait pris conscience. Certains clients, certaines caisses, certaines routes de livraison. Tout ça faisait partie de son travail ordinaire." },
+      { titre: "Le marché", texte: "Elle vend des poissons. Elle livre dans les marchés. Ses caisses transportent des messages qu'elle ne connaît pas." }
+    ],
+    sorts: ['Jet d\'eau (Eau) — usage basique de l\'élément — défense instinctive sans entraînement'],
+    relations: [
+      { id: 84, nom: "Narevael", type: "contact", note: "Glisse des messages dans ses caisses. Elle ne le sait pas." },
+      { id: 17, nom: "Vel", type: "contact", note: "Destinataire final. Elle ne le connaît pas dans cette capacité." }
+    ],
+    lore_long: `Tarynel vend des poissons à Thalassyr. Elle transporte des messages dans ses caisses sans le savoir.
+
+Narevael (84) glisse les messages, Vel (17) en est le destinataire. Elle est une route d'information non-consentante.
+
+Son ignorance est sa protection et son risque. Si les caisses sont fouillées, elle ne peut pas défendre ce qu'elle ne sait pas.`,
+  },
+
+  // ── 96 · SELARA ────────────────────────────────────────
+  96: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "L'apprentissage", texte: "Apprentie de Lyraen à 15 ans — une érudie Néréide qui étudiait les patterns de vent à Thalassyr. L'apprentissage avait duré 10 ans. Elle avait appris à sentir le vent comme un système." },
+      { titre: "Le Silence", texte: "Le Silence des Vents s'était produit quand elle avait 35 ans. Elle se souvenait du jour exact. La transition entre les vents naturels et le réseau artificiel d'Orven avait pris 3 ans. Elle avait observé chaque phase." },
+      { titre: "Après le Silence", texte: "Elle avait essayé de transmettre ses observations sur la différence entre les systèmes. Personne n'avait été vraiment intéressé — le réseau artificiel fonctionnait, le naturel ne fonctionnait plus. La question de la différence semblait théorique." },
+      { titre: "La solitude", texte: "Avec les années, les gens qui avaient connu le vent naturel disparaissaient. Elle était progressivement devenue la dernière personne de sa communauté avec cette mémoire directe." },
+      { titre: "La mémoire", texte: "Elle a 78 ans. Sa mémoire est précise. Sa capacité à la transmettre dépend de qui veut l'entendre. Personne ne lui a demandé depuis longtemps." }
+    ],
+    sorts: ['Flux d\'eau (Eau) — usage utilitaire — pas de combat'],
+    relations: [
+      { id: 14, nom: "Lysara", type: "contact", note: "Contemporaine. Ont partagé l'expérience directe du vent naturel." }
+    ],
+    lore_long: `Selara a 78 ans. Elle était apprentie de Lyraen avant le Silence des Vents.
+
+Elle est la dernière personne à Thalassyr avec une mémoire directe du vent naturel pré-Silence. Elle pourrait décrire la différence précisément.
+
+Personne ne lui demande depuis longtemps. Sa mémoire disparaît avec elle.`,
+  },
+
+  // ── 97 · THYREL ────────────────────────────────────────
+  97: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "La deuxième génération", texte: "Né à Thalassyr après le Silence des Vents. Le réseau artificiel était là avant lui. Sa formation technique s'était construite sur ce réseau sans référence au système naturel." },
+      { titre: "Le travail", texte: "Rejoint le service de maintenance à 22 ans. Kaeleth (86) était son formateur de terrain. Il avait appris le réseau par la pratique." },
+      { titre: "Les défaillances", texte: "Il réparait les défaillances selon les protocoles que Kaeleth lui avait transmis. Quand Kaeleth ne savait pas, ils cherchaient dans les archives d'Orven. Les archives n'étaient pas toujours complètes." },
+      { titre: "La transmission incomplète", texte: "Il avait compris progressivement que les connaissances sur le réseau s'étaient dégradées à chaque transmission. Ce qu'il savait était moins que ce que Kaeleth savait, qui était moins que ce qu'Orven savait." },
+      { titre: "La maintenance", texte: "Il maintient le réseau. Les lacunes s'accumulent sans que personne ne les documente formellement." }
+    ],
+    sorts: ['Décharge électrique (Electrique) — attaque directe — usage défensif', 'Maintenance électrique (Electrique) — réparation rapide des systèmes conducteurs — compétence technique'],
+    relations: [
+      { id: 15, nom: "Orven", type: "contact", note: "Figure de formation. Connu seulement par les documents." },
+      { id: 86, nom: "Kaeleth", type: "allié", note: "Collègue senior. Sa référence directe de formation." }
+    ],
+    lore_long: `Thyrel entretient le réseau artificiel de Thalassyr. Il a 28 ans — le Silence des Vents et le réseau artificiel sont des réalités pré-existantes pour lui.
+
+Il perpétue sans questionner. Le savoir sur le réseau s'est dégradé à chaque génération de techniciens.
+
+Ce qu'il sait est moins que ce que Kaeleth (86) savait, qui était moins qu'Orven (15).`,
+  },
+
+  // ── 98 · ARVAEL ────────────────────────────────────────
+  98: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "Le mouvement", texte: "Il n'avait jamais voulu rester. À 18 ans, il avait quitté Thalassyr pour la première fois. À 25 ans, il avait compris que ses mouvements entre régions avaient une valeur commerciale — il savait des choses que les gens dans chaque ville voulaient savoir." },
+      { titre: "La route Thalassyr-Isthme", texte: "La route entre Thalassyr et l'Isthme était devenue sa principale. Les deux régions avaient des enjeux que chacune voulait suivre dans l'autre. Sa position intermédiaire avait une valeur stable." },
+      { titre: "La neutralité", texte: "Il avait vendu des nouvelles à des parties opposées dans un même conflit. Les deux parties avaient profité de ses nouvelles. Il avait décidé que c'était sa définition du succès." },
+      { titre: "Thyven", texte: "Thyven (62) était devenu un contact régulier à l'Isthme. Un administrateur qui payait bien pour des nouvelles fiables de Thalassyr. Arvael ne savait pas ce que Thyven faisait de ces nouvelles. Ce n'était pas son affaire." },
+      { titre: "Les routes", texte: "Il continue à voyager. Les routes ont changé depuis le Silence des Vents mais pas sa façon de les parcourir." }
+    ],
+    sorts: ['Esquive fluide (Eau) — mouvement rapide utilisant l\'élément comme accélérateur — fuite', 'Barrière d\'eau (Eau) — protection de base — usage instinctif'],
+    relations: [
+      { id: 62, nom: "Thyven", type: "contact", note: "Client régulier à l'Isthme. Achète des nouvelles de Thalassyr." }
+    ],
+    lore_long: `Arvael transporte des nouvelles entre Thalassyr et l'Isthme hors de tout réseau. Neutralité commerciale depuis 25 ans.
+
+Il vend des nouvelles à qui paye, quelle que soit la faction. Sa protection : sans réseau, il n'y a pas de chaîne à remonter.
+
+Thyven (62) est un client régulier à l'Isthme.`,
+  },
+
+  // ── 99 · SORYTHEL ──────────────────────────────────────
+  99: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "Le service impérial", texte: "Formation impériale standard. Son élément Psy avait été orienté vers la surveillance des archives — une application moins directe que l'interrogatoire, mais utile pour détecter des falsifications ou des anomalies." },
+      { titre: "Thalassyr", texte: "Affecté à Thalassyr pour identifier si les archives officielles avaient été manipulées post-Silence des Vents. Sa mission avait évolué vers la surveillance continue." },
+      { titre: "Les anomalies", texte: "Il avait détecté des anomalies — des informations manquantes, des références sans archives correspondantes. Ce qu'il cherchait existait quelque part. Pas dans les archives officielles." },
+      { titre: "Thariel", texte: "Il avait inféré l'existence d'archives parallèles mais n'avait pas pu les localiser. Sa compétence s'arrêtait aux archives officielles. Thariel avait construit ses archives précisément à cet arrêt." },
+      { titre: "La surveillance", texte: "Il surveille les archives officielles. Les anomalies persistent. Il attend une piste." }
+    ],
+    sorts: ['Lecture d\'archives (Psy) — détection d\'anomalies dans les documents — identification des falsifications', 'Brouillage de présence (Psy) — invisibilité psychique — surveillance discrète'],
+    relations: [
+      { id: 18, nom: "Thariel", type: "adversaire", note: "Cherche ce qu'elle a caché. Ne sait pas où chercher." },
+      { id: 89, nom: "Oraveth", type: "contact", note: "Réseau impérial." }
+    ],
+    lore_long: `Sorythel surveille les archives officielles de Thalassyr pour l'Empire. Il cherche les informations que Thariel (18) a retirées.
+
+Le problème : Thariel a construit ses archives parallèles précisément là où son mandat ne couvre pas.
+
+Il surveille les mauvais endroits. Il le sait. Il attend une piste.`,
+  },
+
+  // ── 100 · VARAVETH ─────────────────────────────────────
+  100: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "La pêche", texte: "Pêcheur depuis l'âge de 12 ans. À 35 ans, il était en mer quand le Silence des Vents s'était produit. Il avait vu la transition — les vents qui s'arrêtaient, puis la tempête brève, puis le silence." },
+      { titre: "Le retour au port", texte: "Il était rentré au port dans les jours suivant l'événement. La ville était dans la confusion de l'immédiat. Il avait essayé de raconter ce qu'il avait vu. On lui avait dit que les gens étaient occupés." },
+      { titre: "Les versions officielles", texte: "Les versions officielles du Silence des Vents s'étaient développées sans son témoignage. Ce qu'elles disaient correspondait à certaines choses qu'il avait vues — pas à d'autres. Il n'avait pas trouvé comment corriger la différence." },
+      { titre: "L'attente", texte: "Il avait attendu que quelqu'un lui demande. À 83 ans, personne n'avait demandé directement." },
+      { titre: "Le témoin", texte: "Il vit à Thalassyr. Il a encore sa mémoire. Il attend encore. Il n'a pas beaucoup de temps." }
+    ],
+    sorts: ['Pas de combat (Eau) — Varaveth est vieux. Il n\'utilise plus son élément activement.'],
+    relations: [
+      { id: 14, nom: "Lysara", type: "contact", note: "Figure de son monde d'avant le Silence." }
+    ],
+    lore_long: `Varaveth a 83 ans. Il était en mer quand le Silence des Vents s'est produit il y a 48 ans.
+
+Il a un témoignage direct de l'événement fondateur de la réalité de Thalassyr. Personne ne lui a jamais demandé.
+
+Sa mémoire est encore vive. Il n'a pas beaucoup de temps.`,
+  },
+
+  // ── 101 · CAERYN ───────────────────────────────────────
+  101: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "Les strates basses", texte: "Née dans les strates basses d'Asterciel. Elle avait exploré les passages entre strates depuis l'enfance — des espaces que les habitants des strates supérieures ne visitaient pas." },
+      { titre: "La messagerie", texte: "À 20 ans, elle avait commencé à transporter des messages pour des gens qui avaient besoin de discrétion. Ses routes la rendaient plus rapide et plus sûre que les voies officielles." },
+      { titre: "La Chute", texte: "La Chute des Nuages avait détruit plusieurs routes officielles. Ses routes alternatives avaient pris une valeur encore plus grande. Elle était devenue une ressource dans une ville partiellement fracturée." },
+      { titre: "Les réseaux", texte: "Progressivement, ses clients réguliers s'étaient révélés connectés à des réseaux plus larges. Elle transportait des informations pour des personnes qui appartenaient à des structures dont elle ne comprenait pas la totalité." },
+      { titre: "Les messages", texte: "Elle court. Les messages circulent. Les strates basses d'Asterciel ont des routes que personne d'autre ne connaît." }
+    ],
+    sorts: ['Courant de vent (Vent) — accélération par les courants — vitesse maximale dans les passages', 'Rafale de déviation (Vent) — poussée d\'air — déstabilisation d\'un poursuivant'],
+    relations: [
+      { id: 23, nom: "Talvyn", type: "contact", note: "Son réseau utilise ses routes." },
+      { id: 28, nom: "Caerra", type: "contact", note: "Dans son réseau de messagerie." }
+    ],
+    lore_long: `Caeryn court des messages dans les strates basses d'Asterciel. Elle connaît des passages non-cartographiés que les aristocrates des strates supérieures ignorent.
+
+Sa connaissance des routes est sa valeur et sa protection.
+
+La Chute des Nuages a rendu ses routes alternatives encore plus précieuses.`,
+  },
+
+  // ── 102 · GAVRYN ───────────────────────────────────────
+  102: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "La technique", texte: "Formation technique dans la Technocratie. Son élément Electrique et son aptitude pour les systèmes inter-strates lui avaient valu une position dans la maintenance." },
+      { titre: "Les liens", texte: "À 28 ans, il avait pris en charge le suivi des liens inter-strates à Asterciel. Dans les 6 premiers mois, il avait identifié 12 défaillances potentielles. 8 s'étaient produites." },
+      { titre: "Le budget", texte: "Ses demandes de budget de prévention avaient été classées \"non-urgence\" systématiquement. On lui avait dit que les réparations curatives coûtaient moins cher que la maintenance préventive. Cette logique le rendait inutile." },
+      { titre: "Le rythme", texte: "Les défaillances arrivaient à un rythme prévisible. Les réparations curatives coûtaient plus cher que la prévention. Personne ne semblait calculer ça sur la durée." },
+      { titre: "Les rapports", texte: "Il continue à faire des rapports. Les prochaines défaillances sont identifiées. Les budgets ne sont pas alloués." }
+    ],
+    sorts: ['Surcharge de lien (Electrique) — court-circuit d\'un lien technique — sabotage défensif', 'Décharge électrique (Electrique) — attaque directe — usage en dernier recours'],
+    relations: [
+      { id: 23, nom: "Talvyn", type: "contact", note: "Utilise ses données techniques pour ses calculs." },
+      { id: 28, nom: "Caerra", type: "contact", note: "Comprend ses frustrations." }
+    ],
+    lore_long: `Gavryn voit venir les défaillances des liens inter-strates d'Asterciel avec 2-3 semaines d'avance. Il fait des rapports.
+
+Il n'a pas de budget pour les réparations préventives. Les défaillances arrivent quand même.
+
+Ses rapports préalables prouvent que les défaillances étaient évitables. Personne ne lit les rapports à temps.`,
+  },
+
+  // ── 103 · THAERYS ──────────────────────────────────────
+  103: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "L'aristocratie stellaire", texte: "Né dans une famille de l'aristocratie stellaire d'Asterciel — l'élite dont l'élément Stellaire justifie le rang. Sa formation avait été entièrement orientée vers l'astronomie." },
+      { titre: "La cour", texte: "Astronome de cour depuis l'âge de 25 ans. Sa position était héréditaire autant que méritocratique. Il avait pris l'habitude d'être consulté sans être remis en question." },
+      { titre: "Syvara", texte: "Syvara (30) avait utilisé ses propres cartes stellaires pour des arguments qu'il désapprouvait politiquement. Il avait essayé de démonter les arguments de Syvara en montrant que ses données ne disaient pas ce qu'elle prétendait. Les deux avaient des données valides — elles pointaient dans des directions différentes." },
+      { titre: "L'usage des étoiles", texte: "Il avait compris que les trajectoires stellaires étaient suffisamment complexes pour valider des positions contradictoires. Cette ambiguïté était inconfortable pour lui." },
+      { titre: "La cartographie", texte: "Il continue à cartographier. Ses données continuent à alimenter des arguments politiques qu'il ne contrôle pas." }
+    ],
+    sorts: ['Projection stellaire (Stellaire) — faisceau de lumière concentrée — attaque à distance', 'Cartographie de trajectoire (Stellaire) — prédiction de mouvement — avantage tactique en combat'],
+    relations: [
+      { id: 24, nom: "Serathis", type: "contact", note: "Camp politique allié. Utilise ses données." },
+      { id: 30, nom: "Syvara", type: "adversaire", note: "Utilise ses mêmes données pour des arguments opposés." }
+    ],
+    lore_long: `Thaerys cartographie les trajectoires stellaires pour l'aristocratie d'Asterciel depuis 30 ans.
+
+Ses données sont utilisées par Serathis (24) et Syvara (30) pour des arguments politiques opposés. Il ne voit pas la contradiction.
+
+La science pure comme détachement : les implications politiques de ses données ne sont pas son domaine.`,
+  },
+
+  // ── 104 · SYLVAEL ──────────────────────────────────────
+  104: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "Le vol", texte: "Née dans les strates moyennes d'Asterciel. Son élément Vent était fort dès l'enfance. Elle avait appris à voler avant de savoir lire — une progression naturelle pour une Aéride avec ses capacités." },
+      { titre: "Les Dissidentes", texte: "À 26 ans, elle avait été recrutée par les Dissidentes pour ses compétences de vol et sa connaissance des courants d'Asterciel. Sa première mission d'exfiltration avait été réussie. Elle était restée." },
+      { titre: "Les routes", texte: "Les 3 routes qu'elle utilisait avaient été développées progressivement — chaque exfiltration apprenait quelque chose sur les courants, les points de contrôle, les angles morts. 3 ans pour les stabiliser." },
+      { titre: "La valeur", texte: "Elle avait compris que ses routes n'étaient pas seulement utiles pour les Dissidentes — elles étaient une ressource unique. Si elles étaient connues, elles perdraient leur valeur." },
+      { titre: "Les exfiltrations", texte: "Elle continue à piloter des exfiltrations. Les routes tiennent. Leur valeur tient aussi longtemps que leur secret." }
+    ],
+    sorts: ['Vol accéléré (Vent) — vitesse maximale en vol — fuite ou exfiltration rapide', 'Rafale de combat (Vent) — attaque depuis les airs — avantage de hauteur'],
+    relations: [
+      { id: 28, nom: "Caerra", type: "allié", note: "Réseau Dissident. Sorties aériennes pour ses opérations." },
+      { id: 49, nom: "Velath", type: "contact", note: "Réseau client. Passagers venant de là." }
+    ],
+    lore_long: `Sylvael transporte des personnes hors des strates supérieures d'Asterciel via 3 routes aériennes qu'elle est la seule à connaître.
+
+3 ans de développement progressif. Leur valeur tient aussi longtemps que leur secret.
+
+Elle est Aéride — l'espèce de l'aristocratie qu'elle aide à fuir. Ce paradoxe est résolu pour elle.`,
+  },
+
+  // ── 105 · AEVRIS ───────────────────────────────────────
+  105: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "L'artisanat", texte: "Née dans une famille d'artisans des strates moyennes. Son élément Electrique l'avait orientée vers les instruments de mesure des champs — une niche technique rarissime." },
+      { titre: "La réputation", texte: "À 30 ans, ses instruments avaient une réputation qui dépassait les strates moyennes. Des acheteurs des strates supérieures avaient essayé d'en acheter. Certains avaient réussi. D'autres non." },
+      { titre: "Le refus", texte: "Elle avait refusé de vendre à un agent impérial qui voulait ses instruments pour des mesures dont elle n'approuvait pas l'usage. Il avait offert plus. Elle avait maintenu le refus. La situation avait créé des tensions." },
+      { titre: "Talvyn", texte: "Talvyn (23) était venu à son atelier avec des questions techniques précises. Elle avait vendu au prix réduit sans qu'il le demande. C'était une décision instinctive qu'elle n'avait pas entièrement analysée." },
+      { titre: "L'atelier", texte: "Elle fabrique. Elle vend selon ses critères. Son atelier est une des rares choses dans les strates moyennes d'Asterciel qui fonctionne selon ses propres règles." }
+    ],
+    sorts: ['Surcharge d\'instrument (Electrique) — court-circuit d\'un équipement — sabotage précis', 'Frappe électrique précise (Electrique) — décharge ciblée — dommage concentré'],
+    relations: [
+      { id: 23, nom: "Talvyn", type: "contact", note: "Client respecté. Prix réduit par conviction." },
+      { id: 102, nom: "Gavryn", type: "contact", note: "Réseau professionnel électrique." }
+    ],
+    lore_long: `Aevris fabrique des instruments de mesure des champs élémentaires dans les strates moyennes d'Asterciel.
+
+Ses instruments sont les plus précis disponibles. Elle sélectionne ses clients selon l'usage, pas le paiement.
+
+Elle vend à Talvyn (23) à prix réduit par respect professionnel. Elle a refusé des achats impériaux.`,
+  },
+
+  // ── 106 · VELLETH ──────────────────────────────────────
+  106: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "Les strates basses", texte: "Né et grandi dans les strates basses d'Asterciel. La Chute des Nuages avait endommagé la Plateforme Ouest — une infrastructure essentielle pour les strates basses. Il avait commencé à organiser les demandes de reconstruction à 32 ans." },
+      { titre: "Les pétitions", texte: "Sa première pétition avait réuni 800 signatures. Elle avait été \"prise en considération\". Rien ne s'était passé. Sa deuxième pétition avait réuni 1200 signatures. Même résultat. Il continuait." },
+      { titre: "Le mépris institutionnel", texte: "Il avait réalisé que les pétitions ne fonctionnaient pas parce que le cadre institutionnel ne considérait pas les strates basses comme une priorité. Sa demande précise et légitime se heurtait à une structure indifférente." },
+      { titre: "Caerra", texte: "Caerra (28) lui avait montré une façon de connecter sa demande précise à des enjeux plus larges. Il avait décidé que sa demande précise restait sa priorité mais qu'elle pouvait être articulée dans un cadre plus large." },
+      { titre: "La pétition suivante", texte: "La pétition suivante est en préparation. Le cadre a changé. La Plateforme Ouest n'est toujours pas reconstruite." }
+    ],
+    sorts: ['Rafale de vent (Vent) — poussée d\'air — défense basique', 'Courant porteur (Vent) — déplacement assisté — mobilité'],
+    relations: [
+      { id: 28, nom: "Caerra", type: "allié", note: "Partenaire dans les pétitions. L'a aidé à cadrer la demande plus largement." },
+      { id: 25, nom: "Yrith", type: "contact", note: "Figure de référence dans son argumentation." }
+    ],
+    lore_long: `Velleth organise des pétitions pour la reconstruction de la Plateforme Ouest dans les strates basses d'Asterciel depuis 7 ans.
+
+Ses demandes sont précises et légitimes. Elles sont systématiquement ignorées.
+
+Il continue. La Plateforme Ouest n'est toujours pas reconstruite.`,
+  },
+
+  // ── 107 · TORRYN ───────────────────────────────────────
+  107: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "L'aristocratie stellaire", texte: "Né dans une branche mineure de l'aristocratie stellaire. Son rang lui donnait accès à des cercles sans lui donner de pouvoir dans ces cercles." },
+      { titre: "La révélation", texte: "À 24 ans, il avait appris quelque chose sur Veralith — une figure mystique centrale dans l'aristocratie d'Asterciel — qui contredisait la version officielle. La source était fiable. L'information était perturbante." },
+      { titre: "Le choix", texte: "Il avait réfléchi pendant plusieurs mois à ce qu'il pouvait faire de cette information. Les options qu'il avait identifiées avaient toutes des conséquences importantes. Il avait choisi l'inaction." },
+      { titre: "L'inaction habitée", texte: "Avec le temps, l'inaction était devenue son état par défaut. Il continuait à savoir. Il continuait à ne rien faire. Cette cohérence le préservait d'une décision qu'il ne voulait pas prendre." },
+      { titre: "La cour", texte: "Il continue à naviguer dans les salons de la cour avec sa connaissance silencieuse. Personne ne sait qu'il sait." }
+    ],
+    sorts: ['Projection stellaire légère (Stellaire) — faisceau de lumière — usage défensif basique', 'Illusion stellaire (Stellaire) — projection lumineuse — diversion'],
+    relations: [
+      { id: 24, nom: "Serathis", type: "contact", note: "Figure de cour dans son monde." },
+      { id: 29, nom: "Telos", type: "adversaire", note: "Adversaire indirect dans sa compréhension d'Asterciel." }
+    ],
+    lore_long: `Torryn sait que Veralith n'est pas ce qu'on dit dans l'aristocratie d'Asterciel. Il a 27 ans.
+
+Il a choisi l'inaction. Cette décision est active — il maintient son silence chaque jour.
+
+Personne ne sait qu'il sait. Sa protection dépend de ce silence.`,
+  },
+
+  // ── 108 · GELVETH ──────────────────────────────────────
+  108: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "L'ingénierie", texte: "Formation d'ingénieur à Asterciel. Carrière dans les liens inter-strates. 20 ans de travaux qui tenaient." },
+      { titre: "La Chute", texte: "La Chute des Nuages avait détruit plusieurs structures qu'il avait conçues. Sa plateforme de travail était partiellement effondrée. Il avait décidé de rester dessus." },
+      { titre: "Le refus de partir", texte: "On lui avait proposé de se reloger dans les strates basses. Il avait refusé. On lui avait proposé une position technique dans une autre zone. Il avait refusé. Il n'avait pas expliqué clairement pourquoi." },
+      { titre: "La vie sur la plateforme", texte: "15 ans plus tard, il avait développé une façon de vivre sur la plateforme partielle. Ce n'était pas confortable — c'était son espace." },
+      { titre: "La plateforme", texte: "Il vit sur la plateforme détruite. Il connaît les courants électriques dans les débris mieux que quiconque." }
+    ],
+    sorts: ['Décharge de ruines (Electrique) — utilisation des fils électriques des débris — danger de terrain', 'Frappe électrique (Electrique) — attaque directe — usage défensif sur sa plateforme'],
+    relations: [
+      { id: 25, nom: "Yrith", type: "contact", note: "Figure observée de loin. Travaux sur les strates basses." }
+    ],
+    lore_long: `Gelveth est ancien ingénieur des liens inter-strates d'Asterciel. La Chute des Nuages a détruit ses structures.
+
+Il vit sur une plateforme partiellement détruite depuis 15 ans. Il a refusé de partir.
+
+Sa connaissance technique des ruines est unique — il y habite.`,
+  },
+
+  // ── 109 · YLLRIS ───────────────────────────────────────
+  109: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "Les courants", texte: "Née avec un élément Vent exceptionnellement sensible aux variations thermiques. Elle avait appris les courants d'Asterciel par des années de vol avant de les comprendre comme un système." },
+      { titre: "L'oral", texte: "À 25 ans, un commanditaire lui avait demandé de documenter ses connaissances sur les courants. Elle avait refusé. La demande lui avait fait comprendre pourquoi elle ne voulait pas documenter." },
+      { titre: "La Chute", texte: "La Chute des Nuages avait changé les courants thermiques à Asterciel. Sa connaissance avait dû s'adapter. Personne d'autre n'avait les éléments pour comprendre ces changements — elle était la seule à les avoir observés en temps réel." },
+      { titre: "La transmission", texte: "Elle avait commencé à enseigner à Caeryn (101) — pas ses routes spécifiques, mais la façon de lire les courants. Cette transmission partielle était ce qu'elle pouvait faire pour le moment." },
+      { titre: "Les courants", texte: "Elle navigue. Elle enseigne partiellement. Elle n'a pas encore transmis entièrement son savoir à quelqu'un." }
+    ],
+    sorts: ['Navigation de courant (Vent) — déplacement dans les courants thermiques — vitesse et précision', 'Tempête locale (Vent) — perturbation d\'un courant thermique — désorientation d\'un ennemi'],
+    relations: [
+      { id: 30, nom: "Syvara", type: "contact", note: "Comprend la valeur de sa connaissance." },
+      { id: 101, nom: "Caeryn", type: "contact", note: "Enseigne partiellement les courants." }
+    ],
+    lore_long: `Yllris connaît les courants thermiques d'Asterciel mieux que quiconque. Son savoir est entièrement oral — elle n'a jamais écrit une carte.
+
+Après la Chute des Nuages, elle est la seule à avoir observé les changements des courants en temps réel.
+
+Son savoir mourra avec elle si elle ne le transmet pas. Elle n'a pas encore décidé à qui.`,
+  },
+
+  // ── 110 · SERAVYN ──────────────────────────────────────
+  110: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "Les strates basses", texte: "Né dans les strates basses d'Asterciel. Élu représentant confédéral à 36 ans — une position disponible parce que personne d'autre ne voulait le travail ingrat." },
+      { titre: "Les demandes", texte: "Sa première série de demandes concernait la reconstruction de la Plateforme Ouest. Reclassée \"non-urgence\". Il avait continué avec 12 autres demandes. Résultats similaires." },
+      { titre: "Le classement", texte: "Il avait appris le mécanisme précis par lequel ses demandes étaient reclassées — un processus administratif conçu pour absorber les demandes non-prioritaires. Il l'avait documenté. Sa documentation avait été classée \"informative\"." },
+      { titre: "Talvyn", texte: "Talvyn (23) lui avait montré que ses demandes correspondaient à des enjeux structurels calculables. Cette validation technique donnait un cadre différent à son travail." },
+      { titre: "La représentation", texte: "Il continue à représenter. Ses demandes continuent à être reclassées. Son mandat continue." }
+    ],
+    sorts: ['Frappe électrique (Electrique) — décharge défensive — usage en dernier recours', 'Réseau conducteur (Electrique) — utilisation des structures électriques — avantage de terrain'],
+    relations: [
+      { id: 23, nom: "Talvyn", type: "contact", note: "Ses calculs valident les enjeux structurels des demandes." },
+      { id: 24, nom: "Serathis", type: "adversaire", note: "Opposition fonctionnelle institutionnelle." }
+    ],
+    lore_long: `Seravyn représente les strates basses d'Asterciel à la Confédération depuis 7 ans. Ses demandes sont systématiquement reclassées "non-urgence".
+
+Il continue. Son mandat est réel. Son efficacité est quasiment nulle.
+
+Il a 7 ans de dossiers préparés — prêts pour la crise qui rendra ses demandes urgentes.`,
+  },
+
+  // ── 111 · CALRYS ───────────────────────────────────────
+  111: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "L'astronomie", texte: "Formation en astronomie à la cour d'Asterciel. Astronome secondaire depuis 12 ans — position stable, non-influente. Son travail est de vérifier les calculs de Thaerys." },
+      { titre: "L'anomalie", texte: "Il y a 6 mois, lors d'une observation de routine, une trajectoire n'était pas là où elle devrait être. L'écart était dans les marges d'erreur — mais il y était. Il l'avait noté." },
+      { titre: "L'attente", texte: "Il avait attendu une confirmation dans les observations suivantes. L'anomalie persistait — légèrement différente à chaque fois, mais présente. Ses instruments étaient fiables. Ses calculs étaient vérifiés." },
+      { titre: "6 mois", texte: "Il y avait maintenant 6 mois d'observations avec l'anomalie. Il n'avait pas de modèle pour l'expliquer. Il ne l'avait pas signalée. Ce silence commençait à être difficile à justifier." },
+      { titre: "L'attente prolongée", texte: "Il observe encore. L'anomalie persiste. La fenêtre pour signaler sans explication commence à se fermer." }
+    ],
+    sorts: ['Faisceau stellaire (Stellaire) — projection lumineuse — attaque à distance', 'Cartographie de position (Stellaire) — détermination précise de la localisation — avantage tactique'],
+    relations: [
+      { id: 30, nom: "Syvara", type: "contact", note: "Perspective différente sur les trajectoires stellaires." },
+      { id: 29, nom: "Telos", type: "contact", note: "Dans le réseau de cour." }
+    ],
+    lore_long: `Calrys a observé une anomalie dans les trajectoires stellaires d'Asterciel il y a 6 mois. Il ne l'a pas signalée.
+
+Il attend de mieux comprendre. Cette attente dure depuis 6 mois.
+
+Si quelqu'un d'autre fait la même observation, il devra expliquer son silence.`,
+  },
+
+  // ── 112 · TALEVYN ──────────────────────────────────────
+  112: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "Les strates moyennes", texte: "Né dans les strates moyennes d'Asterciel. Formation en maintenance d'infrastructure — un travail qui lui donnait accès à tous les niveaux sans attirer l'attention." },
+      { titre: "Le contact", texte: "Il y a 4 ans, Caerra (28) l'avait contacté. Pas pour le recruter ouvertement — pour lui demander si certaines défaillances d'infrastructure pouvaient être \"accélérées\". Il avait compris la demande." },
+      { titre: "Le premier sabotage", texte: "Le relais de navigation de Strate 7 — une défaillance progressive sur 3 semaines. Les techniciens officiels avaient conclu à une usure normale. Il avait regardé leur rapport et n'avait rien dit." },
+      { titre: "L'invisibilité", texte: "3 ans de sabotages. Aucune identification. Il avait compris que son efficacité reposait entièrement sur sa non-existence dans tous les registres — Dissident ou impérial." },
+      { titre: "Le saboteur", texte: "Il continue. Ses sabotages s'accumulent dans l'infrastructure des strates supérieures — des défaillances futures que personne ne sait encore relier." }
+    ],
+    sorts: ['Souffle de dispersion (Vent) — dissolution de présence dans les courants — fuite silencieuse', 'Rafale de circuit (Vent) — perturbation de systèmes électroniques par pression d\'air — sabotage à distance'],
+    relations: [
+      { id: 28, nom: "Caerra", type: "contact", note: "Seul contact Dissident. Opère seul par protection." }
+    ],
+    lore_long: `Talevyn sabote l'infrastructure des strates supérieures d'Asterciel depuis 3 ans. Il n'a jamais été identifié.
+
+Ses sabotages sont conçus pour ressembler à des défaillances naturelles — progressives, non-corrélables. Il n'existe dans aucun registre Dissident.
+
+Si quelqu'un relie deux de ses sabotages, sa protection disparaît.`,
+  },
+
+  // ── 113 · GYRALTH ──────────────────────────────────────
+  113: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "La réparation", texte: "Formation technique dans les strates moyennes. Réparateur depuis 18 ans — le même type de travail, le même espace institutionnel. Ni promotion ni dégradation." },
+      { titre: "L'angle mort", texte: "Il avait compris sa position administrative à 30 ans : les strates moyennes recevaient les ressources résiduelles après les strates supérieures, et les urgences des strates basses. Son budget était structurellement insuffisant." },
+      { titre: "La défaillance prévisible", texte: "Il y a 2 ans, un nœud de navigation des strates moyennes avait montré des signes de défaillance. Il avait rempli une demande de remplacement. Elle avait été reclassée \"non-prioritaire\". Il avait réparé avec ce qu'il avait." },
+      { titre: "Talvyn", texte: "Talvyn (23) lui avait demandé des données sur les défaillances des strates moyennes pour ses analyses. Gyralth avait réalisé que quelqu'un documentait ce qu'il observait — mais à l'extérieur de tout canal officiel." },
+      { titre: "La réparation continue", texte: "Il répare. Les défaillances s'accumulent plus vite que ses réparations. Il le sait. Il continue." }
+    ],
+    sorts: ['Décharge de réparation (Electrique) — stimulation électrique d\'urgence — réactivation de systèmes', 'Arc électrique (Electrique) — projection défensive — usage en dernier recours'],
+    relations: [
+      { id: 23, nom: "Talvyn", type: "contact", note: "Ses analyses correspondent aux défaillances observées." },
+      { id: 102, nom: "Gavryn", type: "contact", note: "Travaille sur les systèmes inter-strates, niveau supérieur." }
+    ],
+    lore_long: `Gyralth répare les systèmes de navigation des strates moyennes d'Asterciel depuis 18 ans. Ni assez haut pour compter dans les budgets, ni assez bas pour créer une crise.
+
+Il voit les défaillances systémiques venir. Il n'a pas les canaux pour les signaler efficacement.
+
+Quand la panne majeure arrivera, il aura les données sur pourquoi.`,
+  },
+
+  // ── 114 · VELRYN ───────────────────────────────────────
+  114: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "Les strates basses", texte: "Née dans les strates basses d'Asterciel. Formation autodidacte — les strates basses n'ont pas d'institutions philosophiques financées. Elle avait construit son cadre de pensée à partir de textes accessibles et de conversations." },
+      { titre: "L'enseignement", texte: "À 40 ans, elle avait commencé à enseigner dans des espaces informels des strates basses — ateliers, regroupements, espaces de travail. Ses auditeurs cherchaient quelque chose qu'elle ne nommait pas encore clairement." },
+      { titre: "Veralith", texte: "Elle avait commencé à intégrer Veralith dans ses analyses — non pas comme figure mystique mais comme personnage historique dont le récit avait été construit pour servir l'aristocratie stellaire. Un auditeur avait signalé la session. Elle avait eu un avertissement." },
+      { titre: "L'illégalité", texte: "Elle avait compris que l'illégalité de sa position n'était pas dans l'argumentation — c'était dans le fait que l'argumentation était convaincante. Un mythe indémontable est protégé. Un mythe démontable est dangereux." },
+      { titre: "L'enseignement illégal", texte: "Elle continue d'enseigner dans des espaces plus petits, plus discrets. Serathis (24) sait qu'elle existe. Il n'a pas encore décidé d'agir." }
+    ],
+    sorts: ['Lumière d\'analyse (Stellaire) — projection lumineuse révélant les structures cachées — usage philosophique et défensif', 'Éclat de vérité (Stellaire) — faisceau de clarté — désorientation d\'adversaire'],
+    relations: [
+      { id: 30, nom: "Syvara", type: "contact", note: "Données qui correspondent à ses analyses." },
+      { id: 24, nom: "Serathis", type: "adversaire", note: "Adversaire institutionnel. Sait qu'elle existe. N'a pas encore agi." }
+    ],
+    lore_long: `Velryn enseigne dans les strates basses d'Asterciel que Veralith est un mythe humain, pas une figure divine. C'est illégal.
+
+Serathis (24) sait qu'elle existe. Il n'a pas encore agi.
+
+Sa protection repose sur la distinction entre philosophie et sédition — une distinction qu'Asterciel ne reconnaît pas.`,
+  },
+
+  // ── 115 · THREVEL ──────────────────────────────────────
+  115: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "Le service", texte: "Né dans les strates moyennes supérieures d'Asterciel. Entrée dans les gardes à 20 ans — un choix de stabilité professionnelle. Il avait progressé régulièrement." },
+      { titre: "Les strates supérieures", texte: "Affecté aux strates supérieures à 30 ans — une position qui représentait une promotion. Il avait accepté sans questionner le sens de ce qu'il allait garder." },
+      { titre: "La demande de Seravyn", texte: "Une demande d'accès pour un représentant confédéral des strates basses — Seravyn (110) — était arrivée à son poste. Les règles disaient non. Il avait dit non. Seravyn avait contesté administrativement. Threvel avait maintenu sa position." },
+      { titre: "La rigidité", texte: "Il avait commencé à voir que sa rigidité n'était pas un défaut de caractère — c'était une compétence attendue. Les strates supérieures voulaient des gardes qui n'interprétaient pas les règles. Il était ce qu'on lui avait demandé d'être." },
+      { titre: "Le poste", texte: "Il garde. Les règles sont claires. Il les applique. La question de leur justesse n'est pas son poste." }
+    ],
+    sorts: ['Barrière de vent (Vent) — mur d\'air comprimé — contrôle de position et d\'accès', 'Rafale de dispersion (Vent) — souffle de répulsion — maintien de périmètre'],
+    relations: [
+      { id: 24, nom: "Serathis", type: "contact", note: "Supérieur hiérarchique. Applique ses directives." },
+      { id: 110, nom: "Seravyn", type: "adversaire", note: "Adversaire indirect. Représentant des strates basses dont les demandes arrivent à son poste." }
+    ],
+    lore_long: `Threvel garde les accès des strates supérieures d'Asterciel. Il applique les règles avec rigidité — pas avec cruauté. Cette distinction est réelle pour lui.
+
+Son supérieur est Serathis (24). Son adversaire indirect est Seravyn (110), représentant des strates basses.
+
+Quand une crise demandera un accès que les règles interdisent, il devra choisir.`,
+  },
+
+  // ── 116 · SYLKETH ──────────────────────────────────────
+  116: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Les chants", texte: "Né dans une communauté Sylvan de Sylvera avec une tradition de chants-mémoire forte. Il avait appris à voyager avec les chants à 30 ans — quand sa communauté avait réalisé que certains chants disparaissaient faute de transmission." },
+      { titre: "L'interdit", texte: "Les Gardiens avaient interdit certains chants comme \"prophétiques\" — des chants qui décrivaient la Faim des Racines d'une façon qui contredisait leur version de l'histoire. Sylketh continuait de les transporter." },
+      { titre: "La fouille", texte: "Des Gardiens l'avaient fouillé à la frontière d'un territoire. Ils avaient cherché des objets, pas des chants. Il n'avait rien de physique à cacher. Les chants étaient dans sa mémoire." },
+      { titre: "Sylkae", texte: "Il avait appris par Sylvae (31) qu'une archiviste — Sylkae (127) — archivait les mêmes chants sans le savoir. Deux préservations parallèles qui s'ignoraient. Il n'avait pas cherché à la contacter." },
+      { titre: "L'itinérance", texte: "Il continue de voyager. Les chants interdits sont dans sa mémoire. Personne ne peut les lui prendre sans l'en effacer." }
+    ],
+    sorts: ['Chant de forêt (Plante) — résonance avec la végétation environnante — perturbation de terrain', 'Vrille végétale (Plante) — projection racinaire — entrave'],
+    relations: [
+      { id: 31, nom: "Sylvae", type: "contact", note: "Comprend la valeur des chants-mémoire." },
+      { id: 127, nom: "Sylkae", type: "contact", note: "Archive les mêmes chants en parallèle — ignorance mutuelle." }
+    ],
+    lore_long: `Sylketh transporte les chants-mémoire de Sylvera entre les communautés Sylvan. Certains de ces chants sont interdits par les Gardiens.
+
+Ils sont dans sa mémoire — pas dans des objets. Les Gardiens ne peuvent pas les confisquer.
+
+Sylkae (127) archive les mêmes chants sans le savoir. Deux préservations parallèles qui s'ignorent.`,
+  },
+
+  // ── 117 · THALVAE ──────────────────────────────────────
+  117: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Le choix imposé", texte: "Née dans une communauté mixte à la frontière de deux territoires. Elle avait grandi avec les deux cultures — Conservateurs et Gardiens. À 40 ans, on lui avait demandé de choisir. Elle avait refusé." },
+      { titre: "L'exil", texte: "Le refus de choisir avait eu des conséquences. Sa communauté ne pouvait pas la garder sans frictions. Elle avait choisi de partir vers la forêt de transition plutôt que de rester à imposer une tension." },
+      { titre: "La forêt de transition", texte: "La forêt de transition n'était pas neutre — elle était contestée. Les deux factions la revendiquaient. Elle y vivait quand même. Sa présence était devenue un argument dans leur dispute." },
+      { titre: "L'aide", texte: "Elle avait commencé à aider des Sylvan qui refusaient aussi de choisir — des exilés comme elle, ou des jeunes qui cherchaient une troisième voie. Cette aide n'était pas organisée. Elle était simplement là." },
+      { titre: "La transition", texte: "Elle vit dans la forêt de transition. Elle aide. Elle refuse de se nommer comme faction. Elle sait que ça ne durera peut-être pas." }
+    ],
+    sorts: ['Racines de transition (Plante) — appel aux racines de la forêt intermédiaire — terrain instable pour l\'adversaire', 'Enveloppement forestier (Plante) — camouflage dans la végétation — disparition'],
+    relations: [
+      { id: 31, nom: "Sylvae", type: "contact", note: "Comprend son refus de choisir." },
+      { id: 32, nom: "Kessyn", type: "contact", note: "Autre perspective sur Sylvera." }
+    ],
+    lore_long: `Thalvae a refusé de choisir entre Conservateurs et Gardiens à Sylvera. Elle vit dans la forêt de transition — un espace entre territoires.
+
+Elle aide les Sylvan sans faction. Cette aide la positionne malgré son refus de se nommer.
+
+Si une faction occupe la forêt de transition, elle n'aura plus de territoire neutre.`,
+  },
+
+  // ── 118 · KESSORN ──────────────────────────────────────
+  118: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "La honte héritée", texte: "Né dans la branche cadette de la lignée de Kessaer. La honte de son ancêtre était présente dans sa famille sans être expliquée — une atmosphère, pas une histoire. Il avait appris les détails plus tard." },
+      { titre: "Les Gardiens", texte: "Il avait rejoint les Gardiens à 40 ans — la même faction que Kessaer. Pas par conviction aveugle, mais parce que la méthode des Gardiens lui paraissait la bonne correction des erreurs de Kessaer." },
+      { titre: "Kessyn", texte: "Il avait rencontré Kessyn (32) — un autre collatéral de Kessaer, dans une faction différente. Leur façon de porter la même honte était incompatible. Ils ne s'étaient pas confrontés ouvertement. Ils l'évitaient." },
+      { titre: "L'excès", texte: "Il avait réalisé qu'il travaillait systématiquement deux fois plus que ses collègues. Ce n'était pas de la dévotion — c'était de la compulsion. La honte de Kessaer le poussait sans qu'il y pense." },
+      { titre: "Le travail", texte: "Il travaille. Chaque action est correcte, méthique, précise. Il ne sait pas si ça suffit pour ce qu'il expie." }
+    ],
+    sorts: ['Brûlage contrôlé (Feu) — feu méthodique qui préserve ce qu\'il faut préserver — précision', 'Mur de flammes (Feu) — barrière défensive — protection de zone forestière'],
+    relations: [
+      { id: 32, nom: "Kessyn", type: "contact", note: "Collatéral de la même lignée. Porte la honte différemment — évitement mutuel." }
+    ],
+    lore_long: `Kessorn est descendant de la branche cadette de Kessaer — le forestier de la Faim des Racines. Il porte cette honte ancestrale par excès de travail.
+
+Chaque arbre qu'il sauve est une expiation qu'il ne nomme pas.
+
+Son collatéral Kessyn (32) porte la même honte différemment. Ils s'évitent.`,
+  },
+
+  // ── 119 · AELVYN ───────────────────────────────────────
+  119: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Les racines", texte: "Formation en botanique sylvan. Il avait commencé à s'intéresser au réseau racinaire à 30 ans, quand un vieux Conservateur lui avait décrit ce que le réseau permettait avant la Faim. Ce témoignage avait orienté toute sa carrière." },
+      { titre: "La recherche", texte: "Il avait commencé à cartographier les vestiges du réseau racinaire à 40 ans. La plupart étaient morts. Certains montraient des signes d'activité résiduelle. Il avait commencé à tenter des reconstitutions partielles." },
+      { titre: "L'échec méthodique", texte: "Ses reconstitutions partielles fonctionnaient à petite échelle — entre deux arbres, parfois trois. À plus grande échelle, elles mouraient. Il ne savait pas pourquoi. Sa méthode était correcte. Quelque chose lui manquait." },
+      { titre: "L'absence de fragment actif", texte: "Il avait compris que ses reconstitutions mouraient parce qu'il n'avait pas de fragment actif comme point de départ. Un réseau construit de zéro ne prenait pas. Il cherchait un fragment. Il n'en avait pas trouvé." },
+      { titre: "La recherche continue", texte: "Il cherche toujours un fragment actif. Sylindra (37) en a un. Il ne le sait pas." }
+    ],
+    sorts: ['Réseau racinaire (Plante) — activation de racines souterraines — contrôle de terrain', 'Croissance forcée (Plante) — accélération végétale — barrière ou entrave'],
+    relations: [
+      { id: 31, nom: "Sylvae", type: "contact", note: "Soutient ses recherches." },
+      { id: 37, nom: "Sylindra", type: "contact", note: "A trouvé ce qu'il cherche — ignorance mutuelle." }
+    ],
+    lore_long: `Aelvyn tente de reconstruire le réseau racinaire de Sylvera depuis 20 ans. Ce réseau permettait aux forêts de communiquer avant la Faim des Racines.
+
+Il cherche un fragment actif comme point de départ. Sylindra (37) en a trouvé un.
+
+Il ne le sait pas.`,
+  },
+
+  // ── 120 · THYRVAE ──────────────────────────────────────
+  120: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "La rareté", texte: "Née avec les deux éléments — Plante et Fée — une combinaison si rare qu'elle n'avait pas de précédent dans la mémoire récente de Sylvera. Personne ne savait quoi faire d'elle. Elle avait appris seule." },
+      { titre: "Les arbres-mémoire", texte: "À 20 ans, elle avait fait le premier contact avec un arbre-mémoire. Les images qu'elle avait reçues l'avaient perturbée profondément — des séquences de la Faim des Racines, non-médiatisées par aucune faction." },
+      { titre: "Les factions", texte: "Les deux factions avaient appris qu'elle communiquait avec les arbres-mémoire. Les Conservateurs voulaient un accès \"pour la préservation\". Les Gardiens voulaient un accès \"pour la gestion\". Elle avait refusé les deux." },
+      { titre: "Ce que les arbres disent", texte: "Les arbres-mémoire ne confirmaient ni la version Conservatrice ni la version Gardienne de la Faim des Racines. Ils montraient quelque chose de plus complexe — et de moins utilisable comme argument de faction." },
+      { titre: "L'évitement", texte: "Elle se déplace dans les forêts de Sylvera. Elle communique avec les arbres-mémoire. Elle n'en parle à personne." }
+    ],
+    sorts: ['Voix des arbres (Fée) — communication avec la végétation — perception et perturbation de terrain', 'Lumière féerique (Fée) — manifestation lumineuse — désorientation'],
+    relations: [
+      { id: 34, nom: "Leth", type: "contact", note: "Autre Fée qui comprend sa position." },
+      { id: 33, nom: "Thalorn", type: "contact", note: "Ne cherche pas à la récupérer." }
+    ],
+    lore_long: `Thyrvae communique avec les arbres-mémoire de Sylvera — les seuls témoins directs de la Faim des Racines.
+
+Les deux factions la veulent. Elle les évite toutes les deux.
+
+Ce que les arbres lui ont montré ne confirme ni la version Conservatrice ni la version Gardienne. C'est pourquoi elle n'en parle pas.`,
+  },
+
+  // ── 121 · SYLBORN ──────────────────────────────────────
+  121: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Les Gardiens", texte: "Né dans une famille de Gardiens. La méthode du brûlage contrôlé était une évidence culturelle — pas une idéologie qu'il avait choisie, mais une pratique qu'il avait héritée." },
+      { titre: "La conviction", texte: "À 40 ans, il avait travaillé directement avec Krath (36). Cette collaboration avait transformé son héritage culturel en conviction personnelle. Il brûlait maintenant parce qu'il croyait, pas seulement parce qu'il avait été formé." },
+      { titre: "Kraethyn", texte: "Il avait rencontré Kraethyn (122) — une guérisseuse Conservatrice qui réparait ce qu'il brûlait. Leurs zones de travail se chevauchaient. Leurs méthodes s'annulaient mutuellement. Ils n'avaient jamais eu de confrontation directe." },
+      { titre: "Le désaccord sur \"malade\"", texte: "Il avait compris que son désaccord avec les Conservateurs n'était pas sur la méthode — sur ce que signifiait \"malade\". Lui voyait une contamination à éliminer. Eux voyaient un déséquilibre à rééquilibrer. Ces deux cadres ne se réconciliaient pas." },
+      { titre: "Le brûlage", texte: "Il brûle. Kraethyn (122) répare ce qu'il brûle. Cette tension structure leur territoire." }
+    ],
+    sorts: ['Brûlage ciblé (Plante/Feu) — maîtrise de la végétation pour contrôler le feu — précision chirurgicale', 'Contrôle de croissance (Plante) — ralentissement ou arrêt de végétation pathologique — défense préventive'],
+    relations: [
+      { id: 36, nom: "Krath", type: "contact", note: "Référence de sa méthode. A renforcé sa conviction." },
+      { id: 32, nom: "Kessyn", type: "adversaire", note: "Désaccords sur ce qui est \"malade\" dans la forêt." }
+    ],
+    lore_long: `Sylborn brûle ce qu'il pense malade dans les forêts de Sylvera. Sa conviction vient de Kessaer et de Krath (36).
+
+Kraethyn (122) répare ce qu'il brûle. Ils ne se sont jamais confrontés directement.
+
+Leur désaccord n'est pas sur la méthode — sur ce que signifie "malade". Ces deux définitions ne se réconcilieront pas.`,
+  },
+
+  // ── 122 · KRAETHYN ─────────────────────────────────────
+  122: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "La guérison", texte: "Formation en botanique médicale Sylvan. Elle s'était spécialisée dans les blessures de feu — une spécialité difficile pour une Sylvan, mais nécessaire dans un contexte où le feu est une méthode de gestion forestière." },
+      { titre: "Krath", texte: "Elle avait commencé à travailler après les brûlages de Krath (36) par hasard — elle était dans la zone, elle avait vu le résultat, elle avait soigné. Ce hasard était devenu une routine." },
+      { titre: "Le retard", texte: "Elle avait calculé qu'elle réparait environ 60% des arbres que Krath brûlait avant que leurs blessures soient irréversibles. 40% mouraient avant qu'elle arrive. Ce ratio ne s'améliorait pas." },
+      { titre: "L'asymétrie", texte: "Elle avait compris que cette asymétrie était structurelle — pas une question d'effort. Krath brûlerait toujours plus vite qu'elle ne pourrait réparer. Son travail n'était pas de rattraper Krath. C'était de sauver ce qu'elle pouvait." },
+      { titre: "La course", texte: "Elle répare. Krath brûle. Elle est en retard. Elle continue." }
+    ],
+    sorts: ['Régénération forcée (Plante) — accélération de guérison végétale — restauration rapide', 'Réseau de soins (Plante) — connexion entre arbres blessés — stabilisation collective'],
+    relations: [
+      { id: 36, nom: "Krath", type: "adversaire", note: "Elle répare ce qu'il brûle. Toujours en retard sur lui." },
+      { id: 31, nom: "Sylvae", type: "contact", note: "Soutien de réseau Conservateur." }
+    ],
+    lore_long: `Kraethyn répare ce que Krath (36) brûle dans les forêts de Sylvera. Elle est toujours en retard — il brûle plus vite qu'elle ne répare.
+
+Elle répare 60% des arbres avant que leurs blessures soient irréversibles. 40% meurent avant qu'elle arrive.
+
+Cette asymétrie est structurelle. Elle continue quand même.`,
+  },
+
+  // ── 123 · THALAE ───────────────────────────────────────
+  123: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Avant la Faim", texte: "Elle est née il y a 300 ans — avant la Faim des Racines. Elle se souvient de Sylvera avant : le réseau racinaire actif, les forêts communicantes, la façon dont les décisions se prenaient sans factions." },
+      { titre: "La Faim", texte: "Elle avait 50 ans pendant la Faim des Racines. Elle avait vu les deux camps — ceux qui voulaient brûler et ceux qui voulaient préserver. Elle avait vu aussi ceux qui n'étaient ni l'un ni l'autre et qui avaient disparu de l'histoire officielle." },
+      { titre: "L'oubli", texte: "Les premières fois que des Sylvans lui avaient demandé de raconter la Faim, ils n'avaient retenu que les parties qui confirmaient leur version. Elle avait cessé de témoigner spontanément." },
+      { titre: "Presque personne ne demande", texte: "200 ans après la Faim, les factions débattent de ce qui s'est passé sans lui demander. Elle a compris que cette absence de demande était un choix — pas un oubli." },
+      { titre: "La mémoire silencieuse", texte: "Elle vit. Elle se souvient. Elle attend qu'on lui pose la bonne question — ou quelqu'un capable d'entendre la réponse." }
+    ],
+    sorts: ['Ancienneté (Plante) — connexion avec les racines profondes de Sylvera — contrôle de terrain massif', 'Voix ancienne (Plante) — résonance qui affecte la végétation sur une grande zone — perturbation durable'],
+    relations: [
+      { id: 34, nom: "Leth", type: "contact", note: "Comprend la valeur de sa mémoire." },
+      { id: 120, nom: "Thyrvae", type: "contact", note: "Communique avec les arbres-mémoire que Thalae a alimentés." }
+    ],
+    lore_long: `Thalae a 300 ans. Elle était là pendant la Faim des Racines. Elle se souvient directement de ce qui s'est passé.
+
+Presque personne ne lui demande. Les factions préfèrent leurs versions.
+
+Sa mémoire est plus complexe et moins héroïque pour toutes les parties. C'est pourquoi on ne lui demande pas.`,
+  },
+
+  // ── 124 · KETHVAE ──────────────────────────────────────
+  124: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "La forge", texte: "Né dans une famille de forgerons Sylvan. L'élément Feu chez un Sylvan est rare — dans sa famille, c'était un héritage professionnel. La forge était naturelle." },
+      { titre: "Les Gardiens", texte: "Il avait commencé à fabriquer pour les Gardiens à 30 ans — le seul groupe à Sylvera qui avait besoin de l'outillage de gestion forestière à grande échelle qu'il fabriquait. La demande existait, il avait répondu." },
+      { titre: "Les Conservateurs", texte: "Des Conservateurs lui avaient demandé ses services — pour des outils différents, de soin et de préservation. Il avait accepté. Il fabriquait pour les deux. La faction était dans l'usage, pas dans l'outil." },
+      { titre: "Krath et les outils de brûlage", texte: "Krath (36) lui avait commandé des outils spécifiques pour des brûlages à plus grande échelle. Il les avait fabriqués. Il savait ce pour quoi ils allaient servir. Il avait quand même fabriqué." },
+      { titre: "La forge", texte: "Il forge. Les outils qu'il fabrique partent dans les deux directions — soin et brûlage. Il maintient sa neutralité professionnelle." }
+    ],
+    sorts: ['Forge de combat (Feu) — manipulation de métal en fusion — attaque et défense', 'Outil de contrainte (Feu) — projection d\'élément — immobilisation'],
+    relations: [
+      { id: 32, nom: "Kessyn", type: "contact", note: "Utilisateur de ses outils dans le réseau Gardien." },
+      { id: 36, nom: "Krath", type: "contact", note: "Utilisateur principal de ses créations de brûlage." }
+    ],
+    lore_long: `Kethvae fabrique les outils des forestiers de Sylvera — principalement pour les Gardiens, parfois pour les Conservateurs.
+
+Il est pragmatique, pas idéologique. Un outil n'a pas de faction — seulement un usage.
+
+Si ses outils causent quelque chose d'irréparable, cette neutralité sera interrogée.`,
+  },
+
+  // ── 125 · ORNSYL ───────────────────────────────────────
+  125: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Les passages", texte: "Né dans une famille de Sylvans qui commercialisaient entre Sylvera et les régions voisines. Il avait appris les passages discrets depuis l'enfance — une compétence commerciale avant d'être une compétence politique." },
+      { titre: "Le premier exilé", texte: "À 28 ans, il avait aidé un jeune Sylvan à quitter Sylvera après que les deux factions lui avaient rendu la vie impossible. Ce n'était pas planifié. Il avait répété parce que la demande existait." },
+      { titre: "Aeris", texte: "Aeris (35) avait commencé à surveiller les flux entre Sylvera et l'extérieur — les Sylvans qui partaient portaient des connaissances sur les forêts que l'Empire voulait cartographier. Ornsyl avait dû adapter ses routes." },
+      { titre: "Les Dissidentes", texte: "Les Dissidentes lui avaient proposé un financement — discret, sans contrepartie officielle. Il avait compris leur logique : il affaiblissait les factions. Il avait accepté l'argent sans accepter leur cadre entièrement." },
+      { titre: "Les passages", texte: "Il continue à faire passer des Sylvans. Les routes changent. Aeris cherche. Il évite." }
+    ],
+    sorts: ['Passage végétal (Plante) — création de voies à travers la végétation dense — fuite et infiltration', 'Camouflage forestier (Plante) — disparition dans la végétation — invisibilité de terrain'],
+    relations: [
+      { id: 31, nom: "Sylvae", type: "contact", note: "Utilise parfois ses routes pour des personnes en danger." },
+      { id: 35, nom: "Aeris", type: "adversaire", note: "Agent impérial qui surveille les flux entre Sylvera et l'extérieur." }
+    ],
+    lore_long: `Ornsyl aide les Sylvans qui refusent de choisir entre Conservateurs et Gardiens à quitter Sylvera. Les Dissidentes financent discrètement son travail.
+
+Aeris (35) surveille les flux entre Sylvera et l'extérieur. Ornsyl change ses routes régulièrement.
+
+Si Aeris bloque un passage, Ornsyl devra choisir entre cesser et confronter.`,
+  },
+
+  // ── 126 · AELKORN ──────────────────────────────────────
+  126: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "La botanique", texte: "Formation en botanique Sylvan. Elle avait commencé ses cartographies à 35 ans — des relevés de la structure racinaire actuelle de Sylvera, comparés aux descriptions des vieilles archives de la Faim." },
+      { titre: "La réquisition", texte: "À 50 ans, un agent impérial s'était présenté avec une ordonnance de réquisition de ses recherches. Elle avait eu 48 heures pour répondre. Elle avait cédé ses données — il n'y avait pas vraiment d'alternative légale." },
+      { titre: "La continuation", texte: "Elle avait continué ses recherches. Ses nouvelles données allaient régulièrement à l'Empire — la réquisition était permanente. Elle avait appris à ne pas trop penser à cet usage." },
+      { titre: "La cartographie impériale", texte: "Elle avait vu une cartographie impériale de Sylvera — elle reconnaissait ses données. Les forêts qu'elle avait mesurées pour les comprendre étaient maintenant cartographiées pour être contrôlées. La distinction entre recherche et usage s'était effondrée." },
+      { titre: "La recherche réquisitionnée", texte: "Elle continue ses recherches. L'Empire reçoit ses données. Elle documente quelque chose qu'elle contribue à perdre." }
+    ],
+    sorts: ['Analyse végétale (Plante) — compréhension immédiate de la structure écologique — avantage de terrain', 'Défense racinaire (Plante) — activation de racines défensives — protection'],
+    relations: [
+      { id: 35, nom: "Aeris", type: "contact", note: "Intermédiaire impérial indirect dans la chaîne de réquisition." }
+    ],
+    lore_long: `Aelkorn étudie les forêts de Sylvera depuis 20 ans. Ses recherches ont été réquisitionnées par l'Empire.
+
+Elle n'est pas une collaboratrice active — ses données lui ont été prises. Mais elle continue à produire des données que l'Empire reçoit.
+
+La distinction entre recherche et usage s'est effondrée le jour où elle a vu ses cartographies dans un document impérial.`,
+  },
+
+  // ── 127 · SYLKAE ───────────────────────────────────────
+  127: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "L'archive", texte: "Formation en archivistique Sylvan. Elle avait commencé à travailler sur les chants-mémoire à 25 ans, quand une vieille chante était morte sans transmettre ses variantes uniques. Cette perte l'avait orientée vers la transcription systématique." },
+      { titre: "La méthode", texte: "Elle avait développé un système de notation des chants-mémoire adapté à leur structure spécifique — rythme végétal, tonalités saisonnières, mémoires enchâssées. Ce système avait pris 5 ans à stabiliser." },
+      { titre: "Les chants interdits", texte: "Les Gardiens avaient déclaré certains chants interdits. Elle les avait quand même archivés — une archive n'est pas une diffusion. Elle avait débattu de cette distinction avec Sylvae (31). L'archive restait secrète." },
+      { titre: "L'archive secrète", texte: "Elle avait compris que son archive des chants interdits était maintenant la seule trace officielle de certains d'entre eux — les chanteurs qui les portaient avaient cessé de les diffuser. Elle détenait quelque chose de plus important qu'elle ne pensait." },
+      { titre: "L'archivage", texte: "Elle archive. Sylketh (116) transporte oralement. Ils ne savent pas l'un de l'autre." }
+    ],
+    sorts: ['Lecture végétale (Plante) — interprétation des signaux forestiers — information de terrain', 'Barrière d\'archives (Plante) — protection de zone par végétation dense — défense'],
+    relations: [
+      { id: 31, nom: "Sylvae", type: "contact", note: "Soutient ses archives." },
+      { id: 116, nom: "Sylketh", type: "contact", note: "Transporte les mêmes chants oralement — ignorance mutuelle." }
+    ],
+    lore_long: `Sylkae transcrit les chants-mémoire de Sylvera depuis 20 ans. Son archive contient des chants interdits par les Gardiens.
+
+Sylketh (116) transporte les mêmes chants oralement. Ils ne savent pas l'un de l'autre.
+
+Leur ignorance mutuelle est une vulnérabilité : si l'un des deux est arrêté ou détruit, l'autre devient la seule copie.`,
+  },
+
+  // ── 128 · THALVORN ─────────────────────────────────────
+  128: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Sylvera", texte: "Né à Sylvera dans une famille sans affiliation factionnelle forte. Il avait vécu la période de la Faim des Racines comme adolescent — vieux assez pour comprendre, trop jeune pour agir." },
+      { titre: "L'événement", texte: "À 48 ans, quelque chose s'était passé pendant une crise liée aux séquelles de la Faim des Racines. Il n'en parle pas. Il est parti dans la forêt neutre quelques semaines après." },
+      { titre: "Le refus", texte: "Les deux factions avaient envoyé des émissaires dans sa forêt les premières années. Il avait refusé de les recevoir. À un moment, elles avaient cessé d'essayer." },
+      { titre: "Ce qu'il sait", texte: "Il sait quelque chose sur la Faim des Racines — une information que ni Conservateurs ni Gardiens n'ont. Il l'a gardée pour lui. Il ne sait pas si la partager aiderait ou aggraverait." },
+      { titre: "La forêt neutre", texte: "Il vit seul dans sa forêt. Il a refusé Aelvyn (119) quand il est venu chercher des informations. Il continue de refuser." }
+    ],
+    sorts: ['Forêt sauvage (Plante) — activation de végétation non-gérée — terrain hostile pour les intrus', 'Croissance défensive (Plante) — barrière végétale rapide — protection d\'isolement'],
+    relations: [
+      { id: 119, nom: "Aelvyn", type: "contact", note: "A cherché à le contacter pour ses recherches. Thalvorn a refusé." }
+    ],
+    lore_long: `Thalvorn a quitté Sylvera il y a 20 ans après un événement qu'il n'a jamais raconté. Il vit seul dans une forêt neutre et refuse tout contact politique.
+
+Il sait quelque chose sur la Faim des Racines que personne d'autre n'a.
+
+Il a refusé Aelvyn (119) quand il est venu chercher cette information.`,
+  },
+
+  // ── 129 · ORVKETH ──────────────────────────────────────
+  129: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "L'apparence", texte: "Né avec l'apparence enfantine caractéristique de certains Sylvan-Fées. Il n'avait pas choisi cette apparence — il avait appris à vivre avec, puis à l'utiliser." },
+      { titre: "La mémoire", texte: "À 50 ans (apparence d'un enfant de 10 ans), il avait compris que son angle d'observation était unique. Il avait commencé à documenter ce qu'il entendait — les conversations que les adultes avaient devant lui parce qu'ils ne voyaient pas une menace." },
+      { titre: "Leth", texte: "Leth (34) l'avait rencontré et reconnu immédiatement pour ce qu'il était — une Fée de 150 ans, pas un enfant. Cette reconnaissance avait été à la fois un soulagement et une perte de sa couverture partielle." },
+      { titre: "La valeur de la mémoire", texte: "Il avait réalisé que ses 150 ans de mémoire étaient une ressource rare dans un conflit qui tournait autour d'une histoire contestée. Il avait vu des choses que personne d'autre ne pouvait attester." },
+      { titre: "L'observateur", texte: "Il observe. Il mémorise. Il partage avec prudence — seulement avec ceux qui peuvent entendre la complexité." }
+    ],
+    sorts: ['Enchantement de la mémoire (Fée) — rappel de souvenirs chez l\'adversaire — désorientation émotionnelle', 'Voile féerique (Fée) — confusion perceptive — fuite ou déstabilisation'],
+    relations: [
+      { id: 34, nom: "Leth", type: "contact", note: "L'a reconnu pour ce qu'il est. Compréhension mutuelle." },
+      { id: 33, nom: "Thalorn", type: "contact", note: "Sait qui il est réellement." }
+    ],
+    lore_long: `Orvketh a 150 ans et l'apparence d'un enfant. Il observe les conversations que les adultes ont devant "un enfant".
+
+En 150 ans, il a accumulé une mémoire directe de Sylvera que très peu peuvent égaler. Il ne la partage qu'avec précaution.
+
+Si son âge réel est reconnu, il perd son angle d'observation unique.`,
+  },
+
+  // ── 130 · SYLVETHYN ────────────────────────────────────
+  130: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Les Gardiens", texte: "Né dans une famille de Gardiens. Formation forestière standard. Patrouilles, gestion, brûlages dirigés. Un travail ordinaire dans un contexte politique complexe." },
+      { titre: "La patrouille", texte: "Une nuit il y a 8 mois, lors d'une patrouille dans une zone périphérique de Sylvera, il avait vu quelque chose briller dans la végétation. Un éclat vert-doré, pulsé, dans une zone où le réseau de Thalindre était supposé mort." },
+      { titre: "Le silence", texte: "Il était rentré et n'en avait rien dit. Il n'avait pas de cadre pour rapporter l'observation. \"J'ai vu un fragment mort du réseau briller\" semblait absurde dans un rapport de patrouille Gardien." },
+      { titre: "L'importance possible", texte: "Il avait entendu des conversations sur la recherche d'Aelvyn (119) — un botaniste Conservateur qui cherchait un fragment actif du réseau racinaire. Il avait compris que ce qu'il avait vu correspondait peut-être à ce qu'Aelvyn cherchait. Il n'avait toujours rien dit — Aelvyn était Conservateur." },
+      { titre: "L'observation dormante", texte: "Il patrouille. Il se souvient. Il ne sait pas quoi faire de ce souvenir." }
+    ],
+    sorts: ['Patrouille végétale (Plante) — surveillance par réseau racinaire — détection de présence', 'Frappe forestière (Plante) — projection végétale — attaque de terrain'],
+    relations: [
+      { id: 37, nom: "Sylindra", type: "contact", note: "Contact indirect — a fait une observation similaire. Ignorance mutuelle." }
+    ],
+    lore_long: `Sylvethyn est un forestier Gardien ordinaire. Il y a 8 mois, lors d'une patrouille, il a vu un fragment du réseau de Thalindre briller dans la nuit.
+
+Il n'a pas de cadre pour interpréter ce qu'il a vu. Il n'en a parlé à personne.
+
+Aelvyn (119) cherche exactement ça. Sylindra (37) en a trouvé un. Sylvethyn a été témoin d'un troisième fragment.`,
+  },
+
+  // ── 131 · DREKVAR ──────────────────────────────────────
+  131: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "Les mines", texte: "Né à Ormn-Dur dans une famille de mineurs. Il avait commencé le travail souterrain à 12 ans — une entrée précoce même pour les Chthoniens." },
+      { titre: "Les galeries profondes", texte: "À 35 ans, il avait été affecté aux galeries profondes — les couches au-delà des zones cartographiées officielles. Ces zones n'avaient pas été documentées parce que les conditions rendaient la cartographie difficile. Il avait appris à les naviguer par mémoire." },
+      { titre: "La demande de documentation", texte: "La Technocratie avait demandé une documentation formelle des galeries profondes à 50 ans. Il avait commencé à transcrire — et avait réalisé que sa transcription perdait les informations les plus importantes. Il avait arrêté et rendu un document incomplet." },
+      { titre: "L'indispensabilité", texte: "Il avait compris que sa valeur reposait sur l'incomplétude de la documentation. La Technocratie avait besoin de lui physiquement présent pour accéder à ces galeries. Cette dépendance était sa protection." },
+      { titre: "La mémoire vivante", texte: "Il travaille encore — pas pour la productivité, mais parce que la Technocratie ne peut pas se permettre de le perdre. Il est la seule carte." }
+    ],
+    sorts: ['Frappe tellurique (Sol) — vibration du sol — désorientation de terrain', 'Tunnel d\'urgence (Sol) — création rapide de passage — fuite souterraine'],
+    relations: [
+      { id: 41, nom: "Karm", type: "contact", note: "Travaille dans les couches profondes. Utilise sa connaissance." }
+    ],
+    lore_long: `Drekvar est le seul à connaître certaines galeries profondes d'Ormn-Dur. Aucun document ne les répertorie — sa mémoire est la seule carte.
+
+Il ne les a jamais documentées entièrement. Cette incomplétude le rend indispensable à la Technocratie.
+
+Si il meurt avant de guider quelqu'un, ces passages disparaissent.`,
+  },
+
+  // ── 132 · THYRUM ───────────────────────────────────────
+  132: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "La supervision", texte: "Carrière de superviseur dans les mines de la Confédération d'Ormn-Dur. Il avait progressé régulièrement — un travailleur compétent qui gérait bien les conflits de chantier." },
+      { titre: "La pression de Thyss", texte: "Il y a 2 ans, Thyss (42) avait exercé une pression pour réduire les coûts de sécurité autour de la Fosse. La pression était venue par des voies hiérarchiques qui rendaient le refus difficile. Il avait cédé." },
+      { titre: "L'incident mineur", texte: "Un incident de sécurité mineur s'était produit 6 mois après la réduction des mesures. Rien de grave — mais suffisant pour qu'il sache que sa décision avait eu des conséquences. Il avait rédigé un rapport minimisant le lien entre les deux." },
+      { titre: "L'irréversibilité", texte: "Il avait compris qu'il ne pouvait plus corriger sa décision sans révéler ce qui s'était passé. L'erreur était maintenant structurelle — changer les mesures maintenant impliquait d'expliquer pourquoi elles avaient été réduites." },
+      { titre: "La supervision compromise", texte: "Il supervise avec des mesures réduites. Il surveille les signes d'incident. Il attend que ça tienne." }
+    ],
+    sorts: ['Bouclier de roche (Roche) — formation défensive — protection de zone', 'Projection de débris (Roche) — fragmentation — attaque de terrain'],
+    relations: [
+      { id: 42, nom: "Thyss", type: "contact", note: "A exercé la pression pour réduire les mesures de sécurité." },
+      { id: 39, nom: "Drevaya", type: "adversaire", note: "Adversaire indirect — intérêts incluant des mesures de sécurité réelles." }
+    ],
+    lore_long: `Thyrum a réduit les mesures de sécurité autour de la Fosse Interdite sous pression de Thyss (42). Il sait que c'était une erreur.
+
+Il ne peut pas corriger sa décision sans révéler pourquoi il avait cédé. Il continue et surveille les signes d'incident.
+
+Si un incident grave se produit, sa complicité sera exposée.`,
+  },
+
+  // ── 133 · KARGESH ──────────────────────────────────────
+  133: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "La technique fongique", texte: "Formation en gestion des zones fongiques souterraines — une spécialité rare et précise. Il avait travaillé sur la zone de la Fosse Interdite depuis 20 ans." },
+      { titre: "La réduction de Thyss", texte: "Thyss (42) avait imposé une réduction des apports fongiques pour des raisons budgétaires. Kargesh avait calculé que les nouveaux chiffres étaient insuffisants. Il avait présenté ses calculs. Thyss les avait ignorés." },
+      { titre: "La désobéissance", texte: "Il avait continué à appliquer les anciens chiffres en falsifiant ses rapports — signalant les chiffres réduits tout en maintenant les apports réels. Cette double comptabilité était risquée mais techniquement justifiée à ses yeux." },
+      { titre: "Le paradoxe", texte: "Il avait compris que sa désobéissance cachée maintenait l'illusion que la politique de Thyss fonctionnait. En maintenant l'équilibre secrètement, il validait la décision qui avait tort. Il n'avait pas de solution à ce paradoxe." },
+      { titre: "La double comptabilité", texte: "Il maintient les anciens apports. Il signale les nouveaux chiffres. Il attend que quelqu'un remarque la discordance — ou que la zone se déstabilise malgré lui." }
+    ],
+    sorts: ['Contrôle souterrain (Sol) — manipulation des couches de sol — modification de terrain', 'Stabilisation fongique (Sol) — maintien d\'équilibre — défense de zone'],
+    relations: [
+      { id: 42, nom: "Thyss", type: "adversaire", note: "Adversaire interne. Sa politique de réduction est celle que Kargesh contourne." },
+      { id: 39, nom: "Drevaya", type: "contact", note: "Comprend pourquoi les anciens chiffres sont nécessaires." }
+    ],
+    lore_long: `Kargesh maintient les anciens apports à la zone fongique d'Ormn-Dur. Thyss (42) a imposé des chiffres réduits — insuffisants selon ses calculs.
+
+Il signale les chiffres réduits dans ses rapports et maintient les anciens dans la réalité. Double comptabilité depuis 2 ans.
+
+Si quelqu'un audite ses rapports, sa désobéissance sera révélée — et la politique de Thyss exposée comme jamais appliquée.`,
+  },
+
+  // ── 134 · VORATH ───────────────────────────────────────
+  134: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "L'ingénierie", texte: "Formation d'ingénieur structurel à la Technocratie d'Ormn-Dur. Spécialisation dans les structures de confinement — tunnels, grilles, parois." },
+      { titre: "Les grilles de la Fosse", texte: "Il avait conçu les grilles de sécurité de la Fosse Interdite il y a 12 ans. Un travail solide — des tolérances larges, des matériaux de qualité. Il était satisfait du résultat." },
+      { titre: "L'absence d'inspection", texte: "Après 4 ans sans inspection programmée, il avait demandé un ordre de maintenance. On lui avait dit que le budget était alloué à d'autres priorités. Il avait relancé 2 ans plus tard. Même réponse." },
+      { titre: "8 ans", texte: "Il y avait maintenant 8 ans sans inspection. Ses calculs de durée de vie supposaient une inspection tous les 3 ans. Il était 2,5 cycles au-delà. Il ne savait pas si les grilles tenaient encore." },
+      { titre: "L'ingénieur sans information", texte: "Il attend qu'on lui demande d'inspecter. Personne ne lui demande. Il n'a pas poussé la demande plus fort parce qu'il ne veut pas connaître la réponse." }
+    ],
+    sorts: ['Armure d\'acier (Acier) — renforcement structurel — défense renforcée', 'Grille de confinement (Acier) — création de barrière métallique — contrôle de zone'],
+    relations: [
+      { id: 40, nom: "Draven II", type: "contact", note: "Position institutionnelle sur la Fosse." }
+    ],
+    lore_long: `Vorath a conçu les grilles de sécurité de la Fosse Interdite. Elles n'ont pas été inspectées depuis 8 ans.
+
+Ses calculs supposaient une inspection tous les 3 ans. Il est 2,5 cycles au-delà. Il ne sait pas si elles tiennent encore.
+
+Il attend qu'on lui demande d'inspecter. Personne ne lui demande.`,
+  },
+
+  // ── 135 · DRAVEK ───────────────────────────────────────
+  135: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "La zone fongique", texte: "Formation en biologie fongique souterraine — une spécialité très spécifique à Ormn-Dur. Il avait passé 15 ans à étudier la zone de la Fosse Interdite." },
+      { titre: "L'accord de Valyx", texte: "Ses recherches l'avaient amené à comparer les conditions actuelles de la zone avec les conditions de l'accord de Valyx. Les paramètres ne correspondaient pas — la zone avait évolué d'une façon que l'accord n'anticipait pas." },
+      { titre: "Les questions", texte: "Il avait soulevé ces questions dans un rapport interne. Deux semaines plus tard, il était convoqué et renvoyé — officiellement pour \"inconduite professionnelle\". Les questions n'avaient pas été répondues." },
+      { titre: "Ce que le renvoi signifie", texte: "Le renvoi lui avait confirmé que ses questions touchaient quelque chose de réel. On ne renvoie pas pour des questions académiques innocentes. Il avait commencé à documenter ce qu'il savait." },
+      { titre: "L'ancien chercheur", texte: "Il n'a plus accès à la zone. Ses notes sont sa seule ressource. Il cherche quelqu'un qui peut vérifier ses hypothèses depuis l'intérieur." }
+    ],
+    sorts: ['Spores de confusion (Poison) — nuage fongique — désorientation', 'Contact toxique (Poison) — toxine de zone fongique — affaiblissement'],
+    relations: [
+      { id: 41, nom: "Karm", type: "contact", note: "Peut encore accéder à la zone. Ressource pour vérifier ses hypothèses." },
+      { id: 38, nom: "Valyx", type: "contact", note: "L'accord que ses recherches ont questionné." }
+    ],
+    lore_long: `Dravek a été renvoyé de la zone fongique d'Ormn-Dur après avoir soulevé des questions sur l'accord de Valyx (38).
+
+Son renvoi confirme que ses questions touchaient quelque chose de réel — on ne renvoie pas pour des questions académiques innocentes.
+
+Ses notes de recherche documentent ses observations. Il n'a plus accès à la zone pour les vérifier.`,
+  },
+
+  // ── 136 · THYRVUM ──────────────────────────────────────
+  136: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "Les mines", texte: "Né et formé comme mineur à Ormn-Dur. Il avait travaillé dans les tunnels pendant 10 ans — une connaissance pratique des passages souterrains qui était devenue sa compétence principale." },
+      { titre: "Les Dissidentes", texte: "Ossira (44) l'avait approché après que ses conditions de travail à la mine s'étaient dégradées suite aux réductions de Thyss. Il avait rejoint les Dissidentes en voyant une façon de rendre sa connaissance des tunnels utile." },
+      { titre: "La Fosse Interdite", texte: "Sa route passait naturellement par les tunnels proches de la Fosse Interdite — les passages les moins surveillés. Il avait appris à calibrer sa présence pour éviter les zones de contamination fongique active." },
+      { titre: "La valeur de la route", texte: "Il avait compris que sa route par la Fosse était irremplaçable — aucun autre passeur ne la connaissait assez pour s'y risquer. Cette valeur unique le rendait indispensable au réseau Dissident." },
+      { titre: "Les passages", texte: "Il transporte. Sa route passe par la Fosse. Il connaît les zones sûres. Pour l'instant." }
+    ],
+    sorts: ['Tunnel éclair (Sol) — création de passage souterrain rapide — fuite ou surprise', 'Tremblement localisé (Sol) — vibration de tunnel — désorientation en espace clos'],
+    relations: [
+      { id: 46, nom: "Vethis", type: "contact", note: "Point de contact Dissident à Vel'Nox." },
+      { id: 44, nom: "Ossira", type: "contact", note: "Point de contact Dissident à Ormn-Dur." }
+    ],
+    lore_long: `Thyrvum transporte de l'information entre Ormn-Dur et Vel'Nox via les tunnels de la Fosse Interdite. C'est la route la moins surveillée.
+
+Sa couverture de mineur est crédible. Sa route est risquée.
+
+Si la zone fongique se déstabilise, sa route devient inutilisable.`,
+  },
+
+  // ── 137 · KARGOTH ──────────────────────────────────────
+  137: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "L'architecture souterraine", texte: "Formation en architecture structurelle souterraine — tunnels, abris, renforcements. Il avait travaillé sur des projets de la Technocratie pendant 25 ans avant d'être affecté à la Fosse Interdite." },
+      { titre: "L'évaluation de la Fosse", texte: "Affecté à une évaluation structurelle de la Fosse Interdite, il avait produit un rapport identifiant plusieurs scénarios de rupture possibles. Son rapport avait été classé \"prévisionnel à faible probabilité\"." },
+      { titre: "Le plan d'abri", texte: "Il avait proposé de concevoir des abris en cas de rupture. La proposition avait été acceptée — pas parce que le risque était reconnu, mais parce qu'un plan d'abri existant permettait de cocher une case administrative." },
+      { titre: "Personne ne croit", texte: "Il avait réalisé que personne n'avait vraiment lu son plan d'abri. Il était approuvé mais pas pris au sérieux. Il continuait à le mettre à jour parce qu'il était le seul à prendre le risque au sérieux." },
+      { titre: "Les abris", texte: "Ses abris existent et sont maintenus. Personne ne les connaît assez pour les utiliser en cas de crise. Il l'a signalé. Sans résultat." }
+    ],
+    sorts: ['Abri de roche (Roche) — formation de protection rapide — défense d\'urgence', 'Renforcement structurel (Roche) — stabilisation de tunnel — résistance aux effondrements'],
+    relations: [
+      { id: 39, nom: "Drevaya", type: "contact", note: "Comprend le risque de la Fosse. Ressource pour la prise au sérieux du plan." }
+    ],
+    lore_long: `Kargoth a conçu les abris souterrains d'Ormn-Dur pour une rupture de la Fosse Interdite. Personne ne croit que son plan sera nécessaire.
+
+Il continue à le mettre à jour. Ses abris existent mais personne ne les connaît assez pour les utiliser.
+
+Si la rupture se produit, il sera le seul à savoir où aller.`,
+  },
+
+  // ── 138 · VORNAK ───────────────────────────────────────
+  138: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "L'administration", texte: "Formation juridique et administrative à Ormn-Dur. Il avait commencé à travailler sur les droits miniers à 25 ans — un domaine technique qui nécessitait de la précision et de la persévérance." },
+      { titre: "Draven II", texte: "Il avait été affecté à la protection des droits de Draven II (40) à 35 ans. Draven II avait des droits sur des zones minières importantes, dont des zones proches de la Fosse Interdite. L'Empire cherchait régulièrement à les reprendre." },
+      { titre: "L'empiètement", texte: "La première tentative d'empiètement impérial qu'il avait bloquée avait utilisé une interprétation créative d'une clause administrative. Il avait produit une contre-argumentation légale qui avait tenu. L'Empire avait essayé différemment l'année suivante." },
+      { titre: "Le travail défensif", texte: "Il avait compris que son travail était fondamentalement défensif — il bloquait des avancées sans jamais en faire. Cette asymétrie était épuisante mais nécessaire." },
+      { titre: "La protection", texte: "Il protège les droits de Draven II. L'Empire cherche. Il bloque. Le cycle continue." }
+    ],
+    sorts: ['Armure administrative (Acier) — protection renforcée — défense sous pression', 'Barrière de métal (Acier) — obstruction physique — contrôle de passage'],
+    relations: [
+      { id: 40, nom: "Draven II", type: "contact", note: "Principal mandant. Ses droits miniers sont la responsabilité de Vornak." },
+      { id: 42, nom: "Thyss", type: "contact", note: "Ses politiques empiètent parfois sur les droits administrés." }
+    ],
+    lore_long: `Vornak protège les droits miniers de Draven II (40) contre les empiètements progressifs de l'Empire à Ormn-Dur.
+
+Son travail est légal et défensif — il bloque des avancées sans jamais en faire. Épuisant et nécessaire.
+
+Si l'Empire trouve une faille légale, les droits de Draven II pourraient être temporairement suspendus.`,
+  },
+
+  // ── 139 · DREKATH ──────────────────────────────────────
+  139: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "La cartographie", texte: "Formation autodidacte en cartographie souterraine. Il avait commencé à cartographier les galeries d'Ormn-Dur à 20 ans — par curiosité, puis par méthode." },
+      { titre: "Les passages \"effondrés\"", texte: "Il y a 5 ans, en vérifiant des zones classées \"effondrées\" dans les registres officiels, il avait découvert que plusieurs d'entre elles étaient ouvertes. Pas toutes — mais assez pour que l'erreur soit structurelle, pas accidentelle." },
+      { titre: "La Technocratie", texte: "Il avait commencé à comprendre que certains de ces passages \"effondrés\" conduisaient à des zones proches de la Fosse Interdite. Les classer \"effondrés\" servait peut-être à contrôler l'accès plutôt qu'à refléter la réalité." },
+      { titre: "La carte sensible", texte: "Sa carte était devenue potentiellement dangereuse — elle contredisait les registres officiels de la Technocratie. La garder non-partagée était à la fois une protection et une responsabilité." },
+      { titre: "La carte", texte: "Il continue à cartographier. Sa carte est précise. Elle n'est partagée avec personne." }
+    ],
+    sorts: ['Navigation souterraine (Sol) — orientation parfaite en terrain souterrain — avantage de terrain', 'Glissement tellurique (Sol) — modification du sol — modification de passage'],
+    relations: [
+      { id: 43, nom: "Graveth", type: "contact", note: "Contact futur — ses cartes intéresseront Graveth." }
+    ],
+    lore_long: `Drekath a cartographié les galeries d'Ormn-Dur de façon indépendante. Sa carte montre des passages que la Technocratie croit effondrés — ils sont ouverts.
+
+Il est le seul à avoir vérifié sur le terrain. Il n'a partagé sa carte avec personne.
+
+Ces passages conduisent à des zones proches de la Fosse Interdite. Les classifier "effondrés" n'était peut-être pas une erreur.`,
+  },
+
+  // ── 140 · KHARVEN ──────────────────────────────────────
+  140: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "Ormn-Dur", texte: "Né à Ormn-Dur, formation dans les sciences souterraines de base. Il avait été approché par la Convergence à 28 ans — une approche discrète, une proposition qui semblait raisonnable." },
+      { titre: "Les échantillons", texte: "Sa première mission avait été de collecter des échantillons fongiques de zones spécifiques de la Fosse Interdite. Une mission technique, sans explication des raisons. Il avait exécuté." },
+      { titre: "Drevaya", texte: "Drevaya (39) l'avait croisé dans une zone de la Fosse où il collectait. Il n'était pas clair si Drevaya savait ce qu'il faisait. Il avait couvert ses actions avec une explication plausible. Drevaya ne l'avait pas questionné plus avant." },
+      { titre: "Les usages des échantillons", texte: "Il avait vu un résumé partiel d'une recherche de Graveth (43) qui utilisait ses échantillons. L'application n'était pas ce qu'il avait imaginé. Il n'avait pas questionné Graveth." },
+      { titre: "Les collectes", texte: "Il continue à collecter. Les questions sur l'usage restent en suspens." }
+    ],
+    sorts: ['Nuage fongique (Poison) — spores de la Fosse — contamination de zone', 'Toxine adaptée (Poison) — poison souterrain — affaiblissement ciblé'],
+    relations: [
+      { id: 43, nom: "Graveth", type: "contact", note: "Destinataire des échantillons. Contact principal Convergence." },
+      { id: 39, nom: "Drevaya", type: "adversaire", note: "L'a croisé dans la Fosse. Relation ambiguë." }
+    ],
+    lore_long: `Kharven collecte des échantillons fongiques de la Fosse Interdite pour Graveth (43) de la Convergence. Il ne comprend pas entièrement l'usage.
+
+La Convergence compartimente ses réseaux. Il ne sait que ce qu'il a besoin de savoir.
+
+Si il apprend l'usage réel de ses collectes, il devra décider si ça dépasse sa limite de confiance.`,
+  },
+
+  // ── 141 · GORGRATH ─────────────────────────────────────
+  141: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "La Technocratie", texte: "Carrière dans la Technocratie d'Ormn-Dur depuis 30 ans. Il avait progressé régulièrement jusqu'au poste d'adjoint — une progression fondée sur la compétence et la discrétion." },
+      { titre: "Thyss", texte: "Thyss (42) était arrivé comme directeur il y a 6 ans. Les deux premières années, Gorgrath avait respecté ses décisions. Les deux suivantes, il avait commencé à voir les erreurs. Les deux suivantes, il avait arrêté de les nommer." },
+      { titre: "La réduction de sécurité", texte: "Quand Thyss avait imposé la réduction des mesures de sécurité autour de la Fosse, Gorgrath avait préparé une note d'objection. Il l'avait gardée dans un tiroir. Il ne l'avait jamais envoyée." },
+      { titre: "La note dans le tiroir", texte: "Il avait compris que sa note non-envoyée était maintenant une preuve de son désaccord silencieux. Si quelque chose arrivait, il ne pourrait pas dire qu'il ne savait pas — ni qu'il avait agi." },
+      { titre: "L'adjoint silencieux", texte: "Il observe. Il prépare. Il garde tout dans ses tiroirs. Il attend — il ne sait pas quoi." }
+    ],
+    sorts: ['Pression tellurique (Sol) — compression du sol — contrôle de zone', 'Frappe de sol (Sol) — impact souterrain — attaque de terrain'],
+    relations: [
+      { id: 42, nom: "Thyss", type: "contact", note: "Supérieur hiérarchique. Ses erreurs sont le sujet du silence de Gorgrath." },
+      { id: 40, nom: "Draven II", type: "contact", note: "Préoccupations partagées non-nommées." }
+    ],
+    lore_long: `Gorgrath est directeur adjoint de la Technocratie d'Ormn-Dur sous Thyss (42). Il pense que Thyss fait une erreur sur la gestion de la Fosse Interdite.
+
+Il a préparé une note d'objection aux réductions de sécurité. Il l'a gardée dans un tiroir. Il ne l'a jamais envoyée.
+
+Si un incident se produit, cette note sera à la fois sa protection et sa condamnation.`,
+  },
+
+  // ── 142 · VORDRAK ──────────────────────────────────────
+  142: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "L'ingénierie", texte: "Formation d'ingénieur à la Technocratie d'Ormn-Dur. Spécialisation dans les tunnels et les structures souterraines. 15 ans de travaux dans la Technocratie." },
+      { titre: "L'incursion impériale", texte: "L'incursion de l'Empire dans la Fosse Interdite avait utilisé des tunnels dont il avait vérifié la structure. Il avait vu comment l'Empire était entré — et comment la Technocratie n'avait pas répondu. Cette double vision l'avait changé." },
+      { titre: "Le contact d'Ossira", texte: "Ossira (44) l'avait contacté quelques semaines après l'incursion. La proposition était claire : ses compétences souterraines pour des opérations Dissidentes contre l'Empire à Ormn-Dur. Il avait accepté." },
+      { titre: "La différence entre ingénierie et résistance", texte: "Il avait compris que rejoindre les Dissidentes ne signifiait pas seulement utiliser ses compétences — c'était aussi accepter des opérations qui dépassaient l'ingénierie. Il avait géré cet écart au cas par cas." },
+      { titre: "Les Dissidentes", texte: "Il travaille avec Ossira (44). Ses compétences souterraines sont utiles dans plusieurs directions." }
+    ],
+    sorts: ['Tunnel d\'assaut (Roche) — création rapide de passage — manœuvre tactique souterraine', 'Effondrement ciblé (Roche) — déstabilisation de structure — blocage de passage'],
+    relations: [
+      { id: 44, nom: "Ossira", type: "contact", note: "Contact Dissident principal. L'a recruté après l'incursion." }
+    ],
+    lore_long: `Vordrak a rejoint les Dissidentes après avoir vu l'incursion impériale dans la Fosse Interdite. La Technocratie n'avait pas résisté.
+
+Il connaît les tunnels que l'Empire a utilisés — il en avait vérifié la structure.
+
+Cette connaissance peut servir à résister ou à imiter l'Empire. Vordrak travaille sur la résistance.`,
+  },
+
+  // ── 143 · THYRASH ──────────────────────────────────────
+  143: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "La zone fongique", texte: "Commencé à travailler dans la zone fongique à 18 ans — quand la Fosse Interdite s'appelait encore autrement. Il avait vu la zone évoluer au fil des décennies." },
+      { titre: "L'accord de Valyx", texte: "Il avait 42 ans quand l'accord de Valyx avait été signé. Il était présent dans la zone — pas comme signataire, mais comme travailleur. Il avait entendu des conversations qui n'étaient pas destinées aux mineurs." },
+      { titre: "L'histoire officielle", texte: "Quand les documents officiels sur l'accord de Valyx avaient commencé à circuler, il avait remarqué des divergences avec ce qu'il avait vu et entendu. Il n'avait rien dit — qui écoutait un vieux mineur sur des accords institutionnels ?" },
+      { titre: "Personne ne demande", texte: "Il avait attendu que quelqu'un vienne lui demander son témoignage. En 42 ans, personne n'était venu. Il avait arrêté d'attendre — mais il se souvient encore." },
+      { titre: "La retraite", texte: "Il vit dans sa retraite à Ormn-Dur. Il se souvient. Personne ne lui demande." }
+    ],
+    sorts: ['Frappe de sol (Sol) — impact tellurique — attaque directe', 'Stabilisation (Sol) — ancrage au sol — défense inamovible'],
+    relations: [
+      { id: 38, nom: "Valyx", type: "contact", note: "Témoin direct de son accord. Se souvient de lui comme personne." },
+      { id: 41, nom: "Karm", type: "contact", note: "Travaille encore dans les zones où il a travaillé." }
+    ],
+    lore_long: `Thyrash a 84 ans. Il était présent lors de la signature de l'accord de Valyx (38). Il a entendu des conversations qui ne correspondaient pas aux documents officiels.
+
+Personne ne lui a demandé son témoignage depuis 42 ans. Il attend.
+
+Dravek (135) cherche à comprendre l'accord. Il ne sait pas que Thyrash était là.`,
+  },
+
+  // ── 144 · KARVETH ──────────────────────────────────────
+  144: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "La forge", texte: "Formation de forgeron à Ormn-Dur. Spécialisation dans les outils d'extraction souterraine — une niche précise dans un marché très spécialisé." },
+      { titre: "La propriété", texte: "Il y a 10 ans, un client avait remarqué que ses outils maintenaient leur tranchant dans la zone fongique de la Fosse Interdite là où les autres outils se dégradaient. Il avait regardé ses matériaux et sa méthode sans trouver d'explication évidente. Il avait continué à fabriquer de la même façon." },
+      { titre: "La demande d'analyse", texte: "Un chercheur de la Technocratie avait demandé à analyser sa méthode de forge. Il avait accepté. L'analyse n'avait rien trouvé d'évident. Le chercheur était reparti perplexe. Karveth avait continué à fabriquer." },
+      { titre: "La valeur non-comprise", texte: "Il avait compris que sa propriété inconnue était maintenant sa réputation. Des clients venaient spécifiquement pour ça. Sa valeur reposait sur quelque chose qu'il ne comprenait pas." },
+      { titre: "La fabrication", texte: "Il fabrique. Ses outils résistent à l'air fongique. Il ne sait toujours pas pourquoi." }
+    ],
+    sorts: ['Frappe d\'acier (Acier) — impact métallique — attaque directe', 'Outil de combat (Acier) — arme improvisée — polyvalence'],
+    relations: [
+      { id: 134, nom: "Vorath", type: "contact", note: "A fabriqué des éléments pour les grilles de la Fosse." }
+    ],
+    lore_long: `Les outils de Karveth résistent à l'air fongique de la Fosse Interdite. Il ne comprend pas pourquoi. Cette propriété est sa réputation.
+
+Sa méthode a été analysée par la Technocratie — sans résultat. Il fabrique de la même façon depuis 10 ans.
+
+Si quelqu'un comprend cette propriété, ses outils pourraient être reproduits sans lui.`,
+  },
+
+  // ── 145 · DREKKEL ──────────────────────────────────────
+  145: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "La formation", texte: "Formation académique en biologie souterraine à Ormn-Dur. Il avait choisi la zone fongique de la Fosse comme sujet de thèse à 23 ans — la zone la plus intéressante et la moins documentée." },
+      { titre: "Le premier refus", texte: "Sa première demande d'accès académique à la zone fongique avait été refusée en 2 semaines avec une formule administrative vague. Il avait amélioré son dossier et refait la demande." },
+      { titre: "Les refus répétés", texte: "3 ans, 6 demandes, 6 refus. Les raisons changeaient — \"conditions de sécurité\", \"protocole de recherche insuffisant\", \"zone sensible\". Aucune raison n'était suffisamment précise pour être corrigée." },
+      { titre: "La protection non-académique", texte: "Il avait commencé à comprendre que ses refus n'étaient pas académiques. La zone était protégée pour des raisons que les formulaires de demande ne reflétaient pas. La voie académique était peut-être bloquée structurellement." },
+      { titre: "La 7ème demande", texte: "Il prépare sa 7ème demande. Il cherche aussi des voies alternatives — notamment Drevaya (39), qui a accès à la zone par d'autres canaux." }
+    ],
+    sorts: ['Analyse toxique (Poison) — identification et utilisation des agents fongiques — connaissance de terrain', 'Spore ciblée (Poison) — projection fongique concentrée — attaque précise'],
+    relations: [
+      { id: 39, nom: "Drevaya", type: "contact", note: "Accès alternatif possible à la zone fongique." }
+    ],
+    lore_long: `Drekkel veut étudier la zone fongique de la Fosse Interdite dans un cadre académique. Ses demandes sont refusées depuis 3 ans. Six refus, raisons vagues et changeantes.
+
+Il commence à comprendre que la voie académique est structurellement bloquée — pas pour des raisons académiques.
+
+Il cherche Drevaya (39) pour un accès alternatif.`,
+  },
+
+  // ── 146 · SHEVYR ───────────────────────────────────────
+  146: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Le marché", texte: "Né à Vel'Nox dans les marchés nocturnes. Il avait commencé à vendre de l'information à 15 ans — des rumeurs d'abord, des données vérifiées ensuite. La différence de prix entre une rumeur et un fait vérifié avait structuré son éthique professionnelle." },
+      { titre: "La neutralité", texte: "À 22 ans, il avait failli perdre un client majeur en vendant une information à ses adversaires. Il avait réalisé que sa survie professionnelle dépendait d'une neutralité absolue — pas une neutralité partielle." },
+      { titre: "La tentation factionnelle", texte: "Plusieurs factions de Vel'Nox lui avaient offert des conditions préférentielles pour une exclusivité partielle. Il avait refusé toutes les offres. La neutralité valait plus que les marges supplémentaires." },
+      { titre: "20 ans", texte: "Après 20 ans, il était la référence de l'information à Vel'Nox — précisément parce qu'il n'avait jamais trahi sa neutralité. Sa réputation était son actif principal." },
+      { titre: "Le marché", texte: "Il vend. Toutes les factions lui achètent. Sa neutralité tient." }
+    ],
+    sorts: ['Voile de ténèbres (Ténèbres) — obscurcissement — fuite ou distraction', 'Absorption d\'ombre (Ténèbres) — absorption de lumière ambiante — camouflage nocturne'],
+    relations: [
+      { id: 50, nom: "Tharyn", type: "contact", note: "Fournisseur d'informations de qualité." }
+    ],
+    lore_long: `Shevyr vend de l'information à Vel'Nox depuis 20 ans. Sa règle : neutralité absolue par intérêt financier. Toutes les factions lui achètent.
+
+Sa réputation de neutralité est son capital principal. La briser lui coûterait plus que n'importe quelle transaction.
+
+Si une offre lui était faite qui testerait vraiment cette neutralité, il n'a jamais eu à décider.`,
+  },
+
+  // ── 147 · NYRATH ───────────────────────────────────────
+  147: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Les Trois Couches", texte: "Né dans les Trois Couches de Vel'Nox — les niveaux inférieurs où la lumière ne pénètre jamais. Il avait appris les passages avant de comprendre qu'ils avaient de la valeur." },
+      { titre: "Le guide", texte: "Il avait commencé à guider des visiteurs des Trois Couches à 20 ans — des gens qui avaient besoin de se déplacer discrètement à Vel'Nox. Sa connaissance des passages était sa compétence." },
+      { titre: "Velath", texte: "Velath (49) utilisait le même corridor central pour ses propres déplacements. La compétition était précisément localisée — un corridor, deux guides avec des intérêts différents sur ce corridor spécifique." },
+      { titre: "La friction localisée", texte: "Il avait réalisé que sa relation avec Velath était caractérisée par cette unique friction. Sur tout le reste de Vel'Nox, ils n'étaient pas en compétition. Cette spécificité rendait la résolution possible — s'ils la cherchaient." },
+      { titre: "Le guide", texte: "Il guide. La compétition avec Velath continue sur le corridor. Le reste de Vel'Nox leur est mutuellement disponible." }
+    ],
+    sorts: ['Passage spectral (Spectre) — traversée de surfaces — mobilité en terrain difficile', 'Voile de passage (Spectre) — invisibilité partielle dans les corridors — fuite'],
+    relations: [
+      { id: 49, nom: "Velath", type: "adversaire", note: "Compétition sur un corridor des Trois Couches." },
+      { id: 46, nom: "Vethis", type: "contact", note: "Utilise ses guides pour des mouvements dans les Trois Couches." }
+    ],
+    lore_long: `Nyrath guide dans les passages des Trois Couches de Vel'Nox. Il est en compétition avec Velath (49) sur un seul corridor — le reste de leurs territoires ne se chevauche pas.
+
+Cette compétition précisément localisée pourrait être résolue par un accord. Ils ne l'ont pas cherché.
+
+Vethis (46) utilise ses services régulièrement.`,
+  },
+
+  // ── 148 · VELTHYR ──────────────────────────────────────
+  148: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "L'analyse", texte: "Né avec une sensibilité psychique élevée à Vel'Nox. Il avait commencé à lire les champs élémentaires des autres à 15 ans — d'abord involontairement, puis de façon contrôlée." },
+      { titre: "La Convergence", texte: "Shael (48) l'avait contacté à 25 ans avec une proposition : analyser les profils psychiques dans les marchés nocturnes en échange d'une rémunération. La demande était précise. Il avait accepté." },
+      { titre: "Ce qu'il identifie", texte: "Il avait commencé à remarquer que certains profils qu'il identifiait disparaissaient de Vel'Nox quelques semaines après ses rapports. Il n'avait pas posé de questions à Shael." },
+      { titre: "Le compartimentage", texte: "Il avait compris que la Convergence compartimentait sa mission — il savait ce qu'il faisait, pas où ça menait. Cette ignorance partielle était peut-être intentionnelle." },
+      { titre: "L'analyse", texte: "Il analyse dans les marchés nocturnes. Ses rapports vont à Shael. Les profils qu'il identifie disparaissent." }
+    ],
+    sorts: ['Lecture psychique (Psy) — analyse de champ élémentaire — identification de profil', 'Pression mentale (Psy) — attaque psychique directe — désorientation'],
+    relations: [
+      { id: 48, nom: "Shael", type: "contact", note: "Client principal. Destinataire de ses analyses." },
+      { id: 50, nom: "Tharyn", type: "contact", note: "Source de données des marchés nocturnes." }
+    ],
+    lore_long: `Velthyr analyse les profils psychiques des Élus dans les marchés nocturnes de Vel'Nox pour la Convergence. Il identifie les "purs" pour Shael (48).
+
+Les profils qu'il identifie disparaissent de Vel'Nox quelques semaines après ses rapports. Il n'a pas posé de questions.
+
+Si quelqu'un qu'il a identifié revient chercher qui les avait signalés, sa distanciation analytique prendra fin.`,
+  },
+
+  // ── 149 · SYRVEL ───────────────────────────────────────
+  149: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Vel'Nox", texte: "Né dans les couches supérieures de Vel'Nox. Il avait commencé sa vie professionnelle comme passeur d'information — la transition vers le passage de personnes était naturelle et plus lucrative." },
+      { titre: "Les Dissidentes", texte: "Vethis (46) l'avait intégré dans le réseau Dissident à 30 ans. Ses compétences d'extraction étaient exactement ce dont les Dissidentes avaient besoin à Vel'Nox — une cité où l'Empire cherchait régulièrement des fugitifs." },
+      { titre: "La personne difficile", texte: "Il avait extrait quelqu'un dont il avait appris plus tard qu'il avait commis une violence contre un Umbrien ordinaire. L'Empire le cherchait pour d'autres raisons. Il avait eu du mal à intégrer cette information." },
+      { titre: "Le jugement absent", texte: "Il avait décidé de ne pas juger ce qu'il extrayait. La ligne à ne pas franchir était claire : il n'extrayait pas des cibles impériales légitimes. Tout le reste était de la nuance qu'il n'avait pas le temps de gérer." },
+      { titre: "L'extraction", texte: "Il extrait. Les demandes arrivent via Vethis (46). Il évalue le risque et la faisabilité. Il extrait." }
+    ],
+    sorts: ['Manteau d\'ombre (Ténèbres) — invisibilité dans l\'obscurité — fuite et protection', 'Choc de ténèbres (Ténèbres) — projection d\'obscurité concentrée — désorientation'],
+    relations: [
+      { id: 49, nom: "Velath", type: "contact", note: "Routes alternatives à Vel'Nox." },
+      { id: 46, nom: "Vethis", type: "contact", note: "Point de contact Dissident. Transmet les demandes d'extraction." }
+    ],
+    lore_long: `Syrvel extrait des personnes recherchées par l'Empire depuis Vel'Nox. Il ne transporte pas d'information — il transporte des gens.
+
+Sa règle : pas de jugement. La justice de la fuite appartient à ceux qui fuient. Il évalue le risque, pas la morale.
+
+Cette règle a des limites qu'il n'a pas encore entièrement testées.`,
+  },
+
+  // ── 150 · THYRAV ───────────────────────────────────────
+  150: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Les insectes", texte: "Né avec un élément Insecte rare dans une famille d'Umbriens sans cet élément. Il avait commencé à travailler avec les insectes bioluminescents à 20 ans — une spécialité qui n'avait pas de tradition à Vel'Nox. Il avait tout développé lui-même." },
+      { titre: "La lumière", texte: "Il avait compris à 30 ans que ses insectes résolvaient un problème fondamental de Vel'Nox : la lumière. Les marchés nocturnes fonctionnaient dans l'obscurité relative. Ses colonies changeaient ça." },
+      { titre: "La tentative de documentation", texte: "Un chercheur avait voulu documenter sa méthode d'élevage. Il avait refusé. Pas par caprice — par conviction que certains savoirs doivent être transmis directement ou pas du tout." },
+      { titre: "La dépendance", texte: "Il avait réalisé que les marchés nocturnes de Vel'Nox dépendaient maintenant de ses colonies. Cette dépendance était à la fois sa protection — on ne pouvait pas le remplacer facilement — et une responsabilité." },
+      { titre: "Les colonies", texte: "Il élève. Les marchés ont de la lumière. Son savoir reste oral." }
+    ],
+    sorts: ['Nuée bioluminescente (Insecte) — nuée d\'insectes lumineux — éblouissement et confusion', 'Essaim défensif (Insecte) — nuée protectrice — protection de zone'],
+    relations: [
+      { id: 50, nom: "Tharyn", type: "contact", note: "Son activité dans les marchés dépend de la lumière bioluminescente." }
+    ],
+    lore_long: `Thyrav élève des insectes bioluminescents dont la lumière éclaire les marchés nocturnes de Vel'Nox. Son savoir est entièrement oral — jamais documenté.
+
+Les marchés dépendent de ses colonies. Il est irremplaçable directement.
+
+Si ses colonies meurent, certains marchés de Vel'Nox s'éteignent.`,
+  },
+
+  // ── 151 · NYSHEL ───────────────────────────────────────
+  151: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "La lecture", texte: "Née avec une sensibilité Psy orientée vers la détection du mensonge — un sous-type spécifique rare. Elle avait commencé à le pratiquer professionnellement à 25 ans." },
+      { titre: "L'indépendance", texte: "Plusieurs factions l'avaient approchée pour une intégration régulière. Elle avait refusé toutes. L'indépendance lui coûtait en tarifs réguliers — elle compensait par des tarifs plus élevés par mission." },
+      { titre: "Le client difficile", texte: "Elle avait une fois refusé une mission — pas pour des raisons morales, mais parce que le contexte impliquait un risque physique pour elle. Cette unique exception avait défini ses limites professionnelles." },
+      { titre: "La valeur de l'indépendance", texte: "Elle avait constaté que son indépendance lui valait des missions que les agents de factions ne pouvaient pas accepter — des interrogatoires entre factions, des situations où aucun agent de faction ne serait neutre. Elle occupait un espace unique." },
+      { titre: "Les missions", texte: "Elle interroge. Les clients varient. Son indépendance tient." }
+    ],
+    sorts: ['Lecture forcée (Psy) — extraction psychique d\'information — interrogatoire de terrain', 'Pression mentale (Psy) — attaque psychique — désorientation ciblée'],
+    relations: [
+      { id: 48, nom: "Shael", type: "contact", note: "A travaillé pour la Convergence — maintient une distance professionnelle." },
+      { id: 47, nom: "Nyrreth", type: "contact", note: "Cadre professionnel partagé." }
+    ],
+    lore_long: `Nyshel lit les mensonges à Vel'Nox. Elle travaille pour n'importe quel client contre rémunération. Aucune affiliation de faction.
+
+Son indépendance lui permet d'interroger dans des situations où aucun agent de faction ne serait acceptable.
+
+Ce qu'on fait de ses résultats ne la regarde pas. Cette position a des limites qu'elle n'a pas encore atteintes.`,
+  },
+
+  // ── 152 · VELRYN ───────────────────────────────────────
+  152: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Vel'Nox", texte: "Né dans les marchés nocturnes de Vel'Nox. Il avait travaillé dans la sécurité des marchés depuis 20 ans — d'abord comme garde ordinaire, puis comme médiateur." },
+      { titre: "La paix armée", texte: "À 32 ans, il avait géré une confrontation majeure entre deux factions dans un marché nocturne. Sa gestion avait évité une bataille ouverte. Les deux factions l'avaient ensuite reconnu comme arbitre neutre." },
+      { titre: "La neutralité testée", texte: "Une faction l'avait approché pour une alliance préférentielle après un incident. Il avait refusé — clairement et publiquement. Le refus avait renforcé sa réputation de neutralité." },
+      { titre: "15 ans", texte: "Après 15 ans, il était l'institution de la paix des marchés nocturnes. Son autorité était personnelle — si il partait, cette paix n'aurait pas de successeur évident." },
+      { titre: "La paix", texte: "Il maintient. Les marchés fonctionnent. La paix tient à sa présence." }
+    ],
+    sorts: ['Voile de neutralisation (Ténèbres) — absorption d\'énergie offensive — désescalade forcée', 'Frappe de ténèbres (Ténèbres) — attaque directe — force d\'arbitrage'],
+    relations: [
+      { id: 46, nom: "Vethis", type: "contact", note: "Bénéficie de la paix maintenue dans les marchés." },
+      { id: 50, nom: "Tharyn", type: "contact", note: "Réseau des marchés nocturnes." }
+    ],
+    lore_long: `Velryn maintient la paix armée entre les factions dans les marchés nocturnes de Vel'Nox depuis 15 ans. Son autorité est fondée sur le respect mutuel — toutes les factions ont intérêt aux marchés.
+
+Sa neutralité est fonctionnelle, pas éthique. Elle lui coûte.
+
+Si une faction force une confrontation, il devra prendre position pour la première fois en 15 ans.`,
+  },
+
+  // ── 153 · SYRETH ───────────────────────────────────────
+  153: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "L'Empire", texte: "Né dans les régions impériales. Formation d'agent d'infiltration spécialisé dans les milieux Umbriens — une spécialité rare parce que les Umbriens sont difficiles à infiltrer." },
+      { titre: "Vel'Nox", texte: "Il avait été envoyé à Vel'Nox il y a 18 mois. Sa couverture — marchand d'objets lumineux — était thématiquement adaptée à une cité obsédée par la lumière depuis le Vol." },
+      { titre: "Vethis", texte: "Vethis (46) l'avait regardé avec une attention particulière lors d'un marché nocturne. Le regard n'était pas agressif — c'était de l'évaluation. Il n'avait pas su comment l'interpréter." },
+      { titre: "L'asymétrie", texte: "Il avait commencé à soupçonner que sa couverture n'était pas aussi solide qu'il le pensait — pas parce qu'il avait des preuves, mais parce que certaines personnes l'évitaient de façon non-aléatoire." },
+      { titre: "L'infiltration", texte: "Il continue à collecter des informations. Vethis sait. Syreth soupçonne que quelqu'un sait. Cette danse continue." }
+    ],
+    sorts: ['Disparition spectrale (Spectre) — traversée de matière — fuite d\'urgence', 'Frappe spectrale (Spectre) — attaque à travers les défenses physiques — attaque surprise'],
+    relations: [
+      { id: 46, nom: "Vethis", type: "adversaire", note: "Sait ou soupçonne son identité. Attend de comprendre son niveau d'information avant d'agir." }
+    ],
+    lore_long: `Syreth est un agent impérial infiltré à Vel'Nox depuis 18 mois sous couverture de marchand. Son infiltration est connue de Vethis (46) — mais pas encore formellement confirmée.
+
+Vethis attend de comprendre son niveau d'information avant d'agir. Syreth soupçonne que quelqu'un sait — sans savoir que c'est Vethis.
+
+Cette danse asymétrique continuera jusqu'à ce que l'un d'eux décide d'agir.`,
+  },
+
+  // ── 154 · SHYVEL ───────────────────────────────────────
+  154: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Les marchés", texte: "Né dans les marchés nocturnes de Vel'Nox. Formation en commerce — il avait appris à évaluer et négocier avant de comprendre que les données sur les personnes étaient une marchandise." },
+      { titre: "La Convergence", texte: "Shael (48) l'avait contacté avec une proposition simple : acheter des profils d'Élus dans les marchés nocturnes. Rémunération correcte, risque modéré. Il avait accepté." },
+      { titre: "La source", texte: "Tharyn (50) était devenu sa meilleure source — quelqu'un dont le réseau couvrait une large partie des marchés nocturnes. Cette dépendance à une seule source était une vulnérabilité qu'il gérait en diversifiant partiellement." },
+      { titre: "Ce que Shael fait des profils", texte: "Il n'avait jamais demandé directement. Les indices dans les comportements de Shael suggéraient que les profils servaient un projet plus large. Il n'avait pas creusé." },
+      { titre: "Les achats", texte: "Il achète. Les profils partent vers Shael. Les marchés nocturnes continuent." }
+    ],
+    sorts: ['Sonde psychique (Psy) — lecture de profil élémentaire — évaluation rapide', 'Pression de transaction (Psy) — influence sur la décision — négociation forcée'],
+    relations: [
+      { id: 48, nom: "Shael", type: "contact", note: "Destinataire des profils collectés." },
+      { id: 50, nom: "Tharyn", type: "contact", note: "Source principale de profils d'Élus." }
+    ],
+    lore_long: `Shyvel achète des profils d'Élus dans les marchés nocturnes de Vel'Nox pour la Convergence. Sa source principale est Tharyn (50).
+
+Il ne demande pas ce que Shael (48) fait de ces profils. La transaction est propre — argent contre données. La suite n'est pas son département.
+
+Si Tharyn est compromis, le réseau de collecte de Shyvel s'effondre.`,
+  },
+
+  // ── 155 · NYRVAL ───────────────────────────────────────
+  155: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "L'avant-Vol", texte: "Elle avait 10 ans quand le Vol de la Lumière s'est produit. Elle se souvient du avant — la lumière naturelle, les espaces de Vel'Nox qui ont disparu, des personnes qui n'existent plus dans aucune archive." },
+      { titre: "L'après", texte: "Elle avait vu comment les récits de l'avant-Vol s'étaient formés — les simplifications, les omissions, les reconstructions utiles pour les factions en cours de formation. Elle avait noté les divergences avec ce qu'elle se souvenait." },
+      { titre: "La version officielle", texte: "Elle avait essayé de corriger des historiens sur quelques points. Ses corrections avaient été accueillies avec politesse et ignorées. Elle avait cessé de s'y essayer." },
+      { titre: "Le doute sur la mémoire", texte: "À 80 ans, elle avait commencé à douter de sa propre mémoire — pas entièrement, mais sur des détails. Ce doute la rendait moins sûre de partager ce qu'elle savait avec autorité." },
+      { titre: "La vieille mémoire", texte: "Elle vit. Elle se souvient. Elle doute de sa fiabilité sur certains points. Elle attend une question sérieuse." }
+    ],
+    sorts: ['Ombre ancienne (Ténèbres) — contrôle de la lumière ambiante — obscurcissement total', 'Voile de mémoire (Ténèbres) — manifestation d\'obscurité dense — barrière défensive'],
+    relations: [
+      { id: 51, nom: "Osara", type: "contact", note: "Contemporaine. Partage des souvenirs directs du Vol." }
+    ],
+    lore_long: `Nyrval a 90 ans. Elle avait 10 ans quand le Vol de la Lumière s'est produit. Elle se souvient de Vel'Nox avant.
+
+Sa version contredit la version officielle. Personne ne lui a posé de question sérieuse.
+
+Elle doute de sa propre mémoire sur certains détails. Mais les points de contradiction avec la version officielle, elle en est sûre.`,
+  },
+
+  // ── 156 · VELSHYR ──────────────────────────────────────
+  156: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Vel'Nox", texte: "Née à Vel'Nox. La raison de son engagement contre l'Empire est personnelle — elle n'en parle pas. Elle est arrivée aux Dissidentes à 30 ans avec des compétences déjà formées." },
+      { titre: "La règle", texte: "Elle avait posé sa condition dès le début : cibles exclusivement impériales. Les Dissidentes avaient accepté — ses compétences valaient cette restriction." },
+      { titre: "La demande ambiguë", texte: "Une demande avait été faite pour une cible qui avait des liens impériaux mais n'était pas officiellement un agent impérial — un marchand qui travaillait avec l'Empire. Elle avait refusé. La frontière était là." },
+      { titre: "La frontière floue", texte: "Elle avait commencé à voir que la frontière \"impérial/non-impérial\" était plus floue qu'elle ne pensait. Des collaborateurs, des informateurs, des fournisseurs. Elle avait maintenu sa définition la plus restrictive." },
+      { titre: "Les cibles", texte: "Elle opère. Ses cibles sont impériales. Sa ligne tient." }
+    ],
+    sorts: ['Poison nocturne (Poison) — toxine adaptée à l\'obscurité — administration discrète', 'Nuage toxique (Poison) — diffusion de poison — zone d\'effet'],
+    relations: [
+      { id: 44, nom: "Ossira", type: "contact", note: "Contact réseau Dissident d'Ormn-Dur." },
+      { id: 46, nom: "Vethis", type: "contact", note: "Contact Dissident à Vel'Nox." }
+    ],
+    lore_long: `Velshyr est empoisonneuse pour les Dissidentes à Vel'Nox. Ses cibles sont exclusivement impériales — une règle qu'elle s'est donnée, pas imposée.
+
+Cette exclusivité est sa limite éthique personnelle. Elle la maintient même quand les demandes sont ambiguës.
+
+La frontière "impérial/non-impérial" est plus floue qu'elle ne paraît. Elle maintient la définition la plus restrictive.`,
+  },
+
+  // ── 157 · SYRNAL ───────────────────────────────────────
+  157: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "L'art spectral", texte: "Né avec un élément Spectre orienté vers la perception visuelle plutôt que le mouvement. Il avait développé sa technique de portrait de mémoire à 25 ans — une application artistique de sa capacité à voir ce que les autres ne voient pas." },
+      { titre: "Les anciens", texte: "Les anciens de Vel'Nox avaient été ses premiers clients — des personnes qui voulaient garder le visage de proches décédés. Il avait compris rapidement que certains de ces proches étaient des personnages de l'avant-Vol." },
+      { titre: "Le portrait inexact", texte: "Un client avait reconnu que son portrait d'un proche décédé ne correspondait pas entièrement à ce qu'il avait décrit. La mémoire du client était partielle. Son portrait était une reconstruction d'une reconstruction." },
+      { titre: "L'archive non-officielle", texte: "Il avait réalisé que sa collection de portraits représentait une archive visuelle de Vel'Nox d'avant le Vol — imparfaite, subjective, mais unique." },
+      { titre: "Les portraits", texte: "Il crée. Sa collection s'agrandit. Les anciens qui alimentent sa mémoire meurent peu à peu." }
+    ],
+    sorts: ['Projection spectrale (Spectre) — matérialisation d\'image — confusion', 'Voile visuel (Spectre) — manipulation de perception — désorientation'],
+    relations: [
+      { id: 47, nom: "Nyrreth", type: "contact", note: "Réseau de Vel'Nox créant des demandes de portraits." },
+      { id: 51, nom: "Osara", type: "contact", note: "Ancienne qui fournit des souvenirs de l'avant-Vol." }
+    ],
+    lore_long: `Syrnal crée des portraits de mémoire pour les anciens de Vel'Nox — des représentations de personnes de l'avant-Vol construites à partir de souvenirs.
+
+Sa collection est une archive visuelle non-officielle de l'avant-Vol. Imparfaite, subjective, mais unique.
+
+Quand les derniers anciens mourront, personne ne pourra alimenter de nouveaux portraits.`,
+  },
+
+  // ── 158 · THYRVEL ──────────────────────────────────────
+  158: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "L'Empire", texte: "Formation impériale en commerce et infiltration. La spécialisation dans les milieux Umbriens était une nécessité — les autres agents impériaux ne se fondaient pas bien." },
+      { titre: "Le commerce", texte: "Il avait établi son commerce à Vel'Nox il y a 5 ans — des marchandises nocturnes adaptées aux marchés umbrien. Le commerce avait marché mieux que prévu. Cette réussite avait renforcé sa couverture et créé une situation qu'il n'avait pas entièrement anticipée." },
+      { titre: "L'attachement", texte: "Il avait pris des décisions commerciales qui n'étaient pas dictées par sa mission impériale — de bons choix d'affaires qui protégeaient ses relations commerciales. Ces décisions avaient parfois retardé des actions de collecte." },
+      { titre: "La double loyauté", texte: "Il avait compris qu'il avait développé une loyauté partielle envers ses clients commerciaux — des Umbriens avec qui il faisait des affaires depuis 5 ans. Cette loyauté n'était pas planifiée." },
+      { titre: "Le commerce et la collecte", texte: "Il commerce. Il collecte. Les deux fonctions continuent en parallèle — avec une tension croissante entre elles." }
+    ],
+    sorts: ['Manteau de commerce (Ténèbres) — obscurcissement de présence — couverture renforcée', 'Choc de ténèbres (Ténèbres) — attaque directe — usage d\'urgence'],
+    relations: [
+      { id: 153, nom: "Syreth", type: "contact", note: "Réseau impérial partagé. Contact sans rencontre directe." },
+      { id: 48, nom: "Shael", type: "adversaire", note: "Activités de collecte qui se chevauchent." }
+    ],
+    lore_long: `Thyrvel est un marchand de Vel'Nox dont le commerce sert de couverture à un réseau de collecte impérial. Ses activités commerciales sont réelles et rentables.
+
+En 5 ans, il a développé une loyauté partielle envers ses clients commerciaux. Ce n'était pas planifié.
+
+Si l'Empire lui demande de trahir ces relations, il devra choisir entre mission et couverture.`,
+  },
+
+  // ── 159 · NYRSH ────────────────────────────────────────
+  159: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Les marchés nocturnes", texte: "Né dans les marchés nocturnes de Vel'Nox. Ses parents étaient des commerçants des Trois Couches. Son enfance était les marchés, les insectes bioluminescents, les luminescences élémentaires." },
+      { titre: "Le monde au-dessus", texte: "À 18 ans, quelqu'un lui avait décrit le monde au-dessus — des cités avec lumière naturelle, espaces ouverts, végétation visible. Il avait écouté avec l'attention de quelqu'un qui entend une description d'un pays étranger." },
+      { titre: "La nostalgie des anciens", texte: "Les anciens de Vel'Nox parlaient de \"restaurer la lumière\" avec une intensité qu'il ne comprenait pas entièrement. Pour lui, la lumière était une question technique, pas nostalgique." },
+      { titre: "La différence de génération", texte: "Il avait compris qu'il était la première génération pour qui le Vol de la Lumière était de l'histoire, pas du traumatisme. Cet écart de perception entre sa génération et les anciens était fondamental." },
+      { titre: "Les marchés", texte: "Il vit dans les marchés nocturnes. Il apprend les règles. Il ne ressent pas le manque que les anciens ressentent." }
+    ],
+    sorts: ['Nuée d\'insectes (Insecte) — nuée défensive — perturbation d\'adversaire', 'Bioluminescence (Insecte) — éclat d\'insectes lumineux — éblouissement momentané'],
+    relations: [
+      { id: 50, nom: "Tharyn", type: "contact", note: "Figure des marchés nocturnes connue de tous." }
+    ],
+    lore_long: `Nyrsh a 22 ans. Il est né dans les marchés nocturnes de Vel'Nox après le Vol de la Lumière. Il ne connaît pas d'autre monde.
+
+Pour les anciens, le Vol est un traumatisme. Pour lui, c'est de l'histoire.
+
+Sa génération est la première pour qui Vel'Nox dans l'obscurité est simplement le monde — pas une perte.`,
+  },
+
+  // ── 160 · VELTHYN ──────────────────────────────────────
+  160: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "L'analyse", texte: "Né dans les régions Dissidentes, pas à Vel'Nox. Formation en analyse psychique et en cryptographie élémentaire. Il avait été orienté vers le contre-renseignement Convergence à 28 ans." },
+      { titre: "La Convergence", texte: "Il avait commencé à analyser les patterns de collecte de la Convergence à partir de données fragmentaires. Ses inférences sur les objectifs de la Convergence s'étaient avérées suffisamment précises pour que les Dissidentes lui fassent confiance." },
+      { titre: "L'erreur d'inférence", texte: "Il avait produit une analyse qui orientait les Dissidentes vers une fausse piste — la Convergence avait changé sa méthode de collecte d'une façon qu'il n'avait pas anticipée. Les conséquences avaient été limitées mais réelles." },
+      { titre: "La limite de la distance", texte: "Il avait compris que son analyse à distance avait des limites structurelles — il manquait des nuances contextuelles que seul le terrain pouvait fournir. Il maintenait la distance pour sa sécurité, mais cette sécurité avait un coût analytique." },
+      { titre: "L'analyse à distance", texte: "Il contre-analyse. Ses inférences nourrissent les Dissidentes. La marge d'erreur existe." }
+    ],
+    sorts: ['Analyse psychique à distance (Psy) — lecture de champ élémentaire sans contact — inférence de position', 'Blocage mental (Psy) — interférence de champ — protection de pensées'],
+    relations: [
+      { id: 48, nom: "Shael", type: "adversaire", note: "Source des données analysées. Adversaire indirect." },
+      { id: 18, nom: "Thariel", type: "contact", note: "Fournit du contexte archivistique pour les analyses." }
+    ],
+    lore_long: `Velthyn contre-analyse les données que Shael (48) de la Convergence collecte sur les Élus de Vel'Nox. Il opère à distance — jamais sur le terrain.
+
+Ses inférences nourrissent les Dissidentes. Mais l'analyse à distance a des limites structurelles.
+
+Si la Convergence change de méthode, ses analyses peuvent orienter les Dissidentes dans la mauvaise direction.`,
+  },
+
+  // ── 161 · THYSKRA ──────────────────────────────────────
+  161: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "La Monarchie", texte: "Née dans une famille aristocratique de Crysalme. Formation diplomatique — les Givrins de haut rang sont formés dès l'enfance aux conventions." },
+      { titre: "Asterciel", texte: "Affectée à Asterciel il y a 8 ans. Le poste d'ambassadrice à l'Empire était le poste diplomatique le plus sensible de Crysalme. Keldris (57) lui avait confié précisément parce qu'elle était précise." },
+      { titre: "Les compromis", texte: "Elle avait dû faire des compromis sur certains accords commerciaux — des compromis qui avantagèrent l'Empire plus que Crysalme. Elle avait suivi les directives de Keldris. Les compromis étaient dans la marge acceptable." },
+      { titre: "La stase diplomatique", texte: "Elle avait compris que son travail n'était pas de progresser — c'était de maintenir. Maintenir l'équilibre existant. Toute progression impliquait un déséquilibre. La Monarchie préférait la stase." },
+      { titre: "L'ambassade", texte: "Elle maintient. Les relations tiennent. La stase est préservée." }
+    ],
+    sorts: ['Barrière de glace (Glace) — formation défensive crystalline — protection diplomatique', 'Projection glaciale (Glace) — lance de glace — attaque précise'],
+    relations: [
+      { id: 24, nom: "Serathis", type: "contact", note: "Contact impérial à Asterciel." },
+      { id: 57, nom: "Keldris", type: "contact", note: "Hiérarchie. Rapporte à Keldris." }
+    ],
+    lore_long: `Thyskra est l'ambassadrice de Crysalme à Asterciel. Elle maintient les relations entre la Monarchie Givrine et l'Empire depuis 8 ans.
+
+Son travail est de maintenir la stase — pas de progresser. Toute progression implique un déséquilibre que la Monarchie évite.
+
+Si l'Empire demande un compromis qui dépasse ses limites, elle devra choisir entre protocole et mandat.`,
+  },
+
+  // ── 162 · VELKREN ──────────────────────────────────────
+  162: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "Les archives", texte: "Formation d'archiviste à Crysalme. Il avait travaillé dans les archives de la Monarchie depuis 25 ans — une carrière stable, un accès exceptionnel à des documents que peu de Givrins voient." },
+      { titre: "Les modifications", texte: "Il y a 5 ans, il avait remarqué une modification dans une archive sur le Gel Éternel — un changement de formulation qui altérait subtilement le sens. Il avait cherché l'original. Il n'existait plus." },
+      { titre: "La première copie", texte: "Il avait commencé à copier systématiquement les archives sensibles avant chaque cycle de révision. Ce travail s'était étendu — il copiait maintenant une partie significative des archives annuelles." },
+      { titre: "Thyval", texte: "Thyval (55) l'avait contacté et lui avait révélé que les Dissidentes cherchaient exactement ce qu'il faisait. Il avait rejoint leur réseau — pas pour leur idéologie entièrement, mais parce que ses copies avaient besoin d'un endroit sécurisé." },
+      { titre: "Les copies", texte: "Il copie. Les archives se modifient. Ses copies préservent les originaux." }
+    ],
+    sorts: ['Mur de glace (Glace) — barrière défensive — protection d\'archive', 'Lance crystalline (Glace) — attaque précise — défense d\'urgence'],
+    relations: [
+      { id: 55, nom: "Thyval", type: "contact", note: "Contact Dissident. Ses copies vont dans ce réseau." },
+      { id: 53, nom: "Sylkra", type: "contact", note: "Observations sur le Gel qui enrichissent les archives." }
+    ],
+    lore_long: `Velkren copie secrètement les archives officielles de Crysalme avant que Keldris (57) les modifie. Il travaille depuis l'intérieur de la Monarchie.
+
+Il y a 5 ans, il a vu une modification effacer un original. Il a commencé à copier systématiquement.
+
+Si sa position est découverte, les copies Dissidentes seront l'unique préservation des originaux.`,
+  },
+
+  // ── 163 · ISKRAL ───────────────────────────────────────
+  163: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "Le Champ Gelé", texte: "Né dans les régions nord de Crysalme. Formation de garde du Champ Gelé depuis 20 ans. Un travail difficile dans des conditions extrêmes — mais il connaissait ces conditions depuis l'enfance." },
+      { titre: "L'observation", texte: "Il y a 3 mois, lors d'une patrouille de nuit, il avait vu une silhouette dans une zone du Champ où personne n'avait accès. La silhouette correspondait à Velsa (58) — une figure dont il avait entendu parler mais qu'il n'avait jamais rencontrée officiellement." },
+      { titre: "La non-action", texte: "Il était rentré de sa patrouille sans signaler. Il avait noté l'observation dans son carnet personnel — pas dans le registre officiel. Il n'avait pas expliqué pourquoi dans son carnet." },
+      { titre: "La question sans réponse", texte: "Il avait commencé à chercher une justification pour sa non-action — une raison professionnelle défendable. Il n'en avait pas trouvé de satisfaisante. Il avait arrêté de chercher." },
+      { titre: "La patrouille", texte: "Il patrouille. Il n'a pas revu Velsa (58). Sa non-action reste dans son carnet personnel." }
+    ],
+    sorts: ['Armure de glace (Glace) — protection cristalline — défense physique', 'Tempête de glace (Glace) — blizzard localisé — contrôle de zone'],
+    relations: [
+      { id: 58, nom: "Velsa", type: "contact", note: "A vu dans le Champ. N'a pas signalé. Lien ambigu." }
+    ],
+    lore_long: `Iskral garde le Champ Gelé au nord de Crysalme. Il y a 3 mois, il a vu Velsa (58) dans une zone interdite.
+
+Il n'a pas signalé. Il a noté l'observation dans son carnet personnel. Pas de justification professionnelle satisfaisante.
+
+Si quelqu'un découvre son observation non-signalée, il devra décider entre révéler Velsa ou expliquer son silence.`,
+  },
+
+  // ── 164 · SYRARIS ──────────────────────────────────────
+  164: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "Avant le gel", texte: "Elle existait avant Karath. Elle se souvient de Crysalme avant le Gel Éternel — une réalité différente de la stase actuelle." },
+      { titre: "Le gel de Karath", texte: "Elle avait vu le moment du gel de Karath — ce que les archives de la Monarchie décrivent comme \"l'acte fondateur du Gel Éternel\". Ce qu'elle a vu ne correspondait pas entièrement à cette description. Après le gel, elle avait cessé de parler directement." },
+      { titre: "Les métaphores", texte: "Les premières années, des Givrins lui avaient demandé de témoigner sur le gel. Ses métaphores les avaient dérangés — ils voulaient des faits, pas des images. Elle avait continué à répondre en métaphores." },
+      { titre: "400 ans", texte: "Après 400 ans, sa façon de parler était connue et acceptée comme une particularité. Les Givrins qui la consultaient savaient qu'ils recevraient des métaphores. Certains savaient les lire." },
+      { titre: "Les métaphores", texte: "Elle parle par métaphores. Quelques Givrins — Thyval (55), parfois — comprennent ce qu'elle dit." }
+    ],
+    sorts: ['Cristallisation féerique (Fée/Glace) — gel enchanté — contrôle de zone', 'Voile de glace (Glace) — illusion crystalline — désorientation'],
+    relations: [
+      { id: 52, nom: "Karath", type: "contact", note: "Figure centrale de sa mémoire de 400 ans. L'a vue se geler." }
+    ],
+    lore_long: `Syraris a 400 ans. Elle a vu le gel de Karath (52) en direct. Après le gel, elle a cessé de parler directement.
+
+Depuis 400 ans, elle ne parle que par métaphores. Ses métaphores décrivent ce qu'elle a vu — pour ceux qui savent les lire.
+
+Sa version du gel de Karath contredit la version officielle sur 3 points critiques. Personne n'a encore réussi à tout lire.`,
+  },
+
+  // ── 165 · THYVALRA ─────────────────────────────────────
+  165: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "La mécanique du Champ", texte: "Formation technique dans les systèmes de maintien du Champ Gelé. Elle avait commencé à travailler sur les structures de glace à 22 ans — un travail précis dans des conditions difficiles." },
+      { titre: "Les micro-fractures", texte: "Elle avait commencé à cataloguer les micro-fractures du Champ il y a 3 ans — une documentation systématique des variations structurelles. Les données montraient une progression." },
+      { titre: "La progression anormale", texte: "Ses données montraient que les micro-fractures progressaient 15% plus vite que les modèles standards. Elle avait cherché une explication technique — variations locales, conditions climatiques. Elle avait classé l'anomalie comme \"dans les marges de variation naturelle\"." },
+      { titre: "Sylkra", texte: "Elle avait appris que Sylkra (53) observait les mêmes micro-fractures et les interprétait différemment. Elle n'avait pas encore cherché à débattre de cette différence." },
+      { titre: "La maintenance", texte: "Elle maintient le Champ. Les micro-fractures progressent. Elle les attribue au gel naturel." }
+    ],
+    sorts: ['Armure de glace (Glace) — couche protectrice crystalline — défense', 'Frappe glaciale (Glace) — impact de glace — attaque de terrain'],
+    relations: [
+      { id: 53, nom: "Sylkra", type: "contact", note: "Observations partagées, interprétations divergentes." }
+    ],
+    lore_long: `Thyvalra est mécanicienne du Champ Gelé à Crysalme. Elle observe les mêmes micro-fractures que Sylkra (53) — et les attribue au gel naturel.
+
+Les fractures progressent 15% plus vite que les modèles standards. Elle a classé cette anomalie comme "variations naturelles".
+
+Sylkra interprète les mêmes données comme une dégradation anormale. Elles ne se sont pas encore confrontées sur ce désaccord.`,
+  },
+
+  // ── 166 · VELKRIS ──────────────────────────────────────
+  166: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "L'astronomie", texte: "Formation en astronomie à Crysalme. Il avait commencé à s'intéresser aux alignements stellaires au moment du gel de Karath à 25 ans — en étudiant les archives historiques, pas en observant directement." },
+      { titre: "L'hypothèse", texte: "À 38 ans, il avait formulé une corrélation entre les données stellaires au moment du gel de Karath et un alignement particulier. La corrélation était suffisamment forte pour mériter une vérification. Il avait publié une note préliminaire." },
+      { titre: "L'hérésie", texte: "La Monarchie avait qualifié sa note d'\"hérétique\" — l'hypothèse stellaire réduisait le gel de Karath à un phénomène physique, ce qui était incompatible avec la version Monarchique. Il avait continué ses recherches de façon indépendante." },
+      { titre: "La prochaine occurrence", texte: "En calculant les cycles d'alignements, il avait identifié une date approximative pour un alignement similaire à celui du gel de Karath. Cette date était dans les 40 prochaines années. Il n'avait pas publié ce calcul." },
+      { titre: "L'astronome hérétique", texte: "Il observe. Ses données s'accumulent. La date qu'il a calculée se rapproche." }
+    ],
+    sorts: ['Faisceau stellaire givrin (Stellaire) — projection de lumière stellaire dans le froid — attaque précise', 'Cartographie céleste (Stellaire) — identification précise de position — avantage de terrain'],
+    relations: [
+      { id: 55, nom: "Thyval", type: "contact", note: "Comprend l'importance des recherches." },
+      { id: 52, nom: "Karath", type: "contact", note: "Archive historique centrale de ses données." }
+    ],
+    lore_long: `Velkris cherche l'explication stellaire du gel de Karath. Son hypothèse : un alignement astronomique a déclenché le gel. La Monarchie la considère hérétique.
+
+Il a calculé la date approximative d'un prochain alignement similaire — dans les 40 prochaines années. Il n'a pas publié ce calcul.
+
+Si son hypothèse est correcte, un nouveau gel est prévisible.`,
+  },
+
+  // ── 167 · SYLKREN ──────────────────────────────────────
+  167: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "Le droit Givrin", texte: "Formation juridique à Crysalme. Spécialisation dans les serments du Gel Éternel — un corpus légal unique qui n'existe nulle part ailleurs." },
+      { titre: "Les serments", texte: "Il avait commencé à appliquer les serments du Gel à 35 ans. La complexité du corpus l'avait absorbé entièrement — des siècles de jurisprudence, des précédents qui remontaient au moment du gel." },
+      { titre: "La famille anormale", texte: "Une famille avait contesté une obligation du serment — ses termes avaient évolué différemment de ce que la famille anticipait. Il avait appliqué les termes littéraux. La famille avait perdu. Il avait su que l'application était techniquement correcte et pragmatiquement dure." },
+      { titre: "L'application sans adaptation", texte: "Il avait compris que son travail était l'application, pas l'adaptation. Mais l'adaptation était peut-être nécessaire — les conditions du gel avaient changé en 300 ans. Il n'avait pas cherché l'adaptation." },
+      { titre: "La jurisprudence", texte: "Il juge. Les serments s'appliquent. La société tient." }
+    ],
+    sorts: ['Condamnation de glace (Glace) — gel localisé — immobilisation judiciaire', 'Barrière de serment (Glace) — formation défensive — protection de position'],
+    relations: [
+      { id: 55, nom: "Thyval", type: "contact", note: "Questions sur le Gel qui touchent parfois à sa jurisprudence." }
+    ],
+    lore_long: `Sylkren est juge des serments du Gel Éternel à Crysalme. Il applique les obligations légales que les familles des soldats gelés ont contractées lors du gel.
+
+Ces serments ont des siècles. Il les applique tels qu'ils ont été écrits, sans adapter au contexte actuel.
+
+Si les conditions du Gel changent, sa jurisprudence sera confrontée à une situation sans précédent.`,
+  },
+
+  // ── 168 · THYRKRA ──────────────────────────────────────
+  168: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "Crysalme", texte: "Née à Crysalme dans une famille de guides du Champ. Elle avait appris les galeries sous-glaciaires depuis l'enfance — une connaissance transmise dans la famille." },
+      { titre: "Les Dissidentes", texte: "Les Dissidentes l'avaient approchée à 25 ans. Sa connaissance des galeries était exactement ce dont elles avaient besoin pour maintenir des communications avec Crysalme. Elle avait accepté." },
+      { titre: "La galerie instable", texte: "Une galerie qu'elle utilisait régulièrement avait montré des signes d'instabilité — des craquements, des micro-effondrements. Elle avait changé de route. La connexion avec les fractures que Sylkra observait ne lui était pas venue." },
+      { titre: "Les fractures", texte: "Elle avait entendu des observations de Sylkra (53) sur les micro-fractures du Champ. Elle avait commencé à lier ses observations de terrain aux données de Sylkra. La connexion était préoccupante." },
+      { titre: "Les galeries", texte: "Elle voyage. Ses routes continuent. Les galeries se dégradent à un rythme qu'elle suit maintenant activement." }
+    ],
+    sorts: ['Navigation glaciaire (Glace) — déplacement dans les galeries de glace — mobilité extrême', 'Frappe de glace (Glace) — attaque directe — défense en tunnel'],
+    relations: [
+      { id: 162, nom: "Velkren", type: "contact", note: "Les copies d'archives passent par ses routes." },
+      { id: 54, nom: "Aethren", type: "contact", note: "Contact extérieur desservi par ses routes." }
+    ],
+    lore_long: `Thyrkra transporte des messages entre Crysalme et les réseaux extérieurs via les galeries sous le Champ Gelé. Les gardes du Champ ne surveillent pas ces passages.
+
+Ses galeries montrent des micro-fractures liées à la dégradation que Sylkra (53) observe. Elle suit leur progression avec préoccupation.
+
+Si une galerie s'effondre pendant un transit, sa route est coupée.`,
+  },
+
+  // ── 169 · VELSKRA ──────────────────────────────────────
+  169: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "Le Spectre", texte: "Né avec un élément Spectre qui se manifestait dans une direction inhabituellement — vers la perception de présences passées plutôt que de présences cachées. Il avait commencé à entendre des voix à 15 ans." },
+      { titre: "Les soldats", texte: "À 30 ans, il avait commencé à identifier les voix qu'il entendait avec les soldats gelés du Champ. En croisant ses descriptions avec les archives de Karath (52), il avait trouvé des correspondances précises." },
+      { titre: "Le scepticisme", texte: "La Monarchie avait refusé de le prendre au sérieux — un médium qui prétend communiquer avec des soldats gelés était une perturbation, pas une ressource. Quelques familles de soldats gelés l'avaient consulté discrètement." },
+      { titre: "Les messages", texte: "Ce que les soldats lui communiquaient incluait des détails sur les circonstances du gel — des détails que les archives officielles ne contenaient pas. Cette information non-archivée renforçait sa crédibilité — mais elle posait aussi des questions sur le gel lui-même." },
+      { titre: "Le médium", texte: "Il reçoit. Les soldats lui transmettent. Il n'est pas certain de savoir quoi faire de tout ce qu'il entend." }
+    ],
+    sorts: ['Passage spectral (Spectre) — traversée de surface — mobilité défensive', 'Voix des gelés (Spectre) — manifestation de présences — désorientation psychique'],
+    relations: [
+      { id: 58, nom: "Velsa", type: "contact", note: "Activités autour du Champ Gelé qui créent un contexte partagé." },
+      { id: 52, nom: "Karath", type: "contact", note: "Archives centrales vérifiées contre ses descriptions." }
+    ],
+    lore_long: `Velskra affirme entendre les soldats gelés du Champ Gelé de Crysalme. Ses descriptions correspondent aux archives historiques de personnes mortes avant sa naissance.
+
+La Monarchie ne le prend pas au sérieux. Les familles des soldats le consultent discrètement.
+
+Ce que les soldats lui disent sur les circonstances du gel contient des détails non-archivés.`,
+  },
+
+  // ── 170 · ISKREN ───────────────────────────────────────
+  170: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "Les archives du Gel", texte: "Formation d'archiviste à Crysalme avec spécialisation dans les procédures du Gel Éternel. Il avait commencé à gérer les requêtes de dégel à 28 ans — en croyant qu'il traiterait des cas résolus." },
+      { titre: "Les 47 requêtes", texte: "Il avait hérité d'un registre de requêtes accumulées depuis l'an -312. Son prédécesseur les avait transmises. Son prédécesseur avant lui les avait transmises. Toutes attendaient les mêmes conditions." },
+      { titre: "La première famille", texte: "Une famille avait demandé une exception pour sa requête — le soldat gelé était le dernier descendant, la lignée s'éteignait si rien n'était fait. Il avait appliqué la procédure. La famille avait perdu sa lignée." },
+      { titre: "L'attente permanente", texte: "À 40 ans, il avait compris que les conditions de la procédure de dégel n'avaient aucune date probable de réalisation. Il avait écrit une note interne suggérant une révision. La note était dans ses archives, en attente de traitement." },
+      { titre: "Les requêtes", texte: "Il archive. Les requêtes s'accumulent. Les conditions ne se produisent pas." }
+    ],
+    sorts: ['Sceau de glace (Glace) — gel localisé d\'une zone — contrôle de terrain', 'Barrière d\'archives (Glace) — formation défensive dense — protection'],
+    relations: [
+      { id: 55, nom: "Thyval", type: "contact", note: "Comprend l'absurdité de la position d'Iskren sur les requêtes de dégel." },
+      { id: 54, nom: "Aethren", type: "contact", note: "Lien via les familles de soldats cherchant des réponses à l'extérieur." }
+    ],
+    lore_long: `Iskren gère les requêtes de dégel des familles de soldats gelés à Crysalme. Il existe une procédure — elle nécessite des conditions précises. Ces conditions ne se sont pas produites depuis l'an -312.
+
+47 requêtes attendent dans ses archives. La plus ancienne a 314 ans.
+
+Il a écrit une note suggérant une révision de la procédure. La note est dans ses archives, en attente de traitement.`,
+  },
+
+  // ── 171 · SYRVAL ───────────────────────────────────────
+  171: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "Le commerce", texte: "Famille de commerçants Givrins. Elle avait commencé à voyager entre Crysalme et les régions tempérées à 20 ans — d'abord pour son père, puis pour son propre compte." },
+      { titre: "La demande", texte: "Elle avait identifié une niche : les Givrins voulaient des produits des régions chaudes — des expériences sensorielles différentes du froid permanent. Elle avait construit un réseau d'approvisionnement." },
+      { titre: "Les taxes de passage", texte: "La Monarchie avait imposé des taxes sur les produits chauds importés — une décision qui visait à contrôler les influences extérieures. Thyskra (161) l'avait aidée à naviguer dans les procédures. Ses marges avaient diminué. Elle avait continué." },
+      { titre: "La dépendance au gel", texte: "Elle avait compris que son commerce existait grâce à l'isolement de Crysalme. Si les conditions de Crysalme changeaient — si le gel se résolvait — sa niche disparaîtrait. Cette réalisation avait été inconfortable." },
+      { titre: "Le commerce neutre", texte: "Elle importe. Elle vend. Elle maintient sa neutralité. Les marges sont stables." }
+    ],
+    sorts: ['Frappe commerciale (Glace) — impact rapide — défense personnelle', 'Barrière marchande (Glace) — formation défensive temporaire — protection de marchandises'],
+    relations: [
+      { id: 161, nom: "Thyskra", type: "contact", note: "Facilite les passages aux points de contrôle pour son commerce." }
+    ],
+    lore_long: `Syrval importe des produits chauds dans Crysalme — des épices, des textiles, des denrées des régions tempérées. Son commerce répond à une demande réelle.
+
+Son commerce dépend de l'isolement de Crysalme. Si le Gel Éternel se résolvait, sa niche disparaîtrait.
+
+Elle vend à tous, indépendamment des factions. Sa neutralité est économique.`,
+  },
+
+  // ── 172 · THYVALRIS ────────────────────────────────────
+  172: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "La Fée de Crysalme", texte: "Née à Crysalme 200 ans avant la présente, avec un élément Fée inhabituellement actif pour une Givrine. Elle avait commencé à servir la Monarchie à 30 ans — d'abord comme assistante, puis comme conseillère." },
+      { titre: "Le premier conseil", texte: "Ses 50 premières années de conseil avaient été précises — elle adaptait ses recommandations au contexte politique du moment. À 80 ans, son conseil était reconnu comme indispensable." },
+      { titre: "La stagnation", texte: "À 100 ans, un conseiller plus jeune avait noté que ses recommandations répétaient des formulations de 20 ans avant. Elle avait répondu que les principes de gouvernance ne changeaient pas. Le conseiller avait eu tort de ne pas insister." },
+      { titre: "Le conseil figé", texte: "Elle avait compris à 170 ans que son conseil était devenu formulaire. Elle avait choisi de le maintenir — la continuité était une valeur en elle-même. La Monarchie avait besoin de stabilité, pas d'innovation." },
+      { titre: "La conseillère", texte: "Elle conseille. Keldris l'écoute. Le conseil est le même qu'il y a 150 ans." }
+    ],
+    sorts: ['Aura royale (Fée) — présence de commandement — déstabilisation psychique', 'Frappe givrée (Glace) — impact de froid — attaque directe'],
+    relations: [
+      { id: 57, nom: "Keldris", type: "hierarchie", note: "Monarque actuel qu'elle conseille depuis plusieurs décennies." },
+      { id: 34, nom: "Leth", type: "contact", note: "Réseau Fée lointain rappelant l'évolution du monde extérieur." }
+    ],
+    lore_long: `Thyvalris conseille la Monarchie Givrine depuis 200 ans. Elle a traversé plusieurs générations de monarques. Son expérience est réelle.
+
+Son conseil n'a pas changé depuis 150 ans. Les mêmes formulations, les mêmes principes, appliqués à des situations qui ont évolué.
+
+Keldris (57) la suit. La Monarchie gouverne avec un conseil conçu pour un monde légèrement différent.`,
+  },
+
+  // ── 173 · VELSKREN ─────────────────────────────────────
+  173: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "Les archives", texte: "Formation d'archiviste à Crysalme. Il avait été recruté par la Monarchie à 25 ans pour sa précision. Il avait accepté avec une intention différente." },
+      { titre: "Les Dissidentes", texte: "Il avait été approché par les Dissidentes à 30 ans — ils avaient besoin de quelqu'un dans les archives officielles. Son recrutement par la Monarchie avait été leur opportunité. Il avait commencé à ralentir les procédures discrètement." },
+      { titre: "L'ordre de silence", texte: "Keldris avait émis un ordre de silence sur les recherches de Sylkra (53) — les observations de micro-fractures devaient être classifiées. Velskren avait fait passer l'ordre à travers 4 sous-registres différents. Il avait pris 6 semaines à atteindre le bon bureau. Sylkra avait eu le temps de partager ses données." },
+      { titre: "La limite", texte: "Il avait compris que son méthode avait une limite — il pouvait ralentir, pas bloquer. Un ordre suffisamment urgent passerait malgré ses délais. Sa valeur était dans les marges de temps, pas dans les blocages complets." },
+      { titre: "L'archiviste discret", texte: "Il archive. Il ralentit. Personne ne sait encore." }
+    ],
+    sorts: ['Frappe de glace (Glace) — impact direct — attaque de terrain', 'Bouclier givré (Glace) — protection défensive — survie'],
+    relations: [
+      { id: 57, nom: "Keldris", type: "adversaire", note: "Dont les ordres il ralentit via dysfonctionnements administratifs plausibles." },
+      { id: 53, nom: "Sylkra", type: "contact", note: "Contact Dissident lui indiquant quels documents doivent être prioritairement ralentis." }
+    ],
+    lore_long: `Velskren est archiviste dans l'administration de la Monarchie Givrine. Il est aussi Dissident.
+
+Il ralentit les ordres de silence de Keldris (57) en faisant "disparaître" des documents dans des sous-registres. Les documents ne sont pas détruits — ils sont retardés. Le temps gagné permet aux Dissidentes d'agir.
+
+Personne ne sait encore. Les délais ressemblent à des inefficacités ordinaires.`,
+  },
+
+  // ── 174 · ISKRA ────────────────────────────────────────
+  174: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "La pêche sous-glaciaire", texte: "Né dans une famille de pêcheurs sous-glaciaires de Crysalme. La pêche sous la glace du Champ était une tradition de famille — les passages sous la surface gelée abritaient des espèces Givrin uniques." },
+      { titre: "Les veines", texte: "À 41 ans, il avait commencé à cartographier les craquelures du Champ qu'il traversait pour pêcher. Il les avait appelées \"les veines\" — une métaphore de pêcheur. Sa carte avait commencé comme un aide-navigation." },
+      { titre: "La veine fermée", texte: "Une de ses routes de pêche avait été bloquée par l'extension d'une veine — une craquelure qui s'était élargie jusqu'à rendre le passage impossible. Il avait trouvé une autre route. Il n'avait pas cherché d'explication." },
+      { titre: "Sylkra", texte: "Sylkra (53) lui avait envoyé un message demandant à voir sa carte. Il avait entendu que ses \"veines\" correspondaient à ce qu'elle observait comme micro-fractures. La connexion entre son vocabulaire de pêcheur et les données scientifiques de Sylkra lui avait semblé étrange." },
+      { titre: "Le pêcheur", texte: "Il pêche. Les veines bougent. Sylkra attend sa carte." }
+    ],
+    sorts: ['Navigation glaciaire (Glace) — déplacement dans des espaces glacés étroits — mobilité extrême', 'Frappe sous-glaciaire (Glace) — impact depuis un angle bas — surprise de terrain'],
+    relations: [
+      { id: 53, nom: "Sylkra", type: "contact", note: "Cherche à comparer sa carte des veines avec ses données de micro-fractures." }
+    ],
+    lore_long: `Iskra pêche sous la glace du Champ Gelé depuis plus de 40 ans. Il appelle les craquelures dans la glace "les veines" et les cartographie depuis 20 ans.
+
+Sa carte est plus détaillée que tout ce que la Monarchie possède sur les structures du Champ.
+
+Sylkra (53) veut comparer sa carte à ses données scientifiques. La corrélation pourrait changer la compréhension du Champ Gelé.`,
+  },
+
+  // ── 175 · THYRVALIS ────────────────────────────────────
+  175: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "L'histoire de Crysalme", texte: "Formation d'historien à Crysalme. Spécialisation dans le Gel Éternel — le corpus le plus riche et le plus complexe de l'historiographie Givrine." },
+      { titre: "La version officielle", texte: "Il avait été nommé historien officiel du Gel Éternel à 40 ans. Sa première tâche avait été de synthétiser les archives existantes en une version canonique. Il avait produit un document de référence qui était depuis devenu la base de toute histoire officielle du gel." },
+      { titre: "Le témoignage de Syraris", texte: "Quelqu'un lui avait transmis des extraits des témoignages de Syraris (164) — les métaphores de la Givrine-Fée de 400 ans. Il avait identifié les 3 points de divergence. Il avait conclu que les témoignages oraux d'un individu, même vieux de 400 ans, n'avaient pas la même valeur que les archives institutionnelles." },
+      { titre: "Les sources indépendantes", texte: "Thyval (55) lui avait signalé des sources indépendantes — des correspondances familiales non-officielles de familles de soldats gelés — qui corroboraient certains détails de Syraris sur les 3 points divergents. Il avait noté les sources. Il ne les avait pas intégrées dans sa version canonique." },
+      { titre: "L'historien officiel", texte: "Il écrit. Sa version fait foi. Les sources indépendantes sont dans ses notes." }
+    ],
+    sorts: ['Gel historique (Glace) — immobilisation de position — contrôle de terrain', 'Barrière d\'archives (Glace) — protection défensive — survie académique'],
+    relations: [
+      { id: 164, nom: "Syraris", type: "adversaire", note: "Témoin direct dont le témoignage contredit sa version officielle sur 3 points." },
+      { id: 55, nom: "Thyval", type: "contact", note: "A accès aux deux versions et aux sources indépendantes corroborant Syraris." }
+    ],
+    lore_long: `Thyrvalis est l'historien officiel du Gel Éternel à Crysalme. Sa version canonique du gel de Karath est la référence institutionnelle.
+
+Elle contredit celle de Syraris (164) sur 3 points précis. Syraris a 400 ans et était présente. Thyrvalis est né 145 ans après.
+
+Des sources indépendantes corroborent Syraris sur ces 3 points. Elles sont dans ses notes, pas dans sa version officielle.`,
+  },
+
+  // ── 176 · SAREVYN ──────────────────────────────────────
+  176: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'Isthme", texte: "Né à Virex dans une famille de commerçants de l'Isthme. Il avait appris très tôt que dans un carrefour entre des régions en conflit, la valeur la plus précieuse était de connaître les bonnes personnes." },
+      { titre: "Le réseau", texte: "Il avait commencé à construire des connexions informelles à 25 ans — d'abord pour faciliter son propre commerce, puis parce qu'il avait compris que les Dissidentes avaient besoin de quelqu'un qui connaissait tout le monde sans appartenir à personne." },
+      { titre: "La connexion qui a failli", texte: "Une connexion qu'il avait créée avait été interceptée — pas les deux personnes, mais l'intermédiaire. Il avait reconstruit sa procédure pour que les intermédiaires ne sachent pas pourquoi ils transmettaient un message." },
+      { titre: "La carte entière", texte: "Il avait compris que son réseau fonctionnait parce qu'il était le seul à voir la carte complète. Cette compréhension l'avait rendu indispensable — et vulnérable d'une façon que personne d'autre ne comprenait." },
+      { titre: "Le coordinateur", texte: "Il crée des connexions. L'Isthme se sature. Il prépare les personnes à ce qui vient." }
+    ],
+    sorts: ['Frappe neutre (Normal) — attaque directe sans signature élémentaire — invisible aux détecteurs', 'Esquive de contact (Normal) — déplacement réactif — survie'],
+    relations: [
+      { id: 1, nom: "Brasia", type: "contact", note: "Connexion extérieure à l'Isthme pour des ressources non-disponibles localement." },
+      { id: 49, nom: "Velath", type: "contact", note: "Routes de passage dans l'obscurité pour des extractions." }
+    ],
+    lore_long: `Sarevyn est coordinateur de réseau dans l'Isthme. Il met en contact des personnes qui ont des besoins complémentaires — sans que l'une sache l'identité complète de l'autre.
+
+Il est le seul point de convergence. Son réseau fonctionne parce qu'il voit la carte entière.
+
+Si quelque chose lui arrive, les connexions se coupent.`,
+  },
+
+  // ── 177 · THAREN ───────────────────────────────────────
+  177: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "La forge", texte: "Apprenti forgeron à l'Isthme depuis 15 ans. L'Isthme était un carrefour — des commandes variées, des matériaux de plusieurs régions. Il avait développé une expertise dans les alliages mixtes." },
+      { titre: "Les conteneurs", texte: "À 44 ans, l'Empire lui avait commandé des \"conteneurs de puissance\" — des dispositifs techniques pour stocker l'énergie élémentaire extraite d'Élus Feu. Il avait compris ce à quoi ils servaient. Il avait refusé." },
+      { titre: "La surveillance", texte: "Deux officiers impériaux s'étaient installés dans le quartier après son refus. Ils ne l'avaient pas arrêté — il était utile vivant. Mais son activité était suivie. Ses clients étaient notés." },
+      { titre: "Le compromis impossible", texte: "Il avait compris que vivre sous surveillance tout en maintenant son refus signifiait que chaque client devenait un risque — pour lui et pour eux. Son indépendance avait des coûts que ses clients payaient parfois sans le savoir." },
+      { titre: "La forge sous surveillance", texte: "Il forge. Les officiers notent. Il n'a pas refait de conteneurs." }
+    ],
+    sorts: ['Frappe de forge (Feu) — coup de marteau élémentaire — attaque directe', 'Mur de chaleur (Feu) — barrière thermique — défense de position'],
+    relations: [
+      { id: 267, nom: "Keshavel", type: "adversaire", note: "Officier impérial continuant à approcher des forgerons pour des dispositifs que Tharen refuserait." }
+    ],
+    lore_long: `Tharen a refusé de produire les conteneurs de puissance élémentaire commandés par l'Empire. Ces dispositifs extraient l'énergie des Élus Feu.
+
+Il vit sous surveillance depuis ce refus. Sa forge continue — des outils, pas des dispositifs d'extraction.
+
+Il a tracé une ligne. La maintenir sous surveillance quotidienne a un coût.`,
+  },
+
+  // ── 178 · VELOK ────────────────────────────────────────
+  178: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "Le commerce de l'Isthme", texte: "Famille de marchands dans l'Isthme. Il avait appris les routes commerciales depuis l'enfance — les équilibres entre Varkhôl, Thalassyr, et les régions moins stables." },
+      { titre: "L'administration", texte: "La Confédération l'avait recruté à 30 ans pour son expertise des routes locales. Il avait commencé à gérer les flux commerciaux officiels — une position qui lui donnait un accès aux décisions qui affectaient tout l'Isthme." },
+      { titre: "La route bloquée", texte: "Une faction avait exigé le blocage d'une route commerciale traversant un territoire contesté. Bloquer la route aurait déclenché une réaction d'une autre faction. Il avait trouvé un détour qui satisfaisait partiellement les deux — et n'avait complètement satisfait personne." },
+      { titre: "Les équilibres qui s'effritent", texte: "La saturation élémentaire de l'Isthme avait commencé à affecter des routes commerciales — des zones où les anomalies rendaient le transit dangereux. Ses équilibres reposaient sur des routes qui se réduisaient." },
+      { titre: "L'administrateur", texte: "Il gère. Les routes se réduisent. Les équilibres tiennent pour l'instant." }
+    ],
+    sorts: ['Flux d\'eau (Eau) — courant directionnel — contrôle de terrain', 'Barrière liquide (Eau) — défense fluide — protection adaptative'],
+    relations: [
+      { id: 59, nom: "Second Avatar", type: "contact", note: "Décisions politiques qui impactent indirectement les flux commerciaux gérés." }
+    ],
+    lore_long: `Velok administre les routes commerciales de l'Isthme pour la Confédération. L'Isthme est un carrefour entre des régions en tension — chaque décision sur les routes touche plusieurs factions.
+
+La saturation élémentaire de l'Isthme réduit progressivement les routes disponibles. Ses équilibres reposent sur moins de marge qu'avant.
+
+Tant que les routes fonctionnent, les factions coexistent. Quand elles s'effondrent, l'équilibre part avec elles.`,
+  },
+
+  // ── 179 · KARETH ───────────────────────────────────────
+  179: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "Le combat", texte: "Formé dans l'Isthme, il avait développé un élément Combat rare — la capacité à synthétiser les techniques élémentaires des adversaires. Il avait cherché un mentor à 18 ans. Il n'en avait pas trouvé dans l'Isthme." },
+      { titre: "Les sans-mentor", texte: "À 35 ans, il avait commencé à rencontrer des jeunes Élus dans la même situation qu'il avait connue — des pouvoirs sans encadrement. Il avait commencé à enseigner informellement. Les Dissidentes avaient formalisé son rôle." },
+      { titre: "L'élève incontrôlable", texte: "Un de ses élèves avait utilisé son enseignement pour une attaque non-provoquée contre un fonctionnaire impérial. L'attaque avait exposé le réseau de Kareth. Il avait dû déplacer ses sessions d'entraînement." },
+      { titre: "La responsabilité de l'enseignant", texte: "Il avait compris que enseigner la survie sans contexte éthique créait des compétences sans direction. Il n'avait pas changé son enseignement — il avait ajouté une conversation sur les conséquences, sans imposer de politique." },
+      { titre: "L'instructeur", texte: "Il enseigne. Ses élèves apprennent à survivre. Certains choisissent ensuite." }
+    ],
+    sorts: ['Synthèse de combat (Combat) — absorption et retournement de technique élémentaire adverse — contre-attaque', 'Frappe de précision (Combat) — coup ciblé sur point faible — dommage maximal'],
+    relations: [
+      { id: 275, nom: "Thyrekavel", type: "contact", note: "Instructeur avancé vers qui il oriente ses meilleurs élèves." },
+      { id: 59, nom: "Second Avatar", type: "contact", note: "Des élèves gravitent vers son influence après la formation de base." }
+    ],
+    lore_long: `Kareth forme des jeunes Élus sans mentor dans l'Isthme. Il enseigne la survie et le contrôle — pas la politique.
+
+Ses élèves apprennent à utiliser leurs éléments sans se blesser et sans se faire identifier. Ce qu'ils font après est leur choix.
+
+Il a appris à la dure qu'enseigner la compétence sans direction crée des responsabilités qu'il ne peut pas toujours assumer.`,
+  },
+
+  // ── 180 · KARESYL ──────────────────────────────────────
+  180: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'élément Electrique", texte: "Née dans une famille de techniciens de l'Isthme. Son élément Electrique s'était manifesté comme une aptitude naturelle pour les mesures électromagnétiques. L'Empire l'avait remarquée à 22 ans." },
+      { titre: "L'assignation", texte: "L'Empire l'avait assignée au suivi des anomalies de saturation élémentaire dans l'Isthme à 28 ans. Sa mission était de cartographier les flux anormaux. Elle avait accepté — c'était du travail scientifique avec des ressources significatives." },
+      { titre: "La carte et ses implications", texte: "Elle avait livré une carte de saturation qui avait conduit à une opération impériale dans un quartier de Virex. Elle n'avait pas été informée de l'opération. Elle avait compris a posteriori ce que sa carte avait permis." },
+      { titre: "La neutralité impossible", texte: "Elle avait voulu croire que mesurer était neutre. Ce n'était pas le cas. Ses données avaient des usages qu'elle ne contrôlait pas. Elle avait continué — parce qu'elle ne voyait pas comment refuser sans conséquences." },
+      { titre: "La technicienne", texte: "Elle mesure. Elle transmet. Elle ne regarde pas les opérations qui suivent." }
+    ],
+    sorts: ['Décharge électrique (Electrique) — impulsion de haute tension — attaque directe', 'Interférence (Electrique) — perturbation des flux élémentaires — désorientation'],
+    relations: [
+      { id: 62, nom: "Thyven", type: "contact", note: "Administration impériale locale recevant ses données de saturation." }
+    ],
+    lore_long: `Karesyl mesure les anomalies de saturation élémentaire dans l'Isthme pour l'Empire. Ses cartes sont précises.
+
+Elle transmet ses données sans décider de leur usage. Elle a compris qu'une de ses cartes avait permis une opération impériale. Elle continue à mesurer.
+
+La neutralité technique n'existe pas quand les données ont des usages.`,
+  },
+
+  // ── 181 · ORATHYN ──────────────────────────────────────
+  181: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'élément Psy", texte: "Son élément Psy s'était manifesté comme une empathie sensorielle — il percevait les états émotionnels des autres. À 18 ans, il avait compris que ce n'était pas utile sans entraînement. Il avait cherché un mentor." },
+      { titre: "La saturation", texte: "Il avait commencé à rencontrer des Élus en saturation à 30 ans — des personnes dont les éléments avaient commencé à dépasser leur capacité de contrôle. Il avait développé des techniques adaptées. Aucune faction ne lui avait enseigné — il avait appris en traitant." },
+      { titre: "Le patient empire", texte: "Un Élu impérial en saturation l'avait consulté. Orathyn l'avait traité. L'Empire avait demandé un rapport sur l'état de l'Élu. Orathyn avait refusé — secret professionnel. L'Empire avait noté son refus." },
+      { titre: "La saturation systémique", texte: "Il avait commencé à voir des patterns — la saturation augmentait dans l'Isthme. Ce n'était pas des cas isolés. L'Isthme lui-même affectait les Élus qui y vivaient. La saturation n'était pas seulement individuelle." },
+      { titre: "Le thérapeute", texte: "Il traite. La saturation augmente. Sa liste d'attente s'allonge." }
+    ],
+    sorts: ['Stabilisation psychique (Psy) — rétablissement d\'équilibre élémentaire — soutien', 'Bouclier mental (Psy) — protection contre intrusion psychique — défense'],
+    relations: [
+      { id: 266, nom: "Vashera", type: "contact", note: "Praticienne médicale opérant dans des zones similaires." },
+      { id: 232, nom: "Shiveth", type: "contact", note: "Professionnel de santé avec qui il partage des observations sur les effets de la saturation." }
+    ],
+    lore_long: `Orathyn traite les Élus en saturation élémentaire dans l'Isthme. Il opère indépendamment de toutes les factions — il ne demande pas d'allégeance en échange de soins.
+
+Il observe une saturation systémique croissante dans ses patients. Ce n'est plus seulement des cas individuels — l'Isthme lui-même affecte les Élus qui y vivent.
+
+Sa liste d'attente s'allonge. La saturation continue.`,
+  },
+
+  // ── 182 · VASHEK ───────────────────────────────────────
+  182: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'administration", texte: "Toute sa carrière dans l'administration de la Confédération à l'Isthme. Il avait commencé comme copiste et avait progressé vers la gestion des registres civils." },
+      { titre: "Les registres faux", texte: "À 47 ans, il avait découvert que les registres officiels des enfants de Virex contenaient des erreurs — des dates incorrectes, des identifications manquantes. En croisant avec d'autres sources, il avait compris que les erreurs n'étaient pas accidentelles." },
+      { titre: "La signalisation", texte: "Il avait tenté de signaler les discordances à sa hiérarchie. Sa hiérarchie lui avait dit que les registres de Thyven faisaient autorité. Il avait compris que signaler ne changerait rien." },
+      { titre: "Les vrais registres", texte: "Il avait commencé à maintenir ses propres registres — une copie exacte de ce qu'il pouvait vérifier comme vrai. Pas par opposition directe à Thyven. Par respect pour ce qu'un registre devait être." },
+      { titre: "Le bureaucrate discret", texte: "Il maintient ses registres. Personne ne sait encore qu'ils existent." }
+    ],
+    sorts: ['Frappe neutre (Normal) — attaque directe — défense personnelle', 'Endurance (Normal) — résistance physique — survie prolongée'],
+    relations: [
+      { id: 62, nom: "Thyven", type: "adversaire", note: "Dont les registres officiels falsifiés sont ce que Vashek documente les erreurs." },
+      { id: 63, nom: "Lysael", type: "contact", note: "Qui a besoin des vrais registres pour ses recherches sur les enfants de Virex." }
+    ],
+    lore_long: `Vashek maintient les vrais registres des 39 enfants de Virex. Les registres officiels de Thyven (62) sont incomplets ou falsifiés.
+
+Il l'a découvert à 47 ans. Il a signalé. Sa hiérarchie lui a dit que les registres de Thyven faisaient autorité. Il a commencé à maintenir les siens.
+
+Personne ne sait encore qu'ils existent. Ils contiennent des informations qui pourraient protéger ou exposer des dizaines de personnes selon qui y accède.`,
+  },
+
+  // ── 183 · KAREOL ───────────────────────────────────────
+  183: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "La géologie", texte: "Passionné de géologie depuis l'enfance dans l'Isthme. Il avait commencé à cartographier les formations rocheuses et souterraines à 25 ans — par curiosité personnelle, sans formation officielle." },
+      { titre: "Les anomalies", texte: "À 43 ans, il avait commencé à noter des formations inhabituelles dans certaines zones — des modifications de la composition du sol liées à des concentrations élémentaires. Il avait ajouté ces anomalies à ses cartes." },
+      { titre: "Les officiels", texte: "Il avait présenté ses cartes à un officiel de la Confédération qui les avait comparées aux cartes officielles. Les siennes montraient des zones que les cartes officielles n'indiquaient pas. L'officiel avait dit que ses données étaient non-vérifiées. Il avait compris que non-vérifiées signifiait gênantes." },
+      { titre: "La précision politique", texte: "Il avait compris que les cartes officielles de saturation avaient été établies avec des zones d'omission intentionnelles — des zones qui auraient révélé des concentrations d'Élus ou des activités que certaines factions ne voulaient pas documenter. Ses cartes les montraient." },
+      { titre: "Le cartographe", texte: "Il cartographie. Les zones de saturation s'élargissent. Ses cartes sont plus précises que jamais." }
+    ],
+    sorts: ['Frappe de sol (Sol) — impact de formation rocheuse — attaque de terrain', 'Ancrage (Sol) — fixation au terrain — résistance aux déplacements forcés'],
+    relations: [
+      { id: 243, nom: "Kaevorn", type: "contact", note: "Professionnel de terrain à qui il a transmis certaines observations." }
+    ],
+    lore_long: `Kareol cartographie les zones de saturation élémentaire de l'Isthme depuis 15 ans. Il est amateur — aucune affiliation institutionnelle.
+
+Ses cartes sont plus précises que les cartes officielles. Les cartes officielles ont des zones d'omission intentionnelles. Les siennes montrent ce qui est là.
+
+Il ne contrôle pas ce qu'on fera de ses cartes quand quelqu'un les demandera.`,
+  },
+
+  // ── 184 · THYSNA ───────────────────────────────────────
+  184: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "Virex", texte: "Née à Virex dans l'Isthme dans une famille ordinaire. Elle n'avait pas de connexion avec les Élus avant la naissance de son enfant." },
+      { titre: "L'enfant Élu", texte: "Son enfant avait développé un élément Élu à 8 ans. Elle avait d'abord essayé de le dissimuler. L'Empire avait commencé à identifier les enfants de Virex. Elle avait compris qu'elle ne pouvait pas protéger son enfant seule." },
+      { titre: "Les Dissidentes", texte: "Elle avait approché les Dissidentes à 35 ans. Ils avaient accepté son aide en échange d'une protection pour son enfant. Elle avait accepté. Ce n'était pas une conversion — c'était un accord." },
+      { titre: "La différence", texte: "Elle avait compris que d'autres membres des Dissidentes avaient des motivations différentes — des convictions sur la liberté des Élus, sur l'opposition à l'Empire. Elle croyait en certaines de ces convictions. Pas en toutes. Elle avait décidé que la distinction importait." },
+      { titre: "La mère Dissidente", texte: "Elle participe. Son enfant est protégé pour l'instant. Elle surveille les sorties." }
+    ],
+    sorts: ['Frappe de protection (Normal) — attaque défensive — protection d\'une cible', 'Esquive instinctive (Normal) — déplacement réactif — survie en terrain hostile'],
+    relations: [
+      { id: 63, nom: "Lysael", type: "contact", note: "Cherche à protéger les enfants de Virex — objectif partagé, motivations différentes." },
+      { id: 59, nom: "Second Avatar", type: "contact", note: "Décisions politiques affectant la sécurité de son enfant." }
+    ],
+    lore_long: `Thysna est Dissidente parce que son enfant est un des 39 enfants de Virex. Elle ne l'est pas par conviction idéologique.
+
+Elle a rejoint le mouvement quand elle a compris qu'elle ne pouvait pas protéger son enfant seule. C'est un accord, pas une conversion.
+
+Elle croit en certaines positions Dissidentes. Pas en toutes. Sa loyauté va à son enfant d'abord.`,
+  },
+
+  // ── 185 · ELVRYN ───────────────────────────────────────
+  185: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "Le vol", texte: "Son élément Vent s'était manifesté comme une aptitude naturelle pour la navigation aérienne. Il avait commencé à piloter à 20 ans — d'abord des liaisons commerciales régulières, puis des routes plus discrètes." },
+      { titre: "Le service discret", texte: "À 31 ans, un contact lui avait demandé de transporter une personne sans poser de questions. Il avait accepté. La personne était arrivée à destination. Il n'avait jamais su qui c'était. Il avait compris que ce service avait une valeur." },
+      { titre: "La question posée", texte: "Un officier impérial l'avait interrogé sur un passager qu'il avait transporté un an plus tôt. Il avait répondu honnêtement qu'il ne se souvenait pas du nom — parce qu'il n'avait jamais demandé. L'officier avait noté quelque chose. Il n'avait jamais été rappelé." },
+      { titre: "L'ignorance comme protection", texte: "Il avait compris que ne pas demander les noms n'était pas seulement sa préférence — c'était sa protection légale. Il ne pouvait pas révéler ce qu'il ne savait pas." },
+      { titre: "Le pilote", texte: "Il transporte. Il ne demande pas les noms. Son service continue." }
+    ],
+    sorts: ['Rafale de vent (Vent) — projection de vent concentré — repoussement', 'Vol d\'urgence (Vent) — déplacement aérien rapide — fuite ou repositionnement'],
+    relations: [
+      { id: 104, nom: "Sylvael", type: "contact", note: "Fournit des informations sur les vents de haute altitude pour ses routes." },
+      { id: 49, nom: "Velath", type: "contact", note: "Personnes utilisant ses services pour des extractions dans l'obscurité." }
+    ],
+    lore_long: `Elvryn transporte des personnes sans demander leurs noms depuis 10 ans. Son code : destination, pas identité.
+
+Il ne sait pas qui il a transporté. C'est une protection délibérée — il ne peut pas révéler ce qu'il ne sait pas.
+
+Il a peut-être transporté des personnes qui allaient faire des choses qu'il n'aurait pas approuvées. Son service est neutre. Ses conséquences ne le sont pas.`,
+  },
+
+  // ── 186 · KASEVORN ─────────────────────────────────────
+  186: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'administration impériale", texte: "Recruté par l'Empire à 26 ans pour ses aptitudes administratives. Il avait commencé par des registres commerciaux avant d'être transféré aux registres de population." },
+      { titre: "Virex", texte: "Assigné à Virex à 38 ans pour le recensement complet de la région. Il avait créé un registre exhaustif en 3 ans — des données sur chaque résident, incluant des indicateurs démographiques qui permettaient de recroiser avec des données élémentaires." },
+      { titre: "La demande d'accès", texte: "Quelqu'un avait demandé accès à son registre sans autorisation impériale officielle. Il avait refusé. La demande avait été formulée différemment via des canaux officiels. Il avait fourni les données dans le cadre de sa mission." },
+      { titre: "L'usage des données", texte: "Il avait entendu que des personnes avaient été localisées via des données démographiques similaires aux siennes. Il n'avait pas demandé si c'était ses données. Il n'avait pas voulu savoir." },
+      { titre: "Le recenseur", texte: "Il recense. Il maintient. Il transmet à Thyven. Il ne demande pas à quoi ça sert." }
+    ],
+    sorts: ['Frappe neutre (Normal) — attaque directe — défense personnelle', 'Endurance administrative (Normal) — résistance prolongée — survie'],
+    relations: [
+      { id: 63, nom: "Lysael", type: "contact", note: "Utilise ses données pour ses recherches sur les enfants de Virex — sans qu'il le sache." },
+      { id: 62, nom: "Thyven", type: "hierarchie", note: "Hiérarchie impériale locale recevant ses registres officiellement." }
+    ],
+    lore_long: `Kasevorn maintient le registre de recensement impérial de Virex et de l'Isthme. Son registre est exhaustif et précis.
+
+C'est la source principale que Lysael (63) utilise pour localiser et suivre les enfants de Virex. Il ne le sait pas.
+
+Il fait son travail. Il transmet ses données à Thyven (62). Il ne demande pas à quoi elles servent.`,
+  },
+
+  // ── 187 · THYRATH ──────────────────────────────────────
+  187: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'Isthme et le Feu", texte: "Né dans l'Isthme dans une famille Homme-Lien avec un élément Feu. Il avait grandi en entendant les récits de la Rupture Thermique — une catastrophe qui avait remis en question les équilibres entre éléments." },
+      { titre: "Le Parti du Feu", texte: "Il avait rejoint le Parti du Feu de l'Isthme à 25 ans — une branche locale d'un mouvement qui prenait racine dans plusieurs régions post-Rupture. Sa capacité à parler en public l'avait propulsé rapidement vers un rôle d'agitateur." },
+      { titre: "L'opposition", texte: "Un contre-argumentateur avait cité les destructions Feu pendant la Rupture Thermique. Thyrath avait répondu que le feu qui détruit est la même force que le feu qui chauffe — la question est qui le contrôle. La réponse était rhétoriquement efficace." },
+      { titre: "L'isthme comme terrain", texte: "Il avait compris que l'Isthme — un carrefour entre des régions d'éléments différents — était un terrain idéal pour son message. Si une saturation élémentaire se développait dans l'Isthme, ça confirmerait son argument sur la nécessité d'un élément dominant." },
+      { titre: "L'agitateur", texte: "Il parle. L'Isthme écoute. La saturation lui donne des arguments." }
+    ],
+    sorts: ['Harangue de feu (Feu) — projection de chaleur concentrée — attaque directe', 'Mur d\'argument (Feu) — barrière thermique — contrôle de foule'],
+    relations: [
+      { id: 11, nom: "Orkhael", type: "contact", note: "Leader Feu dont les positions renforcent le discours de Thyrath." },
+      { id: 3, nom: "Gravel", type: "contact", note: "Figure de survie illustrant l'argument de Thyrath." }
+    ],
+    lore_long: `Thyrath est agitateur pour le Parti du Feu dans l'Isthme. Il utilise la Rupture Thermique de Varkhôl comme preuve que l'élément Feu est celui de la survie et de la reconstruction.
+
+Sa lecture de la Rupture est sélective — elle ignore les destructions causées par le Feu pendant la crise. Elle est efficace.
+
+La saturation élémentaire de l'Isthme lui donne de nouveaux arguments. Chaque incident lui permet de demander "le Feu aurait-il géré ça?"`,
+  },
+
+  // ── 188 · SORVAEL ──────────────────────────────────────
+  188: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'eau de l'Isthme", texte: "Né dans l'Isthme dans une famille qui dépendait des sources locales. Il avait commencé à surveiller les niveaux d'eau à 20 ans — par nécessité pratique, puis par fascination scientifique." },
+      { titre: "L'hydrologiste", texte: "Il avait développé une expertise en hydrologie indépendante à 30 ans. Ses relevés covraient toutes les sources principales de l'Isthme — un réseau de mesure qu'il avait construit seul." },
+      { titre: "Les anomalies", texte: "Il y a 6 mois, ses mesures avaient commencé à montrer des fluctuations qui ne correspondaient pas aux modèles saisonniers. Il avait vérifié ses équipements. Ils étaient corrects. Les anomalies étaient réelles." },
+      { titre: "La corrélation géographique", texte: "En cartographiant les zones d'anomalies avec les cartes de saturation disponibles, il avait trouvé une corrélation géographique forte. La saturation élémentaire affectait les sources d'eau. L'ampleur de cette affectation impliquait une saturation plus importante que les estimations officielles." },
+      { titre: "L'hydrologiste inquiet", texte: "Il mesure. Les anomalies continuent. L'administration impériale n'a pas répondu à son signalement." }
+    ],
+    sorts: ['Flux d\'eau (Eau) — courant concentré — attaque directe', 'Tourbillon défensif (Eau) — rotation d\'eau — protection et désorientation'],
+    relations: [
+      { id: 62, nom: "Thyven", type: "contact", note: "Administration impériale contactée pour les anomalies — sans réponse." }
+    ],
+    lore_long: `Sorvael surveille les sources d'eau de l'Isthme depuis 12 ans. Depuis 6 mois, il observe des anomalies qui ne correspondent pas aux modèles saisonniers.
+
+Les zones d'anomalies correspondent géographiquement aux zones de saturation élémentaire. L'ampleur de la corrélation implique une saturation plus grave que les données officielles.
+
+Il a signalé à l'administration impériale. Pas de réponse. Il continue à mesurer.`,
+  },
+
+  // ── 189 · KAELYTH ──────────────────────────────────────
+  189: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'Isthme et la Convergence", texte: "Né dans l'Isthme, il avait été approché par la Convergence à 24 ans — son élément Normal et ses aptitudes relationnelles en faisaient un recruteur idéal. Il avait accepté l'offre." },
+      { titre: "Les enfants de Virex", texte: "Sa première mission avait été d'approcher des familles dont les enfants étaient Élus. Il avait appris à présenter la Convergence dans les termes qui fonctionnaient pour chaque famille. Ça avait fonctionné." },
+      { titre: "La famille qui a refusé", texte: "Une famille avait demandé des détails sur ce qui arrivait aux enfants après leur \"mise en sécurité\". Il n'avait pas eu de réponse satisfaisante. La famille avait refusé. Il avait eu une conversation avec Vashmael sur la façon de gérer ces questions." },
+      { titre: "Ce qu'il ne demande pas", texte: "Il avait compris qu'il fonctionnait mieux en ne demandant pas ce que la Convergence faisait avec les enfants qu'il lui amenait. Il avait pris cette décision consciemment. Il vivait avec." },
+      { titre: "Le recruteur", texte: "Il approche des familles. Il présente la Convergence. Il ne demande pas ce qui suit." }
+    ],
+    sorts: ['Frappe neutre (Normal) — attaque directe — défense personnelle', 'Désorientation verbale (Normal) — perturbation psychologique — avantage momentané'],
+    relations: [
+      { id: 63, nom: "Lysael", type: "contact", note: "Cherche aussi les enfants de Virex — pour les protéger plutôt que les recruter pour le Protocole." },
+      { id: 234, nom: "Vashmael", type: "hierarchie", note: "Superviseur Convergence lui assignant les familles à approcher." }
+    ],
+    lore_long: `Kaelyth recrute des familles d'enfants de Virex pour la Convergence dans l'Isthme. Il présente la Convergence comme une protection contre l'Empire.
+
+Il omet ce que la Convergence fait avec les enfants — le Protocole d'Identification. Il a choisi de ne pas poser la question.
+
+Sa bienveillance est réelle dans la forme. Sa fonction est instrumentale. La distinction commence à s'effacer avec le temps.`,
+  },
+
+  // ── 190 · THARVYN ──────────────────────────────────────
+  190: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'élément Electrique", texte: "Son élément Electrique s'était manifesté avec une aptitude naturelle pour les interférences — il pouvait perturber les systèmes électriques sans les détruire. Il avait commencé à l'utiliser à des fins pratiques avant de comprendre ses applications politiques." },
+      { titre: "Les registres", texte: "Les Dissidentes l'avaient approché à 23 ans quand l'enregistrement obligatoire des Élus avait commencé dans l'Isthme. Sa spécificité — corrompre sans détruire — était exactement ce dont ils avaient besoin." },
+      { titre: "La panne remarquée", texte: "Un technicien avait remarqué que les pannes se concentraient géographiquement près des quartiers d'Élus connus. Il avait changé ses patterns d'intervention — plus aléatoire dans la géographie, moins efficace mais moins identifiable." },
+      { titre: "Les effets secondaires", texte: "Un Élu avait été vérifié lors d'un contrôle — ses données avaient été corrompues par une interférence de Tharvyn. La vérification avait pris plus de temps parce que ses données ne correspondaient à rien. Il avait été retenu pendant des heures. Il n'avait pas été identifié — mais il avait eu peur. Tharvyn avait compris que ses effets secondaires existaient." },
+      { titre: "Le saboteur", texte: "Il sabote. Les registres sont corrompus. Personne n'a encore relié les pannes." }
+    ],
+    sorts: ['Décharge précise (Electrique) — interférence ciblée — sabotage de systèmes', 'Arc électrique (Electrique) — attaque directe — défense en urgence'],
+    relations: [
+      { id: 2, nom: "Cendrix", type: "adversaire", note: "Responsable de l'enregistrement obligatoire que Tharvyn sabote." },
+      { id: 59, nom: "Second Avatar", type: "contact", note: "Décisions politiques sur l'enregistrement que son sabotage ralentit." }
+    ],
+    lore_long: `Tharvyn sabote les registres d'enregistrement obligatoire des Élus dans l'Isthme. Son élément Electrique lui permet de corrompre des données sans détruire les systèmes — des pannes qui ressemblent à des défaillances techniques.
+
+Ses opérations protègent des Élus de l'identification immédiate. Elles créent aussi des données corrompues qui peuvent causer des complications lors de vérifications ultérieures.
+
+Personne n'a encore identifié le pattern. Pour l'instant.`,
+  },
+
+  // ── 191 · VELASK ───────────────────────────────────────
+  191: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'Isthme", texte: "Né dans l'Isthme dans une famille ordinaire. Il avait commencé à se déplacer à 32 ans après une rupture personnelle. Il n'était jamais vraiment revenu." },
+      { titre: "Le vagabondage", texte: "Il s'était construit une connaissance terrain de l'Isthme et des régions adjacentes — des routes, des abris, des personnes qui donnaient à manger sans poser de questions. Il vivait dans les marges de plusieurs sociétés simultanément." },
+      { titre: "La zone de saturation", texte: "Il y a 3 mois, il avait traversé une zone de saturation élémentaire profonde dans l'Isthme — une zone que les personnes sensées évitaient. Il avait besoin d'un raccourci. Il l'avait traversée. Il avait vu quelque chose." },
+      { titre: "Ce qu'il a vu", texte: "La manifestation élémentaire qu'il avait observée dans la zone de saturation ressemblait à une condensation — des éléments qui se regroupaient en quelque chose. Pas une explosion, pas un effondrement. Quelque chose de différent. Il ne savait pas si c'était le début de quelque chose ou la fin." },
+      { titre: "Le silence", texte: "Il continue à se déplacer. Il porte ce qu'il a vu. Il ne sait pas à qui le dire." }
+    ],
+    sorts: ['Survie de terrain (Normal) — adaptation à l\'environnement — défense instinctive', 'Frappe d\'opportunité (Normal) — attaque au moment optimal — efficacité minimale de ressources'],
+    relations: [
+      { id: 59, nom: "Second Avatar", type: "contact", note: "Décisions politiques sur des zones que Velask traverse régulièrement." }
+    ],
+    lore_long: `Velask est vagabond dans l'Isthme depuis 15 ans. Il y a 3 mois, il a traversé une zone de saturation élémentaire profonde.
+
+Il a vu quelque chose. Une condensation élémentaire d'une nature qu'il ne peut pas nommer avec les mots qu'il connaît.
+
+Il n'en a parlé à personne. Il ne sait pas si ce qu'il a vu a un nom. Il ne sait pas si ça importerait.`,
+  },
+
+  // ── 192 · KASYR ────────────────────────────────────────
+  192: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'élément Psy", texte: "Son élément Psy s'était manifesté comme une lecture des patterns élémentaires — elle percevait les concentrations et les flux d'éléments dans son environnement. À 20 ans, elle avait compris que cette lecture pouvait être traduite en probabilités futures." },
+      { titre: "Les prédictions", texte: "Elle avait commencé à faire des prédictions sur les Élus à 35 ans — d'abord pour des consultants privés, puis avec une réputation croissante. Les 4 prédictions exactes sur les enfants de Virex avaient établi sa crédibilité dans l'Isthme." },
+      { titre: "La prédiction fausse", texte: "Elle avait fait une prédiction qui s'était avérée incorrecte. Elle avait expliqué à son client que les patterns avaient changé entre la prédiction et l'événement. Le client n'avait pas compris la distinction. Elle avait remboursé." },
+      { titre: "Les patterns et les enfants", texte: "Elle avait commencé à identifier dans les patterns élémentaires de l'Isthme des signatures spécifiques qui correspondaient aux enfants de Virex. Ces signatures étaient plus fortes que les patterns individuels habituels. Quelque chose dans ces enfants était différent." },
+      { titre: "La voyante", texte: "Elle lit. Elle prédit. Ses prédictions sur les enfants de Virex continuent à s'avérer." }
+    ],
+    sorts: ['Lecture de patterns (Psy) — analyse de flux élémentaire — avantage informationnel', 'Brouillage psychique (Psy) — perturbation de perception — défense'],
+    relations: [
+      { id: 62, nom: "Thyven", type: "contact", note: "Administration impériale qui suit ses activités avec suspicion." },
+      { id: 275, nom: "Thyrekavel", type: "contact", note: "Instructeur trouvant une utilité dans ses prédictions pour identifier des Élus à distance." }
+    ],
+    lore_long: `Kasyr est voyante itinérante dans l'Isthme. Elle lit des patterns élémentaires présents et les traduit en probabilités futures.
+
+Ses prédictions sur les enfants de Virex se sont avérées exactes 4 fois. Elle ne comprend pas entièrement son propre mécanisme — les signatures de ces enfants sont différentes des patterns habituels.
+
+Sa réputation dépasse ses certitudes. Elle est honnête sur ses limites. Les personnes entendent ce qu'elles veulent entendre de toute façon.`,
+  },
+
+  // ── 193 · THALVEN ──────────────────────────────────────
+  193: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "La sécurité", texte: "Formation de sécurité dans l'Isthme. Il avait commencé à travailler pour la Confédération à 25 ans — une carrière dans la protection des communautés, pas dans la politique." },
+      { titre: "Virex", texte: "Assigné à Virex à 32 ans. Il avait développé des relations avec les résidents en 10 ans — une présence de terrain qui lui avait donné une compréhension du tissu social de la communauté, incluant les familles des enfants Élus." },
+      { titre: "L'identification obligatoire", texte: "L'Empire avait imposé l'enregistrement obligatoire des Élus. Sa mission officielle incluait maintenant le signalement des Élus non-enregistrés. Il avait regardé la liste des noms qu'il connaissait. Il avait transmis une liste incomplète. Il avait dit que c'était une erreur administrative." },
+      { titre: "La loyauté divisée", texte: "Il avait compris que sa liste incomplète était une décision, pas une erreur. Et que cette décision était une trahison de son institution. Il vivait maintenant avec les deux." },
+      { titre: "L'officier divisé", texte: "Il assure la sécurité. Il transmet des listes incomplètes. Il ne sait pas combien de temps il peut maintenir les deux." }
+    ],
+    sorts: ['Neutralisation (Combat) — immobilisation sans dommage permanent — sécurité', 'Frappe de service (Combat) — attaque directe de combattant professionnel — précision'],
+    relations: [
+      { id: 62, nom: "Thyven", type: "contact", note: "Administration impériale avec qui il collabore officiellement — et dont les ordres pourraient le forcer à choisir." },
+      { id: 258, nom: "Carevorn", type: "contact", note: "Contact comprenant les divisions de loyauté dans les structures de sécurité." }
+    ],
+    lore_long: `Thalven est officier de sécurité de Virex depuis 10 ans. Il a connu les familles des enfants de Virex — il les a vus grandir.
+
+Il a transmis des listes d'enregistrement incomplètes. Il a dit que c'était des erreurs administratives. C'était des choix.
+
+Sa loyauté est divisée entre la Confédération et ces familles. Il a évité jusqu'ici les situations qui forçaient un choix direct. Cette situation arrive.`,
+  },
+
+  // ── 194 · ORETHYN ──────────────────────────────────────
+  194: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'audit impérial", texte: "Formation dans l'administration centrale impériale. Il avait commencé par des audits financiers avant d'être spécialisé dans les audits démographiques et de recensement — les registres d'Élus, les données de population, les identifications." },
+      { titre: "La mission Virex", texte: "Il avait été assigné à Virex sur signalement de discordances mineures dans les rapports de Thyven — des statistiques qui ne correspondaient pas aux tendances régionales. Sa mission était de vérifier si ces discordances étaient des erreurs ou des falsifications." },
+      { titre: "La coopération de Thyven", texte: "Thyven lui avait fourni tous les registres demandés dans les délais réglementaires — avec une coopération un peu trop fluide pour un audit surprise. Orethyn avait noté la fluidité. Il cherchait ce que Thyven avait préparé pour être trouvé." },
+      { titre: "Ce qui manque", texte: "Ses audits révélaient que les registres de Thyven étaient complets dans leur forme mais lacunaires dans leur substance — des entrées pour des personnes sans historique suffisant, des adresses qui ne correspondaient pas à rien. Les données étaient trop propres." },
+      { titre: "L'auditeur", texte: "Il vérifie. Les registres sont trop propres. Il cherche ce qu'on a essayé de cacher dans ce qui paraît complet." }
+    ],
+    sorts: ['Frappe neutre (Normal) — attaque directe — défense personnelle', 'Analyse de terrain (Normal) — évaluation rapide des positions — avantage tactique'],
+    relations: [
+      { id: 62, nom: "Thyven", type: "adversaire", note: "Administrateur dont il vérifie les registres — coopération trop fluide pour être entièrement sincère." },
+      { id: 186, nom: "Kasevorn", type: "contact", note: "Source de données indépendante à croiser avec les registres de Thyven." }
+    ],
+    lore_long: `Orethyn est vérificateur impérial envoyé à Virex pour auditer les registres de Thyven (62). Sa présence signale que l'Empire ne fait pas entièrement confiance à son administrateur local.
+
+Les registres de Thyven sont trop propres. Des entrées complètes dans leur forme mais lacunaires dans leur substance. Des noms qui manquent là où il devrait y en avoir.
+
+Il cherche ce qu'on a préparé pour être trouvé — et ce qu'on a vraiment caché.`,
+  },
+
+  // ── 195 · VASKETH ──────────────────────────────────────
+  195: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'escrime", texte: "Carrière d'escrimeure compétitive depuis 15 ans. Elle avait remporté plusieurs tournois régionaux dans l'Isthme avant que la politique de l'Empire sur les Élus commence à affecter les compétitions — des Élus exclus des tournois, des réseaux de compétition perturbés." },
+      { titre: "La reconversion", texte: "Elle avait arrêté la compétition à 38 ans — non par choix sportif, mais parce que la situation dans l'Isthme avait rendu les compétitions moins prioritaires. Les Dissidentes lui avaient proposé un rôle qui utilisait ses compétences. Elle avait accepté." },
+      { titre: "La première extraction", texte: "Sa première extraction avait impliqué un enfant de 12 ans dont les parents avaient été arrêtés. Elle avait guidé l'enfant sur 8 kilomètres de nuit. Ils s'étaient séparés à un point de transfert. Elle ne savait pas ce qui était arrivé ensuite." },
+      { titre: "La visibilité partielle", texte: "Elle avait compris que son travail était un segment d'une chaîne dont elle ne voyait pas tous les maillons. Ce qu'elle faisait était réel et utile. Ce qu'il advenait des enfants après son segment était une autre question qu'elle avait choisi de ne pas poser de façon systématique." },
+      { titre: "La protectrice", texte: "Elle guide. Les enfants fuient. Elle prépare la prochaine route." }
+    ],
+    sorts: ['Frappe d\'escrimeure (Feu) — attaque rapide et précise — neutralisation minimale', 'Bouclier de chaleur (Feu) — protection thermique — défense de groupe en mouvement'],
+    relations: [
+      { id: 262, nom: "Thyskara", type: "contact", note: "Gère la partie suivante des extractions après le guidage initial." },
+      { id: 261, nom: "Sarevorn", type: "contact", note: "Coordonne les extractions à une échelle plus large." }
+    ],
+    lore_long: `Vasketh protège les enfants de Virex qui fuient. Elle les guide depuis leur domicile jusqu'aux points de transfert des réseaux d'extraction Dissidents.
+
+Ancienne escrimeure, elle utilise ses compétences de mouvement, d'évaluation des espaces et de réaction rapide pour ces extractions.
+
+Elle ne sait pas toujours ce qui arrive aux enfants après son segment. Elle a choisi de ne pas poser la question de façon systématique.`,
+  },
+
+  // ── 196 · SYLVORN ──────────────────────────────────────
+  196: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "Le jardin", texte: "Jardinier depuis l'âge de 15 ans dans l'Isthme. Son élément Plante minimal lui avait permis de développer une intuition pour les végétaux — pas une magie spectaculaire, mais une communication subtile avec ce qu'il cultivait." },
+      { titre: "L'anomalie", texte: "Il y a 6 mois, ses plantes avaient commencé à pousser plus vite que normal — des cycles de croissance comprimés, des floraisons hors-saison, des racines s'étendant dans des directions inhabituelles. Il avait cherché une cause dans ses pratiques. Ses pratiques n'avaient pas changé." },
+      { titre: "L'inexpliqué", texte: "Il avait consulté un botaniste local qui n'avait pas trouvé d'explication dans les conditions du sol, l'eau, ou le climat. Le botaniste avait suggéré que ses méthodes avaient dû changer sans qu'il s'en souvienne. Il savait que non." },
+      { titre: "Le jardin qui sait", texte: "Il avait commencé à penser que ses plantes répondaient à quelque chose qu'il ne pouvait pas percevoir directement. L'environnement avait changé d'une façon qu'il ne pouvait pas nommer. Ses plantes l'avaient senti avant lui." },
+      { titre: "Le jardinier inquiet", texte: "Il jardine. Les plantes poussent trop vite. Il observe et ne comprend pas." }
+    ],
+    sorts: ['Enchevêtrement végétal (Plante) — racines et tiges comme entraves — contrôle de terrain', 'Croissance accélérée (Plante) — végétation rapide comme barrière — défense'],
+    relations: [
+      { id: 255, nom: "Thaeval", type: "contact", note: "Résonance lointaine — connaissances botaniques Sylvan qui pourraient expliquer l'anomalie." }
+    ],
+    lore_long: `Sylvorn est jardinier dans l'Isthme depuis 48 ans. Son jardin pousse anormalement vite depuis 6 mois.
+
+Il n'est pas un Élu puissant — son élément Plante est minimal. Ce qu'il observe dépasse ce que son élément devrait produire.
+
+Ses plantes répondent à la saturation élémentaire de l'Isthme qu'il ne peut pas percevoir directement. Son jardin est un indicateur que personne n'a encore relié à d'autres données.`,
+  },
+
+  // ── 197 · KAREVYN ──────────────────────────────────────
+  197: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "La logistique", texte: "Formé dans l'administration logistique dans l'Isthme. Il avait travaillé pour des entreprises commerciales avant d'être approché par la Convergence — qui avait besoin de ses compétences pour des flux qu'elle ne pouvait pas confier à des logisticiens commerciaux ordinaires." },
+      { titre: "La Convergence", texte: "La Convergence lui avait présenté son rôle comme la coordination de flux de personnes vulnérables vers des \"sites de protection\". Il avait accepté l'offre — les conditions de travail étaient meilleures et le travail correspondait à ses compétences." },
+      { titre: "Les perturbations", texte: "Des perturbations dans ses flux — des extractions Dissidentes qui récupéraient des Élus avant qu'ils atteignent les sites — avaient commencé à affecter ses métriques. Il avait signalé les perturbations à Rhavel. Il ne savait pas exactement pourquoi ces Élus étaient \"récupérés\"." },
+      { titre: "Ce qu'il n'a pas demandé", texte: "Il avait entendu parler de \"Drain\" dans une conversation entre membres de la Convergence qu'il n'était pas censé entendre. Il n'avait pas demandé ce que ça signifiait. Il avait préféré ne pas savoir." },
+      { titre: "Le logisticien", texte: "Il coordonne les flux. Les Élus arrivent aux sites. Il ne demande pas ce qui se passe ensuite." }
+    ],
+    sorts: ['Frappe neutre (Normal) — attaque directe — défense personnelle', 'Analyse d\'itinéraire (Normal) — identification rapide des routes et des obstacles — avantage logistique'],
+    relations: [
+      { id: 241, nom: "Rhavel", type: "contact", note: "Responsable des sites de Drain à qui il transmet des personnes." },
+      { id: 63, nom: "Lysael", type: "contact", note: "Activités contre le Protocole créant des perturbations dans ses flux logistiques." }
+    ],
+    lore_long: `Karevyn gère les flux logistiques de personnes vers les sites de Drain de la Convergence dans l'Isthme. Son travail est la coordination — des routes, des horaires, des relais.
+
+Ces personnes sont des Élus destinés au Protocole d'Identification. Il ne s'est pas confronté à ce que ça signifie pour elles.
+
+Il a entendu le mot "Drain" dans une conversation qu'il n'était pas censé entendre. Il n'a pas demandé ce que ça signifiait.`,
+  },
+
+  // ── 198 · THYSKELN ─────────────────────────────────────
+  198: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'élément Spectre", texte: "Son élément Spectre s'était manifesté à 12 ans — il avait passé sa main à travers un mur pendant son sommeil. Il avait fallu 3 ans pour apprendre à le contrôler. La peur de passer involontairement à travers le sol l'avait accompagné jusqu'à 20 ans." },
+      { titre: "Le passage", texte: "Les Dissidentes l'avaient approché à 28 ans quand l'enregistrement obligatoire avait commencé dans l'Isthme. Sa capacité à guider des personnes à travers des points de contrôle était exactement ce dont ils avaient besoin. Il avait développé ses techniques en conditions réelles." },
+      { titre: "La limite", texte: "Il avait essayé de guider une personne à travers une surface plus dense qu'il n'avait l'habitude. Sa concentration avait vacillé à mi-passage. Ils avaient réussi — de justesse. Il avait cherché à comprendre ses limites précises avant de les repousser à nouveau." },
+      { titre: "La responsabilité du guidage", texte: "Il avait compris que guider une personne dans un passage spectral lui donnait une responsabilité totale pour cette personne pendant le transit. Si quelque chose se passait à mi-passage, la personne guidée n'avait aucune autonomie. Cette responsabilité était réelle d'une façon que le danger personnel n'était pas." },
+      { titre: "Le passeur", texte: "Il guide. Les Élus passent les points de contrôle. Il prépare la prochaine route." }
+    ],
+    sorts: ['Passage spectral (Spectre) — traversée de surface — mobilité extrême', 'Toucher fantôme (Spectre) — frappe depuis un état de semi-présence — attaque surprise'],
+    relations: [
+      { id: 274, nom: "Vethyskel", type: "contact", note: "Autre utilisateur Spectre dont la connaissance des passages complémente les siens." },
+      { id: 59, nom: "Second Avatar", type: "contact", note: "Décisions sur les zones de contrôle affectant les routes spectrales utilisées." }
+    ],
+    lore_long: `Thyskeln guide les Élus non-enregistrés hors de Virex via des routes spectrales dans l'Isthme. Son élément Spectre lui permet de traverser des surfaces et de guider des personnes en contact.
+
+Il a des limites qu'il connaît par expérience. Guider une personne à travers un passage lui donne une responsabilité totale pour elle pendant le transit.
+
+La saturation élémentaire de l'Isthme crée des interférences sur les routes spectrales. Il prépare des alternatives.`,
+  },
+
+  // ── 199 · VORETHYN ─────────────────────────────────────
+  199: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'administration de l'Isthme", texte: "Carrière administrative dans l'Isthme débutée à 22 ans. Il avait traversé plusieurs changements politiques — l'influence de l'Empire qui s'étendait, la Confédération qui réorganisait ses structures, les factions Élus qui se structuraient." },
+      { titre: "Les lettres", texte: "Il avait pris l'habitude de garder des copies de sa correspondance depuis ses 30 ans — pas par anticipation que ça aurait une valeur, mais parce qu'il avait l'impression que les détails étaient importants. 40 ans de lettres." },
+      { titre: "La retraite", texte: "Il avait pris sa retraite à 68 ans. Ses collègues avaient dit qu'ils n'avaient plus besoin de ses connaissances — il y avait des systèmes informatiques qui gardaient les données mieux que lui. Il savait que les systèmes informatiques ne gardaient pas ce que ses lettres gardaient." },
+      { titre: "L'avant et l'après", texte: "En relisant ses lettres de 40 ans plus tôt, il avait compris que l'Isthme qu'il décrivait était fondamentalement différent de l'Isthme actuel — pas seulement politiquement, mais dans sa nature élémentaire. Les descriptions qu'il faisait d'avant correspondaient à moins de saturation, moins d'anomalies. L'avant était documenté dans ses lettres." },
+      { titre: "Le gardien de lettres", texte: "Il vit dans ses souvenirs et ses lettres. Il attend que quelqu'un lui demande ce qu'il sait." }
+    ],
+    sorts: ['Frappe administrative (Normal) — coup sec et précis — défense minimale', 'Résistance du vieux (Normal) — endurance physique acquise par la vie — survie prolongée'],
+    relations: [
+      { id: 59, nom: "Second Avatar", type: "contact", note: "Décisions politiques ayant des équivalents dans les précédents historiques de sa mémoire." }
+    ],
+    lore_long: `Vorethyn a travaillé dans l'administration de l'Isthme pendant 40 ans. Il garde des lettres de toute cette période.
+
+Il a connu l'Isthme avant la Saturation élémentaire. Ses lettres documentent ce qu'il était — un état de comparaison que les données officielles ne permettent pas.
+
+Il attend que quelqu'un lui demande ce qu'il sait. Personne n'est encore venu lui poser les bonnes questions.`,
+  },
+
+  // ── 200 · THRENVOX ─────────────────────────────────────
+  200: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Le double élément", texte: "Son double élément Feu/Ténèbres s'était manifesté à 14 ans — une combinaison rare qu'il avait mis des années à contrôler. L'Empire l'avait identifié et recruté à 20 ans pour sa capacité unique." },
+      { titre: "Les missions Vel'Nox", texte: "Sa première mission dans Vel'Nox à 28 ans avait révélé l'utilité de son double élément — il pouvait naviguer dans l'obscurité profonde sans torche, tout en conservant la puissance thermique d'un Régulateur Pyrien. L'Empire avait compris ce qu'il avait." },
+      { titre: "Vethis", texte: "Vethis (46) avait identifié que les opérations impériales dans Vel'Nox utilisaient un agent capable d'obscurité. L'adversaire invisible était devenu l'adversaire nommé. Threnvox avait commencé à opérer avec des contremesures anti-identification." },
+      { titre: "L'interstice", texte: "Il avait compris que son utilité à l'Empire venait précisément de son impossibilité à appartenir à un seul monde. Cette position lui donnait accès mais pas ancrage. Il avait décidé que l'accès était plus utile." },
+      { titre: "Le Régulateur-Ombre", texte: "Il opère. Dans Vel'Nox quand l'Empire en a besoin. Dans Varkhôl quand il rentre. Il n'est complètement chez lui nulle part." }
+    ],
+    sorts: ['Frappe d\'ombre ardente (Feu/Ténèbres) — attaque combinant chaleur et obscurité — dommages élémentaires doubles', 'Immersion dans l\'obscurité (Ténèbres) — disparition dans l\'ombre — invisibilité tactique'],
+    relations: [
+      { id: 2, nom: "Cendrix", type: "hierarchie", note: "Commandant de régulation assignant ses missions." },
+      { id: 46, nom: "Vethis", type: "adversaire", note: "Chef Dissident Umbrien identifiant Threnvox comme menace dans Vel'Nox." }
+    ],
+    lore_long: `Threnvox est Régulateur-Ombre pour l'Empire — un Pyrien avec un double élément Feu/Ténèbres qui lui permet d'opérer dans l'obscurité profonde de Vel'Nox.
+
+Il est la ressource impériale pour les missions qui nécessitent à la fois la puissance thermique Pyrien et la capacité à naviguer dans l'obscurité Umbrien.
+
+Vethis (46) l'a identifié. L'interstice entre deux mondes est sa force et son absence d'appartenance.`,
+  },
+
+  // ── 201 · SHYRAVEL ─────────────────────────────────────
+  201: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Le double élément", texte: "Née à Vel'Nox avec un double élément Ténèbres/Feu — rare chez les Umbriens, qui ont généralement un élément d'obscurité mais pas thermique. Elle avait été recrutée par les Dissidentes à 18 ans pour sa combinaison." },
+      { titre: "La technique", texte: "Elle avait développé sa technique de combat en conditions réelles — l'approche dans l'obscurité, la frappe au Feu. Les premières années, les deux éléments interféraient l'un avec l'autre. Elle avait appris à les utiliser en séquence plutôt que simultanément." },
+      { titre: "L'adversaire thermique", texte: "Un Régulateur avait appris à la détecter via la chaleur résiduelle de son élément Feu dans l'obscurité. Elle avait développé une technique pour minimiser cette signature thermique quand elle approchait." },
+      { titre: "L'effet psychologique", texte: "Elle avait compris que l'invisibilité de l'approche suivie de la visibilité maximale de la frappe créait un effet psychologique sur ses adversaires — une peur de l'espace obscur autour d'eux. Cette peur était une arme séparée de la frappe elle-même." },
+      { titre: "La combattante", texte: "Elle combat pour les Dissidentes. Ses adversaires apprennent à craindre l'obscurité." }
+    ],
+    sorts: ['Approche d\'ombre (Ténèbres) — disparition dans l\'obscurité pour repositionnement — mobilité invisible', 'Frappe incendiaire (Feu) — attaque thermique concentrée depuis l\'obscurité — surprise maximale'],
+    relations: [
+      { id: 46, nom: "Vethis", type: "contact", note: "Chef Dissident dont elle applique les décisions en combat." }
+    ],
+    lore_long: `Shyravel est combattante Dissident à Vel'Nox avec un double élément Ténèbres/Feu. Elle utilise l'obscurité pour approcher — puis le Feu pour frapper.
+
+La séquence est sa signature. Personne ne la voit venir. Tout le monde voit la frappe. L'effet psychologique sur ses adversaires est une arme séparée.
+
+Son double élément la rend exceptionnelle et identifiable. Les adversaires expérimentés cherchent sa chaleur dans l'obscurité.`,
+  },
+
+  // ── 202 · DREKRYN ──────────────────────────────────────
+  202: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le double élément et le commerce", texte: "Né à Varkhôl avec un double élément qui lui avait permis de voyager vers Vel'Nox sans les difficultés habituelles des Pyriens dans l'obscurité. Il avait transformé cette capacité en avantage commercial à 22 ans." },
+      { titre: "Les routes mixtes", texte: "Il avait développé ses routes entre Varkhôl et Vel'Nox sur 15 ans. Des routes qui évitaient les points de contrôle habituels en utilisant des passages qu'il connaissait dans les deux environnements." },
+      { titre: "La marchandise douteuse", texte: "Un client lui avait remis une cargaison sans en préciser le contenu. À mi-route, il avait compris que la cargaison était liée à des Élus. Il avait livré. Il avait refusé ce client ensuite. Il n'avait pas demandé ce qu'il avait livré exactement." },
+      { titre: "La neutralité et ses limites", texte: "Il avait compris que la neutralité absolue était une fiction pratique — ses routes avaient des usages qu'il ne contrôlait pas. Il avait choisi de maintenir la neutralité parce que l'alternative — choisir — aurait fermé la moitié de ses routes." },
+      { titre: "Le marchand mixte", texte: "Il commercialise. Ses routes fonctionnent. Il ne demande pas tout ce qu'il transporte." }
+    ],
+    sorts: ['Frappe mixte (Feu/Ténèbres) — impact combinant chaleur et obscurité — attaque directe', 'Évasion dans l\'ombre (Ténèbres) — repositionnement dans l\'obscurité — survie commerciale'],
+    relations: [
+      { id: 66, nom: "Korvel", type: "contact", note: "Marchand Pyrien de Varkhôl avec qui il partage des informations de routes." },
+      { id: 146, nom: "Shevyr", type: "contact", note: "Marchand Umbrien neutre de Vel'Nox coordonnant les arrivées." }
+    ],
+    lore_long: `Drekryn est marchand Pyrien avec un double élément Feu/Ténèbres. Il opère des routes commerciales entre Varkhôl et Vel'Nox que son double élément lui permet de naviguer mieux que des marchands mono-élémentaires.
+
+Sa neutralité absolue lui permet de vendre à tous. Elle facilite aussi parfois des flux qu'il n'examinerait pas s'il le pouvait.
+
+Le pont ne choisit pas qui le traverse.`,
+  },
+
+  // ── 203 · NYREVAX ──────────────────────────────────────
+  203: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Le double élément dans Vel'Nox", texte: "Né à Vel'Nox avec un double élément Ténèbres/Feu — inhabituel dans une population majoritairement Ténèbres. Il avait été identifié par la Convergence à 16 ans et recruté à 20 ans pour ses capacités analytiques sur les interactions élémentaires." },
+      { titre: "L'analyse des purs", texte: "Il avait développé sa méthode d'identification des purs élémentaires sur 10 ans — une combinaison de perception directe et de patterns observés. Ses taux d'identification correcte étaient supérieurs à ceux de ses collègues." },
+      { titre: "Le faux positif", texte: "Il avait identifié un Élu comme \"pur Feu\" — une identification qui avait mené à une extraction. L'Élu s'était révélé être un double élément comme lui. Ses analyses avaient été révisées pour mieux distinguer les purs des doubles." },
+      { titre: "La contingence de sa position", texte: "Il avait compris que son utilité à la Convergence était sa protection. Si ses analyses devenaient moins précises, ou si un analyste plus capable était disponible, sa position changerait. Il maintient ses analyses avec rigueur." },
+      { titre: "L'analyste", texte: "Il analyse. Il identifie. Les Élus purs vont au Protocole." }
+    ],
+    sorts: ['Lecture d\'élément (Ténèbres/Feu) — analyse de signature élémentaire — avantage informationnel', 'Frappe analytique (Ténèbres) — attaque depuis l\'obscurité — surprise'],
+    relations: [
+      { id: 238, nom: "Sethara", type: "contact", note: "Autre analyste Convergence avec qui il partage des méthodes." },
+      { id: 48, nom: "Shael", type: "hierarchie", note: "Directeur Convergence dans Vel'Nox utilisant ses analyses." }
+    ],
+    lore_long: `Nyrevax est analyste de la Convergence dans Vel'Nox. Il identifie les Élus purs Feu et Ténèbres pour le Protocole d'Identification.
+
+Son double élément Ténèbres/Feu lui donne une compréhension intuitive des interactions élémentaires que ses collègues mono-élémentaires n'ont pas.
+
+Son utilité à la Convergence est sa protection. Il maintient ses analyses avec rigueur.`,
+  },
+
+  // ── 204 · VELRASK ──────────────────────────────────────
+  204: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le double élément", texte: "Né à Varkhôl avec un double élément Feu/Ténèbres — inhabituel pour un Pyrien. Il avait été repéré par les Dissidentes à 22 ans pour sa capacité unique." },
+      { titre: "Le sabotage", texte: "Il avait commencé par des sabotages mineurs — des équipements endommagés, des systèmes de communication interrompus. Sa technique avait évolué avec l'expérience et la connaissance plus précise de ses limites." },
+      { titre: "La signature thermique", texte: "Une enquête impériale avait révélé une signature thermique résiduelle sur un de ses sabotages — trop intense pour être accidentelle. Il avait compris qu'il laissait une trace. Il avait développé des techniques pour réduire la signature thermique résiduelle." },
+      { titre: "L'ambiguïté comme outil", texte: "Il avait compris que ses sabotages laissant une signature mixte Feu/Ténèbres étaient plus difficiles à attribuer qu'une signature purement thermique. Cette ambiguïté n'était pas un défaut de sa technique — c'était une fonctionnalité." },
+      { titre: "Le saboteur mixte", texte: "Il sabote. L'Empire cherche un Pyrien ou un Umbrien. Il est les deux." }
+    ],
+    sorts: ['Frappe d\'ombre incendiaire (Feu/Ténèbres) — attaque depuis l\'obscurité avec impact thermique — dommages de sabotage', 'Disparition dans l\'ombre (Ténèbres) — repositionnement après frappe — survie opérationnelle'],
+    relations: [
+      { id: 1, nom: "Brasia", type: "contact", note: "Cheffe Dissidente assignant les cibles de sabotage." },
+      { id: 149, nom: "Syrvel", type: "contact", note: "Passeure Dissidente facilitant ses déplacements entre Varkhôl et Vel'Nox." }
+    ],
+    lore_long: `Velrask sabote des infrastructures impériales à Varkhôl pour les Dissidentes. Son double élément Feu/Ténèbres lui permet une approche invisible et une frappe thermique.
+
+Ses sabotages laissent une signature mixte difficile à attribuer. L'Empire cherche un Pyrien ou un Umbrien. Il est les deux.
+
+Un analyste spécialisé dans les doubles éléments pourrait l'identifier là où les Régulateurs standards échouent.`,
+  },
+
+  // ── 205 · THYRVOX ──────────────────────────────────────
+  205: {
+    timeline_position: { an: -1, lieu: "Vel'Nox", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "L'artisanat dans l'obscurité", texte: "Né à Vel'Nox, il avait appris l'artisanat de son père — des objets pratiques pour la vie dans l'obscurité. Son double élément s'était manifesté à 18 ans et avait transformé son artisanat." },
+      { titre: "Les lanternes", texte: "Il avait développé sa première lanterne élémentaire à 30 ans — un objet qui utilisait son double élément pour projeter une lumière tiède sans être éblouissante. La demande à Vel'Nox avait été immédiate. Il avait développé une gamme." },
+      { titre: "L'intérêt impérial", texte: "Des Régulateurs impériaux avaient demandé à voir ses techniques de fabrication — ils pensaient que ses lanternes pourraient être utilisées pour des opérations de surveillance dans l'obscurité de Vel'Nox. Il avait dit que ses techniques étaient des secrets professionnels. Ils n'avaient pas insisté." },
+      { titre: "L'objet politique", texte: "Il avait compris que ses lanternes — des objets pratiques à son sens — étaient des objets politiques pour d'autres. Une lanterne qui donne de la lumière dans Vel'Nox sans éblouir est aussi une lanterne qui révèle des choses dans l'obscurité." },
+      { titre: "L'artisan", texte: "Il fabrique. Ses lanternes s'achètent. Il maintient ses secrets professionnels." }
+    ],
+    sorts: ['Frappe de lumière tiède (Ténèbres/Feu) — impact lumineux calibré — attaque non-éblouissante', 'Extinction (Ténèbres) — suppression de lumière — avantage dans l\'obscurité'],
+    relations: [
+      { id: 66, nom: "Korvel", type: "contact", note: "Client Pyrien de Varkhôl commandant des lanternes." }
+    ],
+    lore_long: `Thyrvox fabrique des lanternes élémentaires qui combinent Ténèbres et Feu dans son atelier à Vel'Nox. Ses lanternes projettent une lumière tiède sans éblouir des yeux adaptés à l'obscurité.
+
+Il vend dans les deux régions. Ses techniques sont des secrets professionnels.
+
+Ses lanternes sont pratiques pour lui. Elles sont politiques pour d'autres — une lumière dans l'obscurité révèle des choses que l'obscurité cachait.`,
+  },
+
+  // ── 207 · DRENVARK ─────────────────────────────────────
+  207: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "La forge Pyrien", texte: "Apprenti forgeron à Varkhôl dès 16 ans. Son double élément s'était manifesté à 19 ans et avait transformé ses capacités de forge — il pouvait travailler l'acier d'une façon que ses maîtres ne pouvaient pas lui enseigner." },
+      { titre: "L'Empire", texte: "L'Empire l'avait recruté à 26 ans pour sa forge militaire. Les conditions de travail, les ressources, la protection — tout était supérieur à ce qu'il aurait eu comme forgeron indépendant. Il avait accepté." },
+      { titre: "La commande spéciale", texte: "Skarith (9) avait commandé un type d'arme spéciale pour des opérations qui n'étaient pas décrites. Il avait forgé ce qui était demandé. L'arme avait été utilisée. Il n'avait pas demandé à quoi elle avait servi." },
+      { titre: "Le forgeron sans questions", texte: "Il avait compris qu'il avait adopté une politique de ne pas poser de questions sur les usages de ses armes. Cette politique lui permettait de forger efficacement. Elle avait aussi des implications qu'il préférait ne pas examiner." },
+      { titre: "Le forgeron militaire", texte: "Il forge. L'Empire est satisfait. Il ne demande pas les usages." }
+    ],
+    sorts: ['Frappe d\'acier fondu (Feu/Acier) — projectile d\'acier chauffé — attaque à distance', 'Armure d\'acier vivant (Acier) — couche protectrice métallique — défense renforcée'],
+    relations: [
+      { id: 9, nom: "Skarith", type: "contact", note: "Chef des Régulateurs utilisant ses armes en priorité." },
+      { id: 42, nom: "Thyss", type: "contact", note: "Administrateur commandant parfois des équipements spéciaux." }
+    ],
+    lore_long: `Drenvark est forgeron militaire impérial à Varkhôl. Son double élément Feu/Acier lui permet de travailler l'acier d'une façon que les forgerons standards ne peuvent pas atteindre.
+
+Il produit les armes des Régulateurs. Il ne demande pas les usages. Cette politique lui permet de forger efficacement.
+
+Elle a aussi des implications qu'il a choisi de ne pas examiner.`,
+  },
+
+  // ── 208 · KRESSOVAK ────────────────────────────────────
+  208: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "L'artisanat itinérant", texte: "Né à Varkhôl dans une famille d'artisans itinérants. Il avait commencé à voyager avec son père à 15 ans, apprenant à réparer des équipements variés dans des contextes variés. Son double élément avait émergé à 17 ans." },
+      { titre: "Les deux régions", texte: "À 28 ans, il avait commencé à étendre ses routes vers Ormn-Dur — une région avec des besoins en maintenance très spécifiques liés aux galeries. Son double élément lui permettait de travailler les alliages Chthoniens que les Pyriens standards ne maîtrisaient pas." },
+      { titre: "Le client problématique", texte: "Un Dissident lui avait demandé de réparer un équipement qui avait été endommagé lors d'un sabotage. Il avait réparé. Plus tard, un Régulateur lui avait demandé de réparer de l'équipement endommagé par le même sabotage — du côté de l'Empire. Il avait réparé aussi. Il avait compris la position dans laquelle il se trouvait." },
+      { titre: "Le réparateur de tout", texte: "Il avait accepté sa position : réparer pour tous signifiait qu'il contribuait à tous les camps. Il avait décidé que c'était préférable à ne réparer que pour un camp et être perçu comme partisan." },
+      { titre: "L'itinérant", texte: "Il voyage. Il répare. Il ne prend pas de position." }
+    ],
+    sorts: ['Frappe d\'artisan (Feu/Acier) — coup précis adapté à la faiblesse de l\'équipement adverse — efficacité maximale', 'Résistance métallique (Acier) — intégration défensive d\'acier — protection'],
+    relations: [
+      { id: 74, nom: "Dravel", type: "contact", note: "Artisan de Varkhôl partageant des informations sur les matériaux disponibles." },
+      { id: 144, nom: "Karveth", type: "contact", note: "Forgeron Chthonien d'Ormn-Dur connaissant les alliages spécifiques aux galeries." }
+    ],
+    lore_long: `Kressovak est artisan itinérant avec un double élément Feu/Acier. Il répare des équipements dans Varkhôl et Ormn-Dur sans demander l'affiliation de ses clients.
+
+Réparer est par définition un service neutre. Cette neutralité ne neutralise pas les effets de son travail — il contribue aux deux camps.
+
+Il a décidé que c'était préférable à choisir.`,
+  },
+
+  // ── 209 · THRAEVON ─────────────────────────────────────
+  209: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "L'ingénierie de tunnel", texte: "Formation d'ingénieur à Ormn-Dur depuis l'adolescence. Son double élément Acier/Feu lui avait permis de développer des insights sur la thermodynamique des structures souterraines que ses collègues mono-élémentaires ne pouvaient pas avoir." },
+      { titre: "Les structures anti-chaleur", texte: "Il avait commencé à concevoir des structures anti-chaleur à 35 ans — après un incident dans une galerie où une source thermique accidentelle avait compromis une structure existante. Il avait compris que les tunnels n'étaient pas conçus pour la chaleur." },
+      { titre: "Le financement refusé", texte: "La Technocratie avait d'abord refusé de financer ses structures — des scenarios hypothétiques ne justifiaient pas les coûts. Après la rupture Thermique de Varkhôl, son financement avait été accordé. Les scenarios étaient moins hypothétiques." },
+      { titre: "La Fosse", texte: "En analysant les besoins thermiques de l'ensemble d'Ormn-Dur, il avait identifié que les galeries proches de la Fosse Interdite seraient les premières à être compromises si une source de chaleur extrême entrait dans le réseau. Il avait priorisé ces galeries dans ses conceptions." },
+      { titre: "L'ingénieur prévoyant", texte: "Il conçoit. Les structures anti-chaleur se déploient progressivement. La Fosse reste le point de priorité." }
+    ],
+    sorts: ['Armure d\'acier thermique (Acier/Feu) — couche protectrice métallique chauffée — défense avancée', 'Frappe structurelle (Acier) — impact sur point faible de structure — destruction ciblée'],
+    relations: [
+      { id: 134, nom: "Vorath", type: "contact", note: "Autre ingénieur d'Ormn-Dur partageant des spécifications." }
+    ],
+    lore_long: `Thraevon conçoit des structures anti-chaleur pour les tunnels d'Ormn-Dur. Son double élément Acier/Feu lui donne une compréhension unique de la thermodynamique dans les espaces souterrains.
+
+Il a priorisé les galeries proches de la Fosse Interdite — les premières à être compromises si une source de chaleur extrême entre dans le réseau.
+
+Ses structures n'ont pas encore été testées en conditions réelles. La question n'est pas si ce jour viendra.`,
+  },
+
+  // ── 210 · VELDRAK ──────────────────────────────────────
+  210: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le double élément comme identité", texte: "Né à Varkhôl avec un double élément Feu/Acier. À 20 ans, il avait compris que sa nature mixte était vue comme une curiosité par les Pyriens purs et les Chthoniens purs. Il avait décidé d'en faire une position politique plutôt qu'une marginalité." },
+      { titre: "Le Parti de l'Acier", texte: "Il avait rejoint le Parti de l'Acier à 25 ans — un mouvement qui reconnaissait la valeur de l'élément Acier dans la politique de Varkhôl. Il y avait trouvé un espace pour développer son idéologie d'alliance Feu/Acier." },
+      { titre: "Le Chthonien sceptique", texte: "Un Chthonien potentiellement recruté lui avait demandé ce que les Pyriens apportaient aux Chthoniens — pas ce que les Chthoniens apportaient aux Pyriens. La question avait exposé un déséquilibre dans son discours. Il avait révisé son argumentaire." },
+      { titre: "L'alliance comme symétrie", texte: "Il avait compris que son argument d'alliance fonctionnait seulement si les deux côtés y gagnaient quelque chose de réel. Il avait développé un argument de réciprocité. L'idéologie était plus cohérente. Les recrutements étaient plus difficiles." },
+      { titre: "Le militant", texte: "Il recrute. Il milite. L'alliance reste un projet." }
+    ],
+    sorts: ['Poing d\'acier ardent (Feu/Acier) — frappe combinée chaleur et impact métallique — attaque signature', 'Bouclier de l\'alliance (Acier) — défense démonstrative — protection et argumentaire simultanés'],
+    relations: [
+      { id: 4, nom: "Thryss", type: "contact", note: "Leader Pyrien dont il cherche la validation pour l'idéologie d'alliance." },
+      { id: 9, nom: "Skarith", type: "contact", note: "Pyrien dont l'appui renforcerait l'alliance militairement." }
+    ],
+    lore_long: `Veldrak milite pour une alliance Feu/Acier dans Varkhôl. Son double élément est sa démonstration vivante — un Pyrien qui porte de l'Acier.
+
+Il recrute des Chthoniens pour cette vision. Les motivations pratiques de ses recrues et son idéologie ne s'alignent pas toujours.
+
+L'alliance reste un projet. La prochaine crise révèlera si elle tient sous pression.`,
+  },
+
+  // ── 211 · BRYSKETH ─────────────────────────────────────
+  211: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le double élément", texte: "Né à Varkhôl, son double élément s'était manifesté à 16 ans. Il avait découvert qu'il pouvait travailler l'acier directement avec ses mains — le déformer à temperature, le fragmenter. Les Dissidentes l'avaient recruté à 24 ans pour cette capacité spécifique." },
+      { titre: "Les convois", texte: "Sa première mission avait été de compromettre un convoi d'acier militaire — pas le détruire complètement, mais rendre le matériau inutilisable pour la forge militaire tout en le laissant paraître intact. La Technocratie d'Ormn-Dur avait reçu sa cargaison. Les forges impériales avaient rejeté l'acier défectueux." },
+      { titre: "Le convoyeur innocent", texte: "Un convoyeur avait failli être blessé dans une de ses opérations — un accident de timing. Il n'avait pas été blessé. Brysketh avait révisé ses procédures pour minimiser les risques pour les convoyeurs." },
+      { titre: "Les effets collatéraux", texte: "Il avait appris que certaines de ses compromissions de convois avaient affecté des livraisons d'acier vers des artisans indépendants — des forgerons comme Kressovak (208). Les effets collatéraux de son sabotage n'atteignaient pas uniquement l'Empire." },
+      { titre: "Le saboteur de convois", texte: "Il sabote. Les lignes d'approvisionnement sont moins fiables. Il affine ses cibles." }
+    ],
+    sorts: ['Projection d\'acier fondu (Feu/Acier) — fragments d\'acier chauffés projetés — attaque à distance', 'Déformation d\'acier (Acier) — déformation structurelle directe — sabotage d\'équipement'],
+    relations: [
+      { id: 1, nom: "Brasia", type: "contact", note: "Cheffe Dissidente assignant les convois prioritaires à saboter." },
+      { id: 136, nom: "Thyrvum", type: "contact", note: "Chthonien Dissident d'Ormn-Dur coordonnant les sabotages des deux côtés de la chaîne." }
+    ],
+    lore_long: `Brysketh sabote les lignes d'approvisionnement en acier impérial à Varkhôl pour les Dissidentes. Son double élément Feu/Acier lui permet de déformer l'acier des convois directement.
+
+Il cible l'approvisionnement, pas les personnes. Mais ses effets collatéraux atteignent parfois des artisans indépendants.
+
+Il affine ses cibles. L'approvisionnement militaire impérial est moins fiable qu'avant.`,
+  },
+
+  // ── 212 · KORRAVEN ─────────────────────────────────────
+  212: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "Le commerce d'Ormn-Dur", texte: "Né dans une famille de marchands à Ormn-Dur. Il avait commencé par vendre des matériaux miniers avant de comprendre que les armes avaient des marges supérieures et une demande plus constante." },
+      { titre: "La règle", texte: "À 30 ans, il avait établi sa règle contre l'Empire — non pas parce qu'il avait des convictions politiques, mais parce qu'un client Dissident lui avait expliqué qu'un marchand d'armes qui vendait aussi à l'Empire ne pouvait pas être fait confiance par les autres. Il avait gardé la règle." },
+      { titre: "L'offre impériale", texte: "L'Empire lui avait fait une offre significative pour une livraison d'armes. Il avait refusé. L'Empire n'avait pas insisté — il avait d'autres fournisseurs. Korraven avait maintenu sa crédibilité auprès de ses autres clients." },
+      { titre: "La règle commerciale", texte: "Il avait compris que sa règle contre l'Empire était ce qui lui permettait de vendre à tous les autres. Sans la règle, il perdrait la confiance de tous ses clients non-impériaux. La règle était une décision commerciale rationnelle, pas une décision éthique." },
+      { titre: "Le marchand d'armes", texte: "Il vend. Sa règle tient. Ses clients lui font confiance exactement parce qu'il a une règle visible." }
+    ],
+    sorts: ['Frappe d\'acier thermique (Acier/Feu) — impact métallique chauffé — attaque directe', 'Barrière d\'acier (Acier) — formation défensive dense — protection'],
+    relations: [
+      { id: 142, nom: "Vordrak", type: "contact", note: "Ingénieur Dissident d'Ormn-Dur et client régulier." },
+      { id: 202, nom: "Drekryn", type: "contact", note: "Marchand mixte Varkhôl/Vel'Nox fournissant l'accès à des marchés non-couverts." }
+    ],
+    lore_long: `Korraven est marchand d'armes indépendant à Ormn-Dur. Il vend à toutes les factions sauf à l'Empire.
+
+Cette règle n'est pas idéologique — elle est commerciale. Vendre à l'Empire lui ferait perdre la confiance de tous ses autres clients. La transparence de la règle est ce qui la rend crédible.
+
+Si l'Empire lui faisait une offre suffisamment importante, la nature commerciale de la règle deviendrait apparente.`,
+  },
+
+  // ── 213 · THRELVAK ─────────────────────────────────────
+  213: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "La stratégie", texte: "Formation militaire à Varkhôl dès 20 ans. Il avait développé une expertise en planification stratégique que son double élément alimentait — penser en ressources thermiques et métalliques simultanément lui donnait des angles que ses collègues mono-élémentaires ne voyaient pas." },
+      { titre: "Le plan de rupture", texte: "À 40 ans, il avait commencé à développer des scénarios de rupture avec l'Empire — non pas parce qu'une rupture était imminente, mais parce qu'il estimait qu'elle devenait probable. Avoir un plan était meilleur que ne pas en avoir." },
+      { titre: "L'optimisme requis", texte: "Ses premiers scénarios montraient que Varkhôl ne pouvait pas survivre à une rupture complète sans des ressources qu'il n'avait pas. Il avait révisé les scénarios pour identifier ce qui manquait. La révision était aussi un plan pour acquérir ces ressources." },
+      { titre: "La planification comme politique", texte: "Il avait compris que ses plans de rupture étaient aussi une politique — en planifiant pour la rupture, il préparait mentalement et matériellement Varkhôl à une indépendance qu'il n'avait pas encore. La planification était déjà un début de rupture." },
+      { titre: "Le stratège", texte: "Il planifie. Varkhôl accumule des autonomies. La rupture n'est pas encore." }
+    ],
+    sorts: ['Tactique de feu et d\'acier (Feu/Acier) — attaque coordinée combinant les deux éléments — complexité maximale', 'Barrière stratégique (Acier) — formation défensive planifiée — protection optimisée'],
+    relations: [
+      { id: 4, nom: "Thryss", type: "contact", note: "Leader Pyrien dont le soutien est nécessaire pour la base politique des plans." },
+      { id: 9, nom: "Skarith", type: "contact", note: "Chef militaire nécessaire pour la composante sécurité des plans." }
+    ],
+    lore_long: `Threlvak prépare Varkhôl à une rupture avec l'Empire. Ses plans incluent des scénarios d'autonomie économique, militaire et élémentaire.
+
+Il ne prépare pas une rupture imminente — il prépare une rupture quand les conditions seront optimales. La préparation est déjà un début d'indépendance.
+
+Ses plans ont des lacunes qu'il connaît. Il planifie pour les corriger avant que la rupture soit nécessaire.`,
+  },
+
+  // ── 214 · VASKRYN ──────────────────────────────────────
+  214: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "L'Empire et Varkhôl", texte: "Né à Varkhôl dans une famille Pyrien alignée avec l'Empire depuis la génération précédente. L'Empire lui avait offert une position à 22 ans en échange de loyauté et de résultats." },
+      { titre: "L'enregistrement", texte: "Il avait été assigné à l'application de l'enregistrement des Élus à 30 ans. Son quartier avait une population d'Élus significant. Son double élément lui avait permis d'approcher les situations de façon plus directe que ses collègues." },
+      { titre: "La famille connue", texte: "Une famille qu'il connaissait depuis l'enfance avait un enfant non-enregistré. Il avait appliqué la procédure d'enregistrement. La famille l'avait regardé d'une façon qu'il avait mise dans la catégorie \"implications personnelles à côté du travail\"." },
+      { titre: "Le travail et ses conséquences", texte: "Il avait compris qu'appliquer les lois d'enregistrement dans son propre quartier, avec des personnes qu'il connaissait, avait des conséquences relationnelles qu'il n'avait pas anticipées. Il avait maintenu sa position. Les relations avaient changé." },
+      { titre: "L'officier", texte: "Il applique. Les registres s'allongent. Les relations dans son quartier se changent." }
+    ],
+    sorts: ['Autorité thermique (Feu) — présence écrasante de chaleur — intimidation et contrôle', 'Saisie d\'acier (Acier) — emprise métallique — immobilisation'],
+    relations: [
+      { id: 2, nom: "Cendrix", type: "hierarchie", note: "Responsable régional assignant les quotas d'enregistrement." },
+      { id: 79, nom: "Kessav", type: "adversaire", note: "Élu évitant l'enregistrement avec l'aide de la communauté." }
+    ],
+    lore_long: `Vaskryn applique l'enregistrement obligatoire des Élus dans son quartier de Varkhôl pour l'Empire. Son double élément Feu/Acier lui donne une autorité physique qui rend les refus plus difficiles.
+
+Il applique les lois sur des personnes qu'il connaît depuis des années. Il met les implications personnelles dans la catégorie "à côté du travail".
+
+Les relations dans son quartier se transforment. Il continue à appliquer.`,
+  },
+
+  // ── 215 · DRETHVAK ─────────────────────────────────────
+  215: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "La forge de précision", texte: "Né à Varkhôl dans une famille de forgerons. Son double élément Feu/Acier lui avait permis de travailler des pièces d'une finesse que ses pairs ne pouvaient pas atteindre. Il avait naturellement dérivé vers les commandes les plus précises." },
+      { titre: "Le médical", texte: "Thessandra (10) l'avait contacté à 28 ans pour des instruments médicaux d'une précision qu'elle ne trouvait pas chez les forgerons généraux. Il avait développé des solutions. Sa clientèle médicale avait grandi." },
+      { titre: "L'usage douteux", texte: "Un client avait commandé un instrument qu'il avait d'abord présenté comme médical. En le livrant, il avait compris que l'usage prévu n'était pas entièrement médical — l'instrument permettait aussi une extraction élémentaire forcée. Il avait livré. Il avait refusé ce client ensuite." },
+      { titre: "La précision et la responsabilité", texte: "Il avait compris que des outils très précis avaient des usages très précis — et que la précision de son travail signifiait que les mauvais usages étaient aussi précis. La responsabilité était dans la livraison, pas dans la fabrication. Il avait décidé qu'il ne pouvait pas décider ça de façon absolue." },
+      { titre: "Le forgeron médical", texte: "Il fabrique. Les praticiens utilisent. Il sélectionne ses clients." }
+    ],
+    sorts: ['Frappe chirurgicale (Feu/Acier) — attaque précise sur point de faiblesse — dommage maximal minimal', 'Scalpel d\'acier (Acier) — coupe précise — neutralisation ciblée'],
+    relations: [
+      { id: 10, nom: "Thessandra", type: "contact", note: "Praticienne médicale Pyrien utilisant ses outils et donnant des retours." },
+      { id: 144, nom: "Karveth", type: "contact", note: "Forgeron Chthonien d'Ormn-Dur avec qui il échange des techniques d'alliage." }
+    ],
+    lore_long: `Drethvak fabrique des outils médicaux de précision pour des praticiens des deux factions à Varkhôl. Son double élément Feu/Acier lui permet de travailler des pièces d'une finesse que ses pairs ne peuvent pas atteindre.
+
+La médecine ne prend pas de position politique. Ses outils non plus — en principe.
+
+Un incident l'a amené à sélectionner ses clients. La précision de ses outils et la précision de leurs usages sont liées.`,
+  },
+
+  // ── 216 · KAEVOLT ──────────────────────────────────────
+  216: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "La formation à Virex", texte: "Il avait été formé à Virex dans l'Isthme à 15 ans — une période avant que l'enregistrement obligatoire n'existe. Sa formation était hors-registre par défaut. Il ne l'avait pas planifié ainsi." },
+      { titre: "La Rupture", texte: "Quand la Rupture Thermique s'était produite à Varkhôl, il avait rejoint les Dissidentes à 26 ans pour sa connaissance du terrain et ses capacités de combat. Sa liberté de mouvement sans registre avait été identifiée comme une ressource." },
+      { titre: "Les zones de Rupture", texte: "Il avait opéré dans les zones les plus affectées par la Rupture — des quartiers où les structures officielles étaient absentes. Sa protection des civils y était réelle et limitée simultanément — il ne pouvait pas être partout." },
+      { titre: "La liberté et ses marges", texte: "Il avait compris que son absence de registre lui donnait une liberté de mouvement — et une limitation de fait dans les zones officiellement contrôlées. Il opérait dans les marges. Les marges étaient aussi là où les civils abandonnés se trouvaient." },
+      { titre: "Le protecteur des marges", texte: "Il protège. Dans les zones où personne d'autre n'est." }
+    ],
+    sorts: ['Frappe de feu combiné (Feu/Combat) — attaque synthétisant chaleur et technique — efficacité maximale', 'Défense civile (Combat) — protection d\'un groupe non-combattant — technique de couverture'],
+    relations: [
+      { id: 261, nom: "Sarevorn", type: "contact", note: "Coordinateur utilisant ses capacités de combat pour des opérations nécessitant une force physique." }
+    ],
+    lore_long: `Kaevolt protège des civils dans les zones de Rupture Thermique à Varkhôl pour les Dissidentes. Son double élément Feu/Combat lui donne des capacités de combat supérieures.
+
+Il n'est pas dans les registres impériaux — sa formation date d'avant l'enregistrement obligatoire. Cette absence est sa liberté de mouvement.
+
+Il opère dans les zones où les structures officielles ne sont pas. Les civils abandonnés s'y trouvent aussi.`,
+  },
+
+  // ── 217 · THYRSAVEL ────────────────────────────────────
+  217: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "Le combat dans l'Isthme", texte: "Né dans l'Isthme, son double élément Combat/Feu s'était manifesté à 18 ans. L'Empire l'avait recruté à 22 ans pour sa combinaison de capacités — Combat et Feu dans un Homme-Lien créaient un profil rare pour les unités d'élite." },
+      { titre: "L'instruction", texte: "À 36 ans, il avait été transféré de l'opérationnel vers l'instruction. Les Régulateurs formés par ses méthodes avaient un taux de résolution de situations standard supérieur à la moyenne. L'Empire avait institutionnalisé ses méthodes." },
+      { titre: "La situation non-standard", texte: "Un de ses anciens élèves avait fait face à une situation non-standard — une zone de saturation élémentaire dans l'Isthme — et avait appliqué les réponses standard. Ça n'avait pas fonctionné. L'élève avait survécu mais l'opération avait échoué. Thyrsavel avait relu ses curricula." },
+      { titre: "La rigidité utile", texte: "Il avait compris que ses méthodes créaient une efficacité dans les situations connues et une rigidité dans les inconnues. Il avait commencé à ajouter des modules sur les situations non-standard. Les résultats étaient moins uniformes — des élèves plus adaptables mais moins systématiques." },
+      { titre: "L'instructeur", texte: "Il forme. Les Régulateurs sortent de son programme. L'Isthme change." }
+    ],
+    sorts: ['Démonstration de combat (Combat/Feu) — attaque pédagogique maximalement efficace — standard opérationnel', 'Frappe formative (Combat) — attaque précise sur vulnérabilité identifiée — résultat garanti'],
+    relations: [
+      { id: 64, nom: "Avel", type: "hierarchie", note: "Commandant régional dont les Régulateurs sont ses anciens élèves." },
+      { id: 11, nom: "Orkhael", type: "contact", note: "Leader Pyrien avec des observations sur ses méthodes d'entraînement." }
+    ],
+    lore_long: `Thyrsavel forme les Régulateurs impériaux dans l'Isthme depuis 10 ans. Son double élément Combat/Feu lui donne une légitimité de démonstration incontestable.
+
+Ses méthodes produisent des Régulateurs efficaces dans les situations standard. Elles créent aussi une rigidité dans les situations non-standard.
+
+L'Isthme change. Les situations non-standard arrivent. Ses anciens élèves feront face.`,
+  },
+
+  // ── 218 · DREVOLT ──────────────────────────────────────
+  218: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le combat professionnel", texte: "Carrière militaire à Varkhôl pendant 15 ans. Il avait développé son double élément en conditions opérationnelles — pas en formation, en terrain réel. Il avait arrêté le militaire à 35 ans." },
+      { titre: "La reconversion", texte: "La reconversion en garde du corps avait été naturelle — les compétences étaient les mêmes, les clients différents. Il avait commencé par des clients commerciaux avant de recevoir des demandes de personnes de toutes factions." },
+      { titre: "Le client qui change de camp", texte: "Un de ses clients avait changé d'affiliation politique au milieu de son contrat. Sa protection s'était trouvée en tension avec sa loyauté de contrat. Il avait terminé le contrat — protection jusqu'à la fin prévue — et refusé le renouvellement." },
+      { titre: "La neutralité maintenue", texte: "Il avait compris que maintenir une neutralité contractuelle stricte était plus difficile que ça paraissait — des clients qui changeaient, des situations qui évoluaient. Il avait développé des clauses de terminaison plus précises." },
+      { titre: "Le garde du corps", texte: "Il protège. Le contrat actuel est en cours. La loyauté suivra le prochain contrat." }
+    ],
+    sorts: ['Protection de corps (Combat) — interposition défensive entre client et menace — défense absolue', 'Neutralisation rapide (Feu/Combat) — attaque combinée pour neutraliser une menace sans temps mort — efficacité contractuelle'],
+    relations: [
+      { id: 7, nom: "Kael", type: "contact", note: "Ancien associé avec qui il maintient des contacts professionnels." },
+      { id: 217, nom: "Thyrsavel", type: "contact", note: "Ex-collègue de formation militaire." }
+    ],
+    lore_long: `Drevolt est garde du corps privé indépendant à Varkhôl. Il a protégé des clients de toutes factions selon des contrats précis.
+
+Sa loyauté suit le contrat — rien de plus, rien de moins. Quand le contrat se termine, la loyauté se termine.
+
+Il a contribué à la capacité de clients opposés à opérer. Les conflits entre eux ont été légèrement plus équilibrés grâce à sa neutralité.`,
+  },
+
+  // ── 219 · NYRAVEL ──────────────────────────────────────
+  219: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le service militaire", texte: "Service actif dans la Confédération depuis 20 ans. Son double élément lui avait permis d'opérer dans des zones Pyrien avec une efficacité que ses collègues ne pouvaient pas atteindre. Il avait été transféré vers la représentation à 38 ans." },
+      { titre: "Les négociations", texte: "Sa première mission de représentation avait été les négociations post-Rupture Thermique avec des représentants de Varkhôl. Son double élément lui avait donné une compréhension intuitive des positions Pyrien — une compréhension qu'il avait mise au service de la Confédération." },
+      { titre: "La position impossible", texte: "Il avait été contraint de défendre une position de la Confédération qu'il savait irréaliste — une demande qui ne correspondait pas à ce que Varkhôl pouvait offrir. Il avait négocié le meilleur accord possible dans les limites de sa mission. L'accord était sous-optimal pour tous." },
+      { titre: "La représentation et ses limites", texte: "Il avait compris que représenter la Confédération signifiait parfois défendre des positions qu'il ne formulerait pas lui-même. Sa marge de manœuvre était dans le comment, pas dans le quoi." },
+      { titre: "Le représentant", texte: "Il négocie. Les discussions post-Rupture continuent. Les positions évoluent lentement." }
+    ],
+    sorts: ['Frappe diplomatique (Combat/Feu) — démonstration physique de capacité dans un contexte de négociation — argument de force', 'Défense de représentation (Combat) — protection de position sans escalade — survie diplomatique'],
+    relations: [
+      { id: 62, nom: "Thyven", type: "contact", note: "Administration impériale locale dont les positions affectent les négociations." }
+    ],
+    lore_long: `Nyravel représente la Confédération dans les négociations avec Varkhôl sur les séquelles de la Rupture Thermique. Son double élément Combat/Feu lui donne une crédibilité de terrain que les négociateurs civils n'ont pas.
+
+Il comprend les positions Pyrien parce qu'il en a un élément. Cette compréhension fonctionne dans les deux directions.
+
+Il défend les positions de la Confédération. Sa marge de manœuvre est dans le comment, pas dans le quoi.`,
+  },
+
+  // ── 220 · VRASKETH ─────────────────────────────────────
+  220: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le Parti du Feu", texte: "Né dans une famille Pyrien du Parti du Feu. Il avait grandi avec Orkhael (11) comme figure de référence — un leader dont les positions représentaient ce que le Feu devait être. Son entraînement physique avait été orienté vers la protection de cette figure." },
+      { titre: "La protection", texte: "Il avait commencé à escorter Orkhael à 22 ans — d'abord informellement, puis formellement comme garde du corps principal à 25 ans. Quatre ans de protection sans incident grave." },
+      { titre: "La menace", texte: "Une tentative d'intimidation contre Orkhael — pas une agression physique, mais une présence menaçante lors d'une réunion. Vrasketh avait répondu avec une présence physique qui avait clos la situation. Orkhael lui avait fait confiance pour l'escalade." },
+      { titre: "La loyauté comme aveuglement", texte: "Il avait protégé Orkhael lors d'une décision qui avait eu des conséquences négatives pour des tiers. Il n'avait pas eu l'impression que sa loyauté était en cause — il protégeait, pas il conseillait. La distinction lui paraissait claire." },
+      { titre: "Le garde", texte: "Il protège. Orkhael opère. La loyauté ne questionne pas." }
+    ],
+    sorts: ['Interposition de feu (Feu/Combat) — s\'interposer entre une menace et le protégé avec barrière thermique — protection maximale', 'Neutralisation de menace (Combat) — élimination rapide d\'une menace identifiée — efficacité de protection'],
+    relations: [
+      { id: 11, nom: "Orkhael", type: "hierarchie", note: "Protégé absolu — loyauté totale depuis 4 ans." },
+      { id: 3, nom: "Gravel", type: "contact", note: "Autre Pyrien de l'entourage d'Orkhael avec qui il coordonne la sécurité." }
+    ],
+    lore_long: `Vrasketh est le garde du corps d'Orkhael (11) pour le Parti du Feu à Varkhôl depuis 4 ans. Sa loyauté est absolue et non-questionnée.
+
+Son rôle est de protéger, pas de conseiller. Cette distinction est claire pour lui. Elle a des limites qu'il n'a pas encore rencontrées.
+
+Il est d'une efficacité exceptionnelle dans sa définition de son rôle.`,
+  },
+
+  // ── 221 · KRESHAVEL ────────────────────────────────────
+  221: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Les quartiers de la Rupture", texte: "Elle avait vécu dans un quartier de Varkhôl affecté par la Rupture Thermique. Elle avait vu des familles Pyrien perdre leur domicile et chercher à se reconstruire dans des zones non-surveillées. Elle avait commencé à aider naturellement." },
+      { titre: "Les enfants non-enregistrés", texte: "Les Dissidentes l'avaient trouvée alors qu'elle s'occupait déjà de plusieurs enfants Pyriens non-enregistrés. Ils avaient formalisé son rôle et lui avaient fourni des ressources. Elle avait continué ce qu'elle faisait déjà." },
+      { titre: "Le Régulateur dans les ruines", texte: "Un Régulateur avait pénétré dans les quartiers détruits pour une inspection — inhabituel. Elle avait déplacé les enfants dans des zones plus profondément dans les ruines. Le Régulateur n'avait pas cherché plus loin." },
+      { titre: "La limite de la protection", texte: "Elle avait compris que sa protection était temporaire — les quartiers détruits n'étaient pas un endroit où des enfants pouvaient grandir sainement. Les extractions vers quelque chose de mieux dépendaient de réseaux dont elle n'était qu'une partie." },
+      { titre: "La protectrice", texte: "Elle protège. Les enfants sont en sécurité provisoire. Les extractions suivent quand les réseaux permettent." }
+    ],
+    sorts: ['Bouclier de protection (Combat) — interposition physique entre menace et enfants — protection de groupe', 'Frappe de repoussement (Feu/Combat) — attaque pour créer un espace de fuite — ouverture de route d\'extraction'],
+    relations: [
+      { id: 1, nom: "Brasia", type: "contact", note: "Cheffe Dissidente fournissant des ressources et des connexions aux réseaux d'extraction." },
+      { id: 76, nom: "Bressyn", type: "contact", note: "Praticienne médicale opérant dans les mêmes quartiers détruits." }
+    ],
+    lore_long: `Kreshavel protège des enfants Pyriens non-enregistrés dans les quartiers détruits de Varkhôl. Les zones de la Rupture Thermique non-surveillées par l'Empire sont son terrain d'opération.
+
+Elle faisait ça avant que les Dissidentes la trouvent. Ils ont formalisé et équipé quelque chose qui existait déjà.
+
+Sa protection est temporaire. Les extractions dépendent de réseaux qu'elle ne contrôle pas.`,
+  },
+
+  // ── 222 · THYRVELT ─────────────────────────────────────
+  222: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le mercenariat", texte: "Il avait commencé le mercenariat à 20 ans — pas par idéologie, mais parce que ses compétences se vendaient mieux sans affiliation que dans une structure hiérarchique. Il avait développé une clientèle diverse." },
+      { titre: "La liste noire", texte: "Il avait refusé l'Empire à 26 ans — pas pour des raisons idéologiques, mais après avoir analysé les clauses de contrat impérial. Les clauses de non-sortie et les pénalités étaient incompatibles avec son mode de fonctionnement. Il avait classé l'Empire comme client inacceptable." },
+      { titre: "Le client adverse", texte: "Un client lui avait demandé d'agir contre un de ses anciens clients. Il avait évalué le contrat — pas de clause de non-concurrence dans l'ancien contrat. Il avait accepté. L'ancien client n'avait pas été content. Il avait expliqué sa position." },
+      { titre: "La réputation symétrique", texte: "Il avait compris que sa réputation fonctionnait parce qu'elle était symétrique — tout le monde savait qu'il pouvait travailler contre eux s'ils ne le contractaient pas. Cette symétrie était ce qui rendait ses contrats précieux." },
+      { titre: "Le mercenaire", texte: "Il est sous contrat Dissident. L'extraction est en cours. Le prochain contrat sera ce qu'il sera." }
+    ],
+    sorts: ['Exécution de contrat (Feu/Combat) — attaque optimisée pour la mission assignée — efficacité contractuelle', 'Retrait opérationnel (Combat) — décrochage tactique quand les conditions dépassent le contrat — survie professionnelle'],
+    relations: [
+      { id: 49, nom: "Velath", type: "contact", note: "Contact actuel pour l'extraction Dissidente en cours." },
+      { id: 261, nom: "Sarevorn", type: "contact", note: "Coordinateur Dissident avec qui il a travaillé sur des missions précédentes." }
+    ],
+    lore_long: `Thyrvelt est mercenaire sans faction fixe à Varkhôl. Il accepte des contrats selon ses critères — rémunération, risque acceptable, et une liste de clients inacceptables dont l'Empire.
+
+L'Empire est refusé pour des raisons contractuelles, pas idéologiques. Les clauses impériales sont incompatibles avec son mode de fonctionnement.
+
+Il est actuellement sous contrat Dissident. Il honore ses contrats. Ce qui suit dépendra du prochain contrat.`,
+  },
+
+  // ── 223 · DREKAVEL ─────────────────────────────────────
+  223: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le double élément dans l'Isthme", texte: "Né dans l'Isthme avec un double élément Combat/Feu — une combinaison que l'Empire avait identifiée comme idéale pour les opérations dans des environnements thermiques perturbés. Il avait été recruté à 22 ans." },
+      { titre: "Les zones post-Rupture", texte: "Assigné aux zones post-Rupture de Varkhôl à 28 ans. Sa capacité à opérer dans des environnements thermiquement endommagés sans équipement de protection spéciale le rendait plus efficace que les capteurs standard." },
+      { titre: "L'Élu enfant", texte: "Il avait identifié un enfant non-enregistré dans une zone de ruines — accompagné de Kreshavel (221). Il avait fait son rapport. L'extraction de l'enfant par l'Empire n'avait pas eu lieu — les Régulateurs n'avaient pas pu pénétrer assez profondément dans les ruines. Il avait noté le point de localisation pour un suivi." },
+      { titre: "L'étape dans un processus", texte: "Il avait compris que son travail était une étape — il identifiait, d'autres capturaient. La distance entre l'identification et la capture lui permettait de ne pas penser à ce que la capture impliquait pour les Élus identifiés." },
+      { titre: "Le capteur", texte: "Il identifie. Il rapporte. D'autres agissent." }
+    ],
+    sorts: ['Frappe de capture (Combat) — immobilisation sans dommage fatal — capture opérationnelle', 'Navigation thermique (Feu) — déplacement dans des zones de chaleur extrême — accès aux zones post-Rupture'],
+    relations: [
+      { id: 2, nom: "Cendrix", type: "hierarchie", note: "Commandant recevant les rapports d'identification." },
+      { id: 64, nom: "Avel", type: "hierarchie", note: "Commandant régional coordonnant les opérations suivant les identifications." }
+    ],
+    lore_long: `Drekavel identifie des Élus cachés dans les zones post-Rupture Thermique de Varkhôl pour l'Empire. Son double élément Combat/Feu lui permet d'opérer dans des environnements thermiquement endommagés inaccessibles aux agents standard.
+
+Il identifie. D'autres capturent. La distance entre les deux lui permet de ne pas penser à ce que la capture implique.
+
+Cette distance rétrécit quand il est informé des détails de ce qui suit.`,
+  },
+
+  // ── 224 · VASSKRYN ─────────────────────────────────────
+  224: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le combat libre", texte: "Il avait pratiqué le combat libre depuis l'adolescence à Varkhôl — un sport qui lui avait permis de développer des techniques adaptées à son double élément. Il avait commencé à enseigner à 28 ans." },
+      { titre: "Les Élus non-enregistrés", texte: "Des Élus non-enregistrés l'avaient approché après la Rupture — des personnes qui avaient besoin de compétences de survie mais pas d'entraînement au combat offensif. Il avait développé un curriculum spécifique." },
+      { titre: "Le Régulateur instructeur", texte: "Un Régulateur avait assisté à une de ses sessions — pas pour un contrôle, mais parce qu'il cherchait un entraîneur pour ses unités. Vasskryn avait refusé — ses méthodes n'étaient pas adaptées aux besoins offensifs des Régulateurs. Le Régulateur n'avait pas insisté." },
+      { titre: "La neutralité de l'enseignement", texte: "Il avait compris que son enseignement était utile précisément parce qu'il n'était pas offensif — il ne formait pas des combattants, il formait des survivants. Cette distinction le maintenait dans une zone de légitimité que les Régulateurs ne remettaient pas en question." },
+      { titre: "L'entraîneur", texte: "Il enseigne. Les Élus apprennent à survivre. Les Régulateurs ne voient pas ce qu'il fait comme une menace." }
+    ],
+    sorts: ['Frappe de survie (Feu/Combat) — attaque minimale créant une ouverture de fuite — efficacité défensive', 'Décrochage rapide (Combat) — repositionnement pour désengagement — technique de fuite enseignée'],
+    relations: [
+      { id: 179, nom: "Kareth", type: "contact", note: "Autre instructeur dont les méthodes complémentent les siennes pour des Élus avancés." },
+      { id: 44, nom: "Ossira", type: "contact", note: "Coordinatrice Dissident dont certains contacts utilisent ses services." }
+    ],
+    lore_long: `Vasskryn enseigne aux Élus non-enregistrés à Varkhôl des techniques de survie — fuir efficacement, dissimuler l'usage de l'élément, absorber des coups sans tomber.
+
+Il n'est pas un Dissident. Il aide des personnes à survivre à une pression qu'il n'a pas créée. La distinction lui paraît importante.
+
+Son enseignement est neutre par définition pédagogique. Cette neutralité tient tant que ses élèves n'utilisent ses techniques qu'en défense.`,
+  },
+
+  // ── 225 · SHYRETHVON ───────────────────────────────────
+  225: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "Le double élément", texte: "Né dans l'Isthme avec un double élément Feu/Psy — une combinaison qui l'avait rendu visible à la Convergence dès l'adolescence. Ils l'avaient approché à 19 ans. Il avait accepté une formation analytique." },
+      { titre: "Le Protocole", texte: "Il avait compris la finalité du Protocole à 27 ans — pas immédiatement, progressivement. À chaque étape de sa formation, le cadre s'était précisé. Il avait continué. La précision de l'identification était un travail qui lui correspondait." },
+      { titre: "La signature familière", texte: "Il avait identifié une signature pure dans un groupe — et reconnu la personne. Quelqu'un de sa région d'origine. Il avait fait le rapport. Il n'avait pas demandé ce qui était arrivé ensuite." },
+      { titre: "La distance professionnelle", texte: "Il avait compris que maintenir la distance entre identification et conséquence nécessitait un effort. La distance n'était pas naturelle — elle était construite. Il continuait à la construire." },
+      { titre: "L'analyste", texte: "Il identifie des signatures. Les données vont à Sethara (238). Ce qui suit n'est pas son département." }
+    ],
+    sorts: ['Lecture thermique (Feu/Psy) — détection de signatures élémentaires à travers leur empreinte thermique — identification analytique', 'Frappe psychique amplifiée (Psy/Feu) — attaque mentale renforcée par chaleur élémentaire — défense de dernier recours'],
+    relations: [
+      { id: 238, nom: "Sethara", type: "hierarchie", note: "Coordinatrice du Protocole recevant les identifications." },
+      { id: 231, nom: "Razhal", type: "contact", note: "Autre analyste de la Convergence aux méthodes différentes." }
+    ],
+    lore_long: `Shyrethvon identifie des signatures élémentaires pures pour la Convergence dans l'Isthme. Son double élément Feu/Psy lui permet de lire des empreintes psychiques que la chaleur élémentaire amplifie.
+
+Il sait ce que le Protocole fait de ses identifications. Il maintient une distance professionnelle entre les données qu'il fournit et les conséquences qui suivent.
+
+Cette distance est construite. Elle nécessite un effort continu.`,
+  },
+
+  // ── 227 · THYSVORN ─────────────────────────────────────
+  227: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le double élément froid-chaud", texte: "Né à Varkhôl avec un double élément Feu/Spectre — une combinaison qui l'avait isolé dans l'enfance. Les Pyriens trouvaient l'aspect Spectre perturbant. Les Umbriens n'existaient pas à Varkhôl. Il avait développé ses capacités seul." },
+      { titre: "La Rupture Thermique", texte: "La Rupture Thermique avait laissé Varkhôl chargée de résidus thermiques de défunts. Sa capacité à les lire était devenue utile — des familles cherchaient à comprendre ce qui était arrivé à des proches dans les zones de la Rupture. Il avait commencé à pratiquer." },
+      { titre: "Le résidu qui accusait", texte: "Il avait lu un résidu thermique dont l'empreinte indiquait clairement les circonstances d'une mort — une mort qui impliquait une négligence d'une structure impériale. La famille avait demandé s'il pouvait témoigner. Il avait refusé — pas parce qu'il ne croyait pas au résidu, mais parce que témoigner de traces thermiques dans un contexte légal impérial n'était pas une position viable." },
+      { titre: "La limite du témoignage", texte: "Il avait compris que sa capacité à lire n'était pas couplée à une capacité à agir sur ce qu'il lisait. Témoigner de la vérité d'un résidu et agir sur ses implications étaient deux choses différentes. Il avait choisi de continuer à lire." },
+      { titre: "Le médium", texte: "Il lit des résidus thermiques. Les familles comprennent un peu mieux. Les implications restent non-résolues." }
+    ],
+    sorts: ['Flamme spectrale (Feu/Spectre) — projection thermique à signature fantomatique — attaque hybride perturbant les deux registres élémentaires', 'Lecture de résidu (Spectre/Feu) — perception passive des empreintes thermiques résiduelles — capacité non-combat principale'],
+    relations: [
+      { id: 51, nom: "Osara", type: "contact", note: "Umbrien dont les contacts amènent parfois des demandes de lecture particulières." },
+      { id: 58, nom: "Velsa", type: "contact", note: "Personne ayant perdu un proche dans la Rupture dont il a lu l'empreinte thermique." }
+    ],
+    lore_long: `Thysvorn lit les résidus thermiques laissés par les défunts de la Rupture Thermique à Varkhôl. Son double élément Feu/Spectre lui permet de percevoir des empreintes que ni l'un ni l'autre élément seul ne pourrait détecter.
+
+Des familles viennent pour comprendre ce qui est arrivé à des proches dans les zones de la Rupture. Il leur dit ce que les résidus montrent.
+
+Ce que les résidus impliquent sur les responsabilités — il ne témoigne pas de ça.`,
+  },
+
+  // ── 228 · KAELRYN ──────────────────────────────────────
+  228: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le double élément contradictoire", texte: "Né à Varkhôl avec un double élément Feu/Plante — une combinaison que les Pyriens trouvaient contradictoire et les Sylvans impossibles. Il avait appris à les combiner en autodidacte, développant une compréhension unique de comment les plantes survivent à la chaleur extrême." },
+      { titre: "La Rupture Thermique", texte: "La Rupture Thermique avait produit des blessures que les médecines standard ne reconnaissaient pas. Il avait commencé à expérimenter des préparations adaptées à ces blessures spécifiques — des brûlures élémentaires profondes, des tissus saturés d'énergie thermique incontrôlée." },
+      { titre: "Le blessé sans affiliation", texte: "Un Régulateur blessé dans une zone de la Rupture lui avait été amené — inconscient, sans que personne ait dit qui il était. Il l'avait soigné. Quand le Régulateur avait récupéré et réalisé où il était, il était parti sans incident. Kaelryn n'avait pas posé de questions." },
+      { titre: "La neutralité médicale comme protection", texte: "Il avait compris que soigner sans demander l'affiliation était sa protection principale — si les Régulateurs savaient qu'il soignait aussi leurs blessés, il était moins probable qu'ils l'arrêtent pour soigner des Dissidents. La neutralité médicale était une stratégie autant qu'un principe." },
+      { titre: "Le guérisseur", texte: "Il cultive. Il prépare. Il soigne. Les blessures thermiques de la Rupture trouvent un traitement dans ses préparations." }
+    ],
+    sorts: ['Racine de chaleur (Plante/Feu) — projection de végétation thermique contraignante — immobilisation en terrain de Rupture', 'Soin thermique (Feu/Plante) — application d\'énergie végétale-thermique pour blessures élémentaires — guérison de combat'],
+    relations: [
+      { id: 33, nom: "Thalorn", type: "contact", note: "Sylvan dont les connaissances botaniques ont enrichi ses variétés résistantes à la chaleur." },
+      { id: 10, nom: "Thessandra", type: "contact", note: "Pyrien de Varkhôl dont les ressources soutiennent ses préparations." }
+    ],
+    lore_long: `Kaelryn a développé des variétés de plantes médicinales qui poussent dans les zones thermiquement endommagées de la Rupture à Varkhôl. Son double élément Feu/Plante rend cette culture possible là où aucune autre plante ne survit.
+
+Il soigne sans demander l'affiliation. Des Dissidents, des Indépendants, et au moins un Régulateur ont bénéficié de ses préparations.
+
+La neutralité médicale est un principe. C'est aussi sa protection la plus fiable.`,
+  },
+
+  // ── 230 · VRETHVOX ─────────────────────────────────────
+  230: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le Pyrien aux bords froids", texte: "Né à Varkhôl avec un double élément Feu/Spectre — une anomalie dans une région presque exclusivement thermique. Il avait grandi en apprenant à masquer l'aspect Spectre de son élément. La Convergence l'avait trouvé à 26 ans précisément parce qu'ils cherchaient cette combinaison rare." },
+      { titre: "Le Protocole", texte: "La Convergence lui avait expliqué le Protocole progressivement — le Drain de l'An 0, la nécessité d'identifier des Élus purs, l'utilisation des signatures spectrales comme méthode d'identification. Il avait accepté. La précision du travail l'avait intéressé plus que les implications." },
+      { titre: "La signature d'un enfant", texte: "Il avait collecté une signature spectrale dans une zone de la Rupture — une signature de petite taille, thermiquement intense, récente. Un enfant Pyrien mort dans la Rupture. La pureté de la signature indiquait une concentration élémentaire exceptionnelle. Il avait transmis les données." },
+      { titre: "Ce que les données signifient", texte: "Il avait compris que les signatures d'enfants défunts étaient utilisées pour identifier des profils d'Élus vivants similaires — que le Protocole cherchait des personnes vivantes avec des signatures identiques à celles qu'il collectait chez des défunts. La connexion entre ses collectes et les cibles du Protocole était directe." },
+      { titre: "Le collecteur", texte: "Il collecte des signatures. Sethara (238) les utilise. Ce que le Protocole fait ensuite est hors de son périmètre opérationnel." }
+    ],
+    sorts: ['Flamme spectrale concentrée (Feu/Spectre) — projection thermique à signature fantomatique — attaque hybride difficile à bloquer', 'Absorption de résidu (Spectre/Feu) — extraction passive d\'énergie élémentaire d\'un lieu chargé — collecte opérationnelle'],
+    relations: [
+      { id: 238, nom: "Sethara", type: "hierarchie", note: "Coordinatrice du Protocole recevant les collectes spectrales." },
+      { id: 48, nom: "Shael", type: "contact", note: "Umbrien dont les capacités spectrales complètent les siennes pour des signatures mixtes." }
+    ],
+    lore_long: `Vrethvox collecte des signatures spectrales élémentaires dans les zones thermiquement chargées de la Rupture à Varkhôl. Son double élément Feu/Spectre lui donne accès à des empreintes que ni l'un ni l'autre élément seul ne pourrait percevoir.
+
+La Convergence utilise ces signatures pour son Protocole d'Identification — localiser des Élus de pureté élémentaire maximale.
+
+La connexion entre les défunts qu'il lit et les vivants que le Protocole cible, il la comprend. Il continue de collecter.`,
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // PRIMARY CHARACTERS — IDs 11-65 (generated from lore.ts)
+  // ═══════════════════════════════════════════════════════════════
+
+  // ── 11 · ORKHAEL ───────────────────────────────────────
+  11: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "La Rupture comme fondation", texte: "À 11 ans pendant la Rupture Thermique, il avait vu le Quatrième District brûler. Sa colère était alors réelle. Il avait passé les semaines suivantes à essayer de comprendre pourquoi ça s'était passé — et qui en profitait. C'était la première fois qu'il pensait politiquement." },
+      { titre: "La formation du Parti", texte: "À 22 ans, il avait fondé avec d'autres le Parti du Feu à Varkhôl — pas le premier mouvement du genre, mais le premier à comprendre que la commémoration de la Rupture était plus puissante que les programmes politiques. Il avait compris que les anniversaires de catastrophe créent de l'unité là où les arguments créent de la division." },
+      { titre: "La rencontre avec Brasia", texte: "À 31 ans, il avait rencontré Brasia (1) lors d'une évacuation clandestine d'Élus blessés. Il avait proposé son aide. Elle avait refusé. Elle avait dit qu'elle ne travaillait pas avec des personnes qui \"commercialisaient la douleur\". C'était la première fois que quelqu'un avait nommé exactement ce qu'il faisait." },
+      { titre: "La découverte de la Forge Silencieuse", texte: "À 45 ans, ses contacts à Khar-Vurn l'avaient informé de l'existence de la Forge Silencieuse — les ateliers d'armement clandestins. Il avait choisi de ne pas les dénoncer à l'Empire et de ne pas les utiliser lui-même. Les garder comme option est plus précieux que les utiliser." },
+      { titre: "La pression de la crise", texte: "La démonstration de Kasevolt (360) dans l'Isthme pourrait changer l'équilibre des factions. Si le prototype de détection fonctionne, les Élus non-enregistrés partout vont fuir vers Varkhôl, ce qui augmentera la base du Parti du Feu. Il surveille." }
+    ],
+    sorts: ['Colonne de feu (Feu) — projection verticale concentrée — impact de zone dans un espace fermé', 'Mur thermique (Feu) — barrière de chaleur radiale — interdit l\'approche dans un rayon de 4 mètres', 'Éclat de Rupture (Feu) — décharge explosive à courte portée — rappel délibéré de la Rupture Thermique dans ses effets visuels'],
+    relations: [
+      { id: 1, nom: "Brasia", type: "adversaire", note: "Lui a nommé exactement sa méthode à 31 ans. Son adversaire le plus lucide." },
+      { id: 3, nom: "Gravel", type: "allié", note: "Instrument sincère du Parti — sa sincérité est son utilité mais aussi son risque." },
+      { id: 2, nom: "Cendrix", type: "adversaire", note: "Capteur impérial qui surveille le Parti du Feu. Surveillance mutuelle." }
+    ],
+    lore_long: `Orkhael a fondé le Parti du Feu à 22 ans avec une vraie colère. À 54 ans, il ne sait plus exactement où la vraie colère s'est arrêtée et où la construction politique a commencé.
+
+Sa méthode est simple : la commémoration de la Rupture Thermique crée l'unité là où les arguments créent la division. Il a utilisé cette méthode pendant 32 ans.
+
+Brasia (1) l'a nommé exactement à 31 ans : "quelqu'un qui commercialise la douleur". Il n'a jamais répondu à cette définition. La réfuter l'oblige à y répondre.
+
+Gravel (3) est son instrument le plus utile — sincère là où Orkhael est stratège. Et donc incontrôlable.`,
+  },
+
+  // ── 12 · VALDRIS ───────────────────────────────────────
+  12: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Les fondations de Khar-Vurn", texte: "À 14 ans, il avait appris l'architecture avec un maître chthonien de passage à Varkhôl — une rencontre rare. Le Chthonien lui avait enseigné que la roche n'est pas passive : elle répond aux charges, elle se fatigue, elle cède selon des patterns prévisibles. Cette leçon l'avait occupé pendant 44 ans." },
+      { titre: "Les abris pré-Rupture", texte: "À 27 ans, il avait proposé à la Municipalité de Khar-Vurn un plan d'abris résistants aux surtensions thermiques. La Municipalité avait accepté avec un budget réduit de 40%. Il avait fait ce qu'il pouvait avec ce qu'il avait. Ce qu'il avait n'était pas suffisant." },
+      { titre: "La nuit de la Rupture", texte: "Pendant la Rupture Thermique, il avait passé 14 heures à aller d'abri en abri pour évaluer les dégâts. Ceux du district Nord s'étaient effondrés. Il savait exactement pourquoi — les fondations n'avaient pas eu le budget pour les ancrages thermiques. 34 morts dans ses abris défectueux." },
+      { titre: "Le plan complet", texte: "À 40 ans, il avait conçu un plan d'abris complets pour toute la zone de Khar-Vurn — des structures qui auraient résisté à une Rupture deux fois plus intense. Le plan existait. Il l'avait présenté à la Municipalité, à l'Empire, au Parti du Feu, au Parti de l'Acier. Personne n'avait financé. Le plan était dans sa bibliothèque." },
+      { titre: "La reconstruction en cours", texte: "Il travaille actuellement sur une série de nouvelles structures dans les quartiers reconstruits de Khar-Vurn. Chaque bâtiment est conçu pour résister à une Rupture. Il ne le dit pas dans ses plans officiels — il l'inclut dans les spécifications techniques que peu de gens lisent." }
+    ],
+    sorts: ['Rempart de roche (Roche) — élévation d\'une paroi de pierre — protection ou obstacle', 'Frappe structurelle (Roche) — impact concentré sur un point de faiblesse — effondrement ciblé', 'Bouclier de calcaire (Roche) — couche de roche autour du corps — absorption de choc thermique'],
+    relations: [
+      { id: 71, nom: "Kelveth", type: "allié", note: "Architecte junior qui sait pour les plans défectueux du district Nord. N'a jamais parlé." },
+      { id: 9, nom: "Skarith", type: "contact", note: "A posé des questions sur ses plans structurels. Cherche des solutions pour ses quartiers." },
+      { id: 74, nom: "Dravel", type: "contact", note: "Forgeron qui répare ses structures. Connaît leurs défauts mieux que leurs concepteurs." }
+    ],
+    lore_long: `Valdris a conçu les abris de la Rupture Thermique avec 40% du budget nécessaire. Ceux du district Nord ont tenu. Ceux du district Nord défectueux ont tué 34 personnes. Il compte ces 34 régulièrement.
+
+Son plan complet — des abris résistants à une Rupture deux fois plus intense — existe dans sa bibliothèque depuis 18 ans. Présenté à chaque faction. Jamais financé.
+
+Kelveth (71) sait pour les plans défectueux. Il n\'a jamais parlé. Cette loyauté silencieuse pèse sur les deux.`,
+  },
+
+  // ── 13 · NYRETH ────────────────────────────────────────
+  13: {
+    timeline_position: { an: -1, lieu: "Varkhôl", arc: "Rupture Thermique" },
+    histoire: [
+      { titre: "Le recrutement de Crysalme", texte: "À 19 ans, à Crysalme, il avait été recruté par l'Empire pour devenir Régulateur — un Élu Glace capable de neutraliser des Élus \"déstabilisateurs\". Son élément Glace était parfait pour le rôle : neutraliser sans tuer. Il avait accepté. Il croyait alors que l'Empire faisait quelque chose d'utile." },
+      { titre: "Les 8 ans de service", texte: "Pendant 8 ans, il avait exécuté des missions de régulation — neutraliser des Élus non enregistrés, sécuriser des zones de tension, protéger des installations. Il avait rarement posé de questions. Ses supérieurs l'avaient bien noté." },
+      { titre: "L'ordre refusé", texte: "À 27 ans, il avait reçu un ordre : neutraliser une guérisseuse clandestine Pyrienne dans les ruines de Khar-Vurn. Il avait vu la liste de ses patients — des enfants brûlés qui n'avaient pas accès aux soins officiels. Il avait transmis à ses supérieurs que la cible était introuvable. C'était son premier mensonge à l'Empire." },
+      { titre: "La mort simulée", texte: "Son supérieur avait soupçonné le mensonge. Un autre Régulateur avait été envoyé pour \"l'assister\" — ce qui signifiait surveiller. Nyreth avait simulé sa mort dans un incident de saturation thermique, laissé suffisamment de preuves pour que l'enquête soit convaincue, et disparu. Il avait 27 ans. Il avait recommencé." },
+      { titre: "La cellule de Khar-Vurn", texte: "Il opère depuis 11 ans dans et autour de Khar-Vurn sous diverses identités. Sa mission actuelle : repérage et extraction d'Élus non enregistrés identifiés par les agents de Cendrix (2). Il sait que Cendrix cherche une \"anomalie de signature Glace\" dans la zone — lui. La signature ne change pas même quand l'identité change." }
+    ],
+    sorts: ['Neutralisation par gel (Glace) — ralentissement puis immobilisation d\'une cible — non létal si contrôlé', 'Barrière de glace (Glace) — mur de glace instantané — couverture ou cloisonnement', 'Frappe cryogénique (Glace) — impact localisé à température extrême — incapacitation rapide'],
+    relations: [
+      { id: 1, nom: "Brasia", type: "allié", note: "Sait qui il est. L'a recruté. Le seul contact Dissident qui connaît son identité précédente." },
+      { id: 2, nom: "Cendrix", type: "adversaire", note: "Cherche une anomalie de signature Glace dans Khar-Vurn sans savoir qu'il cherche Nyreth." },
+      { id: 10, nom: "Thessandra", type: "contact", note: "L'a soigné une fois sans savoir qui il était. Contact médical en cas d'urgence." }
+    ],
+    lore_long: `Nyreth a refusé un ordre impérial à 27 ans et simulé sa mort. Il aide les Dissidentes depuis 11 ans sous des identités changeantes à Khar-Vurn.
+
+Sa signature Glace ne change pas. Dans une ville de Pyriens, toute manifestation de Glace est détectable — Cendrix (2) cherche précisément cette anomalie sans savoir ce qu'il cherche.
+
+Son identité actuelle dure depuis 14 mois. Trop longtemps. Les connexions formées dans sa couverture sont devenues des vulnérabilités qu'il n'a pas encore abandonnées.`,
+  },
+
+  // ── 14 · LYSARA ────────────────────────────────────────
+  14: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "L'apprentissage de Lyraen", texte: "À 15 ans, elle avait commencé à apprendre la magie des courants aquatiques sous la maîtresse Lyraen — une Néréide dont la spécialité était la compréhension des flux entre eau et vent. Ces deux éléments se répondaient dans les courants de Thalassyr. Lyraen lui avait appris à les entendre ensemble." },
+      { titre: "Le Silence des Vents", texte: "À 15 ans lors du Silence des Vents, elle avait senti le changement avant de le comprendre — une qualité différente dans les courants d'eau, comme si quelque chose manquait dans leur interlocuteur aérien. Elle avait capturé de l'air naturel dans un flacon de verre scellé pendant les dernières minutes du vent d'origine. Personne ne lui avait demandé pourquoi — Lyraen venait de disparaître." },
+      { titre: "La mort de Lyraen", texte: "Lyraen était morte pendant le Silence des Vents. Les circonstances officielles : épuisement lors de la crise. Vel (17) pensait alors et pense encore que ce n'était pas la version complète. Lysara ne savait pas ce qu'elle pensait — elle sait ce qu'elle a vu. Ce qu'elle a vu n'est pas identique aux circonstances officielles." },
+      { titre: "Les 64 ans de conservation", texte: "Pendant 64 ans, elle avait maintenu le flacon intact — une prouesse technique qui requérait une surveillance élémentaire régulière. Elle avait refusé plusieurs offres de le confier à des archives. Elle avait refusé plusieurs offres de le \"analyser\" par des chercheurs qui voulaient comprendre sa composition. Elle avait dit non systématiquement. Elle n'était pas certaine d'avoir eu raison." },
+      { titre: "Le temps qui se compte", texte: "À 79 ans, elle commence à penser à ce que Vel (17) et Selara (96) feront du flacon quand elle ne pourra plus le maintenir. Elle n'a pas encore eu cette conversation. Elle sait qu'elle doit l'avoir. La décision de conserver était plus facile que la décision de transmettre." }
+    ],
+    sorts: ['Flux mémoriel (Eau) — vague lente et précise qui transporte des objets fragiles — transport sans contact', 'Sceau de conservation (Eau) — renforcement d\'un contenant — maintient l\'intégrité de ce qu\'il contient', 'Courant de rappel (Eau) — rappel d\'objets ou de personnes dans un flux — contrôle de distance'],
+    relations: [
+      { id: 17, nom: "Vel", type: "allié", note: "Cherche qui a tué Lyraen depuis 64 ans. Elle lui a donné des fragments d'information — jamais tout." },
+      { id: 18, nom: "Thariel", type: "contact", note: "Archiviste non filtrée. Destinataire potentiel du flacon." },
+      { id: 96, nom: "Selara", type: "allié", note: "Dernière apprentie qui se souvient du vent naturel avec elle. Continuité possible." }
+    ],
+    lore_long: `Lysara avait 15 ans quand elle a capturé de l'air naturel dans un flacon pendant les dernières minutes du vent originel de Thalassyr. Elle a 79 ans. Le flacon est toujours intact.
+
+Elle sait quelque chose sur la mort de Lyraen que la version officielle ne dit pas. Vel (17) cherche cette information depuis 64 ans. Elle lui a donné des fragments — jamais tout.
+
+À 79 ans, les deux décisions convergent : qui reçoit le flacon, et qui reçoit ce qu'elle sait.`,
+  },
+
+  // ── 15 · ORVEN ─────────────────────────────────────────
+  15: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "Le génie des courants", texte: "À 12 ans, il avait compris intuitivement que les courants électriques et les courants aquatiques de Thalassyr répondaient à des lois similaires. À 20 ans, il avait publié un traité sur cette correspondance. À 25 ans, il enseignait à l'École des Courants de Néris." },
+      { titre: "La crise du Silence des Vents", texte: "À 7 ans lors du Silence des Vents, il avait vu Thalassyr perdre ses courants aériens naturels. À 19 ans, il avait commencé à travailler sur une solution — des vents artificiels créés par des champs électriques générant des mouvements d'air contrôlés. À 25 ans, le premier corridor artificiel fonctionnait." },
+      { titre: "L'accord avec l'Empire", texte: "À 30 ans, pour financer l'extension du réseau à toute la région de Thalassyr, il avait accepté des fonds impériaux. La condition : l'Empire aurait accès aux nœuds centraux du réseau pour ses propres \"besoins de communication\". Il avait cru que c'était une concession technique. Ce n'était pas seulement une concession technique." },
+      { titre: "Ce que le réseau permet", texte: "À 55 ans, il avait compris que Shaleth (16) utilisait son réseau pour filtrer l'information — les flux d'air portaient aussi les communications de Thalassyr, et qui contrôlait les flux contrôlait les communications. Il avait demandé des clarifications à la Confédération. On lui avait expliqué que le réseau fonctionnait parfaitement et que c'était l'essentiel." },
+      { titre: "Le réseau hors de ses mains", texte: "À 71 ans, il connaît chaque nœud du réseau qu'il a construit mais il n'en a plus le contrôle opérationnel. Kaeleth (86) et Thyrel (97) maintiennent les systèmes selon ses spécifications originales. Il peut observer, conseiller, mais pas intervenir sans autorisation de la Confédération. Et son fils Ishal (22) maintient les systèmes sans savoir ce que son père a accepté." }
+    ],
+    sorts: ['Tempête de courant (Electrique) — décharge en zone depuis les nœuds du réseau artificiel — perturbation de tout système électrique dans la portée', 'Arc de court-circuit (Electrique) — arc entre deux points conducteurs — neutralisation de cibles métalliques', 'Champ de navigation (Electrique) — génération d\'un courant d\'air électriquement guidé — déplacement rapide ou obstacle'],
+    relations: [
+      { id: 22, nom: "Ishal", type: "famille", note: "Son fils. Maintient le réseau sans savoir ce que son père a accepté. La conversation n'a pas encore eu lieu." },
+      { id: 16, nom: "Shaleth", type: "contact", note: "Utilise le réseau pour filtrer l'information. Orven sait ce qu'il fait. Ne peut pas l'arrêter." },
+      { id: 86, nom: "Kaeleth", type: "allié", note: "Technicien qui maintient les systèmes. Perpétue sans questionner." }
+    ],
+    lore_long: `Orven a créé les vents artificiels de Thalassyr à 25 ans pour remplacer ce que le Silence des Vents avait supprimé. À 30 ans, il a accepté des fonds impériaux avec une condition d'accès aux nœuds centraux.
+
+Ce qu'il a construit est devenu l'infrastructure de contrôle de l'information de la Confédération. Shaleth (16) utilise ses flux pour filtrer les communications. Il sait. Il ne peut plus intervenir.
+
+Son fils Ishal (22) maintient le réseau sans connaître l'arrangement. La conversation n'a pas encore eu lieu.`,
+  },
+
+  // ── 16 · SHALETH ───────────────────────────────────────
+  16: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "L'élève Psy", texte: "À 14 ans, ses capacités Psy avaient été reconnues et développées dans l'École des Flux de Néris. Elle avait appris à lire les états émotionnels, les tensions collectives, les dynamiques de groupe. Ses instructeurs l'avaient notée comme \"exceptionnellement adaptée à la gestion des situations de tension\"." },
+      { titre: "La montée dans la Confédération", texte: "À 28 ans, elle était entré dans l'administration de la Confédération comme analyste de liaison. Ses capacités Psy lui avaient permis de résoudre des situations de négociation que les autres diplomates échouaient. En 10 ans, elle était devenue l'une des personnes les plus influentes dans les flux d'information de Thalassyr." },
+      { titre: "Le premier filtre", texte: "À 40 ans, lors d'une crise diplomatique entre l'Empire et les Dissidentes passant par les canaux de Thalassyr, elle avait retenu une information pendant 48 heures pour \"évaluer son impact\". Ces 48 heures avaient changé l'issue de la crise. Elle avait mesuré l'ampleur de ce que \"gérer l'information\" voulait dire." },
+      { titre: "Les journaux de Lyseth", texte: "Elle avait caché ses journaux personnels dans plusieurs caches à Néris — des analyses de ses propres décisions de filtrage, des doutes qu'elle ne montrait à personne. Lyseth (88) avait trouvé un de ces journaux dans une de ses caches. Elle sait que Lyseth a trouvé quelque chose. Elle ne sait pas exactement quoi." },
+      { titre: "La surveillance de Lyseth", texte: "Elle fait surveiller Lyseth (88) depuis 3 semaines par un contact indirect. Lyseth a rejoint le réseau Dissident de Vel (17) — ce qui signifie que ce que Lyseth a trouvé pourrait avoir voyagé. Elle prépare une réponse. Elle ne sait pas encore laquelle." }
+    ],
+    sorts: ['Lecture d\'intention (Psy) — scan des états émotionnels dans un rayon — identification des intentions avant l\'action', 'Brouillage Psy (Psy) — perturbation des capacités Psy dans une zone — contre-mesure contre les capteurs', 'Projection de stress (Psy) — amplification de l\'état émotionnel d\'une cible — déstabilisation sans contact physique'],
+    relations: [
+      { id: 88, nom: "Lyseth", type: "adversaire", note: "A trouvé un de ses journaux dans ses caches. A rejoint les Dissidentes. Menace principale actuelle." },
+      { id: 81, nom: "Velara", type: "allié", note: "Filtre les communications en bas de la chaîne sans savoir qu'elle est l'extension de Shaleth." },
+      { id: 17, nom: "Vel", type: "adversaire", note: "Chef du réseau Dissident à Thalassyr. Destinataire probable du journal de Lyseth." }
+    ],
+    lore_long: `Shaleth filtre l'information de Thalassyr depuis 12 ans. Elle décide ce qui circule et ce qui ne circule pas dans les réseaux de communication de Néris. Elle se dit que c'est pour la stabilité.
+
+Ses journaux privés documentent ses vraies raisons — pas toujours aussi neutres que la version officielle. Lyseth (88) a trouvé un de ces journaux dans une de ses caches.
+
+Lyseth a rejoint les Dissidentes de Vel (17). La réponse de Shaleth est en préparation.`,
+  },
+
+  // ── 17 · VEL ───────────────────────────────────────────
+  17: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "Le Thalassyr d'avant", texte: "À 15 ans, il avait connu le vent naturel de Thalassyr — pas depuis longtemps, mais assez pour en garder le souvenir. Il avait connu Lyraen comme la maîtresse de Lysara (14), une Néréide dont la réputation dans la compréhension des flux eau-vent était sans égale. Il l'admirait sans la connaître personnellement." },
+      { titre: "La mort de Lyraen", texte: "Le Silence des Vents avait tué Lyraen selon la version officielle. À 15 ans, il avait vu quelque chose qui ne correspondait pas à cette version — une présence dans la zone de la mort de Lyraen qui n'avait pas d'explication technique. Il avait posé la question. On lui avait dit de ne plus la poser. Il avait commencé son enquête." },
+      { titre: "La première réponse violente", texte: "À 19 ans, sa première tentative d'accéder aux archives du Silence des Vents lui avait coûté 2 jours d'incarcération et des marques permanentes aux avant-bras. Il avait compris que la question sur Lyraen était plus sensible que la mort d'une maîtresse lors d'une crise — il cherchait quelque chose que des personnes vivantes voulaient garder caché." },
+      { titre: "Le réseau de 64 ans", texte: "Au fil des décennies, il avait construit un réseau d'informateurs, de contacts dans les archives, de témoins. Il travaillait avec les Dissidentes par pragmatisme — ils avaient accès à des informations que personne d'autre ne pouvait obtenir. Il n'était pas Dissident. Il avait un objectif unique, et les Dissidentes étaient utiles à cet objectif." },
+      { titre: "Le journal de Shaleth", texte: "Lyseth (88) vient de rejoindre son réseau avec un journal de Shaleth (16) qui documente des filtres d'information sur 5 ans. Vel cherche dans ce journal des connexions avec la mort de Lyraen — Shaleth était une enfant de 12 ans lors du Silence des Vents, mais ses archives sur le filtrage de l'information de l'époque pourraient révéler ce qui a été caché." }
+    ],
+    sorts: ['Lame de courant (Eau) — tranchant de flux concentré — précision d\'escrimeur appliquée à l\'élément', 'Pression d\'archivage (Eau) — maintien d\'un objet ou d\'une zone sous flux — protection ou extraction', 'Mémoire du flux (Eau) — lecture des résidus de passage dans l\'eau — reconstruction de trajectoires passées'],
+    relations: [
+      { id: 14, nom: "Lysara", type: "allié", note: "Témoin direct. Détient des informations sur la mort de Lyraen. Ne les a pas données complètement." },
+      { id: 88, nom: "Lyseth", type: "allié", note: "Vient de rejoindre son réseau avec le journal de Shaleth. Angle le plus concret depuis des années." },
+      { id: 82, nom: "Sorthel", type: "allié", note: "Lui fournit des routes d'accès à des archives interdites." }
+    ],
+    lore_long: `Vel cherche qui a tué Lyraen depuis 64 ans. Son enquête est son identité — il travaille avec les Dissidentes par utilité, pas par appartenance.
+
+Lysara (14) détient des informations sur la mort de Lyraen qu'elle ne lui a pas données complètement. Il sait qu'elle retient quelque chose. Il ne lui a pas encore posé la question directement.
+
+Lyseth (88) vient de rejoindre son réseau avec un journal de Shaleth (16) qui archive des filtres d'information depuis 5 ans. C'est sa piste la plus concrète depuis des années. Shaleth prépare une réponse.`,
+  },
+
+  // ── 18 · THARIEL ───────────────────────────────────────
+  18: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "L'apprentissage des profondeurs", texte: "À 13 ans, elle avait commencé à explorer les zones sous-marines de Thalassyr avec une maîtresse qui lui avait appris que l'eau conserve les traces de ce qui l'a traversée. Pas de façon magique — physiquement. Les courants gardent des patterns. Un archiviste qui comprend les courants peut reconstituer des trajectoires." },
+      { titre: "Le premier cache", texte: "À 23 ans, après avoir découvert qu'une archive officielle avait été modifiée — une information économique sur un accord commercial entre Thalassyr et Varkhôl différait entre la version archivée et la version en circulation — elle avait créé son premier cache sous-marin. Une copie non modifiée. Elle avait commencé à systématiser." },
+      { titre: "La demande de suppression", texte: "À 35 ans, un représentant de la Confédération lui avait demandé de \"corriger\" les archives d'un incident diplomatique dont la version officielle avait changé. Elle avait dit qu'elle ne falsifiait pas les archives. La Confédération avait retiré son accréditation officielle. Elle avait continué sans accréditation." },
+      { titre: "L'ampleur de ce qu'elle a", texte: "À 55 ans, elle avait réalisé que ses caches contenaient 32 ans d'informations non filtrées — des décisions de la Confédération, des arrangements avec l'Empire, des disparitions d'Élus. Un historien de Thalassyr aurait trouvé dans ses archives la vraie histoire des 32 dernières années. Le problème était qu'aucun historien de Thalassyr ne pouvait accéder à ses archives sans lui." },
+      { titre: "La surveillance de Sorythel", texte: "Sorythel (99), agent impérial, surveille les archives officielles de Thalassyr — pas celles de Thariel. Mais il cherche des anomalies dans les flux d'information et certains de ses caches sous-marins sont dans des zones que Sorythel commence à cartographier. Elle a déplacé 3 caches dans les 6 dernières semaines." }
+    ],
+    sorts: ['Scellement d\'information (Psy) — encodage mental d\'une information dans un support physique — archive mentale inviolable', 'Flux de mémoire (Psy) — extraction et transmission d\'une information précise — partage instantané sans support écrit', 'Brouillage d\'archive (Psy) — perturbation de la lecture d\'un document — protection d\'archives contre la lecture non autorisée'],
+    relations: [
+      { id: 84, nom: "Narevael", type: "allié", note: "Lui transmet des données Dissidentes. Confiance placée dans sa discrétion — ses données sont dans les archives." },
+      { id: 90, nom: "Shyrael", type: "allié", note: "Plongeuse qui connaît certains emplacements de caches. A croisé Sorythel récemment." },
+      { id: 99, nom: "Sorythel", type: "adversaire", note: "Cartographie les zones sous-marines pour l'Empire. Risque de découverte involontaire." }
+    ],
+    lore_long: `Thariel archive des données non filtrées depuis 40 ans dans des caches sous-marins distribués à Thalassyr. Elle ne prend pas parti — elle préserve.
+
+Ses caches contiennent 40 ans d'histoire réelle de Thalassyr : décisions de la Confédération, arrangements impériaux, disparitions d'Élus. Aucun historien ne peut y accéder sans elle.
+
+Sorythel (99) cartographie les zones sous-marines pour l'Empire. Il ne cherche pas ses caches. Il pourrait les trouver par accident.`,
+  },
+
+  // ── 19 · AERONN ────────────────────────────────────────
+  19: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "La formation impériale", texte: "À 17 ans, il avait été recruté par l'Empire à Asterciel pour ses capacités de vol exceptionnelles et sa capacité à naviguer dans des conditions météorologiques difficiles. Sa formation avait combiné techniques de vol et collecte d'information discrète. Il avait compris rapidement que l'Empire ne cherchait pas des soldats dans les zones neutres, mais des personnes capables de paraître ne pas travailler pour l'Empire." },
+      { titre: "L'affectation à Thalassyr", texte: "À 36 ans, il avait été affecté à Thalassyr — une région officiellement neutre où l'Empire n'avait pas de présence officielle mais où ses intérêts étaient nombreux. Sa couverture : transporteur indépendant de messageries entre les régions côtières. Sa vraie mission : surveillance des flux d'information et cartographie des routes non officielles." },
+      { titre: "La découverte de Crysta", texte: "À 40 ans, Crysta (20) l'avait approché directement lors d'une escale à Néris et lui avait dit qu'elle savait qu'il travaillait pour l'Empire. Puis elle lui avait proposé un accord : ni elle ni lui ne chercheraient à compromettre l'autre, et ils s'échangeraient des informations utiles à leurs objectifs respectifs. Il avait accepté. Il n'avait jamais dit à l'Empire qu'il avait ce contact." },
+      { titre: "La dépendance au réseau", texte: "À 44 ans, une panne temporaire du réseau artificiel d'Orven avait bloqué ses routes pendant 3 jours. Sans les vents artificiels, certains corridors aériens qu'il utilisait régulièrement devenaient impraticables. Il avait réalisé pour la première fois que son utilité pour l'Empire dépendait d'un système qu'il ne contrôlait pas." },
+      { titre: "L'équilibre qui tient", texte: "Il maintient ses contacts avec Shaleth (16), Crysta (20), et plusieurs contacts indépendants depuis 12 ans. L'Empire reçoit ses rapports réguliers — des informations utiles mais jamais complètes. Crysta reçoit ses observations sur les routes aériennes et les mouvements de troupes impériaux dans la région. L'équilibre tient. Il ne sait pas jusqu'à quand." }
+    ],
+    sorts: ['Rafale d\'interférence (Vent) — perturbation des courants aériens dans une zone — désorientation des vols', 'Courant de fuite (Vent) — accélération maximale en ligne directe — extraction d\'une position compromise', 'Turbulence ciblée (Vent) — création d\'une zone de turbulence localisée — entrave au vol d\'une cible'],
+    relations: [
+      { id: 20, nom: "Crysta", type: "allié", note: "Accord de non-interférence depuis 8 ans. Non rapporté à l'Empire. Vulnérabilité mutuelle." },
+      { id: 16, nom: "Shaleth", type: "allié", note: "Échange d'informations — routes aériennes contre flux de communications." },
+      { id: 25, nom: "Yrith", type: "contact", note: "Utilise parfois ses routes pour des déplacements entre Asterciel et Thalassyr." }
+    ],
+    lore_long: `Aeronn est agent impérial à Thalassyr depuis 12 ans sous couverture de transporteur indépendant. Son accès aux routes aériennes dépend entièrement du réseau artificiel d'Orven (15) — un système qu'il ne contrôle pas.
+
+Son accord non rapporté avec Crysta (20) de la Convergence dure depuis 8 ans. Ni lui ni elle ne cherche à compromettre l'autre. L'Empire ne sait pas.
+
+Après 12 ans à Thalassyr, il a des attachements qu'un agent ne devrait pas avoir. Si l'Empire lui demandait de partir, il hésiterait.`,
+  },
+
+  // ── 20 · CRYSTA ────────────────────────────────────────
+  20: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "La formation de la Convergence", texte: "À 20 ans, à Thalassyr, elle avait été approchée par un recruteur de la Convergence qui avait reconnu sa puissance élémentaire Eau exceptionnelle. La Convergence cherchait des Élus purs dont la puissance dépassait les standards normaux. Elle correspondait. Elle avait accepté après 6 mois de réflexion." },
+      { titre: "L'infiltration", texte: "À 36 ans, après 16 ans de formation et de missions mineures, elle avait reçu sa première mission d'infiltration longue durée : s'intégrer dans la structure administrative de la Confédération de Thalassyr et collecter des données sur ses opérations, ses contacts et ses décisions de filtrage. Elle était là depuis 8 ans." },
+      { titre: "La neutralité de Thalassyr", texte: "À 38 ans, après 2 ans d'infiltration, elle avait réalisé que Thalassyr ne choisirait jamais un camp — pas parce qu'elle n'avait pas de position, mais parce que sa position était la neutralité instrumentalisée. Ni l'Empire ni les Dissidentes ne pouvaient la convaincre. Elle avait révisé ses attentes et son rapport à la Convergence." },
+      { titre: "La rencontre avec Aeronn", texte: "À 40 ans, elle avait approché Aeronn (19) directement après avoir identifié sa couverture. L'accord de non-interférence qu'ils avaient établi était rationnel : deux agents de factions opposées dans un territoire neutre, dont les missions respectives ne se chevauchaient pas directement. L'accord tenait depuis 4 ans." },
+      { titre: "Les 8 ans de données", texte: "Ses 8 ans d'infiltration ont produit des données substantielles sur les filtres de Shaleth (16), les connexions impériales dans la Confédération, et les profils d'Élus dans la région. Elle transmet ces données à la Convergence par canaux indirects. Ce qu'elle ne transmet pas toujours : ses propres doutes sur ce que la Convergence fait de ces données." }
+    ],
+    sorts: ['Vague de pression (Eau) — onde de choc aquatique à partir d\'un point d\'origine — déstabilisation de zone', 'Piège de courant (Eau) — création d\'un flux rotatif — immobilisation d\'une cible dans un milieu aquatique ou humide', 'Projection de flux (Eau) — impact à distance via un courant concentré — précision à longue portée'],
+    relations: [
+      { id: 19, nom: "Aeronn", type: "allié", note: "Accord de non-interférence depuis 4 ans. Non rapporté à leurs hiérarchies respectives. Vulnérabilité mutuelle." },
+      { id: 93, nom: "Naeleth", type: "allié", note: "Contact de recrutement Convergence à Thalassyr. Recrute des profils d'Élus." },
+      { id: 16, nom: "Shaleth", type: "cible", note: "Son système de filtrage est documenté dans ses rapports. Surveille son exposition imminente." }
+    ],
+    lore_long: `Crysta est infiltrée dans la Confédération de Thalassyr depuis 8 ans pour la Convergence. Elle collecte des données sur les profils d'Élus pour le Protocole et sur les systèmes de filtrage de Shaleth (16).
+
+Elle pensait que Thalassyr serait un allié naturel contre l'Empire. Elle a compris que Thalassyr ne choisit pas. La neutralité instrumentalisée est aussi une position politique.
+
+Son accord de non-interférence avec Aeronn (19), agent impérial, n'est rapporté ni à l'Empire ni à la Convergence. Deux agents de factions opposées dans un territoire neutre, dont les missions ne se chevauchent pas directement.`,
+  },
+
+  // ── 21 · NAREV ─────────────────────────────────────────
+  21: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "Le Thalassyr commercial", texte: "À 18 ans, il avait rejoint la Confédération comme analyste commercial — les flux d'échange entre Thalassyr et les autres régions, les équilibres, les interdépendances. Le Thalassyr qu'il avait rejoint était fonctionnel et approximativement honnête. Cette approximation s'était progressivement dégradée." },
+      { titre: "La première anomalie", texte: "À 28 ans, il avait identifié sa première anomalie commerciale — une transaction entre une maison de négoce de Néris et une entité impériale passant par un intermédiaire qui n'existait pas. Il avait signalé. Le rapport avait été \"noté\" et rien n'avait changé. C'était la première fois que signaler ne produisait pas de résultat." },
+      { titre: "Le réseau de transactions", texte: "À 38 ans, il avait reconstitué un réseau de 12 transactions sur 5 ans — toutes passant par des intermédiaires fictifs, toutes finançant in fine des opérations impériales dans des régions en tension. Il avait une preuve solide. Il avait rédigé un rapport complet. Son supérieur de l'époque lui avait dit que \"le moment était mal choisi pour perturber les relations avec l'Empire\". Le rapport n'avait pas circulé." },
+      { titre: "La résignation partielle", texte: "À 50 ans, il avait accepté qu'il ne pourrait pas changer le système par des rapports. Il avait commencé à fonctionner différemment : maintenir son propre secteur d'activité intègre, documenter sans signaler, attendre un contexte où la documentation aurait de l'impact. C'était une résignation partielle. Il la vivait comme de la stratégie." },
+      { titre: "La documentation de 30 ans", texte: "Il possède 30 ans de documentation sur les anomalies commerciales de Néris. Des noms, des montants, des flux. Si cette documentation atteignait Thariel (18) ou Vel (17), elle rejoindrait les archives non filtrées. Il n'a pas encore fait ce pas. Il attend encore de savoir si c'est de la stratégie ou de la lâcheté." }
+    ],
+    sorts: ['Champ gravitationnel (Gravité) — zone de gravité augmentée — ralentissement ou immobilisation de zone', 'Ancre de masse (Gravité) — fixation d\'un objet ou d\'une cible à une position — blocage de mouvement', 'Vague de pesanteur (Gravité) — pulse gravitationnel directionnel — déstabilisation par surcharge de poids'],
+    relations: [
+      { id: 18, nom: "Thariel", type: "contact", note: "Archiviste non filtrée. Destinataire potentiel de sa documentation." },
+      { id: 84, nom: "Narevael", type: "contact", note: "Source indirecte d'information sur les réseaux Dissidents à Thalassyr." },
+      { id: 90, nom: "Shyrael", type: "contact", note: "Plongeuse dont les observations complètent involontairement les siennes." }
+    ],
+    lore_long: `Narev a vu la structure commerciale de Néris se corrompre sur 30 ans. Il a documenté les anomalies, signalé, vu ses rapports ignorés, et attendu un meilleur moment.
+
+Il possède 30 ans de preuves des connections entre les transactions commerciales de Thalassyr et les opérations impériales. Il ne les a pas transmises à Thariel (18) ou Vel (17).
+
+Il attend encore. Il ne sait plus si c'est de la stratégie ou autre chose.`,
+  },
+
+  // ── 22 · ISHAL ─────────────────────────────────────────
+  22: {
+    timeline_position: { an: -1, lieu: "Thalassyr", arc: "Silence des Vents" },
+    histoire: [
+      { titre: "Grandir avec le réseau", texte: "Il avait grandi avec le réseau artificiel de Thalassyr comme toile de fond — son père en était le créateur, et les vents artificiels faisaient partie de sa réalité dès sa naissance. Il n'avait jamais connu le vent naturel. Les récits de Lysara (14) sur ce que ça avait été lui semblaient distants, presque mythologiques." },
+      { titre: "La formation technique", texte: "À 18 ans, il avait commencé sa formation formelle en maintenance du réseau artificiel avec les techniciens de son père. À 25 ans, il était devenu l'un des meilleurs plongeurs de maintenance des nœuds secondaires immergés. Son père l'avait recommandé pour les accès avancés. Certains accès avaient été accordés. Pas tous." },
+      { titre: "Le nœud de contrôle refusé", texte: "À 32 ans, il avait demandé l'accès au nœud de contrôle central immergé pour une évaluation de maintenance complète. La demande avait été refusée par la Confédération — \"accès réservé aux niveaux supérieurs d'autorisation\". Son père lui avait dit de ne pas insister. Il n'avait pas insisté. Il avait noté que son père semblait soulagé." },
+      { titre: "Les spécifications inhabituelles", texte: "À 38 ans, lors d'une maintenance de routine sur un nœud secondaire, il avait trouvé des connexions vers des systèmes qui n'apparaissaient dans aucune de ses spécifications techniques officielles. Il avait demandé une clarification à son père. Orven lui avait dit que c'était des \"connexions historiques\" qui dataient de la construction originale. Il n'avait pas questionné davantage." },
+      { titre: "La maintenance qui continue", texte: "Il maintient les nœuds secondaires du réseau selon les spécifications de son père. La défaillance prévue par Orven dans un nœud secondaire est dans sa zone de responsabilité. Il a lui aussi identifié le problème et fait une demande d'intervention à la Confédération. Sa demande est aussi \"en traitement\" depuis 3 semaines." }
+    ],
+    sorts: ['Plongée de combat (Eau) — déplacement ultrarapide dans un milieu aquatique vers une cible — attaque sous-marine', 'Pression de profondeur (Eau) — application d\'une pression aquatique concentrée sur une zone — écrasement ou confinement', 'Flux de navigation (Eau) — création d\'un courant directif dans l\'eau — guidage ou redirection de flux'],
+    relations: [
+      { id: 15, nom: "Orven", type: "famille", note: "Son père. Créateur du réseau artificiel. Lui cache l'arrangement avec l'Empire. La conversation approche." },
+      { id: 86, nom: "Kaeleth", type: "allié", note: "Collègue de maintenance. Partage des évaluations techniques régulières." },
+      { id: 14, nom: "Lysara", type: "contact", note: "Figure de son enfance. Il sait qu'elle garde quelque chose sur le vent naturel." }
+    ],
+    lore_long: `Ishal maintient les nœuds secondaires du réseau artificiel de son père Orven (15). Il n'a jamais eu accès aux nœuds de contrôle centraux. Il n'a jamais insisté, parce que son père avait semblé soulagé qu'il n'insiste pas.
+
+Il a trouvé des connexions vers des systèmes non documentés dans un nœud à 38 ans. Son père a dit que c'était "des connexions historiques". Il n'a pas questionné davantage.
+
+La réparation de la défaillance prévue va l'amener au cœur du nœud. Il va trouver ce que son père lui cache.`,
+  },
+
+  // ── 23 · TALVYN ────────────────────────────────────────
+  23: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "Les champs des strates basses", texte: "À 14 ans, dans les strates basses d'Asterciel, il avait découvert que les champs électriques qui maintenaient les plateformes en suspension avaient des patterns — des oscillations prévisibles, des points de pression, des signatures qui permettaient de prévoir leur comportement. À 18 ans, il était devenu technicien de maintenance." },
+      { titre: "La Chute des Nuages", texte: "À 22 ans, pendant la Chute des Nuages, il avait vu les champs se déstabiliser en temps réel — une défaillance en cascade qu'il avait tenté de contenir depuis son poste de maintenance. Il n'avait pas pu arrêter la Chute, mais il avait stabilisé 3 plateformes secondaires qui auraient dû tomber. Ces stabilisations n'avaient été notées dans aucun rapport officiel." },
+      { titre: "Le rapport ignoré", texte: "À 35 ans, il avait prévu une défaillance majeure dans les connexions de la plateforme Ouest avec 4 semaines d'avance. Son rapport avait reçu la réponse habituelle : \"en traitement, budget insuffisant\". La défaillance s'était produite. La plateforme Ouest était devenue les ruines qu'Yrith (25) habitait maintenant." },
+      { titre: "La compréhension de Caerra", texte: "À 45 ans, Caerra (28) l'avait contacté pour son projet de reconstruction de la plateforme Ouest. Elle avait les mêmes connaissances techniques que lui sur les champs, mais une position différente — elle agissait là où il signalait. Il travaillait avec elle depuis 7 ans." },
+      { titre: "La défaillance en cours", texte: "Il a identifié une nouvelle défaillance dans les connexions centrales d'Asterciel — dans 8 à 12 semaines si non corrigée. Son rapport est déposé. Gavryn (102) a les mêmes données. Caerra a demandé à intégrer ces données dans son projet de reconstruction. La réponse officielle est \"en attente d'évaluation\"." }
+    ],
+    sorts: ['Décharge de champ (Electrique) — libération d\'énergie accumulée dans les champs de maintenance — impact de zone', 'Court-circuit structurel (Electrique) — surcharge ciblée d\'un système électrique — désactivation d\'équipements', 'Stabilisation d\'urgence (Electrique) — renforcement temporaire d\'un champ défaillant — maintien d\'une structure en crise'],
+    relations: [
+      { id: 28, nom: "Caerra", type: "allié", note: "Partage la vision de la reconstruction. Agit là où Talvyn signale." },
+      { id: 102, nom: "Gavryn", type: "allié", note: "Collègue technicien avec les mêmes données sur les défaillances." },
+      { id: 29, nom: "Telos", type: "contact", note: "A demandé à le rencontrer dans un contexte inhabituel." }
+    ],
+    lore_long: `Talvyn maintient les champs électriques qui permettent à Asterciel de fonctionner depuis 30 ans. Il voit les défaillances avant qu'elles arrivent. Il les signale. Il n'a pas toujours le budget pour les corriger.
+
+Il avait prévu la défaillance de la plateforme Ouest 4 semaines avant la Chute des Nuages. Son rapport était "en traitement". La plateforme est tombée.
+
+Il travaille avec Caerra (28) sur la reconstruction depuis 7 ans. Il a identifié une nouvelle défaillance majeure dans 8 à 12 semaines.`,
+  },
+
+  // ── 24 · SERATHIS ──────────────────────────────────────
+  24: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "L'héritage de Veralith", texte: "Il avait grandi avec le poids de la lignée — 11 générations entre lui et Veralith, chacune ayant gouverné Asterciel au nom du sacrifice original. Son enfance était une formation : la langue de Veralith, les citations, les protocoles, la légitimité héritée. À 12 ans, il savait déjà qu'il gouvernerait." },
+      { titre: "La prise de pouvoir", texte: "À 27 ans, à la mort de son père, il avait pris la gouvernance d'Asterciel. La transition avait été aussi fluide que 300 ans de préparation institutionnelle pouvaient la rendre. Personne n'avait contesté. Il avait continué ce que son père avait commencé, ce que son père avait continué de ce que son grand-père avait commencé." },
+      { titre: "La Chute des Nuages révisée", texte: "À 42 ans, lors d'une revue des archives de la Chute des Nuages, ses archivistes avaient trouvé des documents qui ne correspondaient pas entièrement à la version officielle de la mort de Garev et du rôle de Veralith. Il avait ordonné que ces documents soient \"mis en contexte\" — une formulation qui signifiait les reclasser hors d'accès." },
+      { titre: "La recherche de Telos", texte: "À 62 ans, Telos (29) avait commencé à chercher la vraie Veralith dans les archives. Serathis savait que Telos était dans les archives. Il avait demandé à ses archivistes de lui faire un rapport hebdomadaire sur ce que Telos consultait. Il lisait ces rapports avec attention. Jusqu'ici, Telos n'avait pas trouvé les documents reclassés." },
+      { titre: "L'héritage à protéger", texte: "Il gouverne Asterciel depuis 40 ans. Sa légitimité tient à la version officielle de Veralith. Telos se rapproche des archives reclassées. Talvyn (23) a identifié une défaillance structurelle majeure dans les champs d'Asterciel. Les deux menaces — l'archive et la structure — convergent dans les 3 mois qui viennent." }
+    ],
+    sorts: ['Éclat stellaire (Stellaire) — frappe de lumière concentrée — impact à longue portée', 'Aura de lignée (Stellaire) — champ lumineux de dissuasion — effet de peur sur les adversaires non stellaires', 'Trajectoire de Veralith (Stellaire) — reproduction d\'une frappe légendaire — impact dévastateur mais épuisant'],
+    relations: [
+      { id: 29, nom: "Telos", type: "famille", note: "Héritier qui cherche la vraie Veralith. Surveillé sans le savoir. Sa découverte potentielle est la menace principale." },
+      { id: 30, nom: "Syvara", type: "adversaire", note: "Élue Stellaire qui refuse l'aristocratie. Anomalie irritante mais pas encore une menace directe." },
+      { id: 23, nom: "Talvyn", type: "contact", note: "Ingénieur de maintenance qui a identifié la défaillance structurelle. Invisible — jusqu'à ce que Telos le contacte." }
+    ],
+    lore_long: `Serathis gouverne Asterciel depuis 40 ans au nom de la lignée de Veralith. Il croit sincèrement à la légitimité héréditaire qu'il incarne.
+
+À 42 ans, il a reclassé des archives sur la Chute des Nuages qui ne correspondaient pas à la version officielle. À 62 ans, Telos (29) a commencé à chercher la vraie Veralith dans les archives.
+
+Il ne peut pas arrêter Telos sans révéler qu'il surveille. Et révéler qu'il surveille révèle qu'il y a quelque chose à surveiller.`,
+  },
+
+  // ── 25 · YRITH ─────────────────────────────────────────
+  25: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "La plateforme Ouest", texte: "Il avait grandi sur la plateforme Ouest — une des plateformes des strates moyennes d'Asterciel. Sa famille y vivait depuis deux générations. La plateforme avait 3 000 habitants quand il avait 22 ans." },
+      { titre: "La Chute des Nuages", texte: "À 22 ans, pendant la Chute des Nuages, la plateforme Ouest avait cédé. Il avait survécu en s'accrochant à une section partielle qui n'avait pas complètement chuté. La section partielle était toujours là. Il y vivait toujours." },
+      { titre: "Le refus d'évacuation", texte: "À 25 ans, la Confédération avait proposé de l'évacuer vers une plateforme sûre. Il avait refusé. On lui avait expliqué que les ruines étaient dangereuses. Il avait dit qu'il savait comment vivre avec ce qui était dangereux. On lui avait offert une aide financière. Il avait refusé ça aussi." },
+      { titre: "La rencontre avec Caerra", texte: "À 35 ans, Caerra (28) l'avait contacté pour son projet de reconstruction. Elle voulait connaître les caractéristiques des structures de la plateforme Ouest depuis l'intérieur — pas depuis les plans d'avant la Chute, mais depuis ce qui restait. Il lui avait montré. Ils travaillaient ensemble depuis 14 ans." },
+      { titre: "Le cartographe des ruines", texte: "Il a cartographié chaque section de la plateforme Ouest — ce qui tient, ce qui cède, les points de tension, les zones récupérables. Ces cartes sont plus précises que n'importe quel document officiel sur la plateforme. Caerra les utilise pour son projet. Talvyn (23) les a consultées pour comprendre pourquoi certaines sections ont tenu." }
+    ],
+    sorts: ['Rafale de survie (Vent) — déplacement rapide le long de structures instables — mobilité dans des environnements dangereux', 'Coup de vent ciblé (Vent) — projection directionnelle — déviation de projectile ou déséquilibre d\'adversaire', 'Tempête de section (Vent) — création d\'une zone de turbulence localisée — obstacle entre sa position et une menace'],
+    relations: [
+      { id: 28, nom: "Caerra", type: "allié", note: "Travaille avec elle sur le projet de reconstruction depuis 14 ans. Sa carte des ruines est son expertise principale." },
+      { id: 23, nom: "Talvyn", type: "contact", note: "L'a averti de la défaillance prévue. Ils se sont rencontrés via Caerra." },
+      { id: 108, nom: "Gelveth", type: "contact", note: "Vit sur une plateforme partielle adjacente. Reconnaissance mutuelle de survivants." }
+    ],
+    lore_long: `Yrith a survécu à la Chute des Nuages à 22 ans et habite les ruines de la plateforme Ouest depuis 27 ans. Il a refusé toutes les évacuations.
+
+Il a cartographié chaque section des ruines — ce qui tient, ce qui cède, les zones récupérables. Caerra (28) utilise ces cartes pour son projet de reconstruction depuis 14 ans.
+
+Talvyn (23) l'a averti d'une nouvelle défaillance dans 8 à 12 semaines. Il prépare des positions de sécurité. Il ne quitte pas les ruines.`,
+  },
+
+  // ── 28 · CAERRA ────────────────────────────────────────
+  28: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "La Chute des Nuages", texte: "À 18 ans, pendant la Chute des Nuages, elle avait vu la plateforme Ouest tomber. Elle était dans les strates moyennes pour des travaux d'apprentissage. Elle avait aidé à évacuer des personnes pendant les 6 heures suivantes. Elle avait vu Yrith (25) s'accrocher à une section qui tenait encore. Elle avait pris la décision à ce moment-là : elle reconstruirait." },
+      { titre: "La formation accélérée", texte: "À 22 ans, après sa formation d'ingénieure, elle avait commencé les premiers calculs pour la reconstruction de la plateforme Ouest. À 28 ans, elle avait soumis sa première proposition à la Confédération. La proposition avait été retournée avec des demandes de \"compléments d'étude\"." },
+      { titre: "Le blocage institutionnel", texte: "À 35 ans, après 7 ans de compléments d'étude, elle avait compris que le blocage n'était pas technique mais politique. La plateforme Ouest détruite servait de symbole à la légitimité de Serathis (24) — il en avait besoin comme rappel de ce que la lignée de Veralith avait \"sauvé\". La reconstruire retirait ce symbole." },
+      { titre: "Le réseau technique", texte: "À 38 ans, elle avait changé d'approche — plutôt que d'obtenir l'approbation institutionnelle, elle avait commencé à construire le réseau technique qui rendrait le projet incontournable. Talvyn (23) pour les champs électriques, Yrith (25) pour la cartographie des ruines, Velleth (106) pour la pression politique. Le projet était maintenant trop avancé pour être simplement reporté." },
+      { titre: "Le point de basculement", texte: "Le projet de reconstruction est à son point le plus avancé — les plans sont complets, les ressources techniques rassemblées, la pression politique réelle. La défaillance prévue par Talvyn dans les connexions centrales dans 8 à 12 semaines change tout : si des plateformes tombent pendant que sa reconstruction est bloquée, son argument politique devient irréfutable." }
+    ],
+    sorts: ['Frappe de construction (Vent) — manipulation du vent pour déplacer des structures légères — outil de chantier autant que d\'attaque', 'Tempête localisée (Vent) — zone de turbulence concentrée — obstacle défensif', 'Courant de protection (Vent) — flux autour d\'un objet ou d\'une personne — bouclier aérien'],
+    relations: [
+      { id: 23, nom: "Talvyn", type: "allié", note: "Fournit les données techniques sur les champs. Fondation du projet." },
+      { id: 25, nom: "Yrith", type: "allié", note: "Cartographie des ruines depuis l'intérieur depuis 14 ans." },
+      { id: 106, nom: "Velleth", type: "allié", note: "Coordinateur des pétitions populaires pour la reconstruction." }
+    ],
+    lore_long: `Caerra a vu la plateforme Ouest tomber à 18 ans pendant la Chute des Nuages. Elle reconstruit depuis 27 ans.
+
+Le blocage n'est pas technique — c'est politique. La plateforme détruite sert de symbole à la légitimité de Serathis (24). La reconstruire retirerait ce symbole.
+
+La défaillance prévue par Talvyn (23) dans les connexions centrales dans 8 à 12 semaines crée une fenêtre politique qu'elle n'a pas cherchée. Elle ne peut pas l'ignorer.`,
+  },
+
+  // ── 29 · TELOS ─────────────────────────────────────────
+  29: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "L'héritage questionnant", texte: "À 12 ans, lors d'une cérémonie de commémoration de Veralith, il avait demandé à son père une question sur un détail qui ne correspondait pas à deux sources différentes. Son père avait répondu que les sources étaient \"interprétables\". À 12 ans, il avait compris que les sources \"interprétables\" méritaient d'être regardées de plus près." },
+      { titre: "L'accès aux archives", texte: "À 25 ans, son rang d'héritier lui avait donné accès aux archives d'Asterciel. Il avait commencé par les archives officielles de Veralith — celles que tout le monde consultait. À 26 ans, il avait trouvé la première incohérence entre deux versions du même événement dans deux fonds différents." },
+      { titre: "L'incohérence de la Chute", texte: "À 30 ans, il avait trouvé des documents sur la Chute des Nuages qui ne correspondaient pas à la version officielle du rôle de Garev et de l'intervention de Veralith. Il avait demandé l'accès à un fonds complémentaire. L'accès lui avait été refusé — \"fonds en cours de reclassification\"." },
+      { titre: "La surveillance discrète", texte: "À 35 ans, il avait compris que ses consultations d'archives étaient suivies — des archivistes remplaçaient des documents après ses consultations, des accès se fermaient après qu'il les demandait. Quelqu'un lisait ses demandes. Il avait adapté sa méthode : demander des documents adjacents au lieu de demander directement ce qu'il cherchait." },
+      { titre: "Le fond reclassé", texte: "Il s'approche du fonds que Serathis a reclassé à 42 ans — pas directement, mais en triangulant depuis des documents adjacents. Il a besoin de 3 à 4 sources complémentaires pour reconstituer ce que le fonds contient. Il a deux des quatre sources. Il cherche les deux autres en contactant Talvyn (23) et Syvara (30) cette semaine." }
+    ],
+    sorts: ['Arc d\'analyse (Electrique) — décharge qui révèle les propriétés conductrices d\'une surface — lecture de structure', 'Champ de protection (Electrique) — barrière électrostatique — protection contre les impacts physiques', 'Impulsion de recherche (Electrique) — pulse électrique dans un support — activation de systèmes dormants'],
+    relations: [
+      { id: 24, nom: "Serathis", type: "famille", note: "Son père. Le surveille via des rapports d'archivistes. Ne peut pas l'arrêter directement." },
+      { id: 30, nom: "Syvara", type: "allié", note: "Source complémentaire sur Veralith. Refuse l'aristocratie malgré son élément Stellaire." },
+      { id: 23, nom: "Talvyn", type: "contact", note: "Source complémentaire sur les données techniques de la Chute des Nuages." }
+    ],
+    lore_long: `Telos cherche la vraie Veralith dans les archives depuis 5 ans. Ce qu'il a trouvé ne correspondait pas à la version officielle — l'incohérence l'a rendu incapable de s'arrêter.
+
+Serathis (24) le surveille via des rapports d'archivistes. Il ne peut pas intervenir directement sans révéler qu'il surveille — et révéler qu'il surveille révèle qu'il y a quelque chose à surveiller.
+
+Il a besoin de 4 sources pour reconstituer ce que le fonds reclassé contient. Il en a 2. Il contacte Talvyn (23) et Syvara (30) cette semaine.`,
+  },
+
+  // ── 30 · SYVARA ────────────────────────────────────────
+  30: {
+    timeline_position: { an: -1, lieu: "Asterciel", arc: "Chute des Nuages" },
+    histoire: [
+      { titre: "La découverte de l'élément", texte: "À 14 ans, dans les strates basses d'Asterciel, son élément Stellaire s'était manifesté — une rareté dans les strates basses, où l'élément était presque exclusivement une caractéristique de l'aristocratie. Les représentants de l'aristocratie stellaire étaient venus la voir presque immédiatement. Elle avait compris dès ce moment que son élément la définissait pour les autres d'une façon qu'elle n'avait pas choisie." },
+      { titre: "Le refus de l'intégration", texte: "À 18 ans, elle avait officiellement refusé l'intégration dans les structures de l'aristocratie stellaire. Le refus avait été incompréhensible pour presque tout le monde — refuser l'accès aux strates hautes, le rang, la légitimité. Elle avait dit qu'elle ne voulait pas d'une légitimité héritée. On lui avait dit qu'elle n'en avait pas le choix. Elle avait prouvé le contraire." },
+      { titre: "La surveillance de Serathis", texte: "À 25 ans, Serathis (24) avait commencé à la surveiller — non pas à la persécuter, mais à la regarder. Une Élue Stellaire qui refuse son rang est une anomalie dans le système de légitimité. Si elle réussissait à vivre bien hors du système, ça posait des questions sur le système." },
+      { titre: "Ce qu'elle sait de Veralith", texte: "Au fil de 25 ans de contacts dans les strates basses et les strates moyennes, elle avait collecté des témoignages sur Veralith qui ne correspondaient pas à la version officielle — des traditions orales, des récits de familles qui avaient connu Veralith avant qu'elle devienne une icône. Ce qu'elle avait n'était pas des preuves documentaires. C'était une texture différente." },
+      { titre: "La demande de Telos", texte: "Telos (29) lui a demandé de partager ce qu'elle sait. Elle a accepté de le rencontrer — mais elle ne lui donnera pas tout immédiatement. Elle doit d'abord comprendre ce qu'il cherche réellement : confirmer une théorie, ou vraiment comprendre Veralith. La réponse à cette question déterminera ce qu'elle lui donne." }
+    ],
+    sorts: ['Alignement stellaire (Stellaire) — projection de lumière stellaire concentrée — impact précis à longue distance', 'Voile de nuit (Stellaire) — obscurcissement de zone par absorption de lumière stellaire — couverture tactique', 'Éclat de vérité (Stellaire) — lumière qui révèle les illusions et les camouflages — contre-mesure contre les dissimulations'],
+    relations: [
+      { id: 29, nom: "Telos", type: "allié", note: "Source complémentaire pour sa recherche. Elle doit décider ce qu'elle lui donne." },
+      { id: 24, nom: "Serathis", type: "adversaire", note: "La surveille depuis 16 ans. Son existence est une anomalie dans son système de légitimité." },
+      { id: 114, nom: "Velryn", type: "allié", note: "Enseigne Veralith comme mythe humain. Elle le soutient discrètement." }
+    ],
+    lore_long: `Syvara est une Élue Stellaire qui refuse l'aristocratie depuis 27 ans. Dans un système où l'élément Stellaire marque la légitimité héréditaire, son refus est une affirmation politique.
+
+Elle possède des informations sur Veralith des traditions orales des strates basses — une texture différente du mythe officiel. Telos (29) va la rencontrer cette semaine pour obtenir ce qu'elle sait.
+
+Elle doit décider ce qu'elle lui donne. Ce qu'elle donne pourrait compléter la triangulation de Telos et déclencher la crise de légitimité de Serathis (24).`,
+  },
+
+  // ── 31 · SYLVAE ────────────────────────────────────────
+  31: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "L'arrière-grand-mère dans l'arbre", texte: "À 8 ans, elle avait entendu l'histoire pour la première fois : son arrière-grand-mère Sylveth avait été absorbée dans un arbre-mémoire pendant la Faim des Racines — pas tuée, absorbée. L'arbre avait été dévoré après. Sylveth était dans l'arbre quand il avait disparu. À 8 ans, elle avait demandé si l'arbre pouvait être retrouvé. On lui avait dit que non." },
+      { titre: "La première exploration", texte: "À 20 ans, elle avait commencé ses explorations formelles des zones de l'ancienne Faim des Racines. Elle avait cartographié des réseaux racinaires mort sur des dizaines de kilomètres — des traces de ce qui avait existé avant. En 24 ans d'exploration, elle avait trouvé 3 fragments de réseaux racinaires survivants, aucun actif." },
+      { titre: "Le désaccord avec Kessyn", texte: "À 28 ans, lors d'une exploration conjointe avec Kessyn (32), il avait voulu brûler un arbre qu'elle cherchait à étudier — il le jugeait corrompu, potentiellement porteur de la contamination de la Faim. Elle avait refusé. La dispute avait duré 3 jours. L'arbre avait finalement été préservé. Kessyn et elle ne s'accordaient plus sur ce principe depuis." },
+      { titre: "Le pressentiment d'un fragment actif", texte: "À 40 ans, lors d'une exploration dans une zone reculée de Sylvera, elle avait senti quelque chose dans les réseaux racinaires — une activité qui n'était pas là les fois précédentes. Elle avait cherché la source pendant 2 semaines sans la trouver. Le pressentiment persistait. Quelque chose était actif quelque part dans la zone." },
+      { titre: "La zone de Sylindra", texte: "Sylindra (37) explore une zone adjacente à la sienne depuis 6 mois. Elle ne sait pas encore ce que Sylindra a trouvé — elles ne se sont pas coordonnées. Mais les zones qu'elles explorent toutes les deux correspondent à la zone où elle avait senti l'activité racinaire 4 ans plus tôt." }
+    ],
+    sorts: ['Réseau racinaire (Plante) — extension de racines dans le sol — immobilisation d\'une cible ou cartographie souterraine', 'Barrière de croissance (Plante) — mur de végétation dense — obstacle ou protection', 'Mémoire végétale (Plante) — connexion à un arbre-mémoire — accès aux informations stockées dans ses fibres'],
+    relations: [
+      { id: 37, nom: "Sylindra", type: "contact", note: "Explore une zone adjacente. A trouvé quelque chose qu'elle pressent depuis 4 ans. Pas encore connectées." },
+      { id: 32, nom: "Kessyn", type: "adversaire", note: "Veut brûler des arbres qu'elle cherche à étudier. Désaccord fondamental depuis 16 ans." },
+      { id: 119, nom: "Aelvyn", type: "allié", note: "Cherche à reconstruire le réseau racinaire en parallèle sans savoir que Sylindra a trouvé quelque chose." }
+    ],
+    lore_long: `Sylvae cherche les fragments survivants du réseau racinaire de Thalindre depuis 24 ans. Son arrière-grand-mère est morte dans un arbre-mémoire dévoré lors de la Faim des Racines.
+
+À 40 ans, elle a pressenti quelque chose d'actif dans une zone reculée de Sylvera. Elle n'a pas trouvé la source.
+
+Sylindra (37) explore une zone adjacente depuis 6 mois et a trouvé quelque chose qu'elle ne sait pas encore être actif. Leurs explorations convergent. Elles ne se connaissent pas encore.`,
+  },
+
+  // ── 32 · KESSYN ────────────────────────────────────────
+  32: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Le nom de Kessaer", texte: "À 7 ans, il avait compris que son arrière-arrière-grand-père Kessaer était maudit dans la mémoire de Sylvera. Les autres enfants Sylvans l'appelaient \"le fils du brûleur\". Il avait demandé à sa mère si Kessaer avait tort. Elle avait répondu que c'était compliqué. À 7 ans, il avait décidé que si c'était compliqué, ça méritait d'être compris." },
+      { titre: "La formation aux Gardiens", texte: "À 18 ans, il avait rejoint les Gardiens de Sylvera — l'organisation qui gérait les brûlages contrôlés depuis la Faim des Racines. Ses supérieurs avaient hésité à l'accepter à cause de son nom. Il avait dit qu'il ferait les brûlages mieux que n'importe qui d'autre. Ils l'avaient accepté pour voir." },
+      { titre: "Le désaccord avec Sylvae", texte: "À 28 ans, lors d'une exploration conjointe avec Sylvae (31), il avait voulu brûler un arbre qu'il jugeait corrompu — porteur potentiel de la contamination de la Faim. Sylvae avait refusé. La dispute avait duré 3 jours. L'arbre avait été préservé. Il n'avait pas changé de position — il avait changé de méthode. Il opérait maintenant sans coordination avec les Conservateurs." },
+      { titre: "Les archives de Kessaer", texte: "À 32 ans, il avait accédé aux archives privées de Kessaer, conservées dans sa lignée. Il y avait trouvé les calculs de son ancêtre — les arbres brûlés, les surfaces contaminées stoppées, et les erreurs : les arbres brûlés par précaution qui n'étaient pas corrompus. Kessaer le savait. Il avait continué parce qu'il pensait que les erreurs valaient moins que les surfaces sauvées. Kessyn avait compris pourquoi sa méthode devait être plus précise." },
+      { titre: "La zone du pressentiment", texte: "Il a identifié plusieurs arbres dans la zone d'exploration de Sylvae (31) qu'il juge corrompus. Il a préparé les plans de brûlage. Il sait que Sylvae pressentait quelque chose dans cette zone depuis 4 ans. Il considère que son pressentiment n'est pas une raison suffisante pour retarder. Il va commencer les évaluations finales cette semaine." }
+    ],
+    sorts: ['Brûlage contrôlé (Feu) — flamme précise à périmètre défini — élimination ciblée sans propagation', 'Barrière de feu (Feu) — mur de flammes directionnelles — obstacle ou confinement d\'une zone', 'Détection de corruption (Feu) — chaleur qui révèle la contamination dans l\'écorce — diagnostic à distance'],
+    relations: [
+      { id: 31, nom: "Sylvae", type: "adversaire", note: "Conserve ce qu'il voudrait brûler. Désaccord fondamental depuis 11 ans. Leurs zones d'action convergent." },
+      { id: 33, nom: "Thalorn", type: "contact", note: "Arbre-mémoire vivant — la ligne qu'il ne franchira pas dans ses brûlages." },
+      { id: 35, nom: "Aeris", type: "contact", note: "Lui a demandé des données sur les brûlages contrôlés. Il n'a pas encore compris son rôle réel." }
+    ],
+    lore_long: `Kessyn est le descendant de Kessaer, le Sylvan qui a brûlé les premiers arbres corrompus lors de la Faim des Racines. Kessaer est maudit dans la mémoire de Sylvera. Kessyn pense qu\'il avait raison.
+
+Il a accès aux archives privées de Kessaer. Il sait que son ancêtre a fait des erreurs — des arbres brûlés par précaution qui n\'étaient pas corrompus. Il a développé des méthodes plus précises exactement pour ça.
+
+Il a identifié des arbres corrompus dans la zone où Sylvae (31) pressent un fragment actif depuis 4 ans. Il va commencer les évaluations finales cette semaine.`,
+  },
+
+  // ── 33 · THALORN ───────────────────────────────────────
+  33: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Le premier arbre", texte: "À 43 ans, il avait absorbé son premier arbre-mémoire — un vieux chêne de sève qui mourait de la contamination de la Faim des Racines. L'absorption avait été douloureuse. Les mémoires de l'arbre s'étaient déversées en lui pendant 3 jours. Il avait survécu. Il avait aussi compris ce que ça voulait dire de porter des siècles de mémoire en plus de ses propres souvenirs." },
+      { titre: "La décision de la Faim", texte: "À 43 ans, pendant la Faim des Racines, il avait absorbé 4 arbres-mémoire en 6 ans — les plus anciens, ceux qui ne pouvaient pas survivre à la contamination. C'était une décision des Conservateurs : plutôt que de perdre leurs mémoires, les transférer dans un Sylvan qui pourrait les porter. Il avait été choisi parce qu'il avait survécu au premier." },
+      { titre: "La mémoire de Kessaer", texte: "À 65 ans, lors d'une période de fièvre, les mémoires des arbres-mémoire avaient commencé à se mélanger aux siennes. Il avait vécu des séquences de la Faim des Racines depuis la perspective des arbres brûlés par Kessaer — y compris les arbres qui n'étaient pas corrompus. Il avait émergé de la fièvre avec une compréhension de Kessaer qu'aucun témoignage humain ne lui aurait donnée." },
+      { titre: "L'architecture du réseau de Thalindre", texte: "À 95 ans, en explorant ses propres mémoires absorbées, il avait trouvé dans l'un des arbres une carte du réseau racinaire de Thalindre avant la Faim des Racines — pas une carte physique, mais une mémoire de l'architecture. Il pouvait la reconstruire depuis sa conscience. Il ne l'avait pas encore partagée entièrement — pas par rétention, mais parce qu'il cherchait à comprendre ce que cette information changerait." },
+      { titre: "Le fragment de Sylindra", texte: "Sylvae (31) lui a décrit son pressentiment d'un fragment actif. Dans ses mémoires absorbées, il reconnaît la zone qu'elle décrit — une section du réseau racinaire de Thalindre qui avait des propriétés que les autres sections n'avaient pas. Si Sylindra (37) a trouvé ce fragment, Thalorn a des informations sur ce qu'elle a trouvé. Il doit décider quoi faire de cette connaissance." }
+    ],
+    sorts: ['Mémoire végétale (Plante) — connexion à un arbre et accès à ses mémoires — information ou désorientation', 'Enracinement ancien (Plante) — racines massives issues d\'un réseau racinaire étendu — immobilisation de zone', 'Chant des arbres (Plante) — résonance végétale qui rappelle les forêts avant la Faim — affaiblissement des éléments de feu à courte distance'],
+    relations: [
+      { id: 31, nom: "Sylvae", type: "allié", note: "Lui a donné une partie de ses mémoires des arbres. Possède des informations plus précises sur ce qu'elle cherche." },
+      { id: 32, nom: "Kessyn", type: "contact", note: "Porte des mémoires des brûlages de Kessaer. La ligne qu'il ne franchira pas dans les brûlages." },
+      { id: 119, nom: "Aelvyn", type: "allié", note: "Veut reconstruire le réseau racinaire. Thalorn possède l'architecture originale." }
+    ],
+    lore_long: `Thalorn a absorbé 4 arbres-mémoire pendant la Faim des Racines. Il porte leurs mémoires depuis 84 ans. Ce n'est pas une archive — c'est une continuation.
+
+Dans ses mémoires, il a l'architecture du réseau racinaire de Thalindre avant la Faim. Sylvae (31) cherche ce réseau depuis 24 ans. Il n'a pas encore décidé de partager.
+
+Il porte aussi des mémoires des brûlages de Kessaer — y compris les arbres non corrompus brûlés par erreur. Kessyn (32) ne connaît pas cette perspective.`,
+  },
+
+  // ── 35 · AERIS ─────────────────────────────────────────
+  35: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Le double élément", texte: "À 14 ans, son double élément Plante-Eau s'était manifesté — une rareté dans les Sylvans, où l'élément était presque toujours unique. Les Conservateurs avaient voulu la recruter immédiatement : un double élément était une ressource rare. Elle avait attendu avant de répondre. Cette habitude d'attendre était déjà en elle." },
+      { titre: "Le recrutement de l'Empire", texte: "À 34 ans, un contact impérial l'avait approchée — pas avec une proposition directe, mais avec des questions. Ils voulaient comprendre la fracture entre Conservateurs et Gardiens. Elle avait répondu. Ils avaient continué à la consulter. À 34 ans, elle n'avait pas réalisé quand la consultation était devenue un mandat." },
+      { titre: "La première rétention", texte: "À 38 ans, elle avait découvert des données sur les zones racinaires de Sylvera qui auraient pu permettre une réconciliation entre Conservateurs et Gardiens. Elle avait retenu ces données — les avait divisées, avait donné à chaque camp la partie qui confirmait sa position. C'était la première fois qu'elle avait fait ça consciemment. Elle n'avait pas eu de scrupule particulier." },
+      { titre: "Les données de Kessyn", texte: "À 48 ans, elle avait obtenu de Kessyn (32) les données sur ses méthodes de brûlage contrôlé. Elle les avait transmises à l'Empire sous forme d'un rapport sur les capacités militaires des Gardiens. Kessyn pensait qu'il fournissait des données à un rapport botanique. Elle n'avait pas corrigé cette impression." },
+      { titre: "Le fragment de Sylindra", texte: "Sylindra (37) a trouvé quelque chose dans une zone adjacente à celle de Sylvae. Aeris pressent que ce fragment — si actif — change l'équilibre qu'elle maintient depuis 18 ans. Un fragment actif donnerait aux Conservateurs une victoire narrative qui fermerait la fracture. Elle cherche à contacter Sylindra avant que Sylvae ne le fasse." }
+    ],
+    sorts: ['Entrelacement racinaire (Plante) — réseau de racines qui piège et ralentit — immobilisation progressive', 'Flux d\'eau végétale (Eau+Plante) — liquide conducteur dans les fibres végétales — soin ou paralysie selon la cible', 'Camouflage botanique (Plante) — fusion avec la végétation environnante — disparition totale dans une forêt'],
+    relations: [
+      { id: 31, nom: "Sylvae", type: "contact", note: "Lui fait confiance comme botaniste indépendante. Aeris a orienté ses explorations avec des données tronquées." },
+      { id: 37, nom: "Sylindra", type: "contact", note: "Ne la connaît pas encore. Aeris veut la contacter avant Sylvae." },
+      { id: 32, nom: "Kessyn", type: "contact", note: "Lui a fourni des données sur ses méthodes. Transmises à l'Empire sans qu'il le sache." }
+    ],
+    lore_long: `Aeris est infiltrée par l'Empire dans Sylvera depuis 18 ans. Son rôle : maintenir la fracture entre Conservateurs et Gardiens en donnant à chaque camp des informations qui les confirment sans les réconcilier.
+
+Sa couverture de botaniste indépendante est authentique — ses données sont réelles, ses compétences sont vraies. L'Empire a utilisé ce qui était déjà en elle.
+
+Sylindra (37) a trouvé un fragment actif dans une zone adjacente à celle de Sylvae (31). Si les deux Sylvans se connectent, la fracture se referme. Aeris veut atteindre Sylindra en premier.`,
+  },
+
+  // ── 36 · KRATH ─────────────────────────────────────────
+  36: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Le premier brûlage", texte: "À 18 ans, son premier brûlage contrôlé — un arbre clairement corrompu dans une zone reculée de Sylvera. Ça avait fonctionné. Il avait écrit un rapport. À 22 ans, il avait commencé à trouver les rapports contraignants — ils créaient des attentes sur ce qu'il ferait ensuite. Il avait commencé à écrire des rapports plus courts." },
+      { titre: "Les premières archives brûlées", texte: "À 35 ans, il avait brûlé pour la première fois ses propres notes de terrain — une décision prise après une réunion des Gardiens où ses données avaient été utilisées pour justifier une décision avec laquelle il n'était pas d'accord. Si ses données pouvaient être utilisées contre son jugement, la solution était de ne pas laisser de données." },
+      { titre: "Le désaccord avec Kessyn", texte: "À 44 ans, Kessyn (32) avait essayé de lui faire refaire des relevés de terrain qu'il avait brûlés. Krath avait refusé. Kessyn lui avait dit que les données perdues empêchaient une évaluation précise d'une zone contaminée. Krath avait dit que s'il voulait des données, il n'avait qu'à aller les collecter lui-même. Ils n'avaient pas résolu ce désaccord." },
+      { titre: "Les données d'Aelvyn", texte: "À 52 ans, Aelvyn (119) lui avait demandé des données sur les zones racinaires d'une section de Sylvera. Krath avait cherché dans ses archives et réalisé qu'il avait brûlé exactement les données dont Aelvyn avait besoin. Il avait donné ce qui restait — incomplet. Il n'avait pas dit qu'il avait brûlé le reste. Il ne s'en souvenait pas entièrement." },
+      { titre: "Les plans de Kessyn", texte: "Kessyn (32) prépare des brûlages dans une zone où Sylvae (31) pressent un fragment actif. Il sait que Kessyn a identifié des arbres corrompus dans cette zone. Il a ses propres évaluations de la zone — et il a brûlé une partie de ses notes. Ce qu'il a perdu pourrait être exactement ce qui permettrait de savoir si Sylvae a raison sur le fragment actif." }
+    ],
+    sorts: ['Brûlage de zone (Feu) — flammes couvrant une large surface — destruction de zone sans précision chirurgicale', 'Mur de fumée (Feu) — écran de fumée dense — couverture ou désorientation', 'Incendie ciblé (Feu) — flamme unique à haute température — destruction d\'un point précis'],
+    relations: [
+      { id: 32, nom: "Kessyn", type: "allié", note: "Collègue Gardien. Travaillent différemment — Kessyn calcule, Krath agit. Désaccord non résolu sur les archives brûlées." },
+      { id: 31, nom: "Sylvae", type: "adversaire", note: "Le considère plus dangereux que Kessyn. Son imprévisibilité la préoccupe plus que la méthode de Kessyn." },
+      { id: 119, nom: "Aelvyn", type: "contact", note: "Lui a demandé des données. Krath lui a donné des données incomplètes sans dire qu'il avait brûlé le reste." }
+    ],
+    lore_long: `Krath brûle ses propres archives depuis 23 ans. Sa conviction : le savoir laissé crée des dépendances, et les données qui restent peuvent être utilisées contre son jugement.
+
+Il va trop loin. Il a brûlé des données qu'il avait collectées lui-même sur des zones de Sylvera — des données qui manquent maintenant à Kessyn (32) pour évaluer les brûlages prévus.
+
+Ce qu'il a perdu pourrait être ce qui permettrait de confirmer ou infirmer le pressentiment de Sylvae (31) sur le fragment actif.`,
+  },
+
+  // ── 37 · SYLINDRA ──────────────────────────────────────
+  37: {
+    timeline_position: { an: -1, lieu: "Sylvera", arc: "Faim des Racines" },
+    histoire: [
+      { titre: "Les tunnels racinaires", texte: "À 11 ans, elle avait découvert qu'elle pouvait ramper dans les tunnels racinaires sous la forêt de Sylvera sans paniquer — une compétence que la plupart des Sylvans ne développaient pas. Elle avait commencé à cartographier les tunnels de son village. À 14 ans, elle avait une carte plus précise que celle des Conservateurs officiels." },
+      { titre: "L'exploration formelle", texte: "À 22 ans, elle avait commencé ses explorations formelles des zones périphériques de Sylvera — des zones que les Conservateurs ne cartographiaient pas parce qu'elles étaient considérées comme des zones mortes depuis la Faim des Racines. Elle avait trouvé que les zones mortes n'étaient pas entièrement mortes." },
+      { titre: "Le refus de rejoindre les Conservateurs", texte: "À 27 ans, les Conservateurs l'avaient contactée pour l'intégrer formellement. Elle avait refusé. Pas par désaccord avec leurs objectifs, mais parce que leurs méthodes d'exploration étaient trop lentes et trop documentées pour elle. Elle explorait mieux seule, plus vite, avec moins de bureaucratie." },
+      { titre: "Le fragment", texte: "À 33 ans, dans une zone adjacente à celle de Sylvae (31), elle avait trouvé quelque chose — une section de réseau racinaire qui répondait différemment des structures mortes. Pas de la même façon qu'un arbre-mémoire actif, mais pas de la même façon qu'un réseau mort non plus. Quelque chose entre les deux qu'elle ne savait pas encore nommer." },
+      { titre: "La documentation", texte: "Depuis 6 mois, elle documente le fragment. Elle a des observations sur sa réactivité à la température, à l'humidité, à la présence d'autres réseaux racinaires. Elle n'a pas encore conclu. Elle ne conclurait pas avant d'avoir suffisamment de données — mais les données qu'elle accumule disent déjà quelque chose qu'elle ne sait pas encore lire." }
+    ],
+    sorts: ['Extension racinaire (Plante) — projection de racines rapides sous terre — piège ou exploration souterraine', 'Réseau de liaison (Plante) — connexion temporaire entre deux systèmes racinaires — communication ou transfert d\'énergie végétale', 'Bouclier de sève (Plante) — condensation de sève en surface — protection partielle contre les impacts'],
+    relations: [
+      { id: 31, nom: "Sylvae", type: "contact", note: "Explore une zone adjacente. Ne la connaît pas encore directement. Sylvae pressent ce qu'elle a trouvé depuis 4 ans." },
+      { id: 33, nom: "Thalorn", type: "contact", note: "Possède l'architecture du réseau original. Ses informations expliqueraient ce que Sylindra a trouvé." },
+      { id: 35, nom: "Aeris", type: "contact", note: "Cherche à la contacter. Sylindra ne sait pas pourquoi et ne connaît pas son rôle." }
+    ],
+    lore_long: `Sylindra a trouvé quelque chose dans une zone adjacente à celle de Sylvae (31). Elle ne sait pas encore que c'est actif — elle l'interprète comme une anomalie de terrain et continue à documenter.
+
+Elle documente depuis 6 mois. Ses données disent quelque chose qu'elle ne sait pas encore lire — il lui manque le contexte théorique des arbres-mémoire que Sylvae et Thalorn (33) ont.
+
+Aeris (35) cherche à la contacter avant Sylvae. Sylindra ne sait pas pourquoi.`,
+  },
+
+  // ── 38 · VALYX ─────────────────────────────────────────
+  38: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "La descente", texte: "À 23 ans, elle avait effectué sa première descente au niveau 7 de la Fosse — un niveau que les gardiens de l'époque évitaient. Elle était revenue avec des échantillons et avec quelque chose dans sa peau qui ne partirait jamais. Les médecins avaient dit que c'était de la contamination. Elle avait dit que c'était de la communication." },
+      { titre: "L'accord", texte: "À 67 ans, après 44 ans de descentes et d'observations, elle avait demandé à descendre au niveau 9 — le niveau interdit, le niveau où la zone fongique était la plus concentrée. Elle en était revenue trois jours plus tard. Elle avait dit qu'un accord était possible. Personne ne lui avait demandé avec quoi exactement elle avait négocié." },
+      { titre: "Les termes non dits", texte: "Dans les semaines après l'accord, les représentants de Kar-Dum avaient essayé de lui faire détailler les termes complets. Elle avait fourni un document — les obligations de Kar-Dum, les garanties de la zone fongique. Le document ne couvrait pas tout. Quand on lui avait demandé s'il y avait des clauses supplémentaires, elle avait dit que le reste était de la nature de l'accord et pas du contenu écrit." },
+      { titre: "La limite de la contribution", texte: "Dans ses journaux privés, dont des fragments ont survécu : elle avait écrit que l'accord avait une durée, pas un terme. Que la contribution de Kar-Dum pourrait un jour être \"refusée\" si la zone fongique avait évolué au-delà du point où l'accord avait été négocié. Elle n'avait pas précisé ce que \"refusé\" voulait dire dans ce contexte." },
+      { titre: "Ce qu'elle a laissé", texte: "Elle est morte à 72 ans, 5 ans après l'accord. Elle a laissé des journaux fragmentaires que Karm (41) a passé 28 ans à reconstituer. Elle a laissé un accord que Kar-Dum maintient sans en comprendre les termes complets. Et elle a laissé des micro-fractures dans les parois de confinement que Drevaya (39) voit depuis 6 mois et n'a rien dit." }
+    ],
+    sorts: ['Immunité fongique (Poison) — résistance totale aux spores et toxines de la zone fongique — capacité unique qui a rendu la négociation possible', 'Communication sporale (Poison) — transmission de signaux chimiques dans les réseaux fongiques — compréhension de la logique de la zone', 'Contamination contrôlée (Poison) — adaptation partielle aux toxines environnantes — survie aux niveaux interdits'],
+    relations: [
+      { id: 41, nom: "Karm", type: "contact", note: "Reconstruit ses journaux depuis 28 ans. Ce qu'il a trouvé le terrified." },
+      { id: 39, nom: "Drevaya", type: "contact", note: "A lu des fragments de ses journaux. Reconnaît les micro-fractures qu'elle décrivait." }
+    ],
+    lore_long: `Valyx a négocié l'accord avec la zone fongique de la Fosse Interdite à 67 ans. Elle est morte 5 ans plus tard sans avoir transmis sa compréhension complète de l'accord.
+
+Karm (41) reconstruit ses journaux depuis 28 ans. Ce qu'il a trouvé le terrified — les termes officiels ne couvrent pas tout, et ce qui manque semble décrire une limite à la contribution de Kar-Dum.
+
+Les micro-fractures que Drevaya (39) observe depuis 6 mois pourraient être ce que Valyx appelait un "signal de refus".`,
+  },
+
+  // ── 39 · DREVAYA ───────────────────────────────────────
+  39: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "Le premier niveau", texte: "À 16 ans, dans une formation accélérée des gardiens de zone après la mort de trois gardiens dans un incident de spores, elle avait été affectée au niveau 5 — normalement inaccessible avant 25 ans. Elle avait survécu sans incident. Elle avait demandé à descendre au niveau 6 la semaine suivante. On lui avait dit non. Elle y était descendue seule deux jours après." },
+      { titre: "La formation aux journaux de Valyx", texte: "À 24 ans, lors d'une formation avancée des gardiens de zone, elle avait eu accès à des extraits des journaux de Valyx (38) — pas les journaux complets, des extraits sélectionnés. Ces extraits décrivaient la zone fongique d'une façon qui correspondait à ce qu'elle avait observée depuis 8 ans mieux que n'importe quel manuel officiel." },
+      { titre: "Le rapport non soumis", texte: "À 31 ans, après une descente au niveau 8 où elle avait observé des changements dans les structures fongiques, elle avait commencé à rédiger un rapport. À mi-chemin, elle avait compris que le rapport nécessitait une explication sur la nature des changements — et que son explication ne correspondrait pas à ce que les structures officielles attendaient d'un rapport de gardienne. Elle avait rangé le brouillon." },
+      { titre: "Les micro-fractures", texte: "À 43 ans, lors d'une routine d'inspection, elle avait vu la première micro-fracture — une fissure dans les cristaux de confinement du niveau 7 qui ne correspondait à aucune dégradation normale. Elle avait comparé avec les journaux de Valyx. La correspondance était exacte avec ce que Valyx appelait un \"signal de refus\". Elle avait noté dans son carnet privé. Elle n'avait rien dit d'autre." },
+      { titre: "Six mois de silence", texte: "Elle a documenté 23 micro-fractures sur les niveaux 7 à 9 depuis 6 mois. Le rythme s'accélère — 4 nouvelles fractures dans les 2 dernières semaines. Elle a noté que la progression correspond à une évolution géométrique, pas linéaire. Elle sait ce que ça veut dire. Elle n'a toujours pas décidé à qui parler en premier." }
+    ],
+    sorts: ['Voile de spores (Poison) — nuage de spores désorientation — perte de perception environnementale dans une zone', 'Symbiose fongique (Poison) — contact avec les réseaux fongiques — navigation souterraine sans équipement', 'Corruption organique (Poison) — injection de toxines adaptatives — affaiblissement progressif d\'une cible'],
+    relations: [
+      { id: 38, nom: "Valyx", type: "contact", note: "Morte il y a 40 ans. A lu ses journaux. Reconnaît ce qu'elle décrivait dans ses propres observations." },
+      { id: 41, nom: "Karm", type: "contact", note: "L'archiviste qui devrait savoir ce qu'elle sait. Elle n'est pas encore allée le voir." },
+      { id: 43, nom: "Graveth", type: "contact", note: "A posé des questions trop précises. Elle pense qu'il veut accès au niveau 9." }
+    ],
+    lore_long: `Drevaya voit les micro-fractures depuis 6 mois. Elle a 23 fractures documentées dans son carnet privé. Le rythme s'accélère.
+
+Elle a lu les journaux de Valyx (38) — elle reconnaît ce que Valyx appelait un "signal de refus". Si elle a raison, ce n'est pas une dégradation des parois. C'est une communication.
+
+Karm (41) a reconstitué les termes de l'accord et est terrified. Graveth (43) cherche accès au niveau 9. Elle n'a toujours pas décidé à qui parler.`,
+  },
+
+  // ── 40 · DRAVEN II ─────────────────────────────────────
+  40: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "La chaîne de Draven", texte: "À 7 ans, son père lui avait passé la chaîne de représentation et lui avait dit que la famille portait une dette envers Kar-Dum — pas envers les dirigeants, envers la cité elle-même. Il avait demandé pourquoi. Son père avait répondu que quand il serait assez vieux pour comprendre, il le comprendrait seul. Il avait 51 ans et il cherchait encore." },
+      { titre: "L'élection", texte: "À 32 ans, il avait été élu représentant de la Confédération Ormn-Dur — la sixième génération de sa lignée à occuper ce poste. Le processus électoral était réel. Il avait gagné sur son propre mérite, pas seulement son nom. Il était néanmoins conscient que le nom avait ouvert des portes que ses rivaux n'avaient pas eu." },
+      { titre: "L'accès de Karm", texte: "À 44 ans, Karm (41) avait demandé accès aux archives privées de la famille Draven — des documents qui n'avaient jamais été soumis aux archives officielles. Il avait hésité. Il avait finalement accordé l'accès. Karm avait passé 3 semaines dans ces archives. Quand il en était sorti, son expression avait changé. Il n'avait pas dit ce qu'il avait trouvé." },
+      { titre: "La réduction de contribution", texte: "À 49 ans, Thyss (42) l'avait convaincu de réduire la contribution individuelle de 12%. Draven II avait accepté parce que les données économiques supportaient la décision et parce que c'était la première réduction depuis 15 ans. Il avait annoncé ça comme une victoire. Depuis, il a des doutes — pas sur la réduction elle-même, mais sur si 12% était suffisant ou si c'était une amélioration cosmétique d'un système fondamentalement problématique." },
+      { titre: "Ce que Karm sait", texte: "Karm est \"terrified\" par ce qu'il a trouvé dans les archives. Draven II ne sait pas encore ce que c'est — Karm ne lui a pas encore dit. Mais les micro-fractures dans la Fosse que personne n'a officiellement rapportées et la nervosité de Karm convergent vers quelque chose que Draven II commence à pressentir sans vouloir articuler." }
+    ],
+    sorts: ['Mur de roche (Roche) — barrière souterraine — protection structurelle d\'une zone', 'Frappe de terrain (Roche) — impact qui provoque des fissures dans le sol — désorientation et obstacles', 'Résistance minérale (Roche) — durcissement de la peau — réduction des dommages physiques'],
+    relations: [
+      { id: 41, nom: "Karm", type: "contact", note: "A accès aux archives privées de la famille. Sait quelque chose qu'il n'a pas encore dit." },
+      { id: 42, nom: "Thyss", type: "allié", note: "Directeur de contribution sincère. A convaincu Draven II pour la réduction de 12%. Surveillance croissante." },
+      { id: 39, nom: "Drevaya", type: "contact", note: "Gardienne de zone. Draven II ne sait pas encore qu'elle voit des micro-fractures." }
+    ],
+    lore_long: `Draven II est le descendant du fondateur Draven qui a négocié l'accord initial avec la Fosse Interdite. Il porte une culpabilité héréditaire dont il ne connaît pas encore les détails complets.
+
+Il a donné à Karm (41) accès aux archives privées de sa famille. Karm est sorti de ces archives "terrified" et n'a pas encore dit ce qu'il a trouvé.
+
+La réduction de contribution de 12% qu'il a approuvée avec Thyss (42) pourrait avoir accéléré ce que Drevaya (39) observe dans les micro-fractures de la Fosse.`,
+  },
+
+  // ── 41 · KARM ──────────────────────────────────────────
+  41: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "Les archives de Kar-Dum", texte: "À 18 ans, il avait rejoint les archives souterraines de Kar-Dum — des tunnels construits pour stocker des documents dans des conditions de température et d'humidité stables. Il y avait trouvé des documents vieux de 80 ans qui n'avaient jamais été indexés. Il avait passé sa première année à les indexer. C'était le travail de toute une vie qui l'attendait." },
+      { titre: "La découverte des journaux de Valyx", texte: "À 33 ans, lors d'un inventaire de routine, il avait trouvé 7 fragments des journaux de Valyx (38) dans une caisse marquée \"archives de routine\". Il avait compris immédiatement que ce n'était pas des archives de routine. Il avait commencé la reconstitution le soir même." },
+      { titre: "Les archives privées de Draven", texte: "À 55 ans, en demandant accès aux archives privées de la famille Draven pour compléter la reconstitution, il avait trouvé la pièce manquante — un document qui décrivait en termes précis ce que l'accord de Valyx impliquait comme contribution de Kar-Dum, avec une note sur ce qui arriverait si la contribution était modifiée de façon significative. Il avait relu ce document 14 fois en 3 semaines. Il était toujours aussi terrifying." },
+      { titre: "La nature de la contribution", texte: "Ce qu'il a trouvé dans les archives de Draven : l'accord de Valyx n'était pas une contribution économique de Kar-Dum à la zone fongique. C'était une contribution biologique — une extraction d'Élus Poison à des intervalles précis, livrée à un niveau spécifique de la Fosse. La zone fongique ne prenait pas des ressources. Elle prenait des personnes. La \"technocratie de contribution\" de Kar-Dum est construite sur quelque chose que ses fondateurs ont choisi de ne pas rendre explicite." },
+      { titre: "La décision", texte: "Il a la documentation complète. Il sait ce que l'accord implique réellement. Il sait que la réduction de contribution de Thyss (42) a probablement perturbé quelque chose dans ce mécanisme. Il sait que Drevaya (39) voit des micro-fractures qui correspondent à ce qu'une perturbation de l'accord provoquerait. Il n'a pas encore décidé à qui parler en premier." }
+    ],
+    sorts: ['Archives vivantes (Sol) — connexion à des strates de sol pour retrouver des traces d\'événements passés — récupération d\'informations souterraines', 'Enracinement (Sol) — ancrage au sol — résistance aux déplacements forcés', 'Frappe de sédiment (Sol) — projection de débris souterrains — impact modéré à moyenne distance'],
+    relations: [
+      { id: 38, nom: "Valyx", type: "contact", note: "Morte il y a 40 ans. A reconstruit ses journaux. A trouvé ce qu'elle n'a pas dit officiellement." },
+      { id: 40, nom: "Draven II", type: "contact", note: "Lui a donné accès aux archives privées. La pièce manquante était là. Doit lui dire ce qu'il a trouvé." },
+      { id: 39, nom: "Drevaya", type: "contact", note: "A les observations directes sur la Fosse. Leurs informations combinées créent la preuve complète." }
+    ],
+    lore_long: `Karm a passé 28 ans à reconstituer les termes de l'accord de Valyx (38). Ce qu'il a trouvé le terrified.
+
+L'accord de Valyx n'était pas économique. C'était biologique — des Élus Poison livrés à intervalles précis à la zone fongique. La technocratie de contribution de Kar-Dum est construite sur cette réalité que ses fondateurs ont choisi de ne pas rendre explicite.
+
+La réduction de contribution de Thyss (42) a peut-être perturbé ce mécanisme. Les micro-fractures de Drevaya (39) en sont peut-être le signe. Il n'a encore dit à personne ce qu'il sait.`,
+  },
+
+  // ── 42 · THYSS ─────────────────────────────────────────
+  42: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "Le système", texte: "À 14 ans, lors d'une crise d'approvisionnement dans son secteur de Kar-Dum, il avait résolu le problème en proposant une redistribution des contributions de 3 secteurs voisins — une solution que les adultes n'avaient pas trouvée parce qu'ils pensaient les secteurs comme des silos. On lui avait dit qu'il avait un don pour les systèmes. Il avait intégré cette description de lui-même." },
+      { titre: "La direction de contribution", texte: "À 38 ans, il avait été nommé directeur de contribution — le poste qui supervisait l'ensemble du système d'extraction et de distribution des contributions de Kar-Dum. Il avait trouvé un système fonctionnel mais inefficace. Il avait passé 5 ans à l'optimiser. Le système fonctionnait maintenant mieux qu'il n'avait jamais fonctionné. Il était fier de ça." },
+      { titre: "La pression de réforme", texte: "À 48 ans, des représentants de plusieurs secteurs avaient présenté des données sur la détresse sociale causée par le niveau de contribution. Les données étaient réelles. Il les avait vérifiées. Il avait répondu qu'il allait étudier des ajustements. L'étude avait pris 5 ans. La réforme était de 12%. Les représentants avaient demandé 30%. Il avait dit que 12% était soutenable et que 30% ne l'était pas." },
+      { titre: "L'annonce de la réduction", texte: "À 54 ans, il avait annoncé la réduction de contribution de 12% comme une réforme majeure. Il y croyait. Les métriques de satisfaction sociale avaient amélioré de 8 points. Le système continuait à fonctionner correctement. Tout était bien. Karm (41) avait changé d'expression 2 semaines après l'annonce. Thyss l'avait remarqué et n'avait pas posé la question." },
+      { titre: "Ce qu'il ne voit pas", texte: "Il ne sait pas que Drevaya (39) voit des micro-fractures dans la Fosse depuis 6 mois. Il ne sait pas que Karm a reconstitué les termes réels de l'accord de Valyx (38). Il ne sait pas que la réduction de 12% a peut-être perturbé le mécanisme de contribution biologique décrit dans cet accord. Il gère un système dont il ne comprend pas la fondation." }
+    ],
+    sorts: ['Armure de métal (Acier) — renforcement de la peau par une couche métallique — résistance maximale aux impacts', 'Projection d\'acier (Acier) — fragment métallique projeté à haute vitesse — impact précis à distance', 'Structure magnétique (Acier) — contrôle des métaux dans une zone — désarmement ou manipulation d\'objets métalliques'],
+    relations: [
+      { id: 40, nom: "Draven II", type: "allié", note: "Son supérieur. L'a convaincu pour la réforme. Lui fait peut-être trop confiance." },
+      { id: 41, nom: "Karm", type: "contact", note: "A changé d'expression depuis 3 semaines. Thyss n'a pas posé la question." },
+      { id: 39, nom: "Drevaya", type: "contact", note: "Il ne sait pas qu'elle observe des micro-fractures." }
+    ],
+    lore_long: `Thyss croit sincèrement au système de contribution de Kar-Dum. Il a réduit la contribution individuelle de 12% et l'a annoncé comme une victoire. Il a tort sur l'importance de cette réduction.
+
+Ce qu'il ne sait pas : l'accord de Valyx (38) impliquait une contribution biologique, pas économique. Sa réduction a peut-être perturbé un mécanisme qu'il ne connaissait pas.
+
+Karm (41) a changé d'expression depuis 3 semaines. Thyss l'a remarqué. Il n'a pas encore posé la question.`,
+  },
+
+  // ── 43 · GRAVETH ───────────────────────────────────────
+  43: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "La doctrine du redistribution", texte: "À 19 ans, il avait rejoint la Convergence non pas comme croyant au Drain volontaire mais comme croyant à la redistribution de la puissance élémentaire. Il avait distingué les deux dès le début : le Drain était un moyen possible, pas la seule voie. La Convergence avait des débats internes sur ce distinguo. Il se positionnait du côté des alternatives." },
+      { titre: "La théorie fongique", texte: "À 35 ans, lors d'une conférence sur les énergies non-élémentaires, il avait entendu parler pour la première fois de la zone fongique de la Fosse Interdite — une énergie organique qui existait en dehors des éléments classiques. Il avait passé les 13 années suivantes à documenter tout ce qui était accessible sur ce sujet. La plupart de ce qui était accessible ne disait pas grand-chose. Il était allé chercher plus loin." },
+      { titre: "Le premier accès refusé", texte: "À 41 ans, il avait demandé formellement un accès de recherche aux niveaux 5-6 de la Fosse. Refus de la Technocratie de Kar-Dum — les niveaux 5-6 étaient réservés aux gardiens de zone certifiés. Il avait obtenu une certification partielle de gardien de zone en 2 ans. Le niveau 7 restait interdit. Il avait continué à chercher des accès alternatifs." },
+      { titre: "La conversation avec Drevaya", texte: "À 47 ans, lors d'une conférence de gardiens de zone à Kar-Dum, il avait rencontré Drevaya (39). Il lui avait posé des questions sur les observations directes des niveaux 7-9. Les questions étaient trop précises. Drevaya l'avait regardé différemment. Il avait changé de sujet. Il n'était pas sûr de l'avoir convaincue que c'était de la curiosité scientifique." },
+      { titre: "Le plan d'accès", texte: "Il cherche un accès au niveau 9 — pas en forçant l'entrée, mais en trouvant quelqu'un qui a l'autorisation et qui peut être convaincu de lui faciliter l'accès. Drevaya est la personne la mieux placée. Elle n'est pas convaincue. Il cherche une autre approche. La situation de la Fosse qu'il ne connaît pas entièrement est peut-être en train de changer de façon à rendre son accès plus urgent — ou impossible." }
+    ],
+    sorts: ['Nuage toxique (Poison) — diffusion de spores concentrées — désorientation et affaiblissement dans une zone', 'Injection ciblée (Poison) — contact physique qui injecte une toxine — effets variés selon la substance', 'Immunité de terrain (Poison) — adaptation aux environnements toxiques — survie dans des zones inhospitalières'],
+    relations: [
+      { id: 39, nom: "Drevaya", type: "contact", note: "Son meilleur contact pour l'accès. Elle est méfiante depuis leur conversation. Il cherche une autre approche." },
+      { id: 44, nom: "Ossira", type: "adversaire", note: "Dissidentes dans la même ville. Objectifs incompatibles sur la Fosse. Il l'évite." },
+      { id: 41, nom: "Karm", type: "contact", note: "L'archiviste qui sait des choses sur la Fosse. Il ne sait pas encore à quel point." }
+    ],
+    lore_long: `Graveth croit que l'énergie fongique de la Fosse Interdite peut être redistribuée — une alternative au Drain volontaire de la Convergence. Sa théorie est sincère. Son moyen pour l'atteindre est dangereux.
+
+Il cherche à accéder au niveau 9. Drevaya (39) est méfiante à son égard depuis leur conversation. Il cherche une autre approche.
+
+Ce qu'il ne sait pas : la Fosse est peut-être en train de changer. Un accès au niveau 9 maintenant pourrait déclencher exactement ce que l'accord de Valyx (38) était conçu pour empêcher.`,
+  },
+
+  // ── 44 · OSSIRA ────────────────────────────────────────
+  44: {
+    timeline_position: { an: -1, lieu: "Ormn-Dur", arc: "Fosse Interdite" },
+    histoire: [
+      { titre: "Les tunnels", texte: "Née et élevée dans les tunnels de Kar-Dum, elle avait appris dès l'enfance que certains tunnels menaient vers des endroits où les règles changeaient. Sa mère lui avait dit de ne jamais descendre en dessous du niveau 4 sans une raison certifiée. Elle avait demandé ce qu'il y avait en dessous. Sa mère avait répondu : \"ce dont Kar-Dum a besoin pour exister\"." },
+      { titre: "Le travail de surface", texte: "À 27 ans, elle travaillait comme technicienne de maintenance des systèmes de ventilation des niveaux 3-5 — une zone de travail légale pour les non-Élus Poison. Elle connaissait bien les niveaux supérieurs de la Fosse sans jamais être descendue en dessous du niveau 5." },
+      { titre: "L'incursion impériale", texte: "À 29 ans, lors d'une maintenance de routine au niveau 5, elle avait rencontré des agents impériaux — des Élus Poison avec des autorisations forcées, en route pour les niveaux 7-9. Elle avait tenté de les arrêter et n'avait pas pu. Elle avait été projetée contre une paroi par un impact de l'un d'eux. Elle était restée consciente suffisamment longtemps pour voir les agents descendre au niveau 6. Ils n'étaient pas remontés." },
+      { titre: "La décision", texte: "Deux semaines après l'incident, depuis son lit de récupération, elle avait envoyé un message aux Dissidentes via un contact qu'elle avait rencontré un an plus tôt sans penser l'utiliser. Le message était : \"l'Empire a essayé d'entrer dans la Fosse. Ce n'était pas la première fois. Il y aura une prochaine fois. Je veux être là pour la prochaine fois.\" Les Dissidentes avaient répondu." },
+      { titre: "La surveillance", texte: "Depuis 8 ans, elle surveille Kar-Dum pour des signes d'une nouvelle incursion impériale dans la Fosse. Elle n'en a pas vu — l'Empire semble avoir compris la leçon. Mais Graveth (43) de la Convergence cherche un accès similaire. Et Drevaya (39) a quelque chose qu'elle ne lui dit pas." }
+    ],
+    sorts: ['Bouclier de sol (Sol) — soulèvement de terre compact — protection directionnelle', 'Frappe sismique (Sol) — onde de choc dans le sol — déstabilisation d\'une zone', 'Tunnel rapide (Sol) — excavation instantanée d\'un passage — évasion ou infiltration souterraine'],
+    relations: [
+      { id: 39, nom: "Drevaya", type: "allié", note: "Se connaissent depuis l'incident. Drevaya ne lui dit pas ce qu'elle observe. Ossira attend." },
+      { id: 43, nom: "Graveth", type: "adversaire", note: "Convergence qui cherche un accès à la Fosse. Elle n'a pas encore décidé si c'est la même menace que l'Empire." },
+      { id: 41, nom: "Karm", type: "contact", note: "Archiviste qu'elle n'a pas approché. Pense qu'il ne comprend pas la réalité de terrain." }
+    ],
+    lore_long: `Ossira a failli mourir à 29 ans dans une incursion impériale dans la Fosse Interdite. Les trois agents impériaux qui sont descendus au niveau 9 ne sont pas remontés. Elle a rejoint les Dissidentes deux semaines après.
+
+Depuis 8 ans, elle surveille une nouvelle incursion impériale. Graveth (43) de la Convergence cherche le même accès. Elle n'a pas encore décidé si c'est la même menace.
+
+Drevaya (39) a quelque chose qu'elle ne lui dit pas depuis 6 mois.`,
+  },
+
+  // ── 45 · AEL ───────────────────────────────────────────
+  45: {
+    timeline_position: { an: -1, lieu: "Noctéa", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Le double élément", texte: "Né à Vel'Nox avec le double élément Electrique/Stellaire — une combinaison documentée comme \"impossible\" par les théoriciens de l'Empire pendant un siècle. Son existence était une preuve empirique que \"impossible\" était un mot que les théoriciens utilisaient pour les choses qu'ils n'avaient pas encore vues. Il avait contribué à construire plusieurs nœuds du réseau des Trois Couches à 30 ans." },
+      { titre: "La tour", texte: "Il avait construit sa tour à Vel'Nox à 45 ans — pas pour s'isoler, mais pour disposer d'un espace de travail adapté à la manipulation simultanée de deux éléments sans interférence avec les structures environnantes. La tour était au centre d'un nœud du réseau des Trois Couches qu'il avait conçu." },
+      { titre: "Le Vol de la Lumière", texte: "À 71 ans dans sa tour, lors du Vol de la Lumière : son énergie a été volée en moins de 4 heures. Pas tuée — extraite. Le processus avait laissé un Élu vivant mais vide. Osara (51), enfant dans une rue adjacente, avait vu la tour s'obscurcir progressivement pendant ces 4 heures. Elle avait entendu quelque chose — pas un cri, quelque chose de différent." },
+      { titre: "Ce qui reste", texte: "Dans les 10 années après le Vol, des rapports fragmentaires dans les marchés nocturnes de Vel'Nox : des témoins qui disaient avoir \"entendu\" quelque chose dans certains couloirs des Trois Couches qui ressemblait à une présence électrique. Ces rapports avaient été mis de côté comme superstition. Vethis (46), en maintenant le réseau depuis 20 ans, a parfois senti quelque chose dans les nœuds centraux qu'il ne pouvait pas expliquer." },
+      { titre: "La tour en ruines", texte: "La tour est debout — partiellement. Personne n'y est entré depuis 60 ans officiellement. Osara y pense depuis 71 ans. Elle n'est pas allée. Nyrreth (47), en cherchant dans les archives censurées, a trouvé une référence à \"la tour d'Ael\" dans un document sur le réseau des Trois Couches. Il commence à comprendre que la tour et les archives sont liées." }
+    ],
+    sorts: ['Arc double (Electrique+Stellaire) — décharge électrique chargée de lumière stellaire — impact qui désactive les éléments de l\'adversaire', 'Réseau vivant (Electrique) — connexion aux structures électriques d\'un bâtiment — contrôle de l\'infrastructure', 'Cartographie stellaire (Stellaire) — projection de la position des corps célestes dans un espace — navigation précise dans l\'obscurité'],
+    relations: [
+      { id: 51, nom: "Osara", type: "contact", note: "Le connaissait enfant. Pense qu'il est peut-être encore en vie. N'est pas encore allée vérifier." },
+      { id: 47, nom: "Nyrreth", type: "contact", note: "A trouvé une référence à sa tour dans des archives censurées. Commence à comprendre le lien." },
+      { id: 46, nom: "Vethis", type: "contact", note: "Maintient le réseau qu'Ael a contribué à construire. A parfois senti quelque chose dans les nœuds centraux." }
+    ],
+    lore_long: `Ael était l'Élu à double élément Electrique/Stellaire dont l'énergie a été volée lors du Vol de la Lumière il y a 71 ans. Il n'a pas été tué — il a été drainé.
+
+Sa tour est debout. Une fenêtre émet parfois une lumière que personne n'explique. Osara (51), qui le connaissait enfant, pense qu'il est peut-être encore là — sous une forme que personne n'a encore vue.
+
+Nyrreth (47) a trouvé une référence à sa tour dans des archives censurées. Ce qu'Ael savait sur le réseau des Trois Couches est peut-être ce que quelqu'un a voulu cacher.`,
+  },
+
+  // ── 47 · NYRRETH ───────────────────────────────────────
+  47: {
+    timeline_position: { an: -1, lieu: "Noctéa", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "La région purge", texte: "Ce qu'il dit : il est arrivé à Vel'Nox il y a 8 ans, après une purge dans une région qu'il ne nomme pas. Ce qu'il ne dit pas : la purge avait ciblé des Élus Spectre spécifiquement — pas des factions, pas des opposants politiques. Des Élus Spectre avec une capacité de lecture à travers les surfaces. Comme lui." },
+      { titre: "Les archives de Vel'Nox", texte: "À Vel'Nox depuis 8 ans, il avait mis 2 ans à localiser les bibliothèques censurées des Trois Couches — des archives que Vethis (46) maintient et qui contiennent des informations que les factions ne veulent pas perdre mais ne veulent pas non plus voir circuler. Il avait commencé à y accéder progressivement, toujours avec une raison légitime de surface." },
+      { titre: "La référence à la tour d'Ael", texte: "Il y a 3 mois, dans une section d'archive censurée sur le réseau des Trois Couches, il avait trouvé une référence à \"la tour d'Ael\" — liée à une section du réseau que les archives officielles décrivent comme \"inactive\". La section inactive correspondait à un nœud construit à l'époque du Vol de la Lumière. Il avait commencé à comprendre que ce qu'il cherchait sur la purge et ce que les archives cachaient sur la tour d'Ael étaient liés." },
+      { titre: "Ce que la purge ciblait", texte: "En reconstitutant depuis des archives fragmentaires : la purge qui l'avait forcé à fuir ciblait des Élus Spectre qui pouvaient lire des surfaces effacées — la capacité de retrouver ce qui a été caché. L'Empire purgeait des personnes qui pouvaient voir ce que les archives censurées contenaient. Nyrreth pouvait voir ce que les archives censurées contenaient. La connexion était évidente. Ce qu'il cherchait maintenant : pourquoi les archives censurées de Vel'Nox contenaient des informations assez importantes pour justifier une purge." },
+      { titre: "La tour et la section inactive", texte: "Il a trouvé le lien entre la tour d'Ael (45) et la section \"inactive\" du réseau des Trois Couches. Si la section est inactive officiellement mais réellement active sous une autre forme, elle contient peut-être des informations sur ce que quelqu'un a voulu cacher depuis le Vol de la Lumière. Shael (48) s'est approché de lui il y a 2 mois. Il n'a pas dit ce qu'il avait trouvé." }
+    ],
+    sorts: ['Passage spectre (Spectre) — traversée temporaire de surfaces légères — infiltration sans destruction', 'Lecture à travers (Spectre) — vision à travers les surfaces solides légères — information sur ce qui est caché', 'Dissolution partielle (Spectre) — réduction de la signature physique — passage discret dans des espaces surveillés'],
+    relations: [
+      { id: 46, nom: "Vethis", type: "contact", note: "Maintient le réseau des Trois Couches. Nyrreth a besoin d'un accès qu'il contrôle." },
+      { id: 45, nom: "Ael", type: "contact", note: "Sa tour est liée à ce qu'il cherche. Ne sait pas encore s'il est encore en vie." },
+      { id: 48, nom: "Shael", type: "adversaire", note: "Acheteur de données de l'ombre. A fait une proposition que Nyrreth a refusée. Potentiellement dangereux." }
+    ],
+    lore_long: `Nyrreth est arrivé à Vel'Nox après une purge qui ciblait les Élus Spectre capables de lire des surfaces effacées — des Élus qui pouvaient voir ce que les archives censurées contenaient. Il est exactement ce type d'Élu.
+
+Dans les bibliothèques censurées des Trois Couches, il a trouvé un lien entre la tour d'Ael (45) et une section du réseau officiellement "inactive". Ce qu'il cherche sur sa purge et ce que les archives cachent sur la tour sont liés.
+
+Shael (48) lui a proposé de l'argent pour des données de l'ombre. Il a refusé. Shael est dangereux.`,
+  },
+
+  // ── 48 · SHAEL ─────────────────────────────────────────
+  48: {
+    timeline_position: { an: -1, lieu: "Noctéa", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "L'injustice de l'élément", texte: "À 12 ans, son frère avait été recruté par l'Empire parce qu'il avait un élément Stellaire. Lui avait un élément Psy. Son frère avait eu accès à des ressources, une formation, une position. Lui avait eu des restrictions et une surveillance accrue. À 12 ans, il avait compris que l'élément n'était pas un mérite — c'était une loterie. Il avait commencé à trouver ça injuste." },
+      { titre: "La Convergence", texte: "À 22 ans, un recruteur de la Convergence l'avait approché avec une doctrine qui correspondait exactement à ce qu'il pensait depuis 10 ans. Il avait rejoint sans hésiter. On lui avait confié un rôle de collecte d'informations à Vel'Nox — identifier des Élus cachés, établir des contacts, faciliter des rencontres. Il avait trouvé ça légitime." },
+      { titre: "Les données qui disparaissent", texte: "À 30 ans, il avait commencé à remarquer que certaines des personnes dont il avait collecté des données ne réapparaissaient plus dans les marchés nocturnes de Vel'Nox. Il avait posé la question à son contact à la Convergence. On lui avait répondu que ces personnes avaient choisi de rejoindre des communautés Convergence plus fermées. Il avait accepté cette réponse." },
+      { titre: "Nyrreth", texte: "Il y a 2 mois, Nyrreth (47) avait refusé sa proposition sans explication. Ce refus ne ressemblait pas à la méfiance habituelle des habitants de Vel'Nox — il ressemblait à quelqu'un qui savait exactement ce qu'il faisait et pourquoi c'était dangereux. Cette lecture l'avait troublé. Il cherche maintenant à comprendre ce que Nyrreth sait qu'il ne sait pas." },
+      { titre: "Ce qu'il commence à voir", texte: "Tharyn (50) lui a vendu une information il y a 3 semaines : de nouvelles marchandises circulent dans les marchés nocturnes que Tharyn ne reconnaît pas. Shael a transmis l'information à son contact à la Convergence et n'a pas eu de réponse. C'est la première fois depuis 16 ans que son contact ne répond pas. Il commence à se poser des questions qu'il avait évitées jusque-là." }
+    ],
+    sorts: ['Lecture de surface (Psy) — accès aux pensées superficielles d\'une cible — informations immédiates sur les intentions', 'Brouillage d\'intention (Psy) — masquage de ses propres pensées — protection contre la lecture Psy adverse', 'Persuasion émotionnelle (Psy) — amplification d\'une émotion présente chez la cible — orientation de décision'],
+    relations: [
+      { id: 47, nom: "Nyrreth", type: "contact", note: "A refusé sa proposition. Shael cherche à comprendre pourquoi. Potentiellement dangereux pour Nyrreth." },
+      { id: 50, nom: "Tharyn", type: "allié", note: "Source d'informations sur les marchés nocturnes. Lui vend régulièrement des données." },
+      { id: 46, nom: "Vethis", type: "contact", note: "Surveille Vethis sans qu'il le sache. Vethis sent que quelque chose a changé dans les flux." }
+    ],
+    lore_long: `Shael achète des données sur des Élus cachés à Vel'Nox pour la Convergence depuis 16 ans. Il croit sincèrement qu'il fait de la justice redistributive. Il ne sait pas ce que la Convergence fait avec ses données après.
+
+Nyrreth (47) a refusé sa proposition il y a 2 mois. Premier refus en 16 ans. Shael cherche à comprendre pourquoi.
+
+Son contact à la Convergence ne répond plus depuis 3 semaines. Les nouvelles marchandises que Tharyn (50) a mentionnées sont peut-être liées à ce silence.`,
+  },
+
+  // ── 50 · THARYN ────────────────────────────────────────
+  50: {
+    timeline_position: { an: -1, lieu: "Noctéa", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "Le premier marché", texte: "À 18 ans, il avait vendu pour la première fois dans un marché nocturne de Vel'Nox — des informations sur des routes entre les Première et Deuxième Couches qu'il avait cartographiées seul. L'acheteur lui avait demandé comment il avait accès à ces routes. Il avait dit qu'il les avait marchées. L'acheteur avait dit que ce n'était pas possible — ces routes étaient supposées inaccessibles. Tharyn lui avait montré la sortie. L'acheteur était revenu avec plus d'argent." },
+      { titre: "La réputation", texte: "En 25 ans, il avait construit une réputation de précision et de neutralité. Il ne vendait jamais des informations à deux acheteurs concurrents sur le même sujet. Il ne prenait jamais position. Il ne mentait jamais — ce qu'il vendait était vrai ou il ne le vendait pas. Cette combinaison lui avait valu une position unique dans les marchés." },
+      { titre: "Les nouvelles marchandises", texte: "Il y a 4 mois, des transactions avaient commencé à apparaître dans les marchés nocturnes qu'il ne reconnaissait pas — des types de données échangées avec des patterns de paiement inhabituels. Pas des transactions isolées. Un réseau organisé opérant à l'intérieur des marchés sans passer par ses canaux habituels. La première fois qu'il avait vu quelque chose de semblable, c'était lors du Vol de la Lumière. Il ne l'avait pas dit à Shael." },
+      { titre: "Le pattern", texte: "En analysant les transactions sur 4 mois : les nouvelles marchandises circulaient entre des acheteurs qu'il n'avait pas vus avant et des vendeurs qui disparaissaient après une seule transaction. Les données échangées avaient une structure qu'il reconnaissait maintenant — des profils d'Élus. Quelqu'un collectait des profils d'Élus à Vel'Nox de façon systématique. Ce n'était pas Shael — le réseau était trop organisé pour lui." },
+      { titre: "L'observation", texte: "Il observe depuis 4 mois. Il a dit à Shael que quelque chose avait changé. Il a dit à Vethis (46) que des routes de marché empiètent sur des zones des Trois Couches qu'il n'avait pas vues utilisées depuis longtemps. Il n'a pas encore dit à l'un ou l'autre ce qu'il pense vraiment : quelqu'un construit quelque chose dans les marchés nocturnes de Vel'Nox, et ce quelqu'un n'est pas un habitant ordinaire des Trois Couches." }
+    ],
+    sorts: ['Nuée d\'insectes (Insecte) — déploiement d\'un essaim de scouts — surveillance d\'une zone étendue', 'Dard paralysant (Insecte) — injection d\'une toxine d\'insecte — paralysie temporaire d\'une cible', 'Carapace d\'essaim (Insecte) — protection par une masse d\'insectes — réduction des impacts physiques'],
+    relations: [
+      { id: 48, nom: "Shael", type: "allié", note: "Acheteur régulier depuis 8 ans. Tharyn lui a dit que quelque chose a changé. Pas dit ce qu'il a vu." },
+      { id: 46, nom: "Vethis", type: "allié", note: "Collaboration pratique depuis 12 ans. A dit à Vethis que des routes empiètent sur les Trois Couches." },
+      { id: 51, nom: "Osara", type: "contact", note: "La plus ancienne de Vel'Nox qu'il connaît. Pourrait reconnaître le pattern des nouvelles marchandises." }
+    ],
+    lore_long: `Tharyn voit tout dans les marchés nocturnes de Vel'Nox depuis 25 ans. Il a vu des choses qui ressemblaient à des patterns organisés une seule fois avant — lors du Vol de la Lumière.
+
+Depuis 4 mois, un réseau de collecte de profils d'Élus opère dans les marchés. Trop organisé pour Shael (48) seul. Quelqu'un d'autre construit quelque chose dans les Trois Couches.
+
+Il n'a pas encore dit entièrement ce qu'il a vu. La neutralité est la condition de sa survie. Mais garder ça pour lui devient de plus en plus difficile.`,
+  },
+
+  // ── 51 · OSARA ─────────────────────────────────────────
+  51: {
+    timeline_position: { an: -1, lieu: "Noctéa", arc: "Vol de la Lumière" },
+    histoire: [
+      { titre: "La rue adjacente", texte: "À 13 ans, dans la rue adjacente à la tour d'Ael (45), elle avait vu la tour s'obscurcir progressivement pendant 4 heures. Elle avait entendu quelque chose — pas un cri, une vibration dans les murs de la rue, comme si quelque chose de très grand s'arrêtait. Les adultes autour d'elle avaient couru vers la tour ou s'en étaient éloignés. Elle était restée immobile et avait regardé jusqu'à la fin." },
+      { titre: "La décision de rester", texte: "À 16 ans, 3 ans après le Vol, sa famille l'avait incitée à quitter Vel'Nox — la cité était marquée par ce qui s'était passé, moins sûre que les autres. Elle avait dit qu'elle restait. Elle ne leur avait pas dit pourquoi. Elle ne s'était pas encore dit pourquoi à elle-même." },
+      { titre: "Les 71 ans", texte: "À 84 ans, elle vit à Vel'Nox depuis qu'elle a décidé de rester à 13 ans. Elle a vu la cité changer autour d'elle. Elle a vu les marchés nocturnes se former, les Trois Couches se construire, les Dissidentes s'installer. Elle n'a pas quitté Vel'Nox depuis 71 ans. La tour d'Ael est toujours là. Elle ne s'y est jamais approchée de moins de 200 mètres." },
+      { titre: "La fenêtre", texte: "Il y a 3 mois, à 2h du matin, en passant dans une rue à 150 mètres de la tour : une lumière à la fenêtre de l'étage supérieur. Pas d'éclairage artificiel — quelque chose d'autre. Elle s'était arrêtée. La lumière avait duré 4 minutes puis disparu. Elle n'était pas allée vérifier. Elle avait changé de direction et n'était pas repassée par là depuis." },
+      { titre: "La décision imminente", texte: "Nyrreth (47) cherche quelque chose dans les archives censurées qui semble lié à la tour d'Ael. Tharyn (50) observe des nouvelles marchandises dans les marchés qui ressemblent à quelque chose qu'elle a vu lors du Vol. Ces deux faits, joints à la lumière de 3 mois plus tôt, commencent à lui ressembler à une convergence. Elle commence à penser qu'elle va devoir aller voir la tour." }
+    ],
+    sorts: ['Brume toxique (Poison) — diffusion lente d\'une substance de contact — affaiblissement de zone', 'Résistance ancienne (Poison) — immunité aux toxines accumulée en 84 ans — survie dans des environnements hostiles', 'Toucher corrosif (Poison) — contact direct qui injecte une toxine — effet immédiat sur une cible'],
+    relations: [
+      { id: 45, nom: "Ael", type: "contact", note: "Le connaissait à 13 ans. Pense qu'il est peut-être encore en vie. N'est pas allée vérifier depuis 71 ans." },
+      { id: 50, nom: "Tharyn", type: "contact", note: "Marchand de confiance depuis 25 ans. Observe quelque chose qu'elle pourrait reconnaître." },
+      { id: 47, nom: "Nyrreth", type: "contact", note: "A remarqué son arrivée il y a 8 ans. Cherche quelque chose lié à la tour d'Ael. Elle ne lui a pas encore parlé." }
+    ],
+    lore_long: `Osara a 84 ans. Elle était dans la rue adjacente à la tour d'Ael (45) quand le Vol de la Lumière s'est produit. Elle a entendu quelque chose — pas un cri. Quelque chose de différent. Elle vit à Vel'Nox depuis 71 ans.
+
+Il y a 3 mois, une lumière à la fenêtre de la tour d'Ael. Elle n'y est pas allée.
+
+Nyrreth (47) cherche quelque chose lié à cette tour. Tharyn (50) voit des patterns dans les marchés qui ressemblent au Vol. Elle commence à penser qu'elle va devoir y aller.`,
+  },
+
+  // ── 52 · KARATH ────────────────────────────────────────
+  52: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "L'An -312", texte: "En An -312, une armée de coalition menaçait Crysalme. Karath avait 16 ans. Il était le seul Élu Glace présent à Crysalme à ce moment qui avait la puissance nécessaire pour faire quelque chose à l'échelle de ce qui était nécessaire. Il n'avait pas été formé pour ça. Il avait fait ce qu'il pouvait faire." },
+      { titre: "Le gel", texte: "En 4 heures, il avait figé 40 000 soldats dans un champ cristallin à l'extérieur de Crysalme. L'acte avait demandé plus d'énergie qu'un Élu de 16 ans ne pouvait en fournir sans conséquences. Il était mort pendant ou juste après le gel. Ce que les témoins disent sur les dernières minutes est contradictoire." },
+      { titre: "L'instruction", texte: "Selon les fragments retrouvés par Thyval (55) : dans les heures avant ou pendant le gel, Karath avait laissé une instruction — des conditions pour le dégel. Cette instruction n'avait pas été rendue publique. Elle était dans des archives privées que la Monarchie avait ensuite contrôlées. Sa condition pour le dégel est peut-être ce qui se modifie actuellement — ce que Sylkra (53) voit dans les micro-fractures." },
+      { titre: "Ce qui reste dans le gel", texte: "Velsa (58) dit entendre quelque chose depuis le Champ depuis 3 mois. Les Élus Spectre ont une sensibilité aux présences qui persistent dans des états limites. Si quelque chose de Karath persiste dans le gel après 312 ans — pas sa conscience, peut-être une empreinte de l'acte lui-même — Velsa pourrait l'entendre avant que les micro-fractures rendent le Champ accessible." },
+      { titre: "Le monument", texte: "Karath est un monument depuis 312 ans. La Monarchie de Crysalme gouverne en partie au nom de son sacrifice. Ses représentations décorent les bâtiments officiels. Les archives qui le montrent tel qu'il était — un adolescent de 16 ans avec des mains trop grandes — sont dans les collections de Thyval et ne sont pas rendues publiques." }
+    ],
+    sorts: ['Gel de masse (Glace) — cristallisation d\'une zone étendue — capacité unique qui a nécessité sa mort', 'Champ cristallin (Glace) — création d\'une structure de cristaux portants — confinement de zone permanente', 'Stase partielle (Glace) — ralentissement d\'une cible sans gel complet — préservation'],
+    relations: [
+      { id: 55, nom: "Thyval", type: "contact", note: "A trouvé son instruction pour le dégel dans des archives privées. Ne l'a pas encore entièrement lue." },
+      { id: 53, nom: "Sylkra", type: "contact", note: "Voit les micro-fractures dans le Champ qu'il a créé. Peut-être les premières fractures dans les conditions du gel." },
+      { id: 58, nom: "Velsa", type: "contact", note: "Entend quelque chose depuis le Champ depuis 3 mois. Peut-être une empreinte de l'acte de gel." }
+    ],
+    lore_long: `Karath avait 16 ans quand il a figé 40 000 soldats en An -312. Il est mort pendant ou juste après l'acte. La Monarchie de Crysalme gouverne en partie au nom de ce sacrifice depuis 312 ans.
+
+Thyval (55) a trouvé une instruction que Karath aurait laissée pour le dégel — des conditions qu'il avait lui-même définies. Personne ne l'a encore lue entièrement.
+
+Velsa (58) entend quelque chose depuis le Champ depuis 3 mois. Sylkra (53) voit les micro-fractures. Si les conditions du gel changent, le dégel n'est pas une décision — c'est une conséquence.`,
+  },
+
+  // ── 53 · SYLKRA ────────────────────────────────────────
+  53: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "Le Champ", texte: "Née à Crysalme dans une famille de gardiens du Champ Gelé depuis trois générations. Le Champ Gelé n'était pas un mystère pour elle — c'était une infrastructure. Elle l'avait appris comme telle. À 22 ans, elle avait intégré les gardiens comme technicienne de surveillance cristalline." },
+      { titre: "La première anomalie", texte: "À 49 ans, elle avait observé la première micro-fracture dans les cristaux périphériques du Champ — une variation de 0,003% dans la densité cristalline d'un secteur qu'elle surveillait depuis 5 ans. Elle avait documenté et attendu de voir si ça progressait. Ça avait progressé." },
+      { titre: "Le rapport", texte: "À 65 ans, après 16 ans d'observations et 23 micro-fractures documentées, elle avait soumis un rapport formel à Keldris (57). Le rapport décrivait une progression géométrique des fractures — pas linéaire. Keldris l'avait convoquée et lui avait dit que le rapport ne serait pas transmis. La raison officielle : \"données préliminaires insuffisantes pour conclure\". La raison réelle : si le rapport sortait, la stabilité géopolitique de Crysalme était menacée." },
+      { titre: "La documentation secrète", texte: "À 65 ans, après la convocation de Keldris, elle avait continué à documenter dans ses carnets personnels — 18 mois de données supplémentaires, plus précises et plus alarmantes que le rapport original. Elle est maintenant à 47 fractures documentées, dont 12 dans les 4 derniers mois. La progression s'accélère." },
+      { titre: "La décision", texte: "Ses carnets contiennent 22 ans de données. Les 18 derniers mois montrent une accélération. Velsa (58) dit entendre quelque chose depuis le Champ depuis 3 mois. Thyval (55) a trouvé quelque chose dans les archives des serments. Elle ne sait pas encore ce que Velsa entend ou ce que Thyval a trouvé. Elle est à un point où continuer à documenter sans agir devient difficile à justifier même pour elle." }
+    ],
+    sorts: ['Détection cristalline (Glace) — sensibilité aux variations dans les structures de glace — diagnostic de l\'état du Champ Gelé', 'Mur de glace (Glace) — barrière cristalline instantanée — protection ou obstacle', 'Rafale givrante (Glace) — projection de particules de glace — ralentissement d\'une cible'],
+    relations: [
+      { id: 57, nom: "Keldris", type: "adversaire", note: "L'a réduite au silence. Son supérieur hiérarchique. Ne sait pas qu'elle continue à documenter." },
+      { id: 55, nom: "Thyval", type: "contact", note: "Archiviste des serments. A peut-être une copie de son rapport. Elle ne lui a pas encore parlé." },
+      { id: 58, nom: "Velsa", type: "contact", note: "Entend quelque chose depuis le Champ depuis 3 mois. Leurs observations pourraient se confirmer mutuellement." }
+    ],
+    lore_long: `Sylkra a observé la première micro-fracture du Champ Gelé à 49 ans. Elle a documenté pendant 16 ans avant de soumettre un rapport formel. Keldris (57) l'a réduite au silence — "données insuffisantes pour conclure".
+
+Elle documente secrètement depuis 18 mois. 47 fractures, progression géométrique. Elle a les données les plus précises sur l'état réel du Champ.
+
+Velsa (58) entend quelque chose depuis le Champ depuis 3 mois. Elle ne sait pas encore ce que c'est.`,
+  },
+
+  // ── 55 · THYVAL ────────────────────────────────────────
+  55: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "Les serments", texte: "Né dans une famille d'archivistes de la Monarchie depuis deux générations. Les archives d'Iskral n'étaient pas un mystère pour lui — c'était une vocation héritée. À 18 ans, il avait intégré les archives comme apprenti. À 32 ans, il était archiviste des serments — responsable des documents qui fondaient les engagements politiques de la Monarchie." },
+      { titre: "L'inventaire des archives profondes", texte: "À 68 ans, lors d'un inventaire quinquennal des archives les plus anciennes d'Iskral — des archives que personne n'avait ouvertes depuis 40 ans — il avait trouvé une section scellée marquée \"documents personnels, An -312\". Il avait suivi la procédure d'ouverture. Ce qu'il avait trouvé l'avait arrêté." },
+      { titre: "L'instruction de Karath", texte: "Dans la section scellée : un document manuscrit en Givrin ancien, partiellement dégradé, écrit par quelqu'un dont la main tremblait. L'écriture de quelqu'un qui était en train de mourir ou qui venait de faire quelque chose d'épuisant. L'entête : \"Conditions du dégel. À lire quand les cristaux commenceront à fléchir.\" Il avait photocopié le document selon les procédures et commencé l'authentification." },
+      { titre: "Ce que le document dit", texte: "L'authentification était en cours. Il avait lu les parties lisibles. Le document définissait des conditions pour le dégel — pas physiques, politiques. Des conditions qui correspondaient à quelque chose que la coalition de l'époque avait ou n'avait plus. Il n'avait pas encore traduit entièrement les sections en Givrin archaïque — ses connaissances de cette variante étaient limitées. Il cherchait un traducteur de confiance." },
+      { titre: "La traduction", texte: "Il a le document. L'authentification est à 80% — suffisante pour le considérer comme authentique. Il cherche quelqu'un pour traduire les sections en Givrin archaïque. Il n'a pas dit à Keldris (57) ce qu'il avait trouvé. Il a lu le rapport de Sylkra (53) dans les archives — il sait qu'on l'a réduite au silence. Ces deux faits convergent vers quelque chose qu'il n'a pas encore formulé." }
+    ],
+    sorts: ['Cartographie céleste (Stellaire) — projection de la position des corps célestes — navigation et localisation précise', 'Lumière d\'archive (Stellaire) — éclairage concentré qui révèle les encres et sceaux effacés — lecture d\'informations cachées', 'Bouclier de lumière stellaire (Stellaire) — barrière lumineuse — protection partielle contre les impacts'],
+    relations: [
+      { id: 52, nom: "Karath", type: "contact", note: "Mort il y a 312 ans. A trouvé son instruction pour le dégel. L'authentifie et la traduit." },
+      { id: 57, nom: "Keldris", type: "adversaire", note: "Représentant de la Monarchie. A ordonné le silence sur les micro-fractures. Ne lui a pas dit ce qu'il a trouvé." },
+      { id: 53, nom: "Sylkra", type: "contact", note: "A vu son rapport classé. Sait qu'elle a été réduite au silence. Leurs informations se complètent." }
+    ],
+    lore_long: `Thyval a trouvé l'instruction de Karath (52) pour le dégel il y a 3 semaines dans des archives scellées depuis 40 ans. L'entête dit : "À lire quand les cristaux commenceront à fléchir."
+
+Les cristaux fléchissent — Sylkra (53) l'a documenté. Thyval a vu son rapport classé "données préliminaires".
+
+Il n'a pas dit à Keldris (57) ce qu'il a trouvé. Les sections en Givrin archaïque ne sont pas encore traduites. Le dégel n'est peut-être pas à des années.`,
+  },
+
+  // ── 57 · KELDRIS ───────────────────────────────────────
+  57: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "La Monarchie", texte: "Né dans une famille de fonctionnaires de la Monarchie, il avait intégré les structures de représentation à 22 ans. Il avait appris la gestion politique dans un système qui valorisait la stabilité sur l'innovation. Il avait adapté sa pensée à ce système. Il était devenu excellent dans ce cadre." },
+      { titre: "La représentation du Champ", texte: "À 38 ans, il avait été nommé représentant de la Monarchie pour les questions liées au Champ Gelé — une position nouvelle créée à ce moment, signe que la Monarchie prenait le Champ plus au sérieux comme question politique. Il avait passé les 30 années suivantes à gérer les demandes de dégel de la coalition descendante, les requêtes impériales d'accès, et les questions scientifiques sur l'état du Champ." },
+      { titre: "Le rapport de Sylkra", texte: "À 66 ans, le rapport de Sylkra (53) avait atterri sur son bureau. Il l'avait lu. Les données étaient troublantes. Il avait demandé à Sylkra si elle avait des solutions à proposer. Elle avait dit que non — elle documentait, elle ne proposait pas de solutions. Il lui avait dit que publier des données d'anomalie sans solution créerait une panique sans bénéfice. Il avait classé le rapport \"données préliminaires\" et convoqué Sylkra pour lui demander de retenir toute communication externe jusqu'à confirmation." },
+      { titre: "Ce qu'il ne voit pas", texte: "Il ne sait pas que Sylkra continue à documenter secrètement. Il ne sait pas que Thyval a trouvé l'instruction de Karath pour le dégel. Il ne sait pas que Velsa \"entend\" quelque chose depuis le Champ depuis 3 mois. Il gère une situation dont il ne reçoit plus les données depuis 18 mois." },
+      { titre: "La stabilité maintenue", texte: "Du point de vue de Keldris, la situation est stable. Le rapport de Sylkra est classé. Les communications externes sont contrôlées. La coalition descendante n'a pas d'informations nouvelles. Les demandes d'accès impérial sont rejetées. La Monarchie maintient sa position. Ce qu'il ne voit pas : la situation réelle du Champ continue à évoluer sans lui." }
+    ],
+    sorts: ['Barrière de glace (Glace) — mur cristallin instantané — protection ou division d\'espace', 'Tempête givrante (Glace) — projection de particules glaciales dans une zone — ralentissement et désorientation', 'Cristallisation forcée (Glace) — gel rapide d\'une surface de contact — immobilisation temporaire'],
+    relations: [
+      { id: 53, nom: "Sylkra", type: "adversaire", note: "A réduite au silence. Pense qu'elle a arrêté de documenter. Ne sait pas qu'elle continue." },
+      { id: 55, nom: "Thyval", type: "allié", note: "Archiviste de confiance. Ne sait pas ce qu'il a trouvé dans les archives profondes." },
+      { id: 58, nom: "Velsa", type: "contact", note: "Traite ses \"perceptions\" du Champ comme de la superstition." }
+    ],
+    lore_long: `Keldris a ordonné le silence sur les micro-fractures du Champ Gelé quand Sylkra (53) a soumis son rapport. Sa conviction : publier des données d'anomalie sans solution aurait créé une panique sans bénéfice.
+
+Il a transformé un problème gérable en une crise potentielle. Il ne le sait pas encore.
+
+Sylkra continue à documenter secrètement. Thyval (55) a trouvé l'instruction de Karath pour le dégel. Velsa (58) entend quelque chose. Keldris ne reçoit aucune de ces informations.`,
+  },
+
+  // ── 58 · VELSA ─────────────────────────────────────────
+  58: {
+    timeline_position: { an: -1, lieu: "Crysalme", arc: "Gel Éternel" },
+    histoire: [
+      { titre: "La double nature", texte: "Née Givrine avec un élément Spectre — une combinaison rare, les deux éléments se renforçant mutuellement dans certaines conditions. Sa famille avait eu du mal à savoir comment la former : les Givrins n'avaient pas de tradition d'éducation Spectre, et les formateurs Spectre n'étaient pas habitués au contexte froid de Crysalme. Elle s'était formée seule en partie." },
+      { titre: "Iskral", texte: "À 25 ans, elle s'était installée à Iskral pour être proche du Champ Gelé — une curiosité professionnelle autant que personnelle. L'empreinte de l'acte de Karath dans le gel était l'exemple le plus grand et le plus ancien d'une empreinte dans une structure physique qu'elle pouvait trouver dans le monde. Elle avait passé 19 ans à l'étudier de loin." },
+      { titre: "La conversation avec Keldris", texte: "Il y a 2 ans, Keldris (57) l'avait contactée après avoir entendu parler de ses observations du Champ. Il voulait comprendre ce qu'elle voyait. Elle lui avait expliqué — les empreintes, les structures persistantes, la physique Spectre appliquée aux grands actes. Il avait dit que tout ça n'avait pas de valeur dans une décision politique. Elle avait arrêté de lui parler." },
+      { titre: "Ce qu'elle entend depuis 3 mois", texte: "Il y a 3 mois, quelque chose avait changé dans ce qu'elle percevait depuis le Champ. Pas l'empreinte de Karath — elle connaissait ça depuis 19 ans. Quelque chose de différent, plus proche de la surface du Champ, plus récent. Une présence dans les cristaux périphériques qui n'était pas là avant. Elle avait commencé à noter ses observations." },
+      { titre: "La troisième observation", texte: "Elle a deux observations indépendantes de la même présence dans les cristaux périphériques. Elle attend la troisième avant de conclure — sa règle personnelle. La troisième observation, si elle arrive, lui donnera une base suffisante pour dire quelque chose de définitif. Elle cherche quelqu'un qui comprendrait ce qu'elle dirait. Elle pense à Sylkra." }
+    ],
+    sorts: ['Passage Spectre (Spectre) — traversée temporaire de surfaces cristallines légères — accès à des zones confinées', 'Perception d\'empreinte (Spectre) — lecture des actes passés dans des structures physiques — information sur l\'histoire d\'un lieu', 'Dissolution givrine (Spectre+Glace) — réduction de la signature physique dans un environnement froid — quasi-invisibilité dans la neige ou le gel'],
+    relations: [
+      { id: 53, nom: "Sylkra", type: "contact", note: "A entendu parler d'elle via des marchands. Leurs observations se complètent. Elles ne se sont pas encore parlé." },
+      { id: 55, nom: "Thyval", type: "contact", note: "Archiviste dont elle a entendu le nom. Son document de Karath et ses perceptions sont liés." },
+      { id: 57, nom: "Keldris", type: "adversaire", note: "Lui a dit que ses perceptions n'avaient pas de valeur officielle. Elle n'a pas besoin de lui." }
+    ],
+    lore_long: `Velsa entend quelque chose dans les cristaux périphériques du Champ Gelé depuis 3 mois. Pas l'empreinte de Karath (52) qu'elle connaît depuis 19 ans — quelque chose de différent, plus proche de la surface.
+
+Elle a deux observations indépendantes. Elle attend la troisième avant de conclure. Elle cherche quelqu'un qui comprendrait ce qu'elle dirait.
+
+Sylkra (53) voit des micro-fractures dans la même zone depuis 18 mois. Elles ne se sont pas encore parlé.`,
+  },
+
+  // ── 59 · SECOND AVATAR ─────────────────────────────────
+  59: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "La naissance", texte: "Né à An 0 — ou peu avant — avec accès à tous les éléments, une capacité que les théoriciens n'avaient pas anticipée et que l'Empire ne pouvait pas tolérer. Sa naissance avait déclenché une réponse immédiate des services de l'Empire. Les Dissidentes l'avaient pris avant que l'Empire arrive. Sarath (61) avait été celui qui l'avait caché les 3 premières années." },
+      { titre: "La vie en transit", texte: "Jusqu'à 12 ans, il avait changé de lieu de vie tous les 3 à 9 mois — une série de familles Dissidentes, d'espaces entre deux cités, de routes que l'Empire ne cartographiait pas. Il avait grandi en sachant que sa présence mettait en danger ceux qui l'accueillaient. Il avait appris à ne pas s'attacher." },
+      { titre: "Le symbole", texte: "À 23 ans, les Dissidentes avaient commencé à utiliser son nom — pas son identité, son nom — dans des communications publiques comme preuve que le Second Avatar existait et n'était pas contrôlé par l'Empire. Il avait dit qu'il ne voulait pas être utilisé de cette façon. Les Dissidentes lui avaient expliqué que ce n'était pas lui qui était utilisé mais l'idée de lui. Il avait dit que c'était la même chose." },
+      { titre: "Les 9 blessures", texte: "À 26 ans, il avait décidé de comprendre les 9 événements fondateurs — pas en lisant des archives, en allant voir les personnes qui avaient vécu leurs conséquences. Varkhôl, Thalassyr, Asterciel, Sylvera, Ormn-Dur, Vel'Nox, Crysalme, Virex. Il en avait visité 6. Il n'avait pas encore été à Vel'Nox ni à Crysalme. Avel (64) était en route." },
+      { titre: "Les 48 heures", texte: "Il est à Virex. Avel (64) est à 48h. Thyven (62) l'a rencontré une fois et ne l'a pas dénoncé. Les 39 enfants grandissent dans Virex sous la surveillance de Thyven et la pression de Lysael (63). Il ne sait pas encore ce qu'Avel sait de sa position." }
+    ],
+    sorts: ['Adaptation élémentaire (Tous) — accès à n\'importe quel élément selon le contexte — polyvalence totale mais sans maîtrise parfaite de chacun', 'Résonance multiple (Tous) — activation simultanée de deux éléments — effet amplifié mais épuisant', 'Lecture des éléments (Tous) — perception de l\'élément dominant d\'une zone — navigation et compréhension de l\'environnement'],
+    relations: [
+      { id: 61, nom: "Sarath", type: "contact", note: "Mort — l'a caché pendant 3 ans. Une dette non remboursée. Présent comme fantôme dans chaque décision." },
+      { id: 62, nom: "Thyven", type: "allié", note: "Administrateur de Virex qui ne l'a pas dénoncé. Il veut le revoir." },
+      { id: 64, nom: "Avel", type: "adversaire", note: "Capteur impérial à 48h d'arriver. Il ne sait pas encore." }
+    ],
+    lore_long: `Le Second Avatar a 28 ans et porte tous les éléments. Il refuse d'être un symbole. Il veut comprendre les 9 événements fondateurs avant de décider quoi que ce soit.
+
+Il est à Virex. Avel (64) est à 48h. Thyven (62) ne l'a pas dénoncé quand ils se sont rencontrés.
+
+Sarath (61) est mort. Il l'a caché pendant 3 ans. Le Second Avatar lui devait sa survie. Cette dette est présente dans chaque décision.`,
+  },
+
+  // ── 60 · PREMIER AVATAR ────────────────────────────────
+  60: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "La formation", texte: "Né environ 15 ans avant la naissance du Second Avatar, il avait été identifié comme Homme-Lien multi-élémentaire à 8 ans. L'Empire avait choisi d'intégrer plutôt qu'éliminer — une décision calculée. Il avait été formé dans les structures de l'Empire depuis l'âge de 9 ans. La Citadelle avait été son éducation, son milieu, son foyer." },
+      { titre: "La gouvernance", texte: "À 28 ans, il avait pris la gouvernance de l'Empire — un processus qui avait duré 3 ans de transition formelle. Il avait reçu les clés de la Citadelle et des structures qu'il avait appris à connaître depuis 19 ans. Il avait dit lors de son premier discours qu'il gouvernerait avec méthode. 15 ans plus tard, c'est ce qu'il fait." },
+      { titre: "La peur", texte: "À 35 ans, lors d'une crise politique à Varkhôl, il avait utilisé ses éléments sans contrôle pendant 4 secondes — une perte de contrôle dans une chambre de réunion à huis clos que seuls 3 témoins avaient vue. Aucun des 3 ne pouvait parler. Il avait géré la situation. Il avait ensuite compris ce qui s'était passé : sa peur de ne pas être légitime avait déclenché quelque chose. Il avait redoublé de discipline depuis." },
+      { titre: "Le Second Avatar", texte: "À 38 ans, il avait reçu les premiers rapports confirmés sur le Second Avatar — pas des rumeurs, des preuves. Un autre Homme-Lien multi-élémentaire, 15 ans plus jeune, vivant parmi les Dissidentes. Il avait pris la décision d'envoyer des Capteurs. Il n'avait pas regardé en face ce que cette décision disait de lui." },
+      { titre: "Avel à 48h", texte: "Avel (64) est à 48h d'arriver à Virex. Le Premier Avatar attend les résultats. Il pense à la fissure intérieure qu'il ne nomme pas. Si deux Avatars se confrontent, ce qui se passe n'est pas dans aucun des scénarios qu'il a modélisés. Il ne s'est pas demandé pourquoi il n'a pas modélisé ce scénario." }
+    ],
+    sorts: ['Maîtrise multiélémentaire (Tous) — accès contrôlé à tous les éléments — précision maximale mais rigidité émotionnelle requise', 'Gouvernance élémentaire (Tous) — suppression de l\'élément dominant d\'une zone — contrôle de l\'environnement', 'Fissure (Tous) — perte de contrôle involontaire — libération totale et non dirigée de l\'énergie élémentaire'],
+    relations: [
+      { id: 59, nom: "Second Avatar", type: "adversaire", note: "Un problème politique. Un autre lui-même. Il ne s'est pas demandé ce que ça voulait dire." },
+      { id: 64, nom: "Avel", type: "allié", note: "Son Capteur. Loyal et efficace. Envoyé à Virex. Le Premier Avatar attend." },
+      { id: 63, nom: "Lysael", type: "contact", note: "Convergence à Virex. Il la surveille. Elle lui fournit des informations sans le savoir." }
+    ],
+    lore_long: `Le Premier Avatar gouverne l'Empire depuis 15 ans avec une efficacité parfaite et une fissure intérieure que personne n'a encore vue. Il a peur de lui-même — pas de ce qu'il pourrait faire, de ce qu'il est.
+
+Il a envoyé Avel (64) capturer le Second Avatar (59). Il attend les résultats.
+
+À 35 ans, une perte de contrôle pendant 4 secondes dans une chambre à huis clos. Trois témoins. Aucun ne peut parler. Il a redoublé de discipline depuis. La fissure est là.`,
+  },
+
+  // ── 61 · SARATH ────────────────────────────────────────
+  61: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "Sans élément", texte: "Né sans accès aux éléments — un \"Normal\" dans la terminologie des Hommes-Liens. Dans les strates sociales de l'Isthme, ça voulait dire une position spécifique : utile dans les rôles de soutien, invisible dans les rôles de décision. Il avait intégré les Dissidentes à 25 ans — une organisation qui valorisait les compétences pratiques plus que les éléments." },
+      { titre: "Le Second Avatar", texte: "À 32 ans, les Dissidentes lui avaient demandé de cacher quelqu'un pendant quelques semaines. Il avait dit oui. Les quelques semaines étaient devenues 3 ans. Il n'avait pas demandé pourquoi ça durait — il faisait ce qu'il avait dit qu'il ferait." },
+      { titre: "La mort", texte: "Il est mort dans des circonstances que les Dissidentes n'ont pas rendu publiques — peut-être une opération impériale, peut-être une autre raison. Il avait 35 ans environ. Le Second Avatar avait environ 23 ans à ce moment. Il n'était pas là quand Sarath est mort." },
+      { titre: "La dette", texte: "La dette du Second Avatar envers Sarath n'a pas de remboursement possible — Sarath est mort. Le Second Avatar le sait. Cette impossibilité de rembourser est présente comme une forme de culpabilité diffuse dans chaque décision qu'il prend. Ce n'est pas de la paralysie — c'est une présence." },
+      { titre: "Le fantôme", texte: "Sarath est mort. Sa présence dans l'arc est entièrement à travers le Second Avatar — ce qu'il a appris de lui, ce qu'il lui doit, ce qu'il fait à cause de lui. Dans les discussions du Second Avatar sur ses décisions, le nom de Sarath revient souvent sans qu'il soit directement cité." }
+    ],
+    sorts: ['Aucun élément (Normal) — pas d\'accès aux éléments — compétences entièrement physiques et tactiques', 'Discrétion (Normal) — absence de signature élémentaire — passage dans des zones de détection élémentaire sans déclencher d\'alerte', 'Soutien logistique (Normal) — organisation de ressources non-élémentaires — efficacité dans des contextes de survie'],
+    relations: [
+      { id: 59, nom: "Second Avatar", type: "contact", note: "A caché pendant 3 ans. La dette est présente comme fantôme dans ses décisions." }
+    ],
+    lore_long: `Sarath a caché le Second Avatar (59) pendant 3 ans. Il n'avait pas d'élément. Il est mort avant que le Second Avatar puisse rembourser cette dette.
+
+Sa présence dans cet arc est entièrement à travers ce que le Second Avatar fait à cause de lui. Pas de voix directe — une influence sur chaque décision.
+
+Il n'était jamais sur les listes d'importance des Dissidentes. Il faisait plus que ceux qui y étaient.`,
+  },
+
+  // ── 62 · THYVEN ────────────────────────────────────────
+  62: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "La formation", texte: "Formé à la fois comme combattant et comme administrateur — une combinaison rare dans la Confédération, valorisée dans les postes frontaliers et dans les zones à risque. Il avait demandé Virex lui-même — pas pour les 39 enfants, à l'époque il ne savait pas encore ce qu'il y trouverait. Pour la complexité du poste." },
+      { titre: "Virex", texte: "À 40 ans, il avait pris le poste d'administrateur de Virex — une cité de l'Isthme connue pour ses anomalies élémentaires. Il avait pensé que les anomalies seraient le défi. Les anomalies étaient les enfants." },
+      { titre: "Les 39", texte: "Dans ses premiers mois à Virex, il avait identifié 39 enfants Hommes-Liens avec accès à deux éléments distincts — une fréquence statistiquement impossible selon tous les modèles disponibles. Il avait soumis un rapport. La Confédération avait classé \"anomalie en cours d'étude\". Il avait continué à observer." },
+      { titre: "Le Second Avatar", texte: "À 44 ans, le Second Avatar (59) était passé par Virex — pas officiellement, en transit. Thyven l'avait rencontré par hasard dans une conversation sur les 39 enfants. Il avait compris qui il était. Il avait continué la conversation normalement et ne l'avait pas dénoncé. Il n'avait pas regardé cette décision de trop près." },
+      { titre: "Lysael et Avel", texte: "Lysael (63) approche les familles des 39 enfants depuis 3 ans. Thyven le sait. Avel (64) arrive dans 48h. Il ne le sait pas encore. Le Second Avatar est à Virex. Il le sait. Ces trois faits, ensemble, dans les 48 prochaines heures, vont créer une situation qu'aucun cadre administratif confédéral ne couvre." }
+    ],
+    sorts: ['Frappe de précision (Combat) — impact physique amplifié par l\'élément — dommage concentré sur un point', 'Défense active (Combat) — posture de combat qui réduit les impacts — protection par la technique', 'Désarmement (Combat) — manipulation de l\'arme adverse — neutralisation sans destruction'],
+    relations: [
+      { id: 59, nom: "Second Avatar", type: "allié", note: "L'a rencontré et ne l'a pas dénoncé. Le Second Avatar veut le revoir. Thyven le sait." },
+      { id: 63, nom: "Lysael", type: "contact", note: "Approche les familles des 39 enfants pour la Convergence. Thyven le sait depuis 3 ans." },
+      { id: 64, nom: "Avel", type: "contact", note: "Arrive dans 48h. Thyven ne le sait pas encore." }
+    ],
+    lore_long: `Thyven administre Virex depuis 7 ans. Il a vu les 39 enfants double-puissance grandir et a compris progressivement ce qu'ils représentent.
+
+Il a rencontré le Second Avatar (59) et ne l'a pas dénoncé. Cette décision est la plus significative de ses 7 ans à Virex. Il ne l'a pas analysée. Il l'a faite.
+
+Avel (64) arrive dans 48h. Thyven ne le sait pas encore. Lysael (63) approche les familles des 39 depuis 3 ans. Thyven le sait.`,
+  },
+
+  // ── 63 · LYSAEL ────────────────────────────────────────
+  63: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "La doctrine", texte: "Née dans une famille de la Convergence — pas fanatiques, convaincus. Elle avait grandi avec la doctrine de la redistribution comme une évidence : les éléments devraient être accessibles à tous, le Drain volontaire est une forme de don. À 20 ans, elle avait décidé de travailler pour la Convergence activement." },
+      { titre: "Virex", texte: "À 31 ans, elle avait demandé le poste de recrutement à Virex — une ville connue pour ses anomalies élémentaires. Elle avait été affectée à Virex en comprenant qu'elle y trouverait des cas particuliers. Les 39 enfants étaient au-delà de ce qu'elle avait anticipé." },
+      { titre: "Les familles", texte: "Dans ses premiers mois à Virex, elle avait identifié que les familles des 39 enfants n'avaient aucune structure de soutien adaptée — l'Empire les ignorait, la Confédération les cataloguait, et les enfants grandissaient dans une situation que personne ne comprenait. Elle avait commencé à approcher les familles avec des ressources concrètes : médecins, formateurs, communauté. Les familles avaient accepté." },
+      { titre: "Ce que la Convergence veut", texte: "Il y a 6 mois, un contact à la Convergence lui avait dit que les enfants de Virex n'étaient pas la priorité — les parents étaient la priorité. Identifier les familles, comprendre leurs réseaux, déterminer si les parents pourraient être convaincus de contribuer volontairement. Elle avait dit qu'elle faisait son travail. Il avait dit que son travail changeait légèrement. Elle n'avait pas posé les questions qu'elle aurait dû poser." },
+      { titre: "Le moment", texte: "Elle a 3 ans de relations avec 24 des 39 familles. Elle connaît leur confiance. Avel (64) arrive dans 48h — elle ne le sait pas encore. Si la situation des 39 enfants devient une crise, les familles qu'elle a approchées seront les premières affectées. Elle ne le sait pas encore." }
+    ],
+    sorts: ['Choc électrique (Electrique) — décharge directe — paralysie temporaire d\'une cible', 'Réseau conducteur (Electrique) — connexion à l\'infrastructure électrique d\'une zone — information sur les présences et les mouvements', 'Impulsion de persuasion (Electrique) — stimulation neurologique légère — amplification de la réceptivité d\'une cible à un argument'],
+    relations: [
+      { id: 62, nom: "Thyven", type: "contact", note: "L'administrateur qui la surveille sans l'arrêter. Équilibre implicite depuis 3 ans." },
+      { id: 59, nom: "Second Avatar", type: "contact", note: "Ne sait pas qu'il est à Virex. Si elle le savait, la situation changerait." },
+      { id: 64, nom: "Avel", type: "adversaire", note: "Empire. Arrive dans 48h. Elle ne le sait pas." }
+    ],
+    lore_long: `Lysael recrute pour la Convergence à Virex depuis 3 ans. Elle a 24 familles des 39 enfants en confiance. Elle croit sincèrement offrir une communauté à des familles sans soutien.
+
+Il y a 6 mois, un contact à la Convergence lui a dit que le travail changeait. Les parents maintenant, pas les enfants. Elle n'a pas posé les questions qu'elle aurait dû.
+
+Avel (64) arrive dans 48h. Le Second Avatar (59) est à Virex. Elle ne sait pas encore.`,
+  },
+
+  // ── 64 · AVEL ──────────────────────────────────────────
+  64: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "L'intégration", texte: "Identifié à 9 ans comme Homme-Lien Feu avec un potentiel de Capteur. L'Empire avait fait une offre à sa famille — éducation, formation, position. Sa famille avait accepté. Il n'avait pas eu le choix à l'époque. À 38 ans, il considère que c'était le bon choix. Il ne sait pas si c'est vrai ou si c'est ce qu'on lui a appris à penser." },
+      { titre: "Les 14 ans", texte: "En 14 ans de service comme Capteur, il avait réalisé 23 missions. Il n'avait pas échoué. La mission de Virex était la 24e. C'est la première pour laquelle on lui avait dit que la cible était un Avatar." },
+      { titre: "La 24e mission", texte: "Quand le Premier Avatar (60) lui avait dit que la cible était le Second Avatar — un Homme-Lien multi-élémentaire de 28 ans — il avait posé une seule question : \"capturer ou éliminer\". On lui avait dit \"capturer\". Il avait pris ses instructions et était parti. La question suivante qu'il n'avait pas posée : pourquoi capturer plutôt qu'éliminer." },
+      { titre: "Les 48 heures", texte: "Il est à 48h de Virex. Il a les coordonnées approximatives du Second Avatar dans la ville. Il a aussi les informations sur les 39 enfants — sa mission inclut une évaluation des 39 pendant qu'il est sur place. Ces deux objectifs, simultanément à Virex, dans une ville où un administrateur confédéral et une recruteuse de la Convergence opèrent déjà, créent une situation qu'il n'a pas entièrement modélisée." },
+      { titre: "En route", texte: "Il est en route. Il sera à Virex dans 48h. Il ne sait pas encore que Thyven (62) est au courant de la présence du Second Avatar et ne l'a pas dénoncé. Il ne sait pas que Lysael (63) est la pour la Convergence. Ces informations changent la mission sans la changer." }
+    ],
+    sorts: ['Frappe de Capteur (Feu) — décharge concentrée à courte distance — paralysie d\'une cible sans dommages permanents', 'Bouclier thermique (Feu) — protection contre les éléments adverses — résistance aux attaques élémentaires', 'Poursuite ardente (Feu) — accélération par propulsion de Feu — vitesse maximale sur courte distance'],
+    relations: [
+      { id: 59, nom: "Second Avatar", type: "adversaire", note: "Sa cible. Instructions : capturer. Pas éliminer. La différence est importante." },
+      { id: 60, nom: "Premier Avatar", type: "allié", note: "Lui a donné la mission. Attend les résultats." },
+      { id: 62, nom: "Thyven", type: "contact", note: "Administrateur confédéral qu'il considère neutre. Ne sait pas encore qu'il ne l'est pas." }
+    ],
+    lore_long: `Avel est le Capteur de l'Empire envoyé par le Premier Avatar (60) pour capturer le Second Avatar (59) à Virex. Il sera sur place dans 48h.
+
+Sa mission inclut aussi une évaluation des 39 enfants double-puissance de Virex. Lysael (63) opère pour la Convergence dans la même ville. Il ne le sait pas encore.
+
+Thyven (62) a rencontré le Second Avatar et ne l'a pas dénoncé. Avel ne le sait pas non plus. Ces deux informations changent les conditions de sa mission sans la changer.`,
+  },
+
+  // ── 65 · SAEVED ────────────────────────────────────────
+  65: {
+    timeline_position: { an: -1, lieu: "Isthme", arc: "Saturation de l'Isthme" },
+    histoire: [
+      { titre: "Avant la Convergence", texte: "Il avait vécu les 29 premières années de sa vie avant l'existence de la Convergence. Ce qu'il avait vu pendant ces 29 ans — les disparités élémentaires, les inégalités liées à l'accès aux éléments, les vies que l'absence d'élément fermait — avait construit quelque chose en lui qu'il n'avait pas encore appelé conviction." },
+      { titre: "La décision", texte: "À 29 ans, il avait contacté un petit groupe d'Élus qui discutaient de redistribution élémentaire. Pas une organisation formelle — une conversation. Il avait proposé d'être le premier à tester si un Drain volontaire était possible. Il avait survécu au processus de planification. Le Drain lui-même l'avait tué." },
+      { titre: "Le texte", texte: "Dans les semaines avant le Drain, il avait écrit un texte court — les raisons de sa décision et ce qu'il pensait que ça signifiait pour les autres. Ce texte n'est pas une prescription. C'est une description de sa propre décision. La Convergence l'a interprété comme une prescription. Ce glissement est la source de tout ce qui est discutable dans la doctrine." },
+      { titre: "Le saint", texte: "Il est mort. Il est devenu saint de la Convergence. Son image est sur les bâtiments de la Convergence. Son texte est cité dans chaque débat sur la redistribution élémentaire. Ce qu'il aurait pensé de ce qu'on a fait de lui est inconnaissable. Ce qu'on peut raisonnablement supposer depuis son texte : il n'aurait probablement pas voulu ça." },
+      { titre: "L'ombre", texte: "Mort depuis 41 ans. Son ombre pèse sur tous les personnages qui croient à la doctrine ou qui la rejettent. Il n'y a pas de personnage dans l'arc 8 qui n'ait pas de position sur ce que Saeved représente. Cette position dit quelque chose sur le personnage, pas sur Saeved." }
+    ],
+    sorts: ['Ancrage de sol (Sol) — connexion profonde au sol — stabilité absolue dans toute conditions', 'Transmission tellurique (Sol) — partage d\'énergie via le sol — soutien à distance des alliés', 'Sacrifice volontaire (Sol) — don complet de l\'énergie élémentaire — l\'acte qui l\'a tué et fondé la Convergence'],
+    relations: [
+      { id: 63, nom: "Lysael", type: "contact", note: "Croit à la doctrine issue de son acte. Fait quelque chose qu'il n'avait pas prescrit." },
+      { id: 59, nom: "Second Avatar", type: "contact", note: "N'a pas encore articulé sa position sur ce que Saeved représente. Il le fera." }
+    ],
+    lore_long: `Saeved est mort il y a 41 ans. Il a été le premier Drain volontaire. Il a laissé un texte qui décrivait sa propre décision — pas une prescription.
+
+La Convergence a fait de ce texte une doctrine. Elle en a fait un saint.
+
+Ce qu'il aurait pensé de ce qu'on a fait de lui est inconnaissable. Son ombre pèse sur tous les personnages de l'arc — croyants, critiques, et ceux qui décident encore.`,
+  },
+};

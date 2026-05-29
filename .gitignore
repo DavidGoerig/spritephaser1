@@ -25,5 +25,9 @@ dist-ssr
 
 package-lock.json
 
+# Secrets
+.env
+**/.env
+
 # Claude Code internal state
 .claude/

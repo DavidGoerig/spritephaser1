@@ -32,6 +32,14 @@ export const CLASSE_DESCRIPTIONS: Record<Classe, string> = {
   'Spécialiste':         "Autres — hybrides, utilitaires ou catégories uniques qui ne correspondent pas aux archétypes standard.",
 };
 
+/** Per-character sort reordering: maps slot index → kit.sorts[] index.
+ * Lets class archetype define which spell appears on which hotkey. */
+export interface ClassModifications {
+  /** sortOrder[slotIndex] = index into kit.sorts[]. Length ≤ 10.
+   * Unspecified slots fall back to sequential kit order. */
+  sortOrder?: number[];
+}
+
 export interface Personnage {
   id: number;
   nom: string;
@@ -47,6 +55,7 @@ export interface Personnage {
   style_combat: string;
   kit: ElementKit;
   modifications_classe: string;
+  class_mods?: ClassModifications;
   assets?: CharacterAssets;
 }
 
