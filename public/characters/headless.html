@@ -28,10 +28,13 @@
      * @param {string} modelUrl - URL served by the static file server
      * @param {string} [animBankUrl] - optional animation bank GLB
      */
-    window.loadModel = async function(modelUrl, animBankUrl = null) {
-      await viewer.loadModel(modelUrl);
-      if (animBankUrl) await viewer.loadAnimationBank(animBankUrl);
-      return { animClips: viewer._animClips.map(c => c.name) };
+    window.loadModel = function(modelUrl) {
+      return new Promise((resolve) => {
+        viewer.loadUrl(modelUrl, (clipNames) => {
+          console.log('[headless] model loaded, clips:', clipNames.length);
+          resolve(clipNames);
+        });
+      });
     };
 
     /**

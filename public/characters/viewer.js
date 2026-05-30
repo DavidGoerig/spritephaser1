@@ -1651,29 +1651,36 @@ export class GLBViewer {
   _findClipForSlot(slot) {
     if (!this._animClips.length) return null;
     const norm = s => s.toLowerCase().replace(/[\s_]+/g, '-');
+    // Extract core name from Blender/Meshy format: "Armature|ClipName|baselayer" → "clipname"
+    const core = n => {
+      const parts = n.split('|');
+      return (parts.length >= 2 ? parts[1] : parts[0]).toLowerCase().replace(/_/g, ' ').trim();
+    };
 
-    let c = this._animClips.find(x => x.name === slot || norm(x.name) === slot);
+    let c = this._animClips.find(x => x.name === slot || norm(x.name) === slot || core(x.name) === slot);
     if (c) return c.name;
 
     const MAP = {
       idle:       ['idle', 'idle 02', 'idle_02', 'idle 03', 'idle_03', 'alert', 'unarmed-idle', 'relax-idle'],
-      run:        ['walking', 'running', 'run', 'run 02', 'run_02', 'runfast', 'unarmed-run-forward', 'relax-run-forward'],
-      hurt:       ['behit_flyup', 'hurt', 'hit', 'hit reaction', 'be hit'],
+      run:        ['walking', 'walking woman', 'running', 'run', 'run 02', 'run_02', 'runfast', 'unarmed-run-forward', 'relax-run-forward'],
+      hurt:       ['behit flyup', 'behit_flyup', 'hurt', 'hit', 'hit reaction', 'be hit'],
       die:        ['dead', 'die', 'death', 'dying', 'defeated'],
       'attack-01': ['attack', 'attack 01', 'slash', 'unarmed-attack-kick-r1'],
-      'attack-02': ['skill_01', 'skill 01', 'attack 02', 'punch'],
-      'attack-03': ['skill_02', 'skill 02', 'attack 03', 'kick'],
-      'attack-04': ['skill_03', 'skill 03', 'attack 04', 'double combo attack'],
-      'attack-05': ['skill_04', 'skill 04', 'attack 05', 'magic attack', 'action 004', 'action_004'],
-      'attack-06': ['skill_05', 'skill 05', 'attack 06', 'heavy attack', 'action 005', 'action_005'],
-      'attack-07': ['skill_06', 'skill 06', 'attack 07', 'action 006', 'action_006', 'action 007', 'action_007'],
-      'attack-08': ['skill_07', 'skill 07', 'attack 08', 'action 008', 'action_008', 'action 007', 'action_007'],
-      'attack-09': ['skill_08', 'skill 08', 'attack 09', 'action 009', 'action_009', 'action 010', 'action_010'],
-      'attack-10': ['skill_09', 'skill 09', 'attack 10', 'action 010', 'action_010', 'action 011', 'action_011'],
+      'attack-02': ['skill 01', 'skill_01', 'attack 02', 'punch'],
+      'attack-03': ['skill 02', 'skill_02', 'attack 03', 'kick'],
+      'attack-04': ['skill 03', 'skill_03', 'attack 04', 'double combo attack'],
+      'attack-05': ['skill 04', 'skill_04', 'attack 05', 'magic attack', 'action 004', 'action_004'],
+      'attack-06': ['skill 05', 'skill_05', 'attack 06', 'heavy attack', 'action 005', 'action_005'],
+      'attack-07': ['skill 06', 'skill_06', 'attack 07', 'action 006', 'action_006', 'action 007', 'action_007'],
+      'attack-08': ['skill 07', 'skill_07', 'attack 08', 'action 008', 'action_008'],
+      'attack-09': ['skill 08', 'skill_08', 'attack 09', 'action 009', 'action_009', 'action 010', 'action_010'],
+      'attack-10': ['skill 09', 'skill_09', 'attack 10', 'action 010', 'action_010', 'action 011', 'action_011'],
     };
     for (const candidate of (MAP[slot] ?? [])) {
       c = this._animClips.find(x =>
-        x.name.toLowerCase() === candidate.toLowerCase() || norm(x.name) === candidate
+        x.name.toLowerCase() === candidate.toLowerCase()
+        || norm(x.name) === norm(candidate)
+        || core(x.name) === candidate.toLowerCase()
       );
       if (c) return c.name;
     }
@@ -1699,17 +1706,22 @@ export class GLBViewer {
     action.reset().play();
 
     // Save camera state
-    const savedPos = this._camera.position.clone();
-    const savedTop = this._camera.top;
-    const savedBot = this._camera.bottom;
+    const savedPos    = this._camera.position.clone();
+    const savedTop    = this._camera.top;
+    const savedBot    = this._camera.bottom;
+    const savedLeft   = this._camera.left;
+    const savedRight  = this._camera.right;
+    const savedClear  = this._renderer.getClearColor(new THREE.Color());
+    const savedAlpha  = this._renderer.getClearAlpha();
 
-    // Adjust frustum for non-square frame aspect (portrait orientation)
-    if (frameH !== frameW) {
-      const ratio = frameH / frameW;
-      this._camera.top    =  this._camera.right * ratio;
-      this._camera.bottom = -this._camera.right * ratio;
-      this._camera.updateProjectionMatrix();
-    }
+    // Tight frustum so the character fills the frame (model maxDim≈2 units, padding 20%)
+    const CAPTURE_HALF = 1.25;
+    const ratio = frameH / frameW;
+    this._camera.left   = -CAPTURE_HALF;
+    this._camera.right  =  CAPTURE_HALF;
+    this._camera.top    =  CAPTURE_HALF * ratio;
+    this._camera.bottom = -CAPTURE_HALF * ratio;
+    this._camera.updateProjectionMatrix();
 
     // Position camera for this direction
     const elev = Math.atan(1 / Math.SQRT2);
@@ -1722,7 +1734,9 @@ export class GLBViewer {
     this._camera.lookAt(0, 1, 0);
     this._camera.updateMatrixWorld();
 
-    const rt = new THREE.WebGLRenderTarget(renderW, renderH);
+    // Transparent background for sprite sheets
+    this._renderer.setClearColor(0x000000, 0);
+    const rt = new THREE.WebGLRenderTarget(renderW, renderH, { alpha: true });
 
     const outCanvas = document.createElement('canvas');
     outCanvas.width  = frameW * frameCount;
@@ -1748,13 +1762,23 @@ export class GLBViewer {
       this._renderer.setRenderTarget(null);
 
       // Read pixels from GPU + flip Y (WebGL origin = bottom-left)
+      // Apply sRGB gamma correction (linear → display): pow(x, 1/2.2)
       const pixels = new Uint8Array(renderW * renderH * 4);
       this._renderer.readRenderTargetPixels(rt, 0, 0, renderW, renderH, pixels);
 
       const imgData = readCtx.createImageData(renderW, renderH);
       for (let row = 0; row < renderH; row++) {
-        const src = (renderH - 1 - row) * renderW * 4;
-        imgData.data.set(pixels.subarray(src, src + renderW * 4), row * renderW * 4);
+        const srcBase = (renderH - 1 - row) * renderW * 4;
+        const dstBase = row * renderW * 4;
+        for (let col = 0; col < renderW; col++) {
+          const s = srcBase + col * 4;
+          const d = dstBase + col * 4;
+          // sRGB gamma correction for RGB, pass alpha through unchanged
+          imgData.data[d]   = Math.min(255, Math.round(Math.pow(pixels[s]   / 255, 1 / 2.2) * 255));
+          imgData.data[d+1] = Math.min(255, Math.round(Math.pow(pixels[s+1] / 255, 1 / 2.2) * 255));
+          imgData.data[d+2] = Math.min(255, Math.round(Math.pow(pixels[s+2] / 255, 1 / 2.2) * 255));
+          imgData.data[d+3] = pixels[s+3];
+        }
       }
       readCtx.putImageData(imgData, 0, 0);
 
@@ -1763,13 +1787,16 @@ export class GLBViewer {
       outCtx.drawImage(frameCanvas, fi * frameW, 0);
     }
 
-    // Restore camera
+    // Restore camera and renderer state
     this._camera.position.copy(savedPos);
+    this._camera.left   = savedLeft;
+    this._camera.right  = savedRight;
     this._camera.top    = savedTop;
     this._camera.bottom = savedBot;
     this._camera.updateProjectionMatrix();
     this._camera.lookAt(0, 1, 0);
     this._camera.updateMatrixWorld();
+    this._renderer.setClearColor(savedClear, savedAlpha);
 
     // Restore active action
     action.stop();
