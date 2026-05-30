@@ -191,6 +191,7 @@ export class CombatManager {
       this.selectedSpellIndex = null;
       this.isAnimating = true;
       sfxSpell(unit.personnage.element);
+      this._faceAfterCast(unit, x, y);
       playSpellVFX(this.scene, sort, unit, x, y, z, () => {
         const result = executeSpell(sort, unit, { x, y, z }, this);
         this.addLog(result.message);
@@ -210,7 +211,7 @@ export class CombatManager {
     // Click ally: nothing
     if (targetUnit && targetUnit.team === unit.team) return;
 
-    // Click empty tile: move
+    // Click empty tile: animated walk
     if (!targetUnit && !unit.hasMoved) {
       const dist = Math.abs(x - unit.x) + Math.abs(y - unit.y);
       const moveRange = unit.getEffectiveMoveRange(CLASS_STATS[unit.personnage.classe].moveRange);
@@ -219,10 +220,15 @@ export class CombatManager {
         return;
       }
       const topZ = this.scene.grid.getTopTile(x, y)?.z ?? 0;
-      unit.moveTo(x, y, topZ);
-      unit.hasMoved = true;
+      this.isAnimating = true;
       this.rangeOverlay.clear();
-      this.addLog(`${unit.personnage.nom} → (${x},${y})`);
+      unit.walkTo(x, y, topZ, () => {
+        unit.hasMoved = true;
+        this.isAnimating = false;
+        this.addLog(`${unit.personnage.nom} → (${x},${y})`);
+        this._faceAfterMove(unit);
+        this._showDefaultOverlay();
+      });
       return;
     }
 
@@ -242,6 +248,7 @@ export class CombatManager {
         unit.cooldowns[0] = sort.cooldown;
         unit.hasActed = true;
         this.isAnimating = true;
+        this._faceAfterCast(unit, x, y);
         playSpellVFX(this.scene, sort, unit, x, y, z, () => {
           const result = executeSpell(sort, unit, { x, y, z }, this);
           this.addLog(result.message);
@@ -416,6 +423,28 @@ export class CombatManager {
     return true;
   }
 
+  // Classes whose units rotate to face the nearest enemy after moving
+  // (melee fighters — they move into the enemy's face, not away)
+  private static readonly MELEE_CLASSES = new Set([
+    'Juggernaut', 'Vanguard', 'Gardien', 'Plongeur', 'Assassin', 'Escrimeur', 'Battlemage',
+  ]);
+
+  /** After moving: melee classes pivot to face nearest enemy; others keep walk direction. */
+  private _faceAfterMove(unit: CombatUnit) {
+    if (!CombatManager.MELEE_CLASSES.has(unit.personnage.classe)) return;
+    const nearest = this.units
+      .filter(u => u.team !== unit.team && u.isAlive)
+      .sort((a, b) =>
+        (Math.abs(a.x - unit.x) + Math.abs(a.y - unit.y))
+        - (Math.abs(b.x - unit.x) + Math.abs(b.y - unit.y)))[0];
+    if (nearest) unit.faceToward(nearest.x, nearest.y);
+  }
+
+  /** After casting: all classes face the spell target. */
+  private _faceAfterCast(unit: CombatUnit, tx: number, ty: number) {
+    unit.faceToward(tx, ty);
+  }
+
   private _showDefaultOverlay() {
     const unit = this.currentUnit;
     if (!unit) { this.rangeOverlay.clear(); return; }
@@ -565,16 +594,23 @@ export class CombatManager {
 
       if (dest) {
         const topZ = this.scene.grid.getTopTile(dest.x, dest.y)?.z ?? 0;
-        unit.moveTo(dest.x, dest.y, topZ);
-        unit.hasMoved = true;
+        this.isAnimating = true;
         this.rangeOverlay.clear();
-        this.addLog(bonusDest
+        const logMsg = bonusDest
           ? `${unit.personnage.nom} avance vers une case avantageuse`
-          : `${unit.personnage.nom} avance`);
+          : `${unit.personnage.nom} avance`;
+        unit.walkTo(dest.x, dest.y, topZ, () => {
+          unit.hasMoved = true;
+          this.isAnimating = false;
+          this.addLog(logMsg);
+          this._faceAfterMove(unit);
+          this.scene.time.delayedCall(250, () => this._aiAttack());
+        });
+        return;
       }
     }
 
-    this.scene.time.delayedCall(600, () => this._aiAttack());
+    this.scene.time.delayedCall(400, () => this._aiAttack());
   }
 
   /** Returns the best reachable bonus tile if one is worth stepping to, else null. */
@@ -628,6 +664,7 @@ export class CombatManager {
           this.isAnimating = true;
           this.addLog(`${unit.personnage.nom} est confus ! Attaque ${victim.personnage.nom}`);
           sfxSpell(unit.personnage.element);
+          this._faceAfterCast(unit, victim.x, victim.y);
           playSpellVFX(this.scene, sort, unit, victim.x, victim.y, victim.z, () => {
             executeSpell(sort, unit, { x: victim.x, y: victim.y, z: victim.z }, this);
             this.applyTileElementTints();
@@ -726,6 +763,7 @@ export class CombatManager {
           unit.hasActed = true;
           this.isAnimating = true;
           sfxSpell(unit.personnage.element);
+          this._faceAfterCast(unit, bestTx, bestTy);
           playSpellVFX(this.scene, sort, unit, bestTx, bestTy, bestTz, () => {
             const result = executeSpell(sort, unit, { x: bestTx, y: bestTy, z: bestTz }, this);
             this.addLog(result.message);

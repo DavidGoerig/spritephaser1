@@ -53,6 +53,7 @@ export class CombatUnit {
   private hpBar!: Phaser.GameObjects.Rectangle;
   private statusBadges!: Phaser.GameObjects.Graphics;
   private readonly baseElemColor: number;
+  private _depth = 600; // last computed render depth, updated in syncPosition
 
   private static readonly BADGE_COLORS: Partial<Record<StatusEffect['type'], number>> = {
     burn: 0xFF4400, poison: 0x44FF22, freeze: 0x88DDFF, stun: 0xFFFF44,
@@ -125,6 +126,7 @@ export class CombatUnit {
 
     this.screenX = sx;
     this.screenY = screenY;
+    this._depth = depth;
 
     this.charSprite.setPosition(sx, screenY).setDepth(depth);
     this.selectionRing.setPosition(sx, screenY).setDepth(depth - 1);
@@ -140,6 +142,19 @@ export class CombatUnit {
 
     this._drawStatusBadges(sx, screenY + 26, depth + 3);
     this._updateGlow();
+  }
+
+  /** Apply current screenX/screenY to all sprites without recalculating from grid coords.
+   *  Used during walk tweens so sprites follow the interpolated position. */
+  private _applyScreenPos() {
+    const sx = this.screenX, sy = this.screenY;
+    const d = this._depth;
+    this.charSprite.setPosition(sx, sy);
+    this.selectionRing.setPosition(sx, sy);
+    this.nameLabel.setPosition(sx, sy - 20);
+    this.hpBarBg.setPosition(sx, sy + 18);
+    this.hpBar.setPosition(sx - 13, sy + 18);
+    this._drawStatusBadges(sx, sy + 26, d + 3);
   }
 
   private static readonly GLOW_PRIORITY: Array<[StatusEffect['type'], number, number]> = [
@@ -205,12 +220,57 @@ export class CombatUnit {
   moveTo(x: number, y: number, z: number) {
     const dx = x - this.x, dy = y - this.y;
     if (dx !== 0 || dy !== 0) {
-      // Grid-space dominant direction → screen-space facing accounting for camera rotation
       let gf = Math.abs(dx) >= Math.abs(dy) ? (dx > 0 ? 1 : 3) : (dy > 0 ? 2 : 0);
       this.setFacing(((gf + this.scene.grid.direction) % 4) as 0 | 1 | 2 | 3);
     }
     this.x = x; this.y = y; this.z = z;
     this.syncPosition();
+  }
+
+  /** Animated walk: tweens the sprite from current position to (x, y, z),
+   *  plays 'run' during movement and 'idle' on arrival. */
+  walkTo(x: number, y: number, z: number, onComplete: () => void) {
+    const dx = x - this.x, dy = y - this.y;
+    // Face the movement direction immediately
+    if (dx !== 0 || dy !== 0) {
+      let gf = Math.abs(dx) >= Math.abs(dy) ? (dx > 0 ? 1 : 3) : (dy > 0 ? 2 : 0);
+      this.setFacing(((gf + this.scene.grid.direction) % 4) as 0 | 1 | 2 | 3);
+    }
+    this.playAnim('run');
+
+    // Target screen position
+    const [cx2, cy2] = this.scene.grid.getRenderCartCoords(x, y);
+    const [tsx, tsy] = calculateIsoScreenPosition(
+      cx2, cy2, 0, Grid.OFFSET_X, Grid.OFFSET_Y, Grid.OFFSET_Z,
+    );
+    const targetSX = tsx;
+    const targetSY = tsy - Grid.OFFSET_Z * z - 18;
+
+    const dist = Math.abs(dx) + Math.abs(dy);
+    const duration = Math.min(550, 140 + dist * 90);
+
+    this.scene.tweens.add({
+      targets: this,
+      screenX: targetSX,
+      screenY: targetSY,
+      duration,
+      ease: 'Sine.InOut',
+      onUpdate: () => this._applyScreenPos(),
+      onComplete: () => {
+        this.x = x; this.y = y; this.z = z;
+        this.syncPosition();
+        this.playAnim('idle');
+        onComplete();
+      },
+    });
+  }
+
+  /** Turn to face a target grid cell, accounting for camera rotation. */
+  faceToward(tx: number, ty: number) {
+    const dx = tx - this.x, dy = ty - this.y;
+    if (dx === 0 && dy === 0) return;
+    const gf = Math.abs(dx) >= Math.abs(dy) ? (dx > 0 ? 1 : 3) : (dy > 0 ? 2 : 0);
+    this.setFacing(((gf + this.scene.grid.direction) % 4) as 0 | 1 | 2 | 3);
   }
 
   playAnim(state: AnimState, onComplete?: () => void): this {
