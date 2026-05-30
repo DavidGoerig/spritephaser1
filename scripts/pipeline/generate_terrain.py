@@ -266,7 +266,10 @@ async def main():
         conn.close()
         return
 
-    total_cost = len([q for q in queue if not (get_job(conn, q[0]) or {}).get('status') == 'done']) * 2.50
+    def _is_done(slug):
+        job = get_job(conn, slug)
+        return job is not None and job['status'] == 'done'
+    total_cost = len([q for q in queue if not _is_done(q[0])]) * 2.50
     print(f'Processing {len(queue)} assets.  Est. cost: ~${total_cost:.2f}')
     if args.dry_run:
         print('[DRY-RUN] No API calls will be made.')
