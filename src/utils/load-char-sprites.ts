@@ -57,5 +57,7 @@ export const BAKED_CHARS: { id: number; folder: string }[] = [
   { id:  5, folder: '005-auren' },
   { id:  6, folder: '006-vaela' },
   { id:  8, folder: '008-velindra' },
+  { id:  9, folder: '009-skarith' },
   { id: 12, folder: '012-tarakh' },
+  { id: 95, folder: '095-fulgur' },
 ];
