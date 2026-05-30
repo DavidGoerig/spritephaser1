@@ -1,1 +1,66 @@
-{ "teamA": [], "teamB": [] }
+{
+  "teamA": [
+    {
+      "id": 1,
+      "nom": "Brasia",
+      "element": "Feu",
+      "classe": "Enchanteur-Soutien"
+    },
+    {
+      "id": 3,
+      "nom": "Gravel",
+      "element": "Feu",
+      "classe": "Battlemage"
+    },
+    {
+      "id": 4,
+      "nom": "Thryss",
+      "element": "Feu",
+      "classe": "Gardien"
+    },
+    {
+      "id": 73,
+      "nom": "La Tempête Blanche",
+      "element": "Glace",
+      "classe": "Spécialiste"
+    },
+    {
+      "id": 101,
+      "nom": "Korryn",
+      "element": "Electrique",
+      "classe": "Vanguard"
+    }
+  ],
+  "teamB": [
+    {
+      "id": 95,
+      "nom": "Fulgur",
+      "element": "Electrique",
+      "classe": "Mage-Burst"
+    },
+    {
+      "id": 129,
+      "nom": "Grimpant",
+      "element": "Plante",
+      "classe": "Assassin"
+    },
+    {
+      "id": 157,
+      "nom": "Cratère",
+      "element": "Sol",
+      "classe": "Artillerie"
+    },
+    {
+      "id": 187,
+      "nom": "Obus-Pierre",
+      "element": "Roche",
+      "classe": "Artillerie"
+    },
+    {
+      "id": 213,
+      "nom": "Vortex-Massif",
+      "element": "Vent",
+      "classe": "Juggernaut"
+    }
+  ]
+}
