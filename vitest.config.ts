@@ -10,6 +10,11 @@ export default defineConfig({
       "src/**/*.test.ts",
       "public/**/*.test.js",
     ],
+    // viewer.test.js requires Three.js WebGL which is not available in Node
+    exclude: [
+      "node_modules/**",
+      "public/characters/viewer.test.js",
+    ],
     coverage: {
       provider: "v8",
       reporter: ["text", "json", "html"],
