@@ -19,8 +19,10 @@
 <body>
   <canvas id="c" width="640" height="360"></canvas>
   <script type="module">
+    import * as THREE from 'three';
     import { GLBViewer } from './viewer.js';
 
+    window.THREE = THREE;  // expose for captureTileStrip / capturePropDirs
     const viewer = new GLBViewer(document.getElementById('c'));
 
     /**
@@ -81,6 +83,149 @@
      */
     window.captureSpritesheetsByDir = async function(options = {}) {
       return await viewer.captureSpritesheetsByDir(options);
+    };
+
+    /**
+     * ── Terrain tile renderer ──────────────────────────────────────────────
+     * Renders the loaded model 4 times with Y-rotation 0/90/180/270°,
+     * captures 64×64 each, combines into a 256×64 horizontal strip.
+     * @param {{ frameSize?: number }} options
+     * @returns {string} base64 data-URL of the 256×64 PNG strip
+     */
+    window.captureTileStrip = async function({ frameSize = 64 } = {}) {
+      if (!viewer._model) { console.warn('[terrain] No model loaded'); return null; }
+
+      const SCALE    = 4;
+      const renderW  = frameSize * SCALE;
+      const renderH  = frameSize * SCALE;
+
+      // Output: 4 frames wide × 1 frame tall
+      const outCanvas = document.createElement('canvas');
+      outCanvas.width  = frameSize * 4;
+      outCanvas.height = frameSize;
+      const outCtx = outCanvas.getContext('2d');
+      outCtx.imageSmoothingEnabled = false;
+
+      const readCanvas = document.createElement('canvas');
+      readCanvas.width = renderW; readCanvas.height = renderH;
+      const readCtx = readCanvas.getContext('2d');
+
+      const frameCanvas = document.createElement('canvas');
+      frameCanvas.width = frameSize; frameCanvas.height = frameSize;
+      const frameCtx = frameCanvas.getContext('2d');
+      frameCtx.imageSmoothingEnabled = false;
+
+      // Save camera/renderer state
+      const savedPos   = viewer._camera.position.clone();
+      const savedLeft  = viewer._camera.left;
+      const savedRight = viewer._camera.right;
+      const savedTop   = viewer._camera.top;
+      const savedBot   = viewer._camera.bottom;
+      const savedClear = new THREE.Color(); viewer._renderer.getClearColor(savedClear);
+      const savedAlpha = viewer._renderer.getClearAlpha();
+
+      // Tight orthographic frustum for a cube tile
+      const HALF = 1.2;
+      viewer._camera.left   = -HALF;
+      viewer._camera.right  =  HALF;
+      viewer._camera.top    =  HALF;
+      viewer._camera.bottom = -HALF;
+      viewer._camera.updateProjectionMatrix();
+
+      // Isometric camera (SE → looking at origin from SE)
+      const elev = Math.atan(1 / Math.SQRT2);
+      const dist = 8;
+      const az   = Math.PI / 4; // 45° — SE view
+      viewer._camera.position.set(
+        dist * Math.cos(elev) * Math.cos(az),
+        dist * Math.sin(elev),
+        dist * Math.cos(elev) * Math.sin(az),
+      );
+      viewer._camera.lookAt(0, 0.5, 0);
+      viewer._camera.updateMatrixWorld();
+
+      // Transparent background
+      viewer._renderer.setClearColor(0x000000, 0);
+      const rt = new THREE.WebGLRenderTarget(renderW, renderH, { alpha: true });
+
+      // Store original model rotation
+      const origRot = viewer._model.rotation.y;
+
+      for (let frame = 0; frame < 4; frame++) {
+        // Rotate model by 90° per frame (Y axis)
+        viewer._model.rotation.y = (frame * Math.PI) / 2;
+
+        viewer._renderer.setRenderTarget(rt);
+        viewer._renderer.render(viewer._scene, viewer._camera);
+        viewer._renderer.setRenderTarget(null);
+
+        const pixels = new Uint8Array(renderW * renderH * 4);
+        viewer._renderer.readRenderTargetPixels(rt, 0, 0, renderW, renderH, pixels);
+
+        const imgData = readCtx.createImageData(renderW, renderH);
+        for (let row = 0; row < renderH; row++) {
+          const srcBase = (renderH - 1 - row) * renderW * 4;
+          const dstBase = row * renderW * 4;
+          for (let col = 0; col < renderW; col++) {
+            const s = srcBase + col * 4, d = dstBase + col * 4;
+            imgData.data[d]   = Math.min(255, Math.round(Math.pow(pixels[s]   / 255, 1 / 2.2) * 255));
+            imgData.data[d+1] = Math.min(255, Math.round(Math.pow(pixels[s+1] / 255, 1 / 2.2) * 255));
+            imgData.data[d+2] = Math.min(255, Math.round(Math.pow(pixels[s+2] / 255, 1 / 2.2) * 255));
+            imgData.data[d+3] = pixels[s+3];
+          }
+        }
+        readCtx.putImageData(imgData, 0, 0);
+
+        frameCtx.clearRect(0, 0, frameSize, frameSize);
+        frameCtx.drawImage(readCanvas, 0, 0, frameSize, frameSize);
+        outCtx.drawImage(frameCanvas, frame * frameSize, 0);
+      }
+
+      // Restore
+      viewer._model.rotation.y = origRot;
+      viewer._camera.position.copy(savedPos);
+      viewer._camera.left   = savedLeft;
+      viewer._camera.right  = savedRight;
+      viewer._camera.top    = savedTop;
+      viewer._camera.bottom = savedBot;
+      viewer._camera.updateProjectionMatrix();
+      viewer._camera.lookAt(0, 1, 0);
+      viewer._camera.updateMatrixWorld();
+      viewer._renderer.setClearColor(savedClear, savedAlpha);
+      rt.dispose();
+
+      console.log('[terrain] Tile strip captured (256×64, 4 Y-rotations)');
+      return await viewer._blobToBase64(await new Promise(r => outCanvas.toBlob(r, 'image/png')));
+    };
+
+    /**
+     * ── Prop renderer ──────────────────────────────────────────────────────
+     * Renders the loaded model from 4 isometric camera azimuths.
+     * @param {{ frameW?: number, frameH?: number }} options
+     * @returns {{ '0': dataUrl, '1': dataUrl, '2': dataUrl, '3': dataUrl }}
+     */
+    window.capturePropDirs = async function({ frameW = 64, frameH = 128 } = {}) {
+      if (!viewer._model) { console.warn('[terrain] No model loaded'); return null; }
+
+      // Re-use the existing _captureDirStrip machinery per direction
+      const DIR_AZ = [
+        { az: 5 * Math.PI / 4, dir: 0 }, // NW camera → N
+        { az: 7 * Math.PI / 4, dir: 1 }, // NE camera → E
+        { az: 1 * Math.PI / 4, dir: 2 }, // SE camera → S
+        { az: 3 * Math.PI / 4, dir: 3 }, // SW camera → W
+      ];
+
+      // Dummy clip: static first frame
+      const dummyClip = new THREE.AnimationClip('__static', 0.001, []);
+      const result = {};
+
+      for (const { az, dir } of DIR_AZ) {
+        const blob = await viewer._captureDirStrip(dummyClip, 1, frameW, frameH, az);
+        if (blob) result[dir] = await viewer._blobToBase64(blob);
+      }
+
+      console.log('[terrain] Prop directions captured');
+      return result;
     };
 
     window.__viewerReady = true;
