@@ -1,4 +1,3 @@
-import type Game from '../game';
 import { HitFlashPipeline } from './pipelines/hit-flash-pipeline';
 import { ElementGlowPipeline } from './pipelines/element-glow-pipeline';
 
@@ -41,7 +40,7 @@ function texKey(charId: number, state: AnimState, dir: 0 | 1 | 2 | 3): string {
 }
 
 export class CharSprite {
-  private scene: Game;
+  private scene: Phaser.Scene;
   private charId: number;
   private dir: 0 | 1 | 2 | 3 = 2; // South = default camera-facing direction
   private state: AnimState = 'idle';
@@ -53,7 +52,7 @@ export class CharSprite {
   readonly hasSpritesheet: boolean;
 
   constructor(
-    scene: Game,
+    scene: Phaser.Scene,
     charId: number,
     elemColor: number,
     teamColor: number,

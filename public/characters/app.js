@@ -415,7 +415,14 @@ function renderList() {
       renderList();
     });
 
-    item.append(dot, name, idSpan, btnA, btnB);
+    const btnArena = document.createElement('a');
+    btnArena.className = 'arena-btn';
+    btnArena.href = `/arena?id=${char.id}`;
+    btnArena.title = 'Tester en arène';
+    btnArena.textContent = '⚔';
+    btnArena.addEventListener('click', e => e.stopPropagation());
+
+    item.append(dot, name, idSpan, btnA, btnB, btnArena);
     item.addEventListener('click', () => {
       if (!$('team-panel').hidden) {
         addToTeam(activeTeam, char);

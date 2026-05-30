@@ -1,11 +1,14 @@
-import type Game from '../game';
 import type { Sort } from '../data/character-kits';
 import type { CombatUnit } from './combat-unit';
 import type { AnimState } from './char-sprite';
-import Grid from './grid';
-import { calculateIsoScreenPosition } from '../utils/math';
 import { ELEMENT_TINTS } from './element-colors';
 import { getVFXId } from '../data/spell-vfx-map';
+
+/** Minimal scene interface required by the VFX system.
+ *  Both the main Game scene and the Arena scene implement this. */
+export interface IVFXScene extends Phaser.Scene {
+  screenPosFromGrid(gx: number, gy: number, gz: number): { x: number; y: number };
+}
 
 // Module-level state set once per spell dispatch
 let _vfxKey    = '';
@@ -50,16 +53,13 @@ function attackAnimState(sortNum: number): AnimState {
   return `attack-${String(n).padStart(2, '0')}` as AnimState;
 }
 
-function unitPos(unit: CombatUnit, scene: Game): Pt {
-  const [cx, cy] = scene.grid.getRenderCartCoords(unit.x, unit.y);
-  const [sx, sy] = calculateIsoScreenPosition(cx, cy, 0, Grid.OFFSET_X, Grid.OFFSET_Y, Grid.OFFSET_Z);
-  return { x: sx, y: sy - Grid.OFFSET_Z * unit.z - 18 };
+function unitPos(unit: CombatUnit): Pt {
+  return { x: unit.screenX, y: unit.screenY };
 }
 
-function gridPos(gx: number, gy: number, gz: number, scene: Game): Pt {
-  const [cx, cy] = scene.grid.getRenderCartCoords(gx, gy);
-  const [sx, sy] = calculateIsoScreenPosition(cx, cy, 0, Grid.OFFSET_X, Grid.OFFSET_Y, Grid.OFFSET_Z);
-  return { x: sx, y: sy - Grid.OFFSET_Z * gz - 18 };
+function gridPos(gx: number, gy: number, gz: number, scene: IVFXScene): Pt {
+  const p = scene.screenPosFromGrid(gx, gy, gz);
+  return { x: p.x, y: p.y - 18 };
 }
 
 function facingDir(caster: CombatUnit, tx: number, ty: number): 0 | 1 | 2 | 3 {
@@ -76,7 +76,7 @@ function facingDir(caster: CombatUnit, tx: number, ty: number): 0 | 1 | 2 | 3 {
  * @param scale  Final display scale
  * @param delay  ms before spawning (stagger for multi-hit)
  */
-function spawnVFXSprite(scene: Game, pos: Pt, scale = 1.5, delay = 0) {
+function spawnVFXSprite(scene: IVFXScene, pos: Pt, scale = 1.5, delay = 0) {
   if (!_vfxKey || !scene.textures.exists(_vfxKey)) return;
   const animKey = `anim_${_vfxKey}`;
 
@@ -129,7 +129,7 @@ function spawnVFXSprite(scene: Game, pos: Pt, scale = 1.5, delay = 0) {
 /**
  * Looping sprite for travel — stays at scale and alpha until caller destroys it.
  */
-function spawnTravelSprite(scene: Game, pos: Pt, scale = 0.65): Phaser.GameObjects.Sprite | null {
+function spawnTravelSprite(scene: IVFXScene, pos: Pt, scale = 0.65): Phaser.GameObjects.Sprite | null {
   if (!_vfxKey || !scene.textures.exists(_vfxKey)) return null;
   const animKey = `anim_${_vfxKey}`;
   const spr = scene.add.sprite(pos.x, pos.y, _vfxKey)
@@ -143,7 +143,7 @@ function spawnTravelSprite(scene: Game, pos: Pt, scale = 0.65): Phaser.GameObjec
  * Two expanding concentric rings from the impact point.
  * Gives every hit visual weight/grounding.
  */
-function vfxShockwave(scene: Game, color: number, pos: Pt, delay = 0) {
+function vfxShockwave(scene: IVFXScene, color: number, pos: Pt, delay = 0) {
   for (let ring = 0; ring < 2; ring++) {
     scene.time.delayedCall(delay + ring * 70, () => {
       const p   = { r: 6, a: ring === 0 ? 0.85 : 0.55 };
@@ -170,7 +170,7 @@ function vfxShockwave(scene: Game, color: number, pos: Pt, delay = 0) {
  * Screen shake scaled to spell PM cost.
  * Cost 2-3 → subtle; 4-5 → medium; 6+ → heavy.
  */
-function shakeCamera(scene: Game) {
+function shakeCamera(scene: IVFXScene) {
   if (_vfxCostPM < 2) return;
   const intensity = Math.min(0.011, 0.002 * _vfxCostPM);
   const duration  = 80 + _vfxCostPM * 18;
@@ -180,7 +180,7 @@ function shakeCamera(scene: Game) {
 // ── Public API ───────────────────────────────────────────────────────────────
 
 export function playSpellVFX(
-  scene: Game,
+  scene: IVFXScene,
   sort: Sort,
   caster: CombatUnit,
   targetX: number,
@@ -191,7 +191,7 @@ export function playSpellVFX(
   const element = caster.personnage.element;
   const color   = ELEMENT_TINTS[element as keyof typeof ELEMENT_TINTS] ?? 0xFFFFFF;
   const path    = travelPath(sort, element);
-  const from    = unitPos(caster, scene);
+  const from    = unitPos(caster);
   const to      = gridPos(targetX, targetY, targetZ, scene);
 
   _vfxKey    = `vfx_${getVFXId(element, sort.num)}`;
@@ -217,7 +217,7 @@ export function playSpellVFX(
 
 // ── Caster charge flash ───────────────────────────────────────────────────────
 
-function vfxCasterCharge(scene: Game, color: number, pos: Pt) {
+function vfxCasterCharge(scene: IVFXScene, color: number, pos: Pt) {
   if (_vfxKey && scene.textures.exists(_vfxKey)) {
     const spr = scene.add.sprite(pos.x, pos.y, _vfxKey)
       .setDepth(99_001).setScale(0.28).setAlpha(0.7)
@@ -245,7 +245,7 @@ function vfxCasterCharge(scene: Game, color: number, pos: Pt) {
 // ── Travel paths ─────────────────────────────────────────────────────────────
 
 // Projectile: looping travel sprite + afterimage ghosts every ~20px + impact
-function vfxProjectile(scene: Game, color: number, from: Pt, to: Pt, onImpact?: () => void) {
+function vfxProjectile(scene: IVFXScene, color: number, from: Pt, to: Pt, onImpact?: () => void) {
   const dist     = Phaser.Math.Distance.Between(from.x, from.y, to.x, to.y);
   const duration = Math.max(180, dist * 1.8);
 
@@ -313,7 +313,7 @@ function vfxProjectile(scene: Game, color: number, from: Pt, to: Pt, onImpact?: 
 }
 
 // Arc: sprite follows Bézier curve + shockwave at landing
-function vfxArc(scene: Game, color: number, from: Pt, to: Pt, onImpact?: () => void) {
+function vfxArc(scene: IVFXScene, color: number, from: Pt, to: Pt, onImpact?: () => void) {
   const midX = (from.x + to.x) / 2;
   const midY = Math.min(from.y, to.y) - 55;
   const prog  = { t: 0 };
@@ -345,7 +345,7 @@ function vfxArc(scene: Game, color: number, from: Pt, to: Pt, onImpact?: () => v
 }
 
 // AoE / Self: sprite immediately at position + shockwave + shake
-function vfxAoe(scene: Game, color: number, pos: Pt, onImpact?: () => void) {
+function vfxAoe(scene: IVFXScene, color: number, pos: Pt, onImpact?: () => void) {
   onImpact && scene.time.delayedCall(80, onImpact);
 
   if (_vfxKey && scene.textures.exists(_vfxKey)) {
@@ -378,7 +378,7 @@ function vfxAoe(scene: Game, color: number, pos: Pt, onImpact?: () => void) {
 }
 
 // Beam: animated sine-wave width while fading + shockwave at endpoint
-function vfxBeam(scene: Game, color: number, from: Pt, to: Pt, onImpact?: () => void) {
+function vfxBeam(scene: IVFXScene, color: number, from: Pt, to: Pt, onImpact?: () => void) {
   const gfx  = scene.add.graphics().setDepth(99_000);
   const prog = { t: 0 };
 
@@ -406,7 +406,7 @@ function vfxBeam(scene: Game, color: number, from: Pt, to: Pt, onImpact?: () => 
 }
 
 // Charge: accelerating travel sprite + impact
-function vfxCharge(scene: Game, color: number, from: Pt, to: Pt, onImpact?: () => void) {
+function vfxCharge(scene: IVFXScene, color: number, from: Pt, to: Pt, onImpact?: () => void) {
   const dist  = Phaser.Math.Distance.Between(from.x, from.y, to.x, to.y);
   const durMs = Math.max(150, dist * 1.2);
 
@@ -435,7 +435,7 @@ function vfxCharge(scene: Game, color: number, from: Pt, to: Pt, onImpact?: () =
 }
 
 // Cone: fan Graphics + 5 staggered impact sprites across the spread
-function vfxCone(scene: Game, color: number, from: Pt, to: Pt, onImpact?: () => void) {
+function vfxCone(scene: IVFXScene, color: number, from: Pt, to: Pt, onImpact?: () => void) {
   const angle  = Math.atan2(to.y - from.y, to.x - from.x);
   const spread = Math.PI / 3;
   const length = Math.max(60, Phaser.Math.Distance.Between(from.x, from.y, to.x, to.y));
@@ -492,7 +492,7 @@ function vfxCone(scene: Game, color: number, from: Pt, to: Pt, onImpact?: () => 
 }
 
 // Line: 5 rushing orbs + sprites at equidistant points on completion + shockwave
-function vfxLine(scene: Game, color: number, from: Pt, to: Pt, onImpact?: () => void) {
+function vfxLine(scene: IVFXScene, color: number, from: Pt, to: Pt, onImpact?: () => void) {
   const dist     = Phaser.Math.Distance.Between(from.x, from.y, to.x, to.y);
   const duration = Math.max(240, dist * 2.2);
   const NUM      = 5;
@@ -527,7 +527,7 @@ function vfxLine(scene: Game, color: number, from: Pt, to: Pt, onImpact?: () => 
 
 // ── Fallback impact (no sprite available) ─────────────────────────────────────
 
-function vfxImpact(scene: Game, color: number, pos: Pt) {
+function vfxImpact(scene: IVFXScene, color: number, pos: Pt) {
   if (_vfxKey && scene.textures.exists(_vfxKey)) {
     spawnVFXSprite(scene, pos, 1.6);
     vfxShockwave(scene, color, pos);

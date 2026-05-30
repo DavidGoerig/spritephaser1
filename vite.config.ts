@@ -28,6 +28,9 @@ export default {
           if (req.url === '/characters' || req.url === '/characters/') {
             res.writeHead(301, { Location: '/characters/index.html' });
             res.end();
+          } else if (req.url === '/arena' || req.url?.startsWith('/arena?')) {
+            res.writeHead(301, { Location: `/arena.html${req.url.slice('/arena'.length)}` });
+            res.end();
           } else {
             next();
           }
@@ -43,6 +46,10 @@ export default {
       format: { comments: false },
     },
     rollupOptions: {
+      input: {
+        main:  'index.html',
+        arena: 'arena.html',
+      },
       output: {
         entryFileNames: `assets/[name].js`,
         chunkFileNames: `assets/[name].js`,

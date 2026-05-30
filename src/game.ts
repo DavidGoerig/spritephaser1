@@ -15,6 +15,7 @@ import {
 } from "./data/block-catalog";
 import { loadCharSprites, BAKED_CHARS } from "./utils/load-char-sprites";
 import { getAllVFXIds } from "./data/spell-vfx-map";
+import { calculateIsoScreenPosition } from "./utils/math";
 
 // ── Preset definitions ─────────────────────────────────────────
 interface CombatPreset { name: string; elementA: string; elementB: string; teamSize?: 2 | 3 | 5; }
@@ -484,6 +485,13 @@ export default class Game extends Phaser.Scene {
     this._setPaletteVisible(false);
     this.infoBg.setVisible(false);
     this.infoText.setVisible(false);
+  }
+
+  /** Implements IVFXScene — converts grid (gx, gy, gz) to screen pixel coordinates. */
+  screenPosFromGrid(gx: number, gy: number, gz: number): { x: number; y: number } {
+    const [cx, cy] = this.grid.getRenderCartCoords(gx, gy);
+    const [sx, sy] = calculateIsoScreenPosition(cx, cy, 0, Grid.OFFSET_X, Grid.OFFSET_Y, Grid.OFFSET_Z);
+    return { x: sx, y: sy - Grid.OFFSET_Z * gz };
   }
 
   stopCombat() {
